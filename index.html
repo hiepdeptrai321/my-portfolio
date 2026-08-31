@@ -2,12 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>수아's Room Folio</title>
+    <title>Jason — Personal Story Portfolio</title>
     <link rel="stylesheet" href="./src/style.scss" />
     <link rel="icon" type="image/png" href="media/dark-favicon/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/media/dark-faviconfavicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/media/dark-favicon/favicon.svg" />
     <link rel="shortcut icon" href="media/dark-favicon/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="media/dark-favicon/apple-touch-icon.png" />
     <link rel="manifest" href="media/dark-favicon/site.webmanifest" />
@@ -15,32 +14,74 @@
     <meta name="language" content="English" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="/media/og-image.webp" />
+    <meta property="og:title" content="Jason — Personal Story Portfolio" />
 
     <meta
       property="og:description"
-      content="안녕하세요, I'm 김수아 (Kim Soo-ah). This is my portfolio website! I'm currently a student at Seoul National University studying computer science engineering and music. I love to take my combination of skills of technical and artsy skills to create beautiful things for the world that I am passionate about."
+      content="Hi, I'm Jason. Explore my room and discover a personal journey I am still taking step by step."
+    />
+    <meta
+      name="description"
+      content="Jason's personal story portfolio — a quiet room about his journey, values, life beyond coding, and what he is still exploring."
     />
 
   </head>
-  <body class="light-theme">
+  <body class="light-theme" data-language="en">
 
     <div class="loading-screen">
-      <button class="loading-screen-button">
+      <button class="loading-screen-button" type="button" data-i18n="loading.loading">
         Loading...
       </button>
+    </div>
 
-       <button class="no-sound-button">
-        
-      </button>
-
-      <p class="desktop-instructions instructions">use left/right click and mouse wheel to navigate!</p>
-      <p class="mobile-instructions instructions">use one or two fingers to navigate!</p>
+    <div class="welcome-screen" aria-hidden="true">
+      <div class="door-panel door-panel-left" aria-hidden="true">
+        <span class="door-handle door-handle-left"></span>
+      </div>
+      <div class="door-panel door-panel-right" aria-hidden="true">
+        <span class="door-handle door-handle-right"></span>
+      </div>
+      <div class="welcome-screen-content" role="status" aria-live="polite">
+        <p class="welcome-screen-greeting" data-i18n="welcome.greeting">
+          Hello, I'm Hiệp
+        </p>
+        <span class="welcome-screen-accent" aria-hidden="true"></span>
+      </div>
     </div>
     
     <div class="overlay"></div>
 
-    <button class="mute-toggle-button toggle-buttons">
+    <div class="site-controls" aria-label="Website controls" data-i18n-aria-label="controls.group">
+      <button
+        class="language-toggle-button toggle-buttons"
+        type="button"
+        aria-label="Chuyển sang tiếng Việt"
+        data-i18n-aria-label="controls.language"
+      >
+        <span class="language-option language-option-vi" aria-hidden="true">
+          <svg class="language-flag language-flag-vi" viewBox="0 0 60 40" aria-hidden="true" focusable="false">
+            <rect width="60" height="40" rx="2" fill="#DA251D" />
+            <polygon
+              points="30,10 32.35,16.76 38.56,17.22 33.8,21.24 35.29,28.09 30,24 24.71,28.09 26.2,21.24 21.44,17.22 27.65,16.76"
+              fill="#FFFF00"
+            />
+          </svg>
+          <span class="language-code">VI</span>
+        </span>
+        <span class="language-option language-option-en" aria-hidden="true">
+          <svg class="language-flag language-flag-en" viewBox="0 0 60 40" aria-hidden="true" focusable="false">
+            <rect width="60" height="40" rx="2" fill="#012169" />
+            <path d="M0 0L60 40M60 0L0 40" stroke="#FFFFFF" stroke-width="9" />
+            <path d="M0 0L60 40M60 0L0 40" stroke="#C8102E" stroke-width="4" />
+            <path d="M30 0V40M0 20H60" stroke="#FFFFFF" stroke-width="13" />
+            <path d="M30 0V40M0 20H60" stroke="#C8102E" stroke-width="7" />
+          </svg>
+          <span class="language-code">EN</span>
+        </span>
+      </button>
+
+      <div class="audio-controls">
+    <button class="mute-toggle-button" type="button" aria-label="Mute sound" aria-controls="volume-control">
       <svg
         width="800"
         height="800"
@@ -97,8 +138,24 @@
         />
       </svg>
     </button>
+        <label id="volume-control" class="volume-control">
+          <span class="visually-hidden" data-i18n="controls.volume">Volume</span>
+          <input
+            id="volume-slider"
+            class="volume-slider"
+            type="range"
+            min="0"
+            max="1"
+            step="0.05"
+            value="0.5"
+            aria-label="Volume"
+            data-i18n-aria-label="controls.volume"
+          />
+          <output class="volume-value" for="volume-slider">50%</output>
+        </label>
+      </div>
 
-    <button class="theme-toggle-button toggle-buttons">
+    <button class="theme-toggle-button toggle-buttons" type="button" aria-label="Toggle day and night mode" data-i18n-aria-label="controls.theme">
       <svg class="sun-svg" width="800" height="800" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M733.333 550H66.666M666.666 666.667H133.333M399.999 100V166.667M133.333 433.333H66.666M210.47 243.804L163.329 196.663M589.516 243.804L636.659 196.663M733.333 433.333H666.666M233.333 433.333C233.333 341.287 307.952 266.667 399.999 266.667C492.046 266.667 566.666 341.287 566.666 433.333"  stroke-width="85" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
@@ -109,102 +166,92 @@
         <path d="M100 448.657C100 587.47 215.807 700 358.66 700C468.637 700 562.58 633.31 600 539.277C570.363 552.803 537.27 560.363 502.363 560.363C375.38 560.363 272.441 460.337 272.441 336.947C272.441 285.342 290.446 237.824 320.685 200C195.834 217.85 100 322.377 100 448.657Z"  stroke-width="85" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
     </button>
+    </div>
+
+    <div class="modal story story-modal" role="dialog" aria-modal="true" aria-labelledby="story-modal-title">
+      <div class="modal-wrapper">
+        <div class="story-modal-header">
+          <p class="story-modal-eyebrow">A SMALL MILESTONE</p>
+          <h2 id="story-modal-title" class="story-modal-title">Finding My Voice</h2>
+        </div>
+
+        <div class="story-modal-content">
+          <div class="story-modal-content-wrapper">
+            <div class="story-modal-body"></div>
+            <div class="story-modal-milestone-wrap">
+              <span class="story-modal-label" data-i18n="modal.milestone">Milestone</span>
+              <p class="story-modal-milestone">TOEIC 925</p>
+            </div>
+            <p class="story-modal-closing">Still learning. Still moving forward.</p>
+          </div>
+        </div>
+
+        <button class="story-modal-close modal-exit-button" type="button" aria-label="Close story modal" data-i18n-aria-label="modal.closeStory">
+          <svg
+            width="98"
+            height="96"
+            viewBox="0 0 98 96"
+            class="exit-button-svg"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect
+              width="115.92"
+              height="17.889"
+              rx="8.94448"
+              transform="matrix(-0.696845 0.717222 0.717222 0.696845 83.1709 0)"
+              fill="currentColor"
+            />
+            <rect
+              width="115.92"
+              height="17.889"
+              rx="8.94448"
+              transform="matrix(-0.717222 -0.696845 -0.696845 0.717222 97.8047 13.6475)"
+              fill="currentColor"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
 
     <div class="work modal">
       <div class="modal-wrapper">
-        <h1 class="modal-title">~ My Work ~</h1>
+        <h1 class="modal-title" data-i18n="journey.label">~ My Journey ~</h1>
 
         <div class="modal-content">
           <div class="modal-content-wrapper">
             <div class="work-project">
               <div class="work-project-wrapper">
-                <div class="work-image-wrapper">
-                  <img
-                    class="work-base-image"
-                    src="/images/community.webp"
-                    alt=""
-                    srcset=""
-                  />
-                </div>
                 <div class="paragraph-section">
-                  <h2 class="modal-paragraph-header">Community Leader</h2>
-                  <p class="modal-paragraph-text">
-                    Organized several events and outreach with local communities
-                    and business to help international students familiarize with
-                    Korean culture!
-                  </p>
-                  <p class="modal-paragraph-text sm-margin-top sm-font">
-                    Skills: Leadership, Communication, Community Building, Teamwork
-                  </div>
-                  </p>
-              </div>
-            </div>
-            <div class="work-project">
-              <div class="work-project-wrapper">
-                <div class="work-image-wrapper">
-                  <img
-                    class="work-base-image"
-                    src="/images/computer.webp"
-                    alt=""
-                    srcset=""
-                  />
-                </div>
-                <div class="paragraph-section">
-                  <h2 class="modal-paragraph-header">MeloMochi</h2>
-                  <p class="modal-paragraph-text">
-                    During my piano teaching journey, I created MeloMochi, an AI-powered compositional tool that helps students learn music theory through hands-on exploration. I designed the system to generate piano exercises and short pieces that adapt to each student's skill level, combining my experience as a pianist with my machine learning expertise. Using TensorFlow and pretty_midi, I trained models on classical repertoire to create exercises that feel musical while targeting specific technical challenges. The web interface I built with React allows students to interact with the generated pieces, visualize patterns, and even modify them in real-time. Working closely with my students throughout development helped me refine the system to ensure it genuinely supports their learning process, making music theory more engaging and practical.
-                  </p>
-                  <p class="modal-paragraph-text sm-margin-top sm-font">
-                    Skills: Music Generation,
-                    TensorFlow,
-                    pretty_midi,
-                    Adaptive Learning,
-                    React,
-                    Music Theory,
-                    UX Design,
-                    Generative ML,
-                    Education Tech,
-                    Web Audio API
+                  <h2 class="modal-paragraph-header" data-i18n="journey.introTitle">Before I Found My Direction</h2>
+                  <p class="modal-paragraph-text" data-i18n="journey.introBody">
+                    Before university, I was fairly introverted and sometimes found
+                    it difficult to make new friends. I knew almost nothing about
+                    coding; I only felt that I wanted to work with computers.
                   </p>
                 </div>
               </div>
             </div>
             <div class="work-project">
               <div class="work-project-wrapper">
-                <div class="work-image-wrapper">
-                  <img
-                    class="work-base-image"
-                    src="/images/piano.webp"
-                    alt=""
-                    srcset=""
-                  />
-                </div>
                 <div class="paragraph-section">
-                  <h2 class="modal-paragraph-header">
-                    PianoScope
-                  </h2>
-                  <p class="modal-paragraph-text">
-                    PianoScope is my passion project that combines my love for
-                    piano and machine learning. I co-created this AI-powered
-                    tool with fellow musicians to help us better understand our
-                    playing patterns. Using deep learning and audio processing
-                    techniques I implemented in Python and TensorFlow, the
-                    system analyzes recordings to detect nuances in timing,
-                    dynamics, and pedaling. I built the interactive
-                    visualization interface using React, allowing
-                    performers to see how these elements evolve.
+                  <h2 class="modal-paragraph-header" data-i18n="journey.switchTitle">Starting Again</h2>
+                  <p class="modal-paragraph-text" data-i18n="journey.switchBody">
+                    I first studied Construction Engineering. After a period of
+                    feeling lost, I decided to begin again in Software Engineering.
+                    My family's support made that new beginning feel less uncertain.
                   </p>
-                  <p class="modal-paragraph-text sm-margin-top sm-font">
-                    Skills: Audio Processing,
-                    Signal Analysis,
-                    Machine Learning,
-                    Data Visualization,
-                    TensorFlow,
-                    React,
-                    Python,
-                    DSP (Digital Signal Processing),
-                    Performance Analytics,
-                    Audio Classification
+                </div>
+              </div>
+            </div>
+            <div class="work-project">
+              <div class="work-project-wrapper">
+                <div class="paragraph-section">
+                  <h2 class="modal-paragraph-header" data-i18n="journey.exploreTitle">Still Exploring</h2>
+                  <p class="modal-paragraph-text" data-i18n="journey.exploreBody">
+                    I chose Software Engineering because I wanted to become a game
+                    developer. I am still exploring software, computer networks and
+                    IoT, one step at a time, to find the direction that fits me.
                   </p>
                 </div>
               </div>
@@ -212,7 +259,7 @@
           </div>
         </div>
       </div>
-      <button class="modal-exit-button">
+      <button class="modal-exit-button" type="button" aria-label="Close journey modal" data-i18n-aria-label="modal.closeJourney">
         <svg
           width="98"
           height="96"
@@ -240,71 +287,42 @@
     </div>
     <div class="about modal">
       <div class="modal-wrapper">
-        <h1 class="modal-title">~ About Me ~</h1>
+        <h1 class="modal-title" data-i18n="about.label">~ About Me ~</h1>
 
         <div class="modal-content">
           <div class="modal-content-wrapper">
             <div class="paragraph-section">
-              <div class="image-wrapper">
-                <img
-                  class="base-image"
-                  src="/images/profile_pic.webp"
-                  alt=""
-                  srcset=""
-                />
-              </div>
-              <h2 class="modal-paragraph-header">
-                Engineer, musician, creative, & gamer at heart 💜
+              <h2 class="modal-paragraph-header" data-i18n="about.greeting">
+                Hi, I'm Jason.
               </h2>
-              <p class="modal-paragraph-text">
-                안녕하세요, I'm 김수아 (Kim Soo-ah), but you can also call me
-                Angelina! I'm currently a second-year student at Seoul National
-                University studying computer science engineering and music. I
-                love to take my combination of skills of technical and artsy
-                skills to create beautiful things for the world that I am
-                passionate about.
+              <p class="modal-paragraph-text" data-i18n="about.intro">
+                I'm fairly introverted, and meeting new people is not always easy
+                for me. I try to be responsible in my work, care about the people
+                around me, stay open-minded, and remain curious about new things.
               </p>
-              <p class="modal-paragraph-text sm-margin-top">
-                In my free time you'll definitely catch me watching K-drama and
-                League of Legends. I also practice piano one or two hours a day
-                and want to start uploading content one day. May or may not also
-                catch me going for strolls around my neighbohrhood.
+              <p class="modal-paragraph-text sm-margin-top" data-i18n="about.growth">
+                I am still working on my discipline and tendency to be lazy. I do
+                not have every step planned far ahead; I believe in moving forward
+                little by little.
               </p>
-              <h2 class="modal-paragraph-header">What I'm Up To:</h2>
+              <h2 class="modal-paragraph-header" data-i18n="about.valuesTitle">What matters to me</h2>
               <ul>
-                <li class="list-text">
-                  I volunteer at the SNU international students association
-                  helping international students with korean speaking and
-                  overall getting to know Korea a little bit better.
+                <li class="list-text" data-i18n="about.valueFamily">
+                  Family, sincerity, and caring for the people around me.
                 </li>
-                <li class="list-text">
-                  I'm also looking for summer internships related to software
-                  design for music information retriveal, developing ai
-                  algorithms to automatically generate sheet music from audio.
+                <li class="list-text" data-i18n="about.valueCuriosity">
+                  Staying curious and open to software, computer networks, and IoT.
                 </li>
-                <li class="list-text">
-                  Course work is a bit intense! You'll find me in the quiet
-                  rooms studio doing work. I also spend a few hours each week as
-                  a lab assistant researching.
-                </li>
-              </ul>
-              <h2 class="modal-paragraph-header-2">Portfolio credits and Inspiration:</h2>
-              <ul>
-                <li class="list-text-2">
-                  Music is called Cosmic Star Candy by Daystar Project!
-                </li>
-                <li class="list-text-2">
-                  This portfolio was inspired by Bruno Simon's and Rachel Wei's Room Portfolios as well as Denis Wipart's and Nicky Blender's art!
-                </li>
-                <li class="list-text-2">
-                  Also the piano in this portfolio works!! Give it a try and play a song!
+                <li class="list-text" data-i18n="about.valueGrowth">
+                  Growing step by step instead of pretending to have everything
+                  figured out.
                 </li>
               </ul>
             </div>
           </div>
         </div>
       </div>
-      <button class="modal-exit-button">
+      <button class="modal-exit-button" type="button" aria-label="Close about modal" data-i18n-aria-label="modal.closeAbout">
         <svg
           width="98"
           height="96"
@@ -332,20 +350,22 @@
     </div>
     <div class="contact modal">
       <div class="modal-wrapper">
-        <h1 class="modal-title">~ Say hello! ~</h1>
+        <h1 class="modal-title" data-i18n="contact.label">~ Say hello! ~</h1>
 
         <div class="modal-content">
           <div class="modal-content-wrapper">
             <div class="paragraph-section">
-              <h2 class="modal-paragraph-header xsm-margin-top">
-                If you like engineering, music, games, and food, let's connect!
+              <h2 class="modal-paragraph-header xsm-margin-top" data-i18n="contact.intro">
+                If something here resonates with you, feel free to say hello.
               </h2>
               <div class="contact-button-wrapper">
                 <a
                   class="contact-link"
-                  href="mailto:someone@example.com"
+                  href="mailto:dophuhiep212@gmail.com"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Email Jason"
+                  data-i18n-aria-label="contact.emailLabel"
                 >
                 <svg class="contact-svg mail" width="800" height="800" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M656.85 209.817C608.726 166.348 527.66 150 400 150C272.34 150 191.272 166.348 143.15 209.817M656.85 209.817C700.01 248.804 716.666 309.608 716.666 400C716.666 591.177 642.156 650 400 650C157.843 650 83.333 591.177 83.333 400C83.333 309.608 99.9903 248.804 143.15 209.817M656.85 209.817L447.14 419.527C421.103 445.56 378.893 445.56 352.86 419.527L143.15 209.817" stroke="currentColor" stroke-width="66.7" stroke-linecap="round" stroke-linejoin="round"/>
@@ -353,9 +373,11 @@
                 </a>
                 <a
                   class="contact-link"
-                  href="https://github.com/andrewwoan/sooahkimsfolio"
+                  href="https://github.com/hiepdeptrai321"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Jason on GitHub"
+                  data-i18n-aria-label="contact.githubLabel"
                 >
                   <svg
                     width="800"
@@ -381,9 +403,11 @@
                 </a>
                 <a
                   class="contact-link"
-                  href="https://www.linkedin.com/"
+                  href="https://www.linkedin.com/in/dophuhiep212/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Jason on LinkedIn"
+                  data-i18n-aria-label="contact.linkedinLabel"
                 >
                   <svg
                     width="800"
@@ -393,37 +417,35 @@
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <g clip-path="url(#clip0_371_15)">
+                    <g clip-path="url(#clip-0-371-15)">
                       <path
                         d="M600 100C655.23 100 700 144.772 700 200V600C700 655.23 655.23 700 600 700H200C144.772 700 100 655.23 100 600V200C100 144.772 144.772 100 200 100H600ZM600 166.667H200C181.591 166.667 166.667 181.591 166.667 200V600C166.667 618.41 181.591 633.333 200 633.333H600C618.41 633.333 633.333 618.41 633.333 600V200C633.333 181.591 618.41 166.667 600 166.667ZM266.667 333.333C283.761 333.333 297.85 346.201 299.776 362.779L300 366.667V533.333C300 551.743 285.076 566.667 266.667 566.667C249.572 566.667 235.483 553.799 233.558 537.221L233.333 533.333V366.667C233.333 348.257 248.257 333.333 266.667 333.333ZM366.667 300C383.043 300 396.66 311.809 399.47 327.376C406.21 323.478 413.167 319.964 420.223 316.946C442.463 307.432 475.773 302.198 505.83 311.65C521.587 316.603 537.44 325.969 549.193 341.853C559.682 356.034 565.33 373.28 566.456 392.642L566.667 400V533.333C566.667 551.74 551.743 566.667 533.333 566.667C516.238 566.667 502.15 553.796 500.224 537.22L500 533.333V400C500 389.023 497.337 383.857 495.6 381.503C493.81 379.087 490.913 376.843 485.837 375.247C474.227 371.597 457.537 373.493 446.443 378.24C429.742 385.383 414.491 396.571 404.131 406.945L400 411.327V533.333C400 551.743 385.077 566.667 366.667 566.667C349.572 566.667 335.483 553.799 333.558 537.221L333.333 533.333V333.333C333.333 314.924 348.257 300 366.667 300ZM266.667 233.333C285.076 233.333 300 248.257 300 266.667C300 285.076 285.076 300 266.667 300C248.257 300 233.333 285.076 233.333 266.667C233.333 248.257 248.257 233.333 266.667 233.333Z"
                         fill="currentColor"
                       />
                     </g>
                     <defs>
-                      <clipPath id="clip0_371_15">
+                      <clipPath id="clip-0-371-15">
                         <rect width="800" height="800" fill="white" />
                       </clipPath>
                     </defs>
                   </svg>
                 </a>
                 <a
-                  class="contact-link"
-                  href="https://www.instagram.com/"
+                  class="contact-link contact-text-link"
+                  href="https://www.facebook.com/hiepdeptrai321"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Jason on Facebook"
+                  data-i18n-aria-label="contact.facebookLabel"
                 >
-                <svg class="contact-svg instagram" width="800" height="800" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M400 675C341.033 675 298.6 674.971 265.517 671.763C232.812 668.592 211.892 662.5 195.196 652.008C176.114 640.02 159.978 623.885 147.987 604.804C137.5 588.108 131.404 567.187 128.238 534.483C125.029 501.4 125 458.967 125 400C125 341.033 125.029 298.6 128.238 265.517C131.404 232.812 137.5 211.892 147.987 195.196C159.977 176.113 176.113 159.977 195.196 147.987C211.892 137.5 232.812 131.404 265.517 128.238C298.596 125.029 341.029 125 400 125C458.967 125 501.4 125.029 534.483 128.238C567.187 131.404 588.108 137.5 604.804 147.987C623.885 159.978 640.02 176.114 652.008 195.196C662.5 211.892 668.592 232.812 671.763 265.517C674.971 298.6 675 341.033 675 400C675 458.967 674.971 501.4 671.763 534.483C668.592 567.187 662.5 588.108 652.008 604.804C640.019 623.885 623.885 640.019 604.804 652.008C588.108 662.5 567.187 668.592 534.483 671.763C501.4 674.971 458.967 675 400 675Z" stroke="currentColor" stroke-width="66.7"/>
-                  <path d="M400 525C469.036 525 525 469.036 525 400C525 330.964 469.036 275 400 275C330.964 275 275 330.964 275 400C275 469.036 330.964 525 400 525Z" stroke="currentColor" stroke-width="66.7"/>
-                  <path d="M562.5 275C583.211 275 600 258.211 600 237.5C600 216.789 583.211 200 562.5 200C541.789 200 525 216.789 525 237.5C525 258.211 541.789 275 562.5 275Z" fill="currentColor"/>
-                </svg>
+                  Facebook
                 </a>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <button class="modal-exit-button">
+      <button class="modal-exit-button" type="button" aria-label="Close contact modal" data-i18n-aria-label="modal.closeContact">
         <svg
           width="98"
           height="96"
@@ -450,9 +472,128 @@
       </button>
     </div>
 
-    <div id="experience">
-      <canvas id="experience-canvas" class="experience-canvas"></canvas>
-    </div>
+    <main>
+      <section class="room-hero" aria-labelledby="room-hero-title">
+        <div id="experience">
+          <canvas id="experience-canvas" class="experience-canvas" data-i18n="hero.canvasFallback">
+            The interactive room needs WebGL. You can still read the full story below.
+          </canvas>
+        </div>
+
+        <h1 id="room-hero-title" class="visually-hidden" data-i18n="hero.title">Hi, I'm Jason.</h1>
+        <a class="skip-room-link" href="#about-me" data-i18n="hero.skip">Skip the room</a>
+
+        <noscript>
+          <p class="room-fallback-message" data-i18n="hero.noScript">
+            JavaScript is unavailable, but the full story is still available below.
+          </p>
+        </noscript>
+      </section>
+
+      <div id="main-content" class="story-content">
+        <section id="about-me" class="story-section" aria-labelledby="about-me-title">
+          <p class="section-eyebrow" data-i18n="sections.aboutEyebrow">About Me</p>
+          <h2 id="about-me-title" data-i18n="sections.aboutTitle">A quiet introduction</h2>
+          <div class="section-copy">
+            <p data-i18n="sections.aboutBodyOne">
+              I'm fairly introverted, and meeting new people is not always easy for
+              me. I try to be responsible in my work, care about the people around
+              me, stay open-minded, and remain curious about new things.
+            </p>
+            <p data-i18n="sections.aboutBodyTwo">
+              I am still working on my discipline and tendency to be lazy. I do not
+              have everything planned far ahead. I believe in moving forward step by
+              step.
+            </p>
+          </div>
+        </section>
+
+        <section id="my-journey" class="story-section" aria-labelledby="my-journey-title">
+          <p class="section-eyebrow" data-i18n="sections.journeyEyebrow">My Journey</p>
+          <h2 id="my-journey-title" data-i18n="sections.journeyTitle">Starting again and still exploring</h2>
+          <div class="section-copy">
+            <p data-i18n="sections.journeyBodyOne">
+              Before university, I knew almost nothing about coding. I only had the
+              feeling that I wanted to work with computers, while school itself did
+              not give me much excitement at the time.
+            </p>
+            <p data-i18n="sections.journeyBodyTwo">
+              I first studied Construction Engineering. After a period of feeling
+              lost, I decided to begin again in Software Engineering. My family's
+              support helped me feel more at ease with that decision.
+            </p>
+            <p data-i18n="sections.journeyBodyThree">
+              I originally chose Software Engineering because I wanted to become a
+              game developer. Today, I am still exploring software, computer
+              networks, and IoT to find the direction that fits me.
+            </p>
+          </div>
+        </section>
+
+        <section id="what-i-value" class="story-section" aria-labelledby="what-i-value-title">
+          <p class="section-eyebrow" data-i18n="sections.valuesEyebrow">What I Value</p>
+          <h2 id="what-i-value-title" data-i18n="sections.valuesTitle">The people and values that keep me grounded</h2>
+          <div class="section-copy">
+            <p data-i18n="sections.valuesBodyOne">
+              Family support made it easier for me to start again. I value sincerity,
+              caring for the people around me, and staying open to perspectives that
+              are different from my own.
+            </p>
+            <p data-i18n="sections.valuesBodyTwo">
+              TOEIC 925 was a small milestone. The score itself was not the most
+              important part; the encouragement from my teachers and friends gave me
+              more confidence, courage, and motivation to continue.
+            </p>
+          </div>
+        </section>
+
+        <section id="life-beyond-coding" class="story-section" aria-labelledby="life-beyond-coding-title">
+          <p class="section-eyebrow" data-i18n="sections.lifeEyebrow">Life Beyond Coding</p>
+          <h2 id="life-beyond-coding-title" data-i18n="sections.lifeTitle">More than time in front of a screen</h2>
+          <div class="section-copy">
+            <p data-i18n="sections.lifeBody">
+              Swimming is one of the ways I step away from the screen. This part of
+              the portfolio is a reminder that learning and coding are only parts of
+              a larger life.
+            </p>
+          </div>
+        </section>
+
+        <section id="looking-ahead" class="story-section" aria-labelledby="looking-ahead-title">
+          <p class="section-eyebrow" data-i18n="sections.futureEyebrow">Looking Ahead</p>
+          <h2 id="looking-ahead-title" data-i18n="sections.futureTitle">One step at a time</h2>
+          <div class="section-copy">
+            <p data-i18n="sections.futureBody">
+              I do not think too far into the future. I want to improve little by
+              little, gain more experiences, become more independent, meet people on
+              the same wavelength—including friends from other countries—and be able
+              to help the people I love.
+            </p>
+          </div>
+        </section>
+
+        <section id="contact" class="story-section contact-section" aria-labelledby="contact-title">
+          <p class="section-eyebrow" data-i18n="sections.contactEyebrow">GitHub & Contact</p>
+          <h2 id="contact-title" data-i18n="sections.contactTitle">Let's stay connected</h2>
+          <p class="contact-intro" data-i18n="sections.contactBody">
+            If something here resonates with you, you can find me through these links.
+          </p>
+          <div class="profile-links" aria-label="Jason's profile links" data-i18n-aria-label="sections.profileLinksLabel">
+            <a href="https://github.com/hiepdeptrai321" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="mailto:dophuhiep212@gmail.com" data-i18n="sections.email">Email</a>
+            <a href="https://www.linkedin.com/in/dophuhiep212/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://www.facebook.com/hiepdeptrai321" target="_blank" rel="noopener noreferrer">Facebook</a>
+          </div>
+        </section>
+
+        <footer class="site-footer">
+          <p data-i18n="sections.footer">
+            Adapted from Andrew Woan's Soo-ah's Room Folio. Original credits and
+            license are preserved in the repository.
+          </p>
+        </footer>
+      </div>
+    </main>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
