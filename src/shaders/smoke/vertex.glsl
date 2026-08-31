@@ -3,7 +3,7 @@ uniform sampler2D uPerlinTexture;
 
 varying vec2 vUv;
 
-#include ../includes/rotate2D.glsl
+#include ../includes/rotate-2d.glsl
 
 void main()
 {

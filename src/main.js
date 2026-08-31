@@ -1,9 +1,9 @@
 import gsap from "gsap";
 
-import { Howl } from "howler";
+import { Howl, Howler } from "howler";
 
 import * as THREE from "three";
-import { OrbitControls } from "./utils/OrbitControls.js";
+import { OrbitControls } from "./utils/orbit-controls.js";
 import { DRACOLoader } from "three/addons/loaders/DRACOLoader.js";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 
@@ -11,6 +11,13 @@ import smokeVertexShader from "./shaders/smoke/vertex.glsl";
 import smokeFragmentShader from "./shaders/smoke/fragment.glsl";
 import themeVertexShader from "./shaders/theme/vertex.glsl";
 import themeFragmentShader from "./shaders/theme/fragment.glsl";
+
+import { StoryModal } from "./components/story-modal.js";
+import {
+  getInitialLanguage,
+  getTranslation,
+  SUPPORTED_LANGUAGES,
+} from "./data/translations.js";
 
 /**  -------------------------- Audio setup -------------------------- */
 
@@ -21,9 +28,22 @@ const MUSIC_FADE_TIME = 500;
 const PIANO_TIMEOUT = 2000;
 const BACKGROUND_MUSIC_VOLUME = 1;
 const FADED_VOLUME = 0;
+const DEFAULT_VOLUME = 0.4;
+const HANDWRITING_SOUND_DURATION = 2.2;
+const HANDWRITING_LETTER_STAGGER = 0.12;
+const INTRO_DOOR_MUSIC_VOLUME = 0.22;
+const INTRO_MUSIC_FADE_TIME = 650;
+
+let currentLanguage = getInitialLanguage();
+let currentVolume = DEFAULT_VOLUME;
+let lastAudibleVolume = DEFAULT_VOLUME;
+let isMuted = false;
+let hasEnteredRoom = false;
+
+Howler.volume(DEFAULT_VOLUME);
 
 const backgroundMusic = new Howl({
-  src: ["/audio/music/cosmic_candy.ogg"],
+  src: ["/audio/music/drawer-instrumental.mp3"],
   loop: true,
   volume: 1,
 });
@@ -50,32 +70,42 @@ const fadeInBackgroundMusic = () => {
   }
 };
 
+const restoreBackgroundMusicAfterDoor = () => {
+  if (!isMuted) {
+    backgroundMusic.fade(
+      backgroundMusic.volume(),
+      BACKGROUND_MUSIC_VOLUME,
+      INTRO_MUSIC_FADE_TIME
+    );
+  }
+};
+
 // Piano
 const pianoKeyMap = {
-  C1_Key: "Key_24",
-  "C#1_Key": "Key_23",
-  D1_Key: "Key_22",
-  "D#1_Key": "Key_21",
-  E1_Key: "Key_20",
-  F1_Key: "Key_19",
-  "F#1_Key": "Key_18",
-  G1_Key: "Key_17",
-  "G#1_Key": "Key_16",
-  A1_Key: "Key_15",
-  "A#1_Key": "Key_14",
-  B1_Key: "Key_13",
-  C2_Key: "Key_12",
-  "C#2_Key": "Key_11",
-  D2_Key: "Key_10",
-  "D#2_Key": "Key_9",
-  E2_Key: "Key_8",
-  F2_Key: "Key_7",
-  "F#2_Key": "Key_6",
-  G2_Key: "Key_5",
-  "G#2_Key": "Key_4",
-  A2_Key: "Key_3",
-  "A#2_Key": "Key_2",
-  B2_Key: "Key_1",
+  C1_Key: "key-24",
+  "C#1_Key": "key-23",
+  D1_Key: "key-22",
+  "D#1_Key": "key-21",
+  E1_Key: "key-20",
+  F1_Key: "key-19",
+  "F#1_Key": "key-18",
+  G1_Key: "key-17",
+  "G#1_Key": "key-16",
+  A1_Key: "key-15",
+  "A#1_Key": "key-14",
+  B1_Key: "key-13",
+  C2_Key: "key-12",
+  "C#2_Key": "key-11",
+  D2_Key: "key-10",
+  "D#2_Key": "key-9",
+  E2_Key: "key-8",
+  F2_Key: "key-7",
+  "F#2_Key": "key-6",
+  G2_Key: "key-5",
+  "G#2_Key": "key-4",
+  A2_Key: "key-3",
+  "A#2_Key": "key-2",
+  B2_Key: "key-1",
 };
 
 const pianoSounds = {};
@@ -95,6 +125,215 @@ const buttonSounds = {
     preload: true,
     volume: 0.5,
   }),
+};
+
+const playHandwritingSound = (duration = HANDWRITING_SOUND_DURATION) => {
+  const audioContext = Howler.ctx;
+  const audioDestination = Howler.masterGain;
+
+  if (
+    isMuted ||
+    currentVolume <= 0 ||
+    !audioContext ||
+    !audioDestination
+  ) {
+    return;
+  }
+
+  const startTime = audioContext.currentTime;
+  const sampleCount = Math.floor(audioContext.sampleRate * duration);
+  const scratchBuffer = audioContext.createBuffer(
+    1,
+    sampleCount,
+    audioContext.sampleRate
+  );
+  const scratchData = scratchBuffer.getChannelData(0);
+  let previousNoise = 0;
+
+  for (let sampleIndex = 0; sampleIndex < sampleCount; sampleIndex += 1) {
+    const elapsedTime = sampleIndex / audioContext.sampleRate;
+    const progress = sampleIndex / sampleCount;
+    const strokeProgress =
+      (elapsedTime % HANDWRITING_LETTER_STAGGER) /
+      HANDWRITING_LETTER_STAGGER;
+    const strokeEnvelope =
+      strokeProgress < 0.72
+        ? Math.sin((strokeProgress / 0.72) * Math.PI) ** 0.65
+        : 0;
+    const edgeFade = Math.min(progress * 20, (1 - progress) * 20, 1);
+    const rawNoise = Math.random() * 2 - 1;
+    const pencilGrain = rawNoise - previousNoise * 0.58;
+    const paperTexture =
+      0.72 + Math.sin(elapsedTime * Math.PI * 340) * 0.28;
+
+    previousNoise = rawNoise;
+    scratchData[sampleIndex] =
+      pencilGrain * strokeEnvelope * edgeFade * paperTexture;
+  }
+
+  const scratchSource = audioContext.createBufferSource();
+  const scratchHighPass = audioContext.createBiquadFilter();
+  const scratchLowPass = audioContext.createBiquadFilter();
+  const scratchGain = audioContext.createGain();
+
+  scratchSource.buffer = scratchBuffer;
+  scratchHighPass.type = "highpass";
+  scratchHighPass.frequency.value = 850;
+  scratchHighPass.Q.value = 0.5;
+  scratchLowPass.type = "lowpass";
+  scratchLowPass.frequency.value = 4800;
+  scratchLowPass.Q.value = 0.7;
+  scratchGain.gain.setValueAtTime(0.0001, startTime);
+  scratchGain.gain.exponentialRampToValueAtTime(0.085, startTime + 0.04);
+  scratchGain.gain.setValueAtTime(0.085, startTime + duration - 0.08);
+  scratchGain.gain.exponentialRampToValueAtTime(
+    0.0001,
+    startTime + duration
+  );
+
+  scratchSource.connect(scratchHighPass);
+  scratchHighPass.connect(scratchLowPass);
+  scratchLowPass.connect(scratchGain);
+  scratchGain.connect(audioDestination);
+  scratchSource.start(startTime);
+  scratchSource.stop(startTime + duration);
+};
+
+const playPageFlipSound = () => {
+  const audioContext = Howler.ctx;
+  const audioDestination = Howler.masterGain;
+
+  if (
+    isMuted ||
+    currentVolume <= 0 ||
+    !audioContext ||
+    !audioDestination
+  ) {
+    return;
+  }
+
+  const startTime = audioContext.currentTime;
+  const flipDuration = 0.82;
+  const sampleCount = Math.floor(audioContext.sampleRate * flipDuration);
+  const flipBuffer = audioContext.createBuffer(
+    1,
+    sampleCount,
+    audioContext.sampleRate
+  );
+  const flipData = flipBuffer.getChannelData(0);
+  let smoothedNoise = 0;
+
+  for (let sampleIndex = 0; sampleIndex < sampleCount; sampleIndex += 1) {
+    const progress = sampleIndex / sampleCount;
+    const rawNoise = Math.random() * 2 - 1;
+    const flipEnvelope = Math.sin(progress * Math.PI) ** 0.8;
+    const paperFlutter = 0.55 + Math.abs(Math.sin(progress * 18 * Math.PI)) * 0.45;
+
+    smoothedNoise = smoothedNoise * 0.34 + rawNoise * 0.66;
+    flipData[sampleIndex] = smoothedNoise * flipEnvelope * paperFlutter;
+  }
+
+  const flipSource = audioContext.createBufferSource();
+  const flipHighPass = audioContext.createBiquadFilter();
+  const flipLowPass = audioContext.createBiquadFilter();
+  const flipGain = audioContext.createGain();
+
+  flipSource.buffer = flipBuffer;
+  flipSource.playbackRate.setValueAtTime(0.9, startTime);
+  flipSource.playbackRate.exponentialRampToValueAtTime(
+    1.3,
+    startTime + flipDuration
+  );
+  flipHighPass.type = "highpass";
+  flipHighPass.frequency.value = 620;
+  flipLowPass.type = "lowpass";
+  flipLowPass.frequency.value = 5800;
+  flipGain.gain.setValueAtTime(0.0001, startTime);
+  flipGain.gain.exponentialRampToValueAtTime(0.16, startTime + 0.12);
+  flipGain.gain.exponentialRampToValueAtTime(
+    0.0001,
+    startTime + flipDuration
+  );
+
+  flipSource.connect(flipHighPass);
+  flipHighPass.connect(flipLowPass);
+  flipLowPass.connect(flipGain);
+  flipGain.connect(audioDestination);
+  flipSource.start(startTime);
+  flipSource.stop(startTime + flipDuration);
+};
+
+const playDoorOpenSound = () => {
+  const audioContext = Howler.ctx;
+  const audioDestination = Howler.masterGain;
+
+  if (
+    isMuted ||
+    currentVolume <= 0 ||
+    !audioContext ||
+    !audioDestination
+  ) {
+    return;
+  }
+
+  const startTime = audioContext.currentTime;
+  const creakDuration = 1.15;
+  const creakBuffer = audioContext.createBuffer(
+    1,
+    Math.floor(audioContext.sampleRate * creakDuration),
+    audioContext.sampleRate
+  );
+  const creakData = creakBuffer.getChannelData(0);
+  let smoothedNoise = 0;
+
+  for (let sampleIndex = 0; sampleIndex < creakData.length; sampleIndex += 1) {
+    smoothedNoise =
+      smoothedNoise * 0.94 + (Math.random() * 2 - 1) * 0.06;
+    creakData[sampleIndex] = smoothedNoise;
+  }
+
+  const creakSource = audioContext.createBufferSource();
+  const creakFilter = audioContext.createBiquadFilter();
+  const creakGain = audioContext.createGain();
+
+  creakSource.buffer = creakBuffer;
+  creakSource.playbackRate.setValueAtTime(0.92, startTime);
+  creakSource.playbackRate.exponentialRampToValueAtTime(
+    0.62,
+    startTime + creakDuration
+  );
+  creakFilter.type = "bandpass";
+  creakFilter.frequency.setValueAtTime(210, startTime);
+  creakFilter.frequency.exponentialRampToValueAtTime(
+    430,
+    startTime + creakDuration
+  );
+  creakFilter.Q.value = 0.8;
+  creakGain.gain.setValueAtTime(0.0001, startTime);
+  creakGain.gain.exponentialRampToValueAtTime(0.42, startTime + 0.08);
+  creakGain.gain.exponentialRampToValueAtTime(
+    0.0001,
+    startTime + creakDuration
+  );
+
+  creakSource.connect(creakFilter);
+  creakFilter.connect(creakGain);
+  creakGain.connect(audioDestination);
+  creakSource.start(startTime);
+  creakSource.stop(startTime + creakDuration);
+
+  const latchOscillator = audioContext.createOscillator();
+  const latchGain = audioContext.createGain();
+
+  latchOscillator.type = "triangle";
+  latchOscillator.frequency.setValueAtTime(125, startTime);
+  latchOscillator.frequency.exponentialRampToValueAtTime(52, startTime + 0.14);
+  latchGain.gain.setValueAtTime(0.26, startTime);
+  latchGain.gain.exponentialRampToValueAtTime(0.0001, startTime + 0.14);
+  latchOscillator.connect(latchGain);
+  latchGain.connect(audioDestination);
+  latchOscillator.start(startTime);
+  latchOscillator.stop(startTime + 0.15);
 };
 
 /**  -------------------------- Scene setup -------------------------- */
@@ -178,11 +417,14 @@ const modals = {
 
 const overlay = document.querySelector(".overlay");
 
-let touchHappened = false;
+let hasTouchHappened = false;
+let touchStartPosition = null;
+let hasTouchMoved = false;
+const TOUCH_MOVE_THRESHOLD = 12;
 overlay.addEventListener(
   "touchend",
   (e) => {
-    touchHappened = true;
+    hasTouchHappened = true;
     e.preventDefault();
     const modal = document.querySelector('.modal[style*="display: block"]');
     if (modal) hideModal(modal);
@@ -193,7 +435,7 @@ overlay.addEventListener(
 overlay.addEventListener(
   "click",
   (e) => {
-    if (touchHappened) return;
+    if (hasTouchHappened) return;
     e.preventDefault();
     const modal = document.querySelector('.modal[style*="display: block"]');
     if (modal) hideModal(modal);
@@ -231,7 +473,7 @@ document.querySelectorAll(".modal-exit-button").forEach((button) => {
   button.addEventListener(
     "touchend",
     (e) => {
-      touchHappened = true;
+      hasTouchHappened = true;
       handleModalExit(e);
     },
     { passive: false }
@@ -240,7 +482,7 @@ document.querySelectorAll(".modal-exit-button").forEach((button) => {
   button.addEventListener(
     "click",
     (e) => {
-      if (touchHappened) return;
+      if (hasTouchHappened) return;
       handleModalExit(e);
     },
     { passive: false }
@@ -305,51 +547,143 @@ const hideModal = (modal) => {
   });
 };
 
+const storyModal = new StoryModal({
+  modalElement: document.querySelector(".modal.story"),
+  onOpen: showModal,
+  onClose: hideModal,
+  initialLanguage: currentLanguage,
+});
+
 /**  -------------------------- Loading Screen & Intro Animation -------------------------- */
 
 const manager = new THREE.LoadingManager();
 
 const loadingScreen = document.querySelector(".loading-screen");
 const loadingScreenButton = document.querySelector(".loading-screen-button");
-const noSoundButton = document.querySelector(".no-sound-button");
+const welcomeScreen = document.querySelector(".welcome-screen");
+const welcomeScreenGreeting = document.querySelector(
+  ".welcome-screen-greeting"
+);
+const welcomeScreenContent = document.querySelector(".welcome-screen-content");
+const welcomeScreenAccent = document.querySelector(".welcome-screen-accent");
+const leftDoorPanel = document.querySelector(".door-panel-left");
+const rightDoorPanel = document.querySelector(".door-panel-right");
+const languageToggleButton = document.querySelector(".language-toggle-button");
+let loadingScreenState = "loading";
+
+const translate = (key) => getTranslation(currentLanguage, key);
+
+const updateSoundControlLabels = () => {
+  const muteButton = document.querySelector(".mute-toggle-button");
+  const volumeSlider = document.querySelector(".volume-slider");
+  const volumeValue = document.querySelector(".volume-value");
+  const volumePercentage = Math.round(currentVolume * 100);
+
+  muteButton.setAttribute(
+    "aria-label",
+    translate(isMuted ? "controls.unmute" : "controls.mute")
+  );
+  muteButton.setAttribute("aria-pressed", String(isMuted));
+  volumeSlider.setAttribute(
+    "aria-valuetext",
+    translate("controls.volumeValue")(volumePercentage)
+  );
+  volumeValue.textContent = `${volumePercentage}%`;
+};
+
+const applyLanguage = (language) => {
+  if (!SUPPORTED_LANGUAGES.includes(language)) return;
+
+  currentLanguage = language;
+  document.documentElement.lang = language;
+  document.body.dataset.language = language;
+  document.title = translate("meta.title");
+
+  document
+    .querySelector('meta[name="description"]')
+    .setAttribute("content", translate("meta.description"));
+  document
+    .querySelector('meta[property="og:title"]')
+    .setAttribute("content", translate("meta.title"));
+  document
+    .querySelector('meta[property="og:description"]')
+    .setAttribute("content", translate("meta.openGraphDescription"));
+
+  document.querySelectorAll("[data-i18n]").forEach((element) => {
+    const translatedValue = translate(element.dataset.i18n);
+    if (typeof translatedValue === "string") {
+      element.textContent = translatedValue;
+    }
+  });
+
+  document.querySelectorAll("[data-i18n-aria-label]").forEach((element) => {
+    const translatedValue = translate(element.dataset.i18nAriaLabel);
+    if (typeof translatedValue === "string") {
+      element.setAttribute("aria-label", translatedValue);
+    }
+  });
+
+  const loadingTranslationKey = {
+    loading: "loading.loading",
+    ready: "loading.enter",
+    welcome: "loading.welcome",
+  }[loadingScreenState];
+
+  if (loadingScreenButton.isConnected) {
+    loadingScreenButton.textContent = translate(loadingTranslationKey);
+  }
+
+  storyModal.setLanguage(language);
+  updateSoundControlLabels();
+
+  const languageUrl = new URL(window.location.href);
+  languageUrl.searchParams.set("lang", language);
+  window.history.replaceState({}, "", languageUrl);
+
+};
+
+languageToggleButton.addEventListener("click", () => {
+  applyLanguage(currentLanguage === "en" ? "vi" : "en");
+  buttonSounds.click.play();
+});
+
+applyLanguage(currentLanguage);
 
 manager.onLoad = function () {
+  loadingScreenState = "ready";
   loadingScreenButton.style.border = "8px solid #2a0f4e";
   loadingScreenButton.style.background = "#401d49";
   loadingScreenButton.style.color = "#e6dede";
   loadingScreenButton.style.boxShadow = "rgba(0, 0, 0, 0.24) 0px 3px 8px";
-  loadingScreenButton.textContent = "Enter!";
+  loadingScreenButton.textContent = translate("loading.enter");
   loadingScreenButton.style.cursor = "pointer";
   loadingScreenButton.style.transition =
     "transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)";
   let isDisabled = false;
 
-  noSoundButton.textContent = "Enter without Sound :(";
-
-  function handleEnter(withSound = true) {
+  function handleEnter() {
     if (isDisabled) return;
 
-    noSoundButton.textContent = "";
+    loadingScreenState = "welcome";
+    hasEnteredRoom = true;
     loadingScreenButton.style.cursor = "default";
     loadingScreenButton.style.border = "8px solid #6e5e9c";
     loadingScreenButton.style.background = "#ead7ef";
     loadingScreenButton.style.color = "#6e5e9c";
     loadingScreenButton.style.boxShadow = "none";
-    loadingScreenButton.textContent = "~ 안녕하세요 ~";
+    loadingScreenButton.textContent = translate("loading.welcome");
     loadingScreen.style.background = "#ead7ef";
     isDisabled = true;
 
+    prepareWelcomeScreen();
+
     toggleFavicons();
 
-    if (!withSound) {
-      isMuted = true;
-      updateMuteState(true);
-
-      soundOnSvg.style.display = "none";
-      soundOffSvg.style.display = "block";
-    } else {
-      backgroundMusic.play();
+    if (Howler.ctx?.state === "suspended") {
+      Howler.ctx.resume();
     }
+    backgroundMusic.volume(INTRO_DOOR_MUSIC_VOLUME);
+    backgroundMusic.play();
 
     playReveal();
   }
@@ -359,49 +693,199 @@ manager.onLoad = function () {
   });
 
   loadingScreenButton.addEventListener("touchend", (e) => {
-    touchHappened = true;
+    hasTouchHappened = true;
     e.preventDefault();
     handleEnter();
   });
 
   loadingScreenButton.addEventListener("click", (e) => {
-    if (touchHappened) return;
-    handleEnter(true);
+    if (hasTouchHappened) return;
+    handleEnter();
   });
 
   loadingScreenButton.addEventListener("mouseleave", () => {
     loadingScreenButton.style.transform = "none";
   });
-
-  noSoundButton.addEventListener("click", (e) => {
-    if (touchHappened) return;
-    handleEnter(false);
-  });
 };
 
 function playReveal() {
-  const tl = gsap.timeline();
-
-  tl.to(loadingScreen, {
-    scale: 0.5,
-    duration: 1.2,
-    delay: 0.25,
-    ease: "back.in(1.8)",
-  }).to(
-    loadingScreen,
-    {
-      y: "200vh",
-      transform: "perspective(1000px) rotateX(45deg) rotateY(-35deg)",
-      duration: 1.2,
-      ease: "back.in(1.8)",
-      onComplete: () => {
-        isModalOpen = false;
-        playIntroAnimation();
-        loadingScreen.remove();
-      },
+  gsap.to(loadingScreen, {
+    opacity: 0,
+    scale: 0.995,
+    duration: 0.25,
+    ease: "power2.inOut",
+    onComplete: () => {
+      loadingScreen.remove();
+      playWelcomeSequence();
     },
-    "-=0.1"
+  });
+}
+
+function renderWelcomeLetters() {
+  const greeting = welcomeScreenGreeting.textContent.trim();
+  const segmenter =
+    typeof Intl.Segmenter === "function"
+      ? new Intl.Segmenter(undefined, { granularity: "grapheme" })
+      : null;
+  const characters = segmenter
+    ? Array.from(segmenter.segment(greeting), ({ segment }) => segment)
+    : Array.from(greeting);
+  const letterFragment = document.createDocumentFragment();
+
+  welcomeScreenGreeting.setAttribute("aria-label", greeting);
+
+  characters.forEach((character) => {
+    const letter = document.createElement("span");
+    letter.className = "welcome-letter";
+    letter.setAttribute("aria-hidden", "true");
+    letter.textContent = character === " " ? "\u00a0" : character;
+    letterFragment.append(letter);
+  });
+
+  welcomeScreenGreeting.replaceChildren(letterFragment);
+  return welcomeScreenGreeting.querySelectorAll(".welcome-letter");
+}
+
+function prepareWelcomeScreen() {
+  welcomeScreen.style.display = "grid";
+  welcomeScreen.setAttribute("aria-hidden", "false");
+
+  const welcomeLetters = renderWelcomeLetters();
+
+  gsap.set(welcomeScreen, { opacity: 1 });
+  gsap.set(welcomeScreenContent, {
+    opacity: 1,
+    x: 0,
+    xPercent: 0,
+    y: 0,
+    scale: 1,
+    rotation: 0,
+    rotationY: 0,
+  });
+  gsap.set([leftDoorPanel, rightDoorPanel], {
+    rotationY: 0,
+  });
+  gsap.set(welcomeLetters, {
+    opacity: 0,
+    y: 10,
+    rotation: -2,
+    filter: "blur(3px)",
+  });
+  gsap.set(welcomeScreenAccent, {
+    opacity: 0,
+    scaleX: 0,
+  });
+}
+
+function playWelcomeSequence() {
+  const shouldReduceMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  const finishWelcome = () => {
+    welcomeScreen.setAttribute("aria-hidden", "true");
+    welcomeScreen.style.display = "none";
+    isModalOpen = false;
+    playIntroAnimation();
+  };
+
+  const welcomeLetters = welcomeScreenGreeting.querySelectorAll(
+    ".welcome-letter"
   );
+
+  if (shouldReduceMotion) {
+    gsap
+      .timeline({ onComplete: finishWelcome })
+      .addLabel("door-open")
+      .call(playDoorOpenSound, [], "door-open")
+      .to(
+        leftDoorPanel,
+        { rotationY: -78, duration: 0.4, ease: "power1.inOut" },
+        "door-open"
+      )
+      .to(
+        rightDoorPanel,
+        { rotationY: 78, duration: 0.4, ease: "power1.inOut" },
+        "door-open"
+      )
+      .set(welcomeLetters, {
+        opacity: 1,
+        y: 0,
+        filter: "blur(0px)",
+        rotation: 0,
+      })
+      .set(welcomeScreenAccent, { opacity: 1, scaleX: 1 })
+      .call(restoreBackgroundMusicAfterDoor)
+      .call(playPageFlipSound, [], "+=0.65")
+      .to(welcomeScreenContent, {
+        opacity: 0,
+        rotationY: -65,
+        duration: 0.2,
+      });
+    return;
+  }
+
+  const welcomeTimeline = gsap.timeline({ onComplete: finishWelcome });
+
+  welcomeTimeline
+    .addLabel("door-open")
+    .call(playDoorOpenSound, [], "door-open")
+    .to(
+      leftDoorPanel,
+      {
+        rotationY: -88,
+        duration: 1.2,
+        ease: "power3.inOut",
+      },
+      "door-open"
+    )
+    .to(
+      rightDoorPanel,
+      {
+        rotationY: 88,
+        duration: 1.2,
+        ease: "power3.inOut",
+      },
+      "door-open"
+    )
+    .addLabel("handwriting")
+    .call(restoreBackgroundMusicAfterDoor, [], "handwriting")
+    .call(
+      playHandwritingSound,
+      [HANDWRITING_SOUND_DURATION],
+      "handwriting"
+    )
+    .to(
+      welcomeLetters,
+      {
+        opacity: 1,
+        y: 0,
+        filter: "blur(0px)",
+        rotation: 0,
+        duration: 0.5,
+        stagger: HANDWRITING_LETTER_STAGGER,
+        ease: "power2.out",
+      },
+      "handwriting"
+    )
+    .to(
+      welcomeScreenAccent,
+      {
+        opacity: 1,
+        scaleX: 1,
+        duration: 0.65,
+        ease: "power2.out",
+      },
+      "-=0.25"
+    )
+    .call(playPageFlipSound, [], "+=0.4")
+    .to(welcomeScreenContent, {
+      opacity: 0,
+      xPercent: -8,
+      rotationY: -105,
+      duration: 0.9,
+      ease: "power2.inOut",
+    });
 }
 
 function playIntroAnimation() {
@@ -1036,20 +1520,20 @@ const environmentMap = new THREE.CubeTextureLoader()
 
 const textureMap = {
   First: {
-    day: "/textures/room/day/first_texture_set_day.webp",
-    night: "/textures/room/night/first_texture_set_night.webp",
+    day: "/textures/room/day/first-texture-set-day.webp",
+    night: "/textures/room/night/first-texture-set-night.webp",
   },
   Second: {
-    day: "/textures/room/day/second_texture_set_day.webp",
-    night: "/textures/room/night/second_texture_set_night.webp",
+    day: "/textures/room/day/second-texture-set-day.webp",
+    night: "/textures/room/night/second-texture-set-night.webp",
   },
   Third: {
-    day: "/textures/room/day/third_texture_set_day.webp",
-    night: "/textures/room/night/third_texture_set_night.webp",
+    day: "/textures/room/day/third-texture-set-day.webp",
+    night: "/textures/room/night/third-texture-set-night.webp",
   },
   Fourth: {
-    day: "/textures/room/day/fourth_texture_set_day.webp",
-    night: "/textures/room/night/fourth_texture_set_night.webp",
+    day: "/textures/room/day/fourth-texture-set-day.webp",
+    night: "/textures/room/night/fourth-texture-set-night.webp",
   },
 };
 
@@ -1157,7 +1641,7 @@ smoke.position.y = 1.83;
 scene.add(smoke);
 
 const videoElement = document.createElement("video");
-videoElement.src = "/textures/video/Screen.mp4";
+videoElement.src = "/textures/video/screen.mp4";
 videoElement.loop = true;
 videoElement.muted = true;
 videoElement.playsInline = true;
@@ -1299,7 +1783,7 @@ function hasIntroAnimation(objectName) {
   );
 }
 
-loader.load("/models/My_Room.glb", (glb) => {
+loader.load("/models/my-room.glb", (glb) => {
   glb.scene.traverse((child) => {
     if (child.isMesh) {
       if (child.name.includes("Fish_Fourth")) {
@@ -1530,9 +2014,7 @@ let currentIntersects = [];
 let currentHoveredObject = null;
 
 const socialLinks = {
-  GitHub: "https://github.com/andrewwoan/sooahkimsfolio",
-  YouTube: "https://youtu.be/AB6sulUMRGE",
-  Twitter: "https://www.twitter.com/",
+  GitHub: "https://github.com/hiepdeptrai321",
 };
 
 const raycaster = new THREE.Raycaster();
@@ -1645,6 +2127,14 @@ function createDelayedHitboxes() {
   objectsNeedingHitboxes.length = 0;
 }
 
+function isStoryTriggerObject(objectName) {
+  return (
+    objectName.includes("Story_English") ||
+    objectName.includes("Headphones") ||
+    objectName.includes("Microphone")
+  );
+}
+
 function handleRaycasterInteraction() {
   if (currentIntersects.length > 0) {
     const hitbox = currentIntersects[0].object;
@@ -1692,6 +2182,11 @@ function handleRaycasterInteraction() {
         newWindow.rel = "noopener noreferrer";
       }
     });
+
+    if (isStoryTriggerObject(object.name)) {
+      storyModal.open("storyEnglish");
+      return;
+    }
 
     if (object.name.includes("Work_Button")) {
       showModal(modals.work);
@@ -1807,85 +2302,114 @@ function playHoverAnimation(objectHitbox, isHovering) {
   }
 }
 
-window.addEventListener("mousemove", (e) => {
-  touchHappened = false;
+canvas.addEventListener("mousemove", (e) => {
+  hasTouchHappened = false;
   pointer.x = (e.clientX / sizes.width) * 2 - 1;
   pointer.y = -(e.clientY / sizes.height) * 2 + 1;
 });
 
-window.addEventListener(
+canvas.addEventListener(
   "touchstart",
   (e) => {
     if (isModalOpen) return;
     e.preventDefault();
-    pointer.x = (e.touches[0].clientX / sizes.width) * 2 - 1;
-    pointer.y = -(e.touches[0].clientY / sizes.height) * 2 + 1;
+    const touch = e.touches[0];
+    touchStartPosition = { x: touch.clientX, y: touch.clientY };
+    hasTouchMoved = false;
+    pointer.x = (touch.clientX / sizes.width) * 2 - 1;
+    pointer.y = -(touch.clientY / sizes.height) * 2 + 1;
   },
   { passive: false }
 );
 
-window.addEventListener(
+canvas.addEventListener(
+  "touchmove",
+  (e) => {
+    if (isModalOpen || !touchStartPosition) return;
+    const touch = e.touches[0];
+    const moveX = Math.abs(touch.clientX - touchStartPosition.x);
+    const moveY = Math.abs(touch.clientY - touchStartPosition.y);
+
+    if (moveX > TOUCH_MOVE_THRESHOLD || moveY > TOUCH_MOVE_THRESHOLD) {
+      hasTouchMoved = true;
+    }
+  },
+  { passive: true }
+);
+
+canvas.addEventListener(
   "touchend",
   (e) => {
     if (isModalOpen) return;
+
+    const shouldIgnoreTap = hasTouchMoved || !touchStartPosition;
+    touchStartPosition = null;
+    hasTouchMoved = false;
+
+    if (shouldIgnoreTap) return;
+
     e.preventDefault();
     handleRaycasterInteraction();
   },
   { passive: false }
 );
 
-window.addEventListener("click", handleRaycasterInteraction);
+canvas.addEventListener("click", handleRaycasterInteraction);
+window.addEventListener("keydown", (event) => {
+  if (event.key !== "Escape") return;
+
+  const modal = document.querySelector('.modal[style*="display: block"]');
+  if (modal) hideModal(modal);
+});
 
 // Other Event Listeners
 const themeToggleButton = document.querySelector(".theme-toggle-button");
+const audioControls = document.querySelector(".audio-controls");
 const muteToggleButton = document.querySelector(".mute-toggle-button");
+const volumeSlider = document.querySelector(".volume-slider");
 const sunSvg = document.querySelector(".sun-svg");
 const moonSvg = document.querySelector(".moon-svg");
 const soundOffSvg = document.querySelector(".sound-off-svg");
 const soundOnSvg = document.querySelector(".sound-on-svg");
 
-const updateMuteState = (muted) => {
-  if (muted) {
-    backgroundMusic.volume(0);
-  } else {
-    backgroundMusic.volume(BACKGROUND_MUSIC_VOLUME);
-  }
+const updateSoundIcon = () => {
+  soundOnSvg.style.display = isMuted ? "none" : "block";
+  soundOffSvg.style.display = isMuted ? "block" : "none";
+};
 
-  buttonSounds.click.mute(muted);
-  Object.values(pianoSounds).forEach((sound) => {
-    sound.mute(muted);
-  });
+const updateMuteState = (muted) => {
+  Howler.mute(muted);
+  updateSoundIcon();
+  updateSoundControlLabels();
 };
 
 const handleMuteToggle = (e) => {
   e.preventDefault();
 
+  if (isMuted && currentVolume === 0) {
+    currentVolume = lastAudibleVolume;
+    Howler.volume(currentVolume);
+    volumeSlider.value = currentVolume;
+  }
+
   isMuted = !isMuted;
   updateMuteState(isMuted);
   buttonSounds.click.play();
 
-  if (!backgroundMusic.playing()) {
+  if (!isMuted && hasEnteredRoom && !backgroundMusic.playing()) {
     backgroundMusic.play();
   }
 
   gsap.to(muteToggleButton, {
-    rotate: -45,
-    scale: 5,
-    duration: 0.5,
+    rotate: -12,
+    scale: 1.15,
+    duration: 0.2,
     ease: "back.out(2)",
     onStart: () => {
-      if (!isMuted) {
-        soundOffSvg.style.display = "none";
-        soundOnSvg.style.display = "block";
-      } else {
-        soundOnSvg.style.display = "none";
-        soundOffSvg.style.display = "block";
-      }
-
       gsap.to(muteToggleButton, {
         rotate: 0,
         scale: 1,
-        duration: 0.5,
+        duration: 0.25,
         ease: "back.out(2)",
         onComplete: () => {
           gsap.set(muteToggleButton, {
@@ -1897,24 +2421,54 @@ const handleMuteToggle = (e) => {
   });
 };
 
-let isMuted = false;
 muteToggleButton.addEventListener(
   "click",
   (e) => {
-    if (touchHappened) return;
+    if (hasTouchHappened) return;
     handleMuteToggle(e);
   },
   { passive: false }
 );
 
+volumeSlider.addEventListener("input", (event) => {
+  currentVolume = Number(event.target.value);
+  Howler.volume(currentVolume);
+
+  if (currentVolume > 0) {
+    lastAudibleVolume = currentVolume;
+    isMuted = false;
+    Howler.mute(false);
+
+    if (hasEnteredRoom && !backgroundMusic.playing()) {
+      backgroundMusic.play();
+    }
+  } else {
+    isMuted = true;
+    Howler.mute(true);
+  }
+
+  updateSoundIcon();
+  updateSoundControlLabels();
+});
+
 muteToggleButton.addEventListener(
   "touchend",
   (e) => {
-    touchHappened = true;
+    hasTouchHappened = true;
+    audioControls.classList.toggle("is-volume-open");
     handleMuteToggle(e);
   },
   { passive: false }
 );
+
+document.addEventListener("pointerdown", (event) => {
+  if (
+    event.pointerType !== "mouse" &&
+    !audioControls.contains(event.target)
+  ) {
+    audioControls.classList.remove("is-volume-open");
+  }
+});
 
 // Themeing stuff
 const toggleFavicons = () => {
@@ -1992,7 +2546,7 @@ const handleThemeToggle = (e) => {
 themeToggleButton.addEventListener(
   "click",
   (e) => {
-    if (touchHappened) return;
+    if (hasTouchHappened) return;
     handleThemeToggle(e);
   },
   { passive: false }
@@ -2001,7 +2555,7 @@ themeToggleButton.addEventListener(
 themeToggleButton.addEventListener(
   "touchend",
   (e) => {
-    touchHappened = true;
+    hasTouchHappened = true;
     handleThemeToggle(e);
   },
   { passive: false }
