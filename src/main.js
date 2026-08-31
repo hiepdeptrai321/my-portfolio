@@ -1299,7 +1299,7 @@ function hasIntroAnimation(objectName) {
   );
 }
 
-loader.load("/models/Room_Portfolio.glb", (glb) => {
+loader.load("/models/My_Room.glb", (glb) => {
   glb.scene.traverse((child) => {
     if (child.isMesh) {
       if (child.name.includes("Fish_Fourth")) {
