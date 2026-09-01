@@ -15,7 +15,7 @@ export const translations = {
       welcome: "~ Opening ~",
     },
     welcome: {
-      greeting: "Hello, I'm Hiệp",
+      greeting: "Hello, I’m Hiệp.",
     },
     controls: {
       group: "Website controls",
@@ -73,6 +73,7 @@ export const translations = {
         "The interactive room needs WebGL. You can still read the full story below.",
       title: "Hi, I'm Jason.",
       skip: "Skip the room",
+      backToRoom: "Back to my room",
       noScript:
         "JavaScript is unavailable, but the full story is still available below.",
     },
@@ -129,7 +130,7 @@ export const translations = {
       welcome: "~ Đang mở ~",
     },
     welcome: {
-      greeting: "Hello, I'm Hiệp",
+      greeting: "Hello, I’m Hiệp.",
     },
     controls: {
       group: "Điều khiển website",
@@ -187,6 +188,7 @@ export const translations = {
         "Căn phòng tương tác cần WebGL. Bạn vẫn có thể đọc toàn bộ câu chuyện ở bên dưới.",
       title: "Xin chào, mình là Hiệp.",
       skip: "Bỏ qua căn phòng",
+      backToRoom: "Trở lại căn phòng",
       noScript:
         "JavaScript hiện không khả dụng, nhưng toàn bộ câu chuyện vẫn nằm ở bên dưới.",
     },
