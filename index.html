@@ -28,6 +28,13 @@
   </head>
   <body class="light-theme" data-language="en">
 
+    <div class="ambient-background" aria-hidden="true">
+      <div class="ambient-sky ambient-sky-sunny"></div>
+      <div class="ambient-sky ambient-sky-rainy"></div>
+      <div class="ambient-sky ambient-sky-night"></div>
+      <canvas class="ambient-background-canvas"></canvas>
+    </div>
+
     <div class="loading-screen">
       <button class="loading-screen-button" type="button" data-i18n="loading.loading">
         Loading...
@@ -43,7 +50,7 @@
       </div>
       <div class="welcome-screen-content" role="status" aria-live="polite">
         <p class="welcome-screen-greeting" data-i18n="welcome.greeting">
-          Hello, I'm Hiệp
+          Hello, I’m Hiệp.
         </p>
         <span class="welcome-screen-accent" aria-hidden="true"></span>
       </div>
@@ -473,7 +480,7 @@
     </div>
 
     <main>
-      <section class="room-hero" aria-labelledby="room-hero-title">
+      <section id="room" class="room-hero" aria-labelledby="room-hero-title">
         <div id="experience">
           <canvas id="experience-canvas" class="experience-canvas" data-i18n="hero.canvasFallback">
             The interactive room needs WebGL. You can still read the full story below.
@@ -489,6 +496,16 @@
           </p>
         </noscript>
       </section>
+
+      <a
+        class="back-to-room-link"
+        href="#room"
+        data-i18n="hero.backToRoom"
+        aria-hidden="true"
+        tabindex="-1"
+      >
+        Back to my room
+      </a>
 
       <div id="main-content" class="story-content">
         <section id="about-me" class="story-section" aria-labelledby="about-me-title">

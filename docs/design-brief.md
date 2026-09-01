@@ -146,6 +146,10 @@ Nếu giữ day/night mode:
 
 - Day: trắng, xanh sáng và ánh sáng dịu.
 - Night: navy đậm, xanh lạnh và ánh sáng trắng xanh.
+- Ambient background của day mode chọn ngẫu nhiên giữa bầu trời mùa hè có nắng và một cơn mưa mùa hè có ánh sáng ấm; lựa chọn được làm lại khi quay từ night về day.
+- Ambient background của night mode dùng nền gần đen với sao nhấp nháy và một vài sao băng thưa, không mang cảm giác neon hoặc cyberpunk.
+- Nền động phải nằm ngoài Three.js engine, không chặn tương tác và dùng lớp nền nội dung bán trong suốt để chữ giữ màu gốc, rõ ràng. Khi tab bị ẩn hoặc bật `prefers-reduced-motion`, animation phải dừng hoặc chuyển sang trạng thái tĩnh.
+- Trong night mode, chữ và icon của các nút hoặc link có hình thức như control dùng màu trắng, kết hợp glow xanh-trắng nhẹ như ánh đèn; glow không được mạnh đến mức làm giảm khả năng đọc. Khi chuyển day/night, màu nền, viền, chữ, icon và glow đổi mượt trong khoảng `350ms` và tôn trọng `prefers-reduced-motion`.
 - Hai mode phải giữ cùng một visual identity.
 
 ## 7. Phong cách giao diện
@@ -183,10 +187,10 @@ Phải hỗ trợ:
 ## 9. Cấu trúc website
 
 1. Loading screen ngắn; sau khi tải xong chỉ hiển thị một nút vào phòng. Âm thanh bắt đầu sau thao tác này và có thể điều chỉnh hoặc tắt trong phòng.
-2. Sau khi chọn `Enter the room`, hai cánh cửa mở cùng tiếng cửa. Tiếp theo opening full-screen hiển thị `Hello, I'm Hiệp` ở chính giữa bằng animation viết tay có tiếng bút theo từng nét; toàn bộ opening lật đi như một trang giấy kèm tiếng giấy rồi mới bắt đầu intro của căn phòng. Font opening phải hỗ trợ đầy đủ ký tự tiếng Việt. Hiệu ứng hỗ trợ `prefers-reduced-motion`; các SFX đều tuân theo trạng thái mute và âm lượng chung.
+2. Sau khi chọn `Enter the room`, hai cánh cửa mở đối xứng cùng tiếng cửa. Khi cửa gần mở xong, opening full-screen hiển thị chính xác `Hello, I’m Hiệp.` ở chính giữa bằng font self-hosted Patrick Hand có hỗ trợ Vietnamese/Latin Extended và phát `/audio/sfx/writing.mp3` ở mức tăng cường trong đúng `2.3s` của animation viết tay. Sau một khoảng giữ ngắn, toàn bộ opening bay lên lệch sang một bên trong `2.0s`, kết hợp xoay nhẹ theo các trục, scale nhẹ; `/audio/sfx/paperflutter.mp3` được kích hoạt sớm hơn chuyển động `0.5s` để bù độ trễ đầu file. Overlay chỉ ẩn sau khi chuyển động kết thúc. Hiệu ứng hỗ trợ `prefers-reduced-motion`; các SFX đều tuân theo trạng thái mute và âm lượng chung.
 3. Hero với căn phòng 3D; không giữ lời chào lớn cố định trên hero.
 4. Tạm thời không hiển thị câu hướng dẫn interaction trên hero để giao diện ít chữ hơn.
-5. Link `Skip the room` ở góc dưới bên phải, đưa người xem tới nội dung chính và dùng cùng ngôn ngữ thiết kế với cụm điều khiển phía trên.
+5. Link `Skip the room` ở góc dưới bên phải, đưa người xem tới nội dung chính và dùng cùng ngôn ngữ thiết kế với cụm điều khiển phía trên. Khi người xem đã cuộn qua căn phòng, thay link này bằng `Back to my room` tại cùng vị trí; ba control ngôn ngữ, âm thanh và day/night vẫn cố định ở góc phải phía trên.
 6. Generic story modal.
 7. About Me.
 8. My Journey.

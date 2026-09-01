@@ -11,13 +11,20 @@ import smokeVertexShader from "./shaders/smoke/vertex.glsl";
 import smokeFragmentShader from "./shaders/smoke/fragment.glsl";
 import themeVertexShader from "./shaders/theme/vertex.glsl";
 import themeFragmentShader from "./shaders/theme/fragment.glsl";
+import treeVertexShader from "./shaders/tree/vertex.glsl";
+import treeFragmentShader from "./shaders/tree/fragment.glsl";
 
 import { StoryModal } from "./components/story-modal.js";
+import { AmbientBackground } from "./components/ambient-background.js";
 import {
   getInitialLanguage,
   getTranslation,
   SUPPORTED_LANGUAGES,
 } from "./data/translations.js";
+
+const ambientBackground = new AmbientBackground({
+  canvas: document.querySelector(".ambient-background-canvas"),
+});
 
 /**  -------------------------- Audio setup -------------------------- */
 
@@ -29,10 +36,16 @@ const PIANO_TIMEOUT = 2000;
 const BACKGROUND_MUSIC_VOLUME = 1;
 const FADED_VOLUME = 0;
 const DEFAULT_VOLUME = 0.4;
-const HANDWRITING_SOUND_DURATION = 2.2;
+const HANDWRITING_ANIMATION_DURATION = 2.3;
 const HANDWRITING_LETTER_STAGGER = 0.12;
+const HANDWRITING_TIMING_VARIATION = [0, 0.018, -0.008, 0.012, -0.014];
+const HANDWRITING_START_Y = [8, 11, 7, 10, 9];
+const HANDWRITING_START_ROTATION = [-2.2, 1.1, -0.8, 1.6, -1.2];
 const INTRO_DOOR_MUSIC_VOLUME = 0.22;
+const INTRO_WRITING_MUSIC_VOLUME = 0.35;
 const INTRO_MUSIC_FADE_TIME = 650;
+const PAPER_EXIT_DURATION = 2;
+const PAPER_EXIT_LIFT_DURATION = 0.35;
 
 let currentLanguage = getInitialLanguage();
 let currentVolume = DEFAULT_VOLUME;
@@ -70,7 +83,17 @@ const fadeInBackgroundMusic = () => {
   }
 };
 
-const restoreBackgroundMusicAfterDoor = () => {
+const setBackgroundMusicForWriting = () => {
+  if (!isMuted) {
+    backgroundMusic.fade(
+      backgroundMusic.volume(),
+      INTRO_WRITING_MUSIC_VOLUME,
+      INTRO_MUSIC_FADE_TIME
+    );
+  }
+};
+
+const restoreBackgroundMusicAfterIntro = () => {
   if (!isMuted) {
     backgroundMusic.fade(
       backgroundMusic.volume(),
@@ -127,140 +150,29 @@ const buttonSounds = {
   }),
 };
 
-const playHandwritingSound = (duration = HANDWRITING_SOUND_DURATION) => {
-  const audioContext = Howler.ctx;
-  const audioDestination = Howler.masterGain;
-
-  if (
-    isMuted ||
-    currentVolume <= 0 ||
-    !audioContext ||
-    !audioDestination
-  ) {
-    return;
-  }
-
-  const startTime = audioContext.currentTime;
-  const sampleCount = Math.floor(audioContext.sampleRate * duration);
-  const scratchBuffer = audioContext.createBuffer(
-    1,
-    sampleCount,
-    audioContext.sampleRate
-  );
-  const scratchData = scratchBuffer.getChannelData(0);
-  let previousNoise = 0;
-
-  for (let sampleIndex = 0; sampleIndex < sampleCount; sampleIndex += 1) {
-    const elapsedTime = sampleIndex / audioContext.sampleRate;
-    const progress = sampleIndex / sampleCount;
-    const strokeProgress =
-      (elapsedTime % HANDWRITING_LETTER_STAGGER) /
-      HANDWRITING_LETTER_STAGGER;
-    const strokeEnvelope =
-      strokeProgress < 0.72
-        ? Math.sin((strokeProgress / 0.72) * Math.PI) ** 0.65
-        : 0;
-    const edgeFade = Math.min(progress * 20, (1 - progress) * 20, 1);
-    const rawNoise = Math.random() * 2 - 1;
-    const pencilGrain = rawNoise - previousNoise * 0.58;
-    const paperTexture =
-      0.72 + Math.sin(elapsedTime * Math.PI * 340) * 0.28;
-
-    previousNoise = rawNoise;
-    scratchData[sampleIndex] =
-      pencilGrain * strokeEnvelope * edgeFade * paperTexture;
-  }
-
-  const scratchSource = audioContext.createBufferSource();
-  const scratchHighPass = audioContext.createBiquadFilter();
-  const scratchLowPass = audioContext.createBiquadFilter();
-  const scratchGain = audioContext.createGain();
-
-  scratchSource.buffer = scratchBuffer;
-  scratchHighPass.type = "highpass";
-  scratchHighPass.frequency.value = 850;
-  scratchHighPass.Q.value = 0.5;
-  scratchLowPass.type = "lowpass";
-  scratchLowPass.frequency.value = 4800;
-  scratchLowPass.Q.value = 0.7;
-  scratchGain.gain.setValueAtTime(0.0001, startTime);
-  scratchGain.gain.exponentialRampToValueAtTime(0.085, startTime + 0.04);
-  scratchGain.gain.setValueAtTime(0.085, startTime + duration - 0.08);
-  scratchGain.gain.exponentialRampToValueAtTime(
-    0.0001,
-    startTime + duration
-  );
-
-  scratchSource.connect(scratchHighPass);
-  scratchHighPass.connect(scratchLowPass);
-  scratchLowPass.connect(scratchGain);
-  scratchGain.connect(audioDestination);
-  scratchSource.start(startTime);
-  scratchSource.stop(startTime + duration);
+const introSounds = {
+  writing: new Howl({
+    src: ["/audio/sfx/writing.mp3"],
+    preload: true,
+    volume: 0.85,
+    sprite: {
+      opening: [0, HANDWRITING_ANIMATION_DURATION * 1000],
+    },
+  }),
+  paperFlutter: new Howl({
+    src: ["/audio/sfx/paperflutter.mp3"],
+    preload: true,
+    volume: 0.9,
+  }),
 };
 
-const playPageFlipSound = () => {
-  const audioContext = Howler.ctx;
-  const audioDestination = Howler.masterGain;
+const playHelloWritingSound = () => {
+  introSounds.writing.play("opening");
+  introSounds.writing.play("opening");
+};
 
-  if (
-    isMuted ||
-    currentVolume <= 0 ||
-    !audioContext ||
-    !audioDestination
-  ) {
-    return;
-  }
-
-  const startTime = audioContext.currentTime;
-  const flipDuration = 0.82;
-  const sampleCount = Math.floor(audioContext.sampleRate * flipDuration);
-  const flipBuffer = audioContext.createBuffer(
-    1,
-    sampleCount,
-    audioContext.sampleRate
-  );
-  const flipData = flipBuffer.getChannelData(0);
-  let smoothedNoise = 0;
-
-  for (let sampleIndex = 0; sampleIndex < sampleCount; sampleIndex += 1) {
-    const progress = sampleIndex / sampleCount;
-    const rawNoise = Math.random() * 2 - 1;
-    const flipEnvelope = Math.sin(progress * Math.PI) ** 0.8;
-    const paperFlutter = 0.55 + Math.abs(Math.sin(progress * 18 * Math.PI)) * 0.45;
-
-    smoothedNoise = smoothedNoise * 0.34 + rawNoise * 0.66;
-    flipData[sampleIndex] = smoothedNoise * flipEnvelope * paperFlutter;
-  }
-
-  const flipSource = audioContext.createBufferSource();
-  const flipHighPass = audioContext.createBiquadFilter();
-  const flipLowPass = audioContext.createBiquadFilter();
-  const flipGain = audioContext.createGain();
-
-  flipSource.buffer = flipBuffer;
-  flipSource.playbackRate.setValueAtTime(0.9, startTime);
-  flipSource.playbackRate.exponentialRampToValueAtTime(
-    1.3,
-    startTime + flipDuration
-  );
-  flipHighPass.type = "highpass";
-  flipHighPass.frequency.value = 620;
-  flipLowPass.type = "lowpass";
-  flipLowPass.frequency.value = 5800;
-  flipGain.gain.setValueAtTime(0.0001, startTime);
-  flipGain.gain.exponentialRampToValueAtTime(0.16, startTime + 0.12);
-  flipGain.gain.exponentialRampToValueAtTime(
-    0.0001,
-    startTime + flipDuration
-  );
-
-  flipSource.connect(flipHighPass);
-  flipHighPass.connect(flipLowPass);
-  flipLowPass.connect(flipGain);
-  flipGain.connect(audioDestination);
-  flipSource.start(startTime);
-  flipSource.stop(startTime + flipDuration);
+const playPaperExitSound = () => {
+  introSounds.paperFlutter.play();
 };
 
 const playDoorOpenSound = () => {
@@ -344,7 +256,7 @@ const sizes = {
 };
 
 const scene = new THREE.Scene();
-scene.background = new THREE.Color("#D9CAD1");
+scene.background = new THREE.Color("#DCE2DE");
 
 const camera = new THREE.PerspectiveCamera(
   35,
@@ -651,9 +563,9 @@ applyLanguage(currentLanguage);
 
 manager.onLoad = function () {
   loadingScreenState = "ready";
-  loadingScreenButton.style.border = "8px solid #2a0f4e";
-  loadingScreenButton.style.background = "#401d49";
-  loadingScreenButton.style.color = "#e6dede";
+  loadingScreenButton.style.border = "8px solid #405D52";
+  loadingScreenButton.style.background = "#718E7A";
+  loadingScreenButton.style.color = "#F1E9DE";
   loadingScreenButton.style.boxShadow = "rgba(0, 0, 0, 0.24) 0px 3px 8px";
   loadingScreenButton.textContent = translate("loading.enter");
   loadingScreenButton.style.cursor = "pointer";
@@ -667,12 +579,12 @@ manager.onLoad = function () {
     loadingScreenState = "welcome";
     hasEnteredRoom = true;
     loadingScreenButton.style.cursor = "default";
-    loadingScreenButton.style.border = "8px solid #6e5e9c";
-    loadingScreenButton.style.background = "#ead7ef";
-    loadingScreenButton.style.color = "#6e5e9c";
+    loadingScreenButton.style.border = "8px solid #718E7A";
+    loadingScreenButton.style.background = "#DCE2DE";
+    loadingScreenButton.style.color = "#405D52";
     loadingScreenButton.style.boxShadow = "none";
     loadingScreenButton.textContent = translate("loading.welcome");
-    loadingScreen.style.background = "#ead7ef";
+    loadingScreen.style.background = "#F1E9DE";
     isDisabled = true;
 
     prepareWelcomeScreen();
@@ -759,17 +671,26 @@ function prepareWelcomeScreen() {
     xPercent: 0,
     y: 0,
     scale: 1,
-    rotation: 0,
+    rotationX: 0,
     rotationY: 0,
+    rotationZ: 0,
   });
-  gsap.set([leftDoorPanel, rightDoorPanel], {
+  gsap.set(leftDoorPanel, {
     rotationY: 0,
+    transformOrigin: "left center",
+  });
+  gsap.set(rightDoorPanel, {
+    rotationY: 0,
+    transformOrigin: "right center",
   });
   gsap.set(welcomeLetters, {
     opacity: 0,
-    y: 10,
-    rotation: -2,
+    y: (index) => HANDWRITING_START_Y[index % HANDWRITING_START_Y.length],
+    rotation: (index) =>
+      HANDWRITING_START_ROTATION[index % HANDWRITING_START_ROTATION.length],
     filter: "blur(3px)",
+    clipPath: "inset(0 100% 0 0)",
+    transformOrigin: "left center",
   });
   gsap.set(welcomeScreenAccent, {
     opacity: 0,
@@ -786,6 +707,7 @@ function playWelcomeSequence() {
     welcomeScreen.setAttribute("aria-hidden", "true");
     welcomeScreen.style.display = "none";
     isModalOpen = false;
+    restoreBackgroundMusicAfterIntro();
     playIntroAnimation();
   };
 
@@ -815,13 +737,20 @@ function playWelcomeSequence() {
         rotation: 0,
       })
       .set(welcomeScreenAccent, { opacity: 1, scaleX: 1 })
-      .call(restoreBackgroundMusicAfterDoor)
-      .call(playPageFlipSound, [], "+=0.65")
-      .to(welcomeScreenContent, {
-        opacity: 0,
-        rotationY: -65,
-        duration: 0.2,
-      });
+      .call(setBackgroundMusicForWriting)
+      .addLabel("reduced-paper-exit", "+=0.65")
+      .call(playPaperExitSound, [], "reduced-paper-exit-=0.5")
+      .to(
+        welcomeScreenContent,
+        {
+          opacity: 0,
+          yPercent: -8,
+          rotationZ: 3,
+          duration: 0.35,
+          ease: "power1.inOut",
+        },
+        "reduced-paper-exit"
+      );
     return;
   }
 
@@ -848,13 +777,9 @@ function playWelcomeSequence() {
       },
       "door-open"
     )
-    .addLabel("handwriting")
-    .call(restoreBackgroundMusicAfterDoor, [], "handwriting")
-    .call(
-      playHandwritingSound,
-      [HANDWRITING_SOUND_DURATION],
-      "handwriting"
-    )
+    .addLabel("handwriting", "door-open+=0.95")
+    .call(setBackgroundMusicForWriting, [], "handwriting")
+    .call(playHelloWritingSound, [], "handwriting")
     .to(
       welcomeLetters,
       {
@@ -862,8 +787,13 @@ function playWelcomeSequence() {
         y: 0,
         filter: "blur(0px)",
         rotation: 0,
+        clipPath: "inset(0 0% 0 0)",
         duration: 0.5,
-        stagger: HANDWRITING_LETTER_STAGGER,
+        stagger: (index) =>
+          index * HANDWRITING_LETTER_STAGGER +
+          HANDWRITING_TIMING_VARIATION[
+            index % HANDWRITING_TIMING_VARIATION.length
+          ],
         ease: "power2.out",
       },
       "handwriting"
@@ -878,12 +808,31 @@ function playWelcomeSequence() {
       },
       "-=0.25"
     )
-    .call(playPageFlipSound, [], "+=0.4")
+    .addLabel("paper-exit", "+=0.4")
+    .call(playPaperExitSound, [], "paper-exit-=0.5")
+    .to(
+      welcomeScreenContent,
+      {
+        x: "-2vw",
+        y: "-2vh",
+        scale: 1.01,
+        rotationX: 2,
+        rotationY: -3,
+        rotationZ: -2,
+        duration: PAPER_EXIT_LIFT_DURATION,
+        ease: "sine.inOut",
+      },
+      "paper-exit"
+    )
     .to(welcomeScreenContent, {
       opacity: 0,
-      xPercent: -8,
-      rotationY: -105,
-      duration: 0.9,
+      x: "34vw",
+      y: "-118vh",
+      scale: 0.88,
+      rotationX: 9,
+      rotationY: -16,
+      rotationZ: 12,
+      duration: PAPER_EXIT_DURATION - PAPER_EXIT_LIFT_DURATION,
       ease: "power2.inOut",
     });
 }
@@ -1002,16 +951,20 @@ function playIntroAnimation() {
         z: 1,
       },
       "-=0.6"
-    )
-    .to(
-      twitter.scale,
+    );
+
+  if (facebook) {
+    t2.to(
+      facebook.scale,
       {
-        x: 1,
-        y: 1,
-        z: 1,
+        x: facebook.userData.initialScale.x,
+        y: facebook.userData.initialScale.y,
+        z: facebook.userData.initialScale.z,
+        onComplete: activateFacebookHitbox,
       },
       "-=0.6"
     );
+  }
 
   const tFlowers = gsap.timeline({
     defaults: {
@@ -1615,6 +1568,42 @@ const roomMaterials = {
   Fourth: createMaterialForTextureSet(4),
 };
 
+const outsideTreeMaterials = [];
+
+function createOutsideTreeMaterial(sourceMaterial) {
+  const dayColor =
+    sourceMaterial.color?.clone() ?? new THREE.Color(0xffffff);
+  const isLeaves = sourceMaterial.name === "Tree_Green";
+  const material = new THREE.ShaderMaterial({
+    uniforms: {
+      uDayColor: { value: dayColor },
+      uNightColor: { value: dayColor.clone().multiplyScalar(0.14) },
+      uThemeMix: { value: 0 },
+      uLightDirectionWorld: {
+        value: new THREE.Vector3(-0.42, 0.82, 0.39).normalize(),
+      },
+      uSkyTint: { value: new THREE.Color("#f1e4dc") },
+      uGroundTint: { value: new THREE.Color("#777986") },
+      uMorningSpecularColor: { value: new THREE.Color("#ffd3a1") },
+      uSpecularStrength: { value: isLeaves ? 0.18 : 0.1 },
+      uSpecularPower: { value: isLeaves ? 18 : 28 },
+      uOpacity: { value: sourceMaterial.opacity },
+    },
+    vertexShader: treeVertexShader,
+    fragmentShader: treeFragmentShader,
+    transparent: sourceMaterial.transparent,
+    side: sourceMaterial.side,
+    depthWrite: sourceMaterial.depthWrite,
+    depthTest: sourceMaterial.depthTest,
+    toneMapped: sourceMaterial.toneMapped,
+  });
+
+  material.name = sourceMaterial.name;
+  outsideTreeMaterials.push(material);
+
+  return material;
+}
+
 // Smoke Shader setup
 const smokeGeometry = new THREE.PlaneGeometry(1, 1, 16, 64);
 smokeGeometry.translate(0, 0.5, 0);
@@ -1671,6 +1660,10 @@ let plank1,
   github,
   youtube,
   twitter;
+
+let facebook;
+let facebookHitbox;
+let isFacebookHitboxActive = false;
 
 let letter1, letter2, letter3, letter4, letter5, letter6, letter7, letter8;
 
@@ -1783,9 +1776,13 @@ function hasIntroAnimation(objectName) {
   );
 }
 
-loader.load("/models/my-room.glb", (glb) => {
+loader.load("/models/room-main.glb", (glb) => {
   glb.scene.traverse((child) => {
     if (child.isMesh) {
+      if (child.name.includes("Twitter")) {
+        child.visible = false;
+      }
+
       if (child.name.includes("Fish_Fourth")) {
         fish = child;
         child.position.x += 0.04;
@@ -1974,7 +1971,10 @@ loader.load("/models/my-room.glb", (glb) => {
         });
       }
 
-      if (child.name.includes("Raycaster")) {
+      if (
+        child.name.includes("Raycaster") &&
+        !child.name.includes("Twitter")
+      ) {
         if (hasIntroAnimation(child.name)) {
           // Create a hitbox for object after intro is done playing,
           // Set an original scale first for the hitbox
@@ -2007,6 +2007,18 @@ loader.load("/models/my-room.glb", (glb) => {
   scene.add(glb.scene);
 });
 
+loader.load("/models/outside-tree.glb", (glb) => {
+  glb.scene.traverse((child) => {
+    if (!child.isMesh) return;
+
+    child.material = Array.isArray(child.material)
+      ? child.material.map(createOutsideTreeMaterial)
+      : createOutsideTreeMaterial(child.material);
+  });
+
+  scene.add(glb.scene);
+});
+
 /**  -------------------------- Raycaster setup -------------------------- */
 
 const raycasterObjects = [];
@@ -2015,6 +2027,7 @@ let currentHoveredObject = null;
 
 const socialLinks = {
   GitHub: "https://github.com/hiepdeptrai321",
+  Facebook: "https://www.facebook.com/hiepdeptrai321",
 };
 
 const raycaster = new THREE.Raycaster();
@@ -2127,6 +2140,193 @@ function createDelayedHitboxes() {
   objectsNeedingHitboxes.length = 0;
 }
 
+function activateFacebookHitbox() {
+  if (!facebookHitbox || isFacebookHitboxActive) return;
+
+  raycasterObjects.push(facebookHitbox);
+  isFacebookHitboxActive = true;
+}
+
+const FACEBOOK_CARD_COLORS = {
+  blue: {
+    rest: new THREE.Color("#455a86"),
+    hover: new THREE.Color("#576f9e"),
+  },
+  white: {
+    rest: new THREE.Color("#ded8d4"),
+    hover: new THREE.Color("#f0e8e3"),
+  },
+};
+
+function createUnlitMaterial(material) {
+  const sourceColor = material.color ?? new THREE.Color(0xffffff);
+  const isFacebookBlue =
+    material.name === "Material.001" ||
+    (material.name !== "Material.f" &&
+      sourceColor.b > sourceColor.r * 1.5 &&
+      sourceColor.b > sourceColor.g * 1.5);
+  const palette = isFacebookBlue
+    ? FACEBOOK_CARD_COLORS.blue
+    : FACEBOOK_CARD_COLORS.white;
+  const unlitMaterial = new THREE.MeshBasicMaterial({
+    color: palette.rest,
+    map: material.map ?? null,
+    transparent: material.transparent,
+    opacity: material.opacity,
+    alphaTest: material.alphaTest,
+    side: material.side,
+    depthWrite: material.depthWrite,
+    vertexColors: material.vertexColors,
+  });
+
+  unlitMaterial.name = material.name;
+  unlitMaterial.userData.facebookRole = isFacebookBlue ? "blue" : "white";
+  unlitMaterial.userData.facebookRestColor = palette.rest.clone();
+  unlitMaterial.userData.facebookHoverColor = palette.hover.clone();
+
+  return unlitMaterial;
+}
+
+function animateFacebookMaterials(object, isHovering) {
+  object.traverse((child) => {
+    if (!child.isMesh) return;
+
+    const materials = Array.isArray(child.material)
+      ? child.material
+      : [child.material];
+
+    materials.forEach((material) => {
+      const targetColor = isHovering
+        ? material.userData.facebookHoverColor
+        : material.userData.facebookRestColor;
+
+      if (!targetColor) return;
+
+      gsap.killTweensOf(material.color);
+      gsap.to(material.color, {
+        r: targetColor.r,
+        g: targetColor.g,
+        b: targetColor.b,
+        duration: isHovering ? 0.25 : 0.3,
+        ease: "power2.out",
+      });
+    });
+  });
+}
+
+function createBottomCenterAnimationPivot(object) {
+  const parent = object.parent;
+  if (!parent) return object;
+
+  object.updateWorldMatrix(true, true);
+
+  const objectWorldInverse = object.matrixWorld.clone().invert();
+  const localBounds = new THREE.Box3().makeEmpty();
+
+  object.traverse((child) => {
+    if (!child.isMesh || !child.geometry) return;
+
+    if (!child.geometry.boundingBox) {
+      child.geometry.computeBoundingBox();
+    }
+
+    const childToObject = new THREE.Matrix4().multiplyMatrices(
+      objectWorldInverse,
+      child.matrixWorld
+    );
+    const childBounds = child.geometry.boundingBox
+      .clone()
+      .applyMatrix4(childToObject);
+
+    localBounds.union(childBounds);
+  });
+
+  if (localBounds.isEmpty()) return object;
+
+  const anchor = localBounds.getCenter(new THREE.Vector3());
+  anchor.z = localBounds.max.z;
+
+  const pivotPosition = anchor
+    .clone()
+    .multiply(object.scale)
+    .applyQuaternion(object.quaternion)
+    .add(object.position);
+  const originalName = object.name;
+  const pivot = new THREE.Group();
+
+  pivot.name = originalName;
+  pivot.position.copy(pivotPosition);
+  pivot.quaternion.copy(object.quaternion);
+  pivot.scale.copy(object.scale);
+
+  parent.add(pivot);
+  pivot.add(object);
+
+  object.name = `${originalName}_Visual`;
+  object.position.copy(anchor).multiplyScalar(-1);
+  object.quaternion.identity();
+  object.scale.set(1, 1, 1);
+
+  return pivot;
+}
+
+function addStandaloneInteractiveModel(modelUrl) {
+  loader.load(modelUrl, (glb) => {
+    const interactiveObjects = [];
+
+    glb.scene.traverse((child) => {
+      if (child.isMesh) {
+        child.material = Array.isArray(child.material)
+          ? child.material.map(createUnlitMaterial)
+          : createUnlitMaterial(child.material);
+      }
+
+      if (
+        child.name.includes("Raycaster") &&
+        !child.parent?.name.includes("Raycaster")
+      ) {
+        interactiveObjects.push(child);
+      }
+    });
+
+    interactiveObjects.forEach((object) => {
+      const isFacebook = object.name.includes("Facebook");
+      const animationObject = isFacebook
+        ? createBottomCenterAnimationPivot(object)
+        : object;
+
+      if (animationObject.name.includes("Hover")) {
+        animationObject.userData.initialScale = animationObject.scale.clone();
+        animationObject.userData.initialPosition =
+          animationObject.position.clone();
+        animationObject.userData.initialRotation =
+          animationObject.rotation.clone();
+      }
+
+      const raycastObject = createStaticHitbox(animationObject);
+
+      if (raycastObject !== animationObject) {
+        scene.add(raycastObject);
+      }
+
+      hitboxToObjectMap.set(raycastObject, animationObject);
+
+      if (isFacebook) {
+        facebook = animationObject;
+        facebookHitbox = raycastObject;
+        facebook.scale.set(0, 0, 0);
+        return;
+      }
+
+      raycasterObjects.push(raycastObject);
+    });
+
+    scene.add(glb.scene);
+  });
+}
+
+addStandaloneInteractiveModel("/models/facebook-card.glb");
+
 function isStoryTriggerObject(objectName) {
   return (
     objectName.includes("Story_English") ||
@@ -2175,11 +2375,7 @@ function handleRaycasterInteraction() {
 
     Object.entries(socialLinks).forEach(([key, url]) => {
       if (object.name.includes(key)) {
-        const newWindow = window.open();
-        newWindow.opener = null;
-        newWindow.location = url;
-        newWindow.target = "_blank";
-        newWindow.rel = "noopener noreferrer";
+        window.open(url, "_blank", "noopener,noreferrer");
       }
     });
 
@@ -2201,6 +2397,11 @@ function handleRaycasterInteraction() {
 function playHoverAnimation(objectHitbox, isHovering) {
   let scale = 1.4;
   const object = hitboxToObjectMap.get(objectHitbox);
+
+  if (object.name.includes("Facebook")) {
+    animateFacebookMaterials(object, isHovering);
+  }
+
   gsap.killTweensOf(object.scale);
   gsap.killTweensOf(object.rotation);
   gsap.killTweensOf(object.position);
@@ -2250,6 +2451,7 @@ function playHoverAnimation(objectHitbox, isHovering) {
       object.name.includes("Contact_Button") ||
       object.name.includes("My_Work_Button") ||
       object.name.includes("GitHub") ||
+      object.name.includes("Facebook") ||
       object.name.includes("YouTube") ||
       object.name.includes("Twitter")
     ) {
@@ -2282,6 +2484,7 @@ function playHoverAnimation(objectHitbox, isHovering) {
       object.name.includes("Contact_Button") ||
       object.name.includes("My_Work_Button") ||
       object.name.includes("GitHub") ||
+      object.name.includes("Facebook") ||
       object.name.includes("YouTube") ||
       object.name.includes("Twitter")
     ) {
@@ -2371,6 +2574,30 @@ const sunSvg = document.querySelector(".sun-svg");
 const moonSvg = document.querySelector(".moon-svg");
 const soundOffSvg = document.querySelector(".sound-off-svg");
 const soundOnSvg = document.querySelector(".sound-on-svg");
+const roomHero = document.querySelector(".room-hero");
+const backToRoomLink = document.querySelector(".back-to-room-link");
+
+const setBackToRoomVisibility = (shouldShow) => {
+  backToRoomLink.classList.toggle("is-visible", shouldShow);
+  backToRoomLink.setAttribute("aria-hidden", String(!shouldShow));
+
+  if (shouldShow) {
+    backToRoomLink.removeAttribute("tabindex");
+  } else {
+    backToRoomLink.setAttribute("tabindex", "-1");
+  }
+};
+
+const roomVisibilityObserver = new IntersectionObserver(
+  ([entry]) => {
+    const hasPassedRoom =
+      !entry.isIntersecting && entry.boundingClientRect.bottom <= 0;
+    setBackToRoomVisibility(hasPassedRoom);
+  },
+  { threshold: 0 }
+);
+
+roomVisibilityObserver.observe(roomHero);
 
 const updateSoundIcon = () => {
   soundOnSvg.style.display = isMuted ? "none" : "block";
@@ -2535,6 +2762,14 @@ const handleThemeToggle = (e) => {
 
   Object.values(roomMaterials).forEach((material) => {
     gsap.to(material.uniforms.uMixRatio, {
+      value: isNightMode ? 1 : 0,
+      duration: 1.5,
+      ease: "power2.inOut",
+    });
+  });
+
+  outsideTreeMaterials.forEach((material) => {
+    gsap.to(material.uniforms.uThemeMix, {
       value: isNightMode ? 1 : 0,
       duration: 1.5,
       ease: "power2.inOut",
