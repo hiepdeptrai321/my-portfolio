@@ -1,0 +1,129 @@
+{
+  "blend": "C:\\Users\\hiepdeptrai\\Desktop\\hk1_2026_2027\\MyPortfolioWeb\\sooahs-room-folio\\blender files\\For Export - Grounded Pastel Day.blend",
+  "collections": [
+    {
+      "name": "First Texture Set",
+      "hide_viewport": false,
+      "hide_render": false,
+      "direct_object_count": 1,
+      "direct_mesh_count": 1,
+      "baked_material_mesh_count": 0,
+      "children": []
+    },
+    {
+      "name": "Fourth Texture Set",
+      "hide_viewport": false,
+      "hide_render": false,
+      "direct_object_count": 1,
+      "direct_mesh_count": 1,
+      "baked_material_mesh_count": 0,
+      "children": []
+    },
+    {
+      "name": "LCA",
+      "hide_viewport": false,
+      "hide_render": false,
+      "direct_object_count": 2,
+      "direct_mesh_count": 0,
+      "baked_material_mesh_count": 0,
+      "children": []
+    },
+    {
+      "name": "Second Texture Set",
+      "hide_viewport": false,
+      "hide_render": false,
+      "direct_object_count": 1,
+      "direct_mesh_count": 1,
+      "baked_material_mesh_count": 0,
+      "children": []
+    },
+    {
+      "name": "SimpleBake_Bakes",
+      "hide_viewport": false,
+      "hide_render": false,
+      "direct_object_count": 166,
+      "direct_mesh_count": 166,
+      "baked_material_mesh_count": 166,
+      "children": []
+    },
+    {
+      "name": "Targets",
+      "hide_viewport": false,
+      "hide_render": false,
+      "direct_object_count": 134,
+      "direct_mesh_count": 134,
+      "baked_material_mesh_count": 0,
+      "children": []
+    },
+    {
+      "name": "Third Texture Set",
+      "hide_viewport": false,
+      "hide_render": false,
+      "direct_object_count": 1,
+      "direct_mesh_count": 1,
+      "baked_material_mesh_count": 0,
+      "children": []
+    }
+  ],
+  "layer_collections": [
+    {
+      "view_layer": "ViewLayer",
+      "tree": {
+        "name": "Scene Collection",
+        "exclude": false,
+        "hide_viewport": false,
+        "children": [
+          {
+            "name": "LCA",
+            "exclude": false,
+            "hide_viewport": true,
+            "children": []
+          },
+          {
+            "name": "SimpleBake_Bakes",
+            "exclude": true,
+            "hide_viewport": true,
+            "children": []
+          },
+          {
+            "name": "Targets",
+            "exclude": false,
+            "hide_viewport": false,
+            "children": []
+          },
+          {
+            "name": "First Texture Set",
+            "exclude": false,
+            "hide_viewport": false,
+            "children": []
+          },
+          {
+            "name": "Second Texture Set",
+            "exclude": false,
+            "hide_viewport": false,
+            "children": []
+          },
+          {
+            "name": "Third Texture Set",
+            "exclude": false,
+            "hide_viewport": false,
+            "children": []
+          },
+          {
+            "name": "Fourth Texture Set",
+            "exclude": false,
+            "hide_viewport": false,
+            "children": []
+          }
+        ]
+      }
+    }
+  ],
+  "mesh_counts": {
+    "total": 331,
+    "viewport_visible": 330,
+    "render_visible": 331,
+    "using_baked_materials": 166,
+    "not_using_baked_materials": 165
+  }
+}

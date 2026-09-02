@@ -1,0 +1,943 @@
+{
+  "atlases": {
+    "first": {
+      "source_atlas": "public/textures/room/night/first-texture-set-night.webp",
+      "source_sha256_before": "6B44890BA675F52A2AD2481497A2679FC2BB82D761686EE6D90B9199E5E4343E",
+      "source_sha256_after": "6B44890BA675F52A2AD2481497A2679FC2BB82D761686EE6D90B9199E5E4343E",
+      "source_unchanged": true,
+      "test_atlas": "public/textures/room/grounded-pastel-test/first-texture-set-night-grounded-test.webp",
+      "test_sha256": "B7F61574BACFFE4B8EE7BB084A3CD67E3BCE5B6E345E98E23D8EB2A749930043",
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "source_mode": "RGB",
+      "test_mode": "RGB",
+      "uv_alignment_basis": "Same 4096x4096 atlas dimensions and the same per-texture-set vUv used by Day/Night samplers in the unchanged theme shader",
+      "reused_day_masks": {
+        "room-shell": {
+          "reused_day_mask": "public/textures/room/grounded-pastel-test/masks/first-mask-room-shell.png",
+          "day_mask_sha256_before": "FDE958C74CB80A2F94061853825F6B95B56CAC99F6C3F3DB7D13BEB123B27F2A",
+          "day_mask_sha256_after": "FDE958C74CB80A2F94061853825F6B95B56CAC99F6C3F3DB7D13BEB123B27F2A",
+          "day_mask_unchanged": true,
+          "dimensions_match_night": true,
+          "core_pixels": 4059733,
+          "night_alignment_overlay": "public/textures/room/grounded-pastel-test/debug/first-night-debug-room-shell-overlay.png"
+        },
+        "stone-structure": {
+          "reused_day_mask": "public/textures/room/grounded-pastel-test/masks/first-mask-stone-structure.png",
+          "day_mask_sha256_before": "572F169FCBE4E10B779CD43E9FC361D55E38A0995C55CBDFEB11B020CEF4BE43",
+          "day_mask_sha256_after": "572F169FCBE4E10B779CD43E9FC361D55E38A0995C55CBDFEB11B020CEF4BE43",
+          "day_mask_unchanged": true,
+          "dimensions_match_night": true,
+          "core_pixels": 890846,
+          "night_alignment_overlay": "public/textures/room/grounded-pastel-test/debug/first-night-debug-stone-structure-overlay.png"
+        },
+        "neutral-structure": {
+          "reused_day_mask": "public/textures/room/grounded-pastel-test/masks/first-mask-neutral-structure.png",
+          "day_mask_sha256_before": "DC51810891904F937452324812C1B896ACC9B39D5D3B8117FCFA5CC9533D0DA1",
+          "day_mask_sha256_after": "DC51810891904F937452324812C1B896ACC9B39D5D3B8117FCFA5CC9533D0DA1",
+          "day_mask_unchanged": true,
+          "dimensions_match_night": true,
+          "core_pixels": 1374973,
+          "night_alignment_overlay": "public/textures/room/grounded-pastel-test/debug/first-night-debug-neutral-structure-overlay.png"
+        },
+        "cream-structure": {
+          "reused_day_mask": "public/textures/room/grounded-pastel-test/masks/first-mask-cream-structure.png",
+          "day_mask_sha256_before": "35D502EEE5F34268ED7EFF77A55B58BC05BE55A98EE45479A979FD2F14705B8D",
+          "day_mask_sha256_after": "35D502EEE5F34268ED7EFF77A55B58BC05BE55A98EE45479A979FD2F14705B8D",
+          "day_mask_unchanged": true,
+          "dimensions_match_night": true,
+          "core_pixels": 233461,
+          "night_alignment_overlay": "public/textures/room/grounded-pastel-test/debug/first-night-debug-cream-structure-overlay.png"
+        }
+      },
+      "new_night_specific_masks": [],
+      "mask_overlap_core_pixels": 0,
+      "outside_mask_pixel_mismatches": 0,
+      "black_pixels_before": 2257702,
+      "black_pixels_after": 2257702,
+      "new_black_pixels": 0,
+      "removed_black_pixels": 0,
+      "new_blown_highlight_pixels": 0,
+      "per_group": {
+        "room-shell": {
+          "object_material": "Cube / Room",
+          "day_family": "Warm Cream",
+          "day_hex": "#F1E9DE",
+          "night_family": "Warm Dim Cream",
+          "night_hex": "#BEB3A5",
+          "mean_luminance_before": 26.327131,
+          "mean_luminance_after": 26.262732,
+          "mean_absolute_luminance_delta": 0.088845,
+          "luminance_correlation": 0.999988398
+        },
+        "stone-structure": {
+          "object_material": "Cube.039 / Stone wall",
+          "day_family": "Mist Gray",
+          "day_hex": "#DCE2DE",
+          "night_family": "Night Mist Gray",
+          "night_hex": "#818D89",
+          "mean_luminance_before": 11.976126,
+          "mean_luminance_after": 11.949122,
+          "mean_absolute_luminance_delta": 0.071834,
+          "luminance_correlation": 0.999927025
+        },
+        "neutral-structure": {
+          "object_material": "Plane.001 / Base Gray.001",
+          "day_family": "Mist Gray",
+          "day_hex": "#DCE2DE",
+          "night_family": "Night Mist Gray",
+          "night_hex": "#818D89",
+          "mean_luminance_before": 16.553608,
+          "mean_luminance_after": 16.514469,
+          "mean_absolute_luminance_delta": 0.071292,
+          "luminance_correlation": 0.999985952
+        },
+        "cream-structure": {
+          "object_material": "Cube.020 / Base White.001",
+          "day_family": "Warm Cream",
+          "day_hex": "#F1E9DE",
+          "night_family": "Warm Dim Cream",
+          "night_hex": "#BEB3A5",
+          "mean_luminance_before": 17.36478,
+          "mean_luminance_after": 17.309448,
+          "mean_absolute_luminance_delta": 0.082435,
+          "luminance_correlation": 0.999981586
+        }
+      },
+      "comparison": "public/textures/room/grounded-pastel-test/debug/first-night-original-vs-grounded-test.png",
+      "transition": {
+        "analysis_dimensions": [
+          1024,
+          1024
+        ],
+        "shader_model": "sRGB texture decode -> linear RGB mix(day, night, uMixRatio) -> pow(1/2.2), matching the current theme shader",
+        "preview": "public/textures/room/grounded-pastel-test/debug/first-day-night-transition-strip.png",
+        "strong_purple_definition": "Lab a > 12 and Lab b < -6 inside recolor masks",
+        "strong_purple_percent_by_mix_ratio": {
+          "0.00": 0.0,
+          "0.25": 0.0,
+          "0.50": 0.0,
+          "0.75": 0.000724,
+          "1.00": 0.017862
+        },
+        "intermediate_purple_overshoot_percent": 0.0,
+        "purple_flash_detected": false,
+        "per_group_mean_lab_path": {
+          "room-shell": [
+            {
+              "mix_ratio": 0.0,
+              "mean_lab_a": 2.319761,
+              "mean_lab_b": 4.1882
+            },
+            {
+              "mix_ratio": 0.25,
+              "mean_lab_a": 2.333554,
+              "mean_lab_b": 4.289572
+            },
+            {
+              "mix_ratio": 0.5,
+              "mean_lab_a": 2.448421,
+              "mean_lab_b": 4.233232
+            },
+            {
+              "mix_ratio": 0.75,
+              "mean_lab_a": 2.628337,
+              "mean_lab_b": 4.10217
+            },
+            {
+              "mix_ratio": 1.0,
+              "mean_lab_a": 3.414287,
+              "mean_lab_b": 3.834574
+            }
+          ],
+          "stone-structure": [
+            {
+              "mix_ratio": 0.0,
+              "mean_lab_a": -1.797149,
+              "mean_lab_b": 1.08604
+            },
+            {
+              "mix_ratio": 0.25,
+              "mean_lab_a": -1.656822,
+              "mean_lab_b": 0.836022
+            },
+            {
+              "mix_ratio": 0.5,
+              "mean_lab_a": -1.485494,
+              "mean_lab_b": 0.483391
+            },
+            {
+              "mix_ratio": 0.75,
+              "mean_lab_a": -1.275882,
+              "mean_lab_b": -0.114371
+            },
+            {
+              "mix_ratio": 1.0,
+              "mean_lab_a": -1.172843,
+              "mean_lab_b": -2.499514
+            }
+          ],
+          "neutral-structure": [
+            {
+              "mix_ratio": 0.0,
+              "mean_lab_a": 0.808112,
+              "mean_lab_b": 3.053437
+            },
+            {
+              "mix_ratio": 0.25,
+              "mean_lab_a": 0.663879,
+              "mean_lab_b": 2.794336
+            },
+            {
+              "mix_ratio": 0.5,
+              "mean_lab_a": 0.757997,
+              "mean_lab_b": 2.675323
+            },
+            {
+              "mix_ratio": 0.75,
+              "mean_lab_a": 0.993635,
+              "mean_lab_b": 2.532086
+            },
+            {
+              "mix_ratio": 1.0,
+              "mean_lab_a": 1.961683,
+              "mean_lab_b": 2.254157
+            }
+          ],
+          "cream-structure": [
+            {
+              "mix_ratio": 0.0,
+              "mean_lab_a": 2.311534,
+              "mean_lab_b": 4.354335
+            },
+            {
+              "mix_ratio": 0.25,
+              "mean_lab_a": 2.282721,
+              "mean_lab_b": 3.908931
+            },
+            {
+              "mix_ratio": 0.5,
+              "mean_lab_a": 2.312159,
+              "mean_lab_b": 3.336418
+            },
+            {
+              "mix_ratio": 0.75,
+              "mean_lab_a": 2.515181,
+              "mean_lab_b": 2.504006
+            },
+            {
+              "mix_ratio": 1.0,
+              "mean_lab_a": 3.978342,
+              "mean_lab_b": 0.220222
+            }
+          ]
+        }
+      }
+    },
+    "second": {
+      "source_atlas": "public/textures/room/night/second-texture-set-night.webp",
+      "source_sha256_before": "F38137E567F2114C7835976ED7ABB3E795FA073AF9F0FEDAC384A2B024AB04B9",
+      "source_sha256_after": "F38137E567F2114C7835976ED7ABB3E795FA073AF9F0FEDAC384A2B024AB04B9",
+      "source_unchanged": true,
+      "test_atlas": "public/textures/room/grounded-pastel-test/second-texture-set-night-grounded-test.webp",
+      "test_sha256": "0AB8CFEDB5AC991E25DCCDD998A9AD439F53F885540B7F2469ECF32305D0CCFA",
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "source_mode": "RGB",
+      "test_mode": "RGB",
+      "uv_alignment_basis": "Same 4096x4096 atlas dimensions and the same per-texture-set vUv used by Day/Night samplers in the unchanged theme shader",
+      "reused_day_masks": {
+        "backdrop": {
+          "reused_day_mask": "public/textures/room/grounded-pastel-test/masks/second-mask-backdrop.png",
+          "day_mask_sha256_before": "A476260BDF4E0B5285AF5F4A6F55AFB111D5E711CBEE1FF06117467A579D99A0",
+          "day_mask_sha256_after": "A476260BDF4E0B5285AF5F4A6F55AFB111D5E711CBEE1FF06117467A579D99A0",
+          "day_mask_unchanged": true,
+          "dimensions_match_night": true,
+          "core_pixels": 9505917,
+          "night_alignment_overlay": "public/textures/room/grounded-pastel-test/debug/second-night-debug-backdrop-overlay.png"
+        },
+        "poster-frame": {
+          "reused_day_mask": "public/textures/room/grounded-pastel-test/masks/second-mask-poster-frame.png",
+          "day_mask_sha256_before": "AE6FDEB7AD7D3F6BE0B5F5E8074D8B7B1942A7758561FA69F5DF6EC36DDFBEC1",
+          "day_mask_sha256_after": "AE6FDEB7AD7D3F6BE0B5F5E8074D8B7B1942A7758561FA69F5DF6EC36DDFBEC1",
+          "day_mask_unchanged": true,
+          "dimensions_match_night": true,
+          "core_pixels": 14835,
+          "night_alignment_overlay": "public/textures/room/grounded-pastel-test/debug/second-night-debug-poster-frame-overlay.png"
+        }
+      },
+      "new_night_specific_masks": [],
+      "mask_overlap_core_pixels": 0,
+      "outside_mask_pixel_mismatches": 0,
+      "black_pixels_before": 1727568,
+      "black_pixels_after": 1727568,
+      "new_black_pixels": 0,
+      "removed_black_pixels": 0,
+      "new_blown_highlight_pixels": 0,
+      "per_group": {
+        "backdrop": {
+          "object_material": "Backdrop / Backdrop.001",
+          "day_family": "Mist Gray",
+          "day_hex": "#DCE2DE",
+          "night_family": "Night Mist Gray",
+          "night_hex": "#818D89",
+          "mean_luminance_before": 22.410006,
+          "mean_luminance_after": 22.335566,
+          "mean_absolute_luminance_delta": 0.09837,
+          "luminance_correlation": 0.99965171
+        },
+        "poster-frame": {
+          "object_material": "Plane.122 / Poster Frame",
+          "day_family": "Deep Sage",
+          "day_hex": "#405D52",
+          "night_family": "Charcoal Sage",
+          "night_hex": "#263C35",
+          "mean_luminance_before": 29.205479,
+          "mean_luminance_after": 29.107515,
+          "mean_absolute_luminance_delta": 0.116765,
+          "luminance_correlation": 0.999961328
+        }
+      },
+      "comparison": "public/textures/room/grounded-pastel-test/debug/second-night-original-vs-grounded-test.png",
+      "transition": {
+        "analysis_dimensions": [
+          1024,
+          1024
+        ],
+        "shader_model": "sRGB texture decode -> linear RGB mix(day, night, uMixRatio) -> pow(1/2.2), matching the current theme shader",
+        "preview": "public/textures/room/grounded-pastel-test/debug/second-day-night-transition-strip.png",
+        "strong_purple_definition": "Lab a > 12 and Lab b < -6 inside recolor masks",
+        "strong_purple_percent_by_mix_ratio": {
+          "0.00": 0.0,
+          "0.25": 0.0,
+          "0.50": 0.0,
+          "0.75": 0.0,
+          "1.00": 0.0
+        },
+        "intermediate_purple_overshoot_percent": 0.0,
+        "purple_flash_detected": false,
+        "per_group_mean_lab_path": {
+          "backdrop": [
+            {
+              "mix_ratio": 0.0,
+              "mean_lab_a": -1.664403,
+              "mean_lab_b": -0.076815
+            },
+            {
+              "mix_ratio": 0.25,
+              "mean_lab_a": -1.653447,
+              "mean_lab_b": -0.21346
+            },
+            {
+              "mix_ratio": 0.5,
+              "mean_lab_a": -1.663115,
+              "mean_lab_b": -0.416532
+            },
+            {
+              "mix_ratio": 0.75,
+              "mean_lab_a": -1.781823,
+              "mean_lab_b": -0.799836
+            },
+            {
+              "mix_ratio": 1.0,
+              "mean_lab_a": -2.694462,
+              "mean_lab_b": -2.252877
+            }
+          ],
+          "poster-frame": [
+            {
+              "mix_ratio": 0.0,
+              "mean_lab_a": -5.972906,
+              "mean_lab_b": -1.302136
+            },
+            {
+              "mix_ratio": 0.25,
+              "mean_lab_a": -5.148963,
+              "mean_lab_b": -1.688329
+            },
+            {
+              "mix_ratio": 0.5,
+              "mean_lab_a": -4.168416,
+              "mean_lab_b": -2.235493
+            },
+            {
+              "mix_ratio": 0.75,
+              "mean_lab_a": -2.924006,
+              "mean_lab_b": -3.139257
+            },
+            {
+              "mix_ratio": 1.0,
+              "mean_lab_a": -1.195418,
+              "mean_lab_b": -5.565578
+            }
+          ]
+        }
+      }
+    },
+    "third": {
+      "source_atlas": "public/textures/room/night/third-texture-set-night.webp",
+      "source_sha256_before": "AA37C8CC097B78E2F775EDFC382700C2E0D46B6ADF894F521160E56B4EB9B46B",
+      "source_sha256_after": "AA37C8CC097B78E2F775EDFC382700C2E0D46B6ADF894F521160E56B4EB9B46B",
+      "source_unchanged": true,
+      "test_atlas": "public/textures/room/grounded-pastel-test/third-texture-set-night-grounded-test.webp",
+      "test_sha256": "4896DC82D24924ABADC56DCF98B1F061F0A1F10BFC2F845A59E1B7947198BB0B",
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "source_mode": "RGB",
+      "test_mode": "RGB",
+      "uv_alignment_basis": "Same 4096x4096 atlas dimensions and the same per-texture-set vUv used by Day/Night samplers in the unchanged theme shader",
+      "reused_day_masks": {
+        "piano-body": {
+          "reused_day_mask": "public/textures/room/grounded-pastel-test/masks/third-mask-piano-body.png",
+          "day_mask_sha256_before": "5ADBCE538B87C5C1F64B53CBD2B5675C000D3C6707D7ACB79E4755C2954CFB52",
+          "day_mask_sha256_after": "5ADBCE538B87C5C1F64B53CBD2B5675C000D3C6707D7ACB79E4755C2954CFB52",
+          "day_mask_unchanged": true,
+          "dimensions_match_night": true,
+          "core_pixels": 3578567,
+          "night_alignment_overlay": "public/textures/room/grounded-pastel-test/debug/third-night-debug-piano-body-overlay.png"
+        },
+        "welcome-mat": {
+          "reused_day_mask": "public/textures/room/grounded-pastel-test/masks/third-mask-welcome-mat.png",
+          "day_mask_sha256_before": "46E33C7F54AC9E4945B205846F913ACD5E39109981C32E174D999E0F0E843DBB",
+          "day_mask_sha256_after": "46E33C7F54AC9E4945B205846F913ACD5E39109981C32E174D999E0F0E843DBB",
+          "day_mask_unchanged": true,
+          "dimensions_match_night": true,
+          "core_pixels": 753201,
+          "night_alignment_overlay": "public/textures/room/grounded-pastel-test/debug/third-night-debug-welcome-mat-overlay.png"
+        }
+      },
+      "new_night_specific_masks": [],
+      "mask_overlap_core_pixels": 0,
+      "outside_mask_pixel_mismatches": 0,
+      "black_pixels_before": 2203433,
+      "black_pixels_after": 2203433,
+      "new_black_pixels": 0,
+      "removed_black_pixels": 0,
+      "new_blown_highlight_pixels": 0,
+      "per_group": {
+        "piano-body": {
+          "object_material": "Piano / Base Gray.001, Piano.001, Base Purple.001",
+          "day_family": "Dusty Blue",
+          "day_hex": "#8FA9B8",
+          "night_family": "Night Dusty Blue",
+          "night_hex": "#526C7A",
+          "mean_luminance_before": 22.473227,
+          "mean_luminance_after": 22.411507,
+          "mean_absolute_luminance_delta": 0.09022,
+          "luminance_correlation": 0.999983544
+        },
+        "welcome-mat": {
+          "object_material": "Plane.019 / Welcome Mat.001, Drawer Shelves.001",
+          "day_family": "Sage Green",
+          "day_hex": "#718E7A",
+          "night_family": "Night Sage",
+          "night_hex": "#4E6759",
+          "mean_luminance_before": 29.763041,
+          "mean_luminance_after": 29.654837,
+          "mean_absolute_luminance_delta": 0.11852,
+          "luminance_correlation": 0.999946592
+        }
+      },
+      "comparison": "public/textures/room/grounded-pastel-test/debug/third-night-original-vs-grounded-test.png",
+      "transition": {
+        "analysis_dimensions": [
+          1024,
+          1024
+        ],
+        "shader_model": "sRGB texture decode -> linear RGB mix(day, night, uMixRatio) -> pow(1/2.2), matching the current theme shader",
+        "preview": "public/textures/room/grounded-pastel-test/debug/third-day-night-transition-strip.png",
+        "strong_purple_definition": "Lab a > 12 and Lab b < -6 inside recolor masks",
+        "strong_purple_percent_by_mix_ratio": {
+          "0.00": 0.027621,
+          "0.25": 0.016204,
+          "0.50": 0.011785,
+          "0.75": 0.008839,
+          "1.00": 0.074024
+        },
+        "intermediate_purple_overshoot_percent": 0.0,
+        "purple_flash_detected": false,
+        "per_group_mean_lab_path": {
+          "piano-body": [
+            {
+              "mix_ratio": 0.0,
+              "mean_lab_a": -2.388924,
+              "mean_lab_b": -8.724007
+            },
+            {
+              "mix_ratio": 0.25,
+              "mean_lab_a": -2.197217,
+              "mean_lab_b": -8.360438
+            },
+            {
+              "mix_ratio": 0.5,
+              "mean_lab_a": -1.966151,
+              "mean_lab_b": -8.075267
+            },
+            {
+              "mix_ratio": 0.75,
+              "mean_lab_a": -1.647621,
+              "mean_lab_b": -7.889977
+            },
+            {
+              "mix_ratio": 1.0,
+              "mean_lab_a": -1.05909,
+              "mean_lab_b": -8.474959
+            }
+          ],
+          "welcome-mat": [
+            {
+              "mix_ratio": 0.0,
+              "mean_lab_a": -10.373653,
+              "mean_lab_b": 4.813497
+            },
+            {
+              "mix_ratio": 0.25,
+              "mean_lab_a": -9.539364,
+              "mean_lab_b": 4.113002
+            },
+            {
+              "mix_ratio": 0.5,
+              "mean_lab_a": -8.614096,
+              "mean_lab_b": 3.24364
+            },
+            {
+              "mix_ratio": 0.75,
+              "mean_lab_a": -7.471367,
+              "mean_lab_b": 1.952498
+            },
+            {
+              "mix_ratio": 1.0,
+              "mean_lab_a": -6.122082,
+              "mean_lab_b": -0.891926
+            }
+          ]
+        }
+      }
+    },
+    "fourth": {
+      "source_atlas": "public/textures/room/night/fourth-texture-set-night.webp",
+      "source_sha256_before": "B13702E1A997C215F64C48C49E782D409646DD5DF232B7101F0657D64290D197",
+      "source_sha256_after": "B13702E1A997C215F64C48C49E782D409646DD5DF232B7101F0657D64290D197",
+      "source_unchanged": true,
+      "test_atlas": "public/textures/room/grounded-pastel-test/fourth-texture-set-night-grounded-test.webp",
+      "test_sha256": "1450DE776CD0F4B967C351A28EA0B637C2F0F21CA50C867815A9D430EB1AFB91",
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "source_mode": "RGB",
+      "test_mode": "RGB",
+      "uv_alignment_basis": "Same 4096x4096 atlas dimensions and the same per-texture-set vUv used by Day/Night samplers in the unchanged theme shader",
+      "reused_day_masks": {
+        "drawer": {
+          "reused_day_mask": "public/textures/room/grounded-pastel-test/masks/fourth-mask-drawer.png",
+          "day_mask_sha256_before": "8BF6395B23A5A2713C9C78792CBE0BBCB839625BF9D453E73F7F9FDCDF89F765",
+          "day_mask_sha256_after": "8BF6395B23A5A2713C9C78792CBE0BBCB839625BF9D453E73F7F9FDCDF89F765",
+          "day_mask_unchanged": true,
+          "dimensions_match_night": true,
+          "core_pixels": 1270363,
+          "night_alignment_overlay": "public/textures/room/grounded-pastel-test/debug/fourth-night-debug-drawer-overlay.png"
+        },
+        "drawer-shelves": {
+          "reused_day_mask": "public/textures/room/grounded-pastel-test/masks/fourth-mask-drawer-shelves.png",
+          "day_mask_sha256_before": "B79423301A1BE5495F64705BE94BEAC88469646792C8898A597106E9D302C0EB",
+          "day_mask_sha256_after": "B79423301A1BE5495F64705BE94BEAC88469646792C8898A597106E9D302C0EB",
+          "day_mask_unchanged": true,
+          "dimensions_match_night": true,
+          "core_pixels": 1069877,
+          "night_alignment_overlay": "public/textures/room/grounded-pastel-test/debug/fourth-night-debug-drawer-shelves-overlay.png"
+        },
+        "computer": {
+          "reused_day_mask": "public/textures/room/grounded-pastel-test/masks/fourth-mask-computer.png",
+          "day_mask_sha256_before": "3BDDBF1C2F24C901675D61E67D282F7F2B7DE07B7CB99F40A0CEB6339ACBF593",
+          "day_mask_sha256_after": "3BDDBF1C2F24C901675D61E67D282F7F2B7DE07B7CB99F40A0CEB6339ACBF593",
+          "day_mask_unchanged": true,
+          "dimensions_match_night": true,
+          "core_pixels": 2411291,
+          "night_alignment_overlay": "public/textures/room/grounded-pastel-test/debug/fourth-night-debug-computer-overlay.png"
+        },
+        "chair-body": {
+          "reused_day_mask": "public/textures/room/grounded-pastel-test/masks/fourth-mask-chair-body.png",
+          "day_mask_sha256_before": "47BC0FC33D621CA574FE614CB96524097A8CE245F872726B234CDECA2D882D95",
+          "day_mask_sha256_after": "47BC0FC33D621CA574FE614CB96524097A8CE245F872726B234CDECA2D882D95",
+          "day_mask_unchanged": true,
+          "dimensions_match_night": true,
+          "core_pixels": 671042,
+          "night_alignment_overlay": "public/textures/room/grounded-pastel-test/debug/fourth-night-debug-chair-body-overlay.png"
+        },
+        "chair-cushion": {
+          "reused_day_mask": "public/textures/room/grounded-pastel-test/masks/fourth-mask-chair-cushion.png",
+          "day_mask_sha256_before": "DEDFE725B467001A5FD579C17AE291A2A583D750CB6283F5E816F5DF0414EFEE",
+          "day_mask_sha256_after": "DEDFE725B467001A5FD579C17AE291A2A583D750CB6283F5E816F5DF0414EFEE",
+          "day_mask_unchanged": true,
+          "dimensions_match_night": true,
+          "core_pixels": 621854,
+          "night_alignment_overlay": "public/textures/room/grounded-pastel-test/debug/fourth-night-debug-chair-cushion-overlay.png"
+        },
+        "desk-pad": {
+          "reused_day_mask": "public/textures/room/grounded-pastel-test/masks/fourth-mask-desk-pad.png",
+          "day_mask_sha256_before": "EEC5D69A8AB64580D1A7BB5CE57D7CEBD8DC1870DF13EE63D17B27DA1AA936DC",
+          "day_mask_sha256_after": "EEC5D69A8AB64580D1A7BB5CE57D7CEBD8DC1870DF13EE63D17B27DA1AA936DC",
+          "day_mask_unchanged": true,
+          "dimensions_match_night": true,
+          "core_pixels": 314989,
+          "night_alignment_overlay": "public/textures/room/grounded-pastel-test/debug/fourth-night-debug-desk-pad-overlay.png"
+        },
+        "keyboard-body": {
+          "reused_day_mask": "public/textures/room/grounded-pastel-test/masks/fourth-mask-keyboard-body.png",
+          "day_mask_sha256_before": "EC0ADB32EDF1AE5BF38D7EAA7A507BDFDB78C9B2B825E8E98CDE7187CCFBE50B",
+          "day_mask_sha256_after": "EC0ADB32EDF1AE5BF38D7EAA7A507BDFDB78C9B2B825E8E98CDE7187CCFBE50B",
+          "day_mask_unchanged": true,
+          "dimensions_match_night": true,
+          "core_pixels": 99718,
+          "night_alignment_overlay": "public/textures/room/grounded-pastel-test/debug/fourth-night-debug-keyboard-body-overlay.png"
+        }
+      },
+      "new_night_specific_masks": [],
+      "mask_overlap_core_pixels": 0,
+      "outside_mask_pixel_mismatches": 0,
+      "black_pixels_before": 3596235,
+      "black_pixels_after": 3596235,
+      "new_black_pixels": 0,
+      "removed_black_pixels": 0,
+      "new_blown_highlight_pixels": 0,
+      "per_group": {
+        "drawer": {
+          "object_material": "Plane.030 / Drawer",
+          "day_family": "Sage Green",
+          "day_hex": "#718E7A",
+          "night_family": "Night Sage",
+          "night_hex": "#4E6759",
+          "mean_luminance_before": 7.223991,
+          "mean_luminance_after": 7.204545,
+          "mean_absolute_luminance_delta": 0.037716,
+          "luminance_correlation": 0.999970905
+        },
+        "drawer-shelves": {
+          "object_material": "Plane.031 / Drawer Shelves.001",
+          "day_family": "Warm Cream",
+          "day_hex": "#F1E9DE",
+          "night_family": "Warm Dim Cream",
+          "night_hex": "#BEB3A5",
+          "mean_luminance_before": 3.178858,
+          "mean_luminance_after": 3.169439,
+          "mean_absolute_luminance_delta": 0.013869,
+          "luminance_correlation": 0.999988381
+        },
+        "computer": {
+          "object_material": "Computer + Plane.020 / computer body",
+          "day_family": "Dusty Blue",
+          "day_hex": "#8FA9B8",
+          "night_family": "Night Dusty Blue",
+          "night_hex": "#526C7A",
+          "mean_luminance_before": 25.421099,
+          "mean_luminance_after": 25.357889,
+          "mean_absolute_luminance_delta": 0.080333,
+          "luminance_correlation": 0.999992353
+        },
+        "chair-body": {
+          "object_material": "Chair Top + Chair Legs / chair body",
+          "day_family": "Warm Cream",
+          "day_hex": "#F1E9DE",
+          "night_family": "Warm Dim Cream",
+          "night_hex": "#BEB3A5",
+          "mean_luminance_before": 17.946898,
+          "mean_luminance_after": 17.897968,
+          "mean_absolute_luminance_delta": 0.077081,
+          "luminance_correlation": 0.999983512
+        },
+        "chair-cushion": {
+          "object_material": "Chair Top / Chair Cushion",
+          "day_family": "Soft Terracotta",
+          "day_hex": "#D99478",
+          "night_family": "Night Terracotta",
+          "night_hex": "#9D6253",
+          "mean_luminance_before": 24.247936,
+          "mean_luminance_after": 24.188309,
+          "mean_absolute_luminance_delta": 0.084843,
+          "luminance_correlation": 0.999975934
+        },
+        "desk-pad": {
+          "object_material": "Cube.002 / Desk Pad",
+          "day_family": "Soft Terracotta",
+          "day_hex": "#D99478",
+          "night_family": "Night Terracotta",
+          "night_hex": "#9D6253",
+          "mean_luminance_before": 11.338831,
+          "mean_luminance_after": 11.31375,
+          "mean_absolute_luminance_delta": 0.029089,
+          "luminance_correlation": 0.999997159
+        },
+        "keyboard-body": {
+          "object_material": "Cube.003 / Keyboard body",
+          "day_family": "Warm Cream",
+          "day_hex": "#F1E9DE",
+          "night_family": "Warm Dim Cream",
+          "night_hex": "#BEB3A5",
+          "mean_luminance_before": 33.901863,
+          "mean_luminance_after": 33.80751,
+          "mean_absolute_luminance_delta": 0.098017,
+          "luminance_correlation": 0.999993077
+        }
+      },
+      "comparison": "public/textures/room/grounded-pastel-test/debug/fourth-night-original-vs-grounded-test.png",
+      "transition": {
+        "analysis_dimensions": [
+          1024,
+          1024
+        ],
+        "shader_model": "sRGB texture decode -> linear RGB mix(day, night, uMixRatio) -> pow(1/2.2), matching the current theme shader",
+        "preview": "public/textures/room/grounded-pastel-test/debug/fourth-day-night-transition-strip.png",
+        "strong_purple_definition": "Lab a > 12 and Lab b < -6 inside recolor masks",
+        "strong_purple_percent_by_mix_ratio": {
+          "0.00": 0.505541,
+          "0.25": 0.474052,
+          "0.50": 0.555094,
+          "0.75": 0.888054,
+          "1.00": 2.769614
+        },
+        "intermediate_purple_overshoot_percent": 0.0,
+        "purple_flash_detected": false,
+        "per_group_mean_lab_path": {
+          "drawer": [
+            {
+              "mix_ratio": 0.0,
+              "mean_lab_a": -3.310241,
+              "mean_lab_b": 2.674588
+            },
+            {
+              "mix_ratio": 0.25,
+              "mean_lab_a": -2.860883,
+              "mean_lab_b": 2.195804
+            },
+            {
+              "mix_ratio": 0.5,
+              "mean_lab_a": -2.252204,
+              "mean_lab_b": 1.56866
+            },
+            {
+              "mix_ratio": 0.75,
+              "mean_lab_a": -1.279393,
+              "mean_lab_b": 0.6105
+            },
+            {
+              "mix_ratio": 1.0,
+              "mean_lab_a": 1.246272,
+              "mean_lab_b": -1.884832
+            }
+          ],
+          "drawer-shelves": [
+            {
+              "mix_ratio": 0.0,
+              "mean_lab_a": 7.448405,
+              "mean_lab_b": 0.157667
+            },
+            {
+              "mix_ratio": 0.25,
+              "mean_lab_a": 6.489137,
+              "mean_lab_b": 0.1621
+            },
+            {
+              "mix_ratio": 0.5,
+              "mean_lab_a": 5.206008,
+              "mean_lab_b": 0.190057
+            },
+            {
+              "mix_ratio": 0.75,
+              "mean_lab_a": 3.346159,
+              "mean_lab_b": 0.212974
+            },
+            {
+              "mix_ratio": 1.0,
+              "mean_lab_a": 0.604709,
+              "mean_lab_b": 0.148065
+            }
+          ],
+          "computer": [
+            {
+              "mix_ratio": 0.0,
+              "mean_lab_a": -0.3902,
+              "mean_lab_b": -8.051471
+            },
+            {
+              "mix_ratio": 0.25,
+              "mean_lab_a": -0.230211,
+              "mean_lab_b": -8.001469
+            },
+            {
+              "mix_ratio": 0.5,
+              "mean_lab_a": 0.065443,
+              "mean_lab_b": -7.967934
+            },
+            {
+              "mix_ratio": 0.75,
+              "mean_lab_a": 0.434009,
+              "mean_lab_b": -7.970134
+            },
+            {
+              "mix_ratio": 1.0,
+              "mean_lab_a": 1.01207,
+              "mean_lab_b": -8.182878
+            }
+          ],
+          "chair-body": [
+            {
+              "mix_ratio": 0.0,
+              "mean_lab_a": 1.426502,
+              "mean_lab_b": 4.180134
+            },
+            {
+              "mix_ratio": 0.25,
+              "mean_lab_a": 1.535145,
+              "mean_lab_b": 4.110471
+            },
+            {
+              "mix_ratio": 0.5,
+              "mean_lab_a": 1.688978,
+              "mean_lab_b": 3.995045
+            },
+            {
+              "mix_ratio": 0.75,
+              "mean_lab_a": 1.962264,
+              "mean_lab_b": 3.832526
+            },
+            {
+              "mix_ratio": 1.0,
+              "mean_lab_a": 2.963445,
+              "mean_lab_b": 3.582937
+            }
+          ],
+          "chair-cushion": [
+            {
+              "mix_ratio": 0.0,
+              "mean_lab_a": 21.389198,
+              "mean_lab_b": 21.147989
+            },
+            {
+              "mix_ratio": 0.25,
+              "mean_lab_a": 20.41057,
+              "mean_lab_b": 19.411848
+            },
+            {
+              "mix_ratio": 0.5,
+              "mean_lab_a": 19.401659,
+              "mean_lab_b": 17.40555
+            },
+            {
+              "mix_ratio": 0.75,
+              "mean_lab_a": 18.447062,
+              "mean_lab_b": 14.936029
+            },
+            {
+              "mix_ratio": 1.0,
+              "mean_lab_a": 19.358919,
+              "mean_lab_b": 11.577112
+            }
+          ],
+          "desk-pad": [
+            {
+              "mix_ratio": 0.0,
+              "mean_lab_a": 7.013152,
+              "mean_lab_b": 5.952185
+            },
+            {
+              "mix_ratio": 0.25,
+              "mean_lab_a": 6.866777,
+              "mean_lab_b": 5.462765
+            },
+            {
+              "mix_ratio": 0.5,
+              "mean_lab_a": 6.751138,
+              "mean_lab_b": 4.899227
+            },
+            {
+              "mix_ratio": 0.75,
+              "mean_lab_a": 6.70586,
+              "mean_lab_b": 4.208946
+            },
+            {
+              "mix_ratio": 1.0,
+              "mean_lab_a": 7.032153,
+              "mean_lab_b": 3.211739
+            }
+          ],
+          "keyboard-body": [
+            {
+              "mix_ratio": 0.0,
+              "mean_lab_a": 2.738931,
+              "mean_lab_b": 3.464267
+            },
+            {
+              "mix_ratio": 0.25,
+              "mean_lab_a": 3.16014,
+              "mean_lab_b": 3.246704
+            },
+            {
+              "mix_ratio": 0.5,
+              "mean_lab_a": 3.683979,
+              "mean_lab_b": 3.015679
+            },
+            {
+              "mix_ratio": 0.75,
+              "mean_lab_a": 4.431667,
+              "mean_lab_b": 2.729516
+            },
+            {
+              "mix_ratio": 1.0,
+              "mean_lab_a": 5.807812,
+              "mean_lab_b": 2.323236
+            }
+          ]
+        }
+      }
+    }
+  },
+  "approved_day_tests": {
+    "first": {
+      "path": "public/textures/room/grounded-pastel-test/first-texture-set-day-grounded-test.webp",
+      "sha256_before": "732BC3D069221F98AE1A780D4A79EF9E885A387E2564731DBE58C1EDC29015B5",
+      "sha256_after": "732BC3D069221F98AE1A780D4A79EF9E885A387E2564731DBE58C1EDC29015B5",
+      "unchanged": true
+    },
+    "second": {
+      "path": "public/textures/room/grounded-pastel-test/second-texture-set-day-grounded-test.webp",
+      "sha256_before": "E89D583DC0E13A7B6549920DA7EAEFC024C1BE6C489A95FABAD3DE5D086E3A9F",
+      "sha256_after": "E89D583DC0E13A7B6549920DA7EAEFC024C1BE6C489A95FABAD3DE5D086E3A9F",
+      "unchanged": true
+    },
+    "third": {
+      "path": "public/textures/room/grounded-pastel-test/third-texture-set-day-grounded-test.webp",
+      "sha256_before": "821376D56769AD01B96AC342B51950BD8B9222F7AAEA3B3317F83763E3C8463A",
+      "sha256_after": "821376D56769AD01B96AC342B51950BD8B9222F7AAEA3B3317F83763E3C8463A",
+      "unchanged": true
+    },
+    "fourth": {
+      "path": "public/textures/room/grounded-pastel-test/fourth-texture-set-day-grounded-test.webp",
+      "sha256_before": "976965082C2FAFA4F865B54BA35AC21B04DE7435142CE3051049D547FC92EE8F",
+      "sha256_after": "976965082C2FAFA4F865B54BA35AC21B04DE7435142CE3051049D547FC92EE8F",
+      "unchanged": true
+    }
+  },
+  "all_night_comparison": "public/textures/room/grounded-pastel-test/debug/all-four-night-atlas-comparisons.png",
+  "all_day_night_consistency": "public/textures/room/grounded-pastel-test/debug/all-four-grounded-day-night-consistency.png",
+  "mask_alignment": {
+    "reused_validated_day_masks": true,
+    "new_night_specific_masks": [],
+    "reason": "Every mask is 4096x4096, uses the same baked UV/object membership, and Day/Night samplers share vUv in the unchanged shader."
+  },
+  "method": {
+    "source": "Original production Night atlases only",
+    "color_space": "CIELAB",
+    "luminance": "Original Night L channel preserved",
+    "chroma": "Original a/b blended toward darker Grounded Pastel targets",
+    "dark_pixel_protection": "Smoothstep L=4..18",
+    "masks": "Validated Day masks reused read-only",
+    "output_encoding": "Lossless WebP RGB"
+  }
+}

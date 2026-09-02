@@ -1,0 +1,67 @@
+{
+  "blend": "C:\\Users\\hiepdeptrai\\Desktop\\hk1_2026_2027\\MyPortfolioWeb\\sooahs-room-folio\\blender files\\Before Baking - Grounded Pastel Test.blend",
+  "object_count": 178,
+  "mesh_count": 176,
+  "collections": [
+    "Billboard",
+    "Books",
+    "Chair",
+    "Clock",
+    "Collection",
+    "Computer",
+    "Contact Frames",
+    "Egg Basket",
+    "Fish",
+    "Foot Rest",
+    "Hanging Lights",
+    "Hanging Plant",
+    "LCA",
+    "Maybe",
+    "Microphone",
+    "Mr Rabbit",
+    "Outside",
+    "Piano",
+    "SimpleBake_Bakes",
+    "Slippers",
+    "Storage Boxes",
+    "Table Top Items",
+    "Targets",
+    "Unwrapped",
+    "Window Frame",
+    "Wires"
+  ],
+  "keyword_matches": [
+    {
+      "name": "Twitter",
+      "type": "MESH",
+      "location": [
+        -1.091519,
+        4.070673,
+        5.872617
+      ],
+      "rotation": [
+        1.256246,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Contact Frames"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Twitter Logo",
+        "Light Wooden"
+      ]
+    }
+  ],
+  "baked_materials": [],
+  "grounded_images": [],
+  "missing_external_images": []
+}

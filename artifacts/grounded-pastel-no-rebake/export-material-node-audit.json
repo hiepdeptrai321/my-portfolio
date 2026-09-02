@@ -1,0 +1,359 @@
+{
+  "blend": "C:\\Users\\hiepdeptrai\\Desktop\\hk1_2026_2027\\MyPortfolioWeb\\sooahs-room-folio\\blender files\\For Export.blend",
+  "materials": {
+    "FinalFirst_Baked": {
+      "missing": false,
+      "use_nodes": true,
+      "node_count": 4,
+      "nodes": [
+        {
+          "name": "Material Output",
+          "label": "",
+          "type": "ShaderNodeOutputMaterial"
+        },
+        {
+          "name": "Group",
+          "label": "gltf",
+          "type": "ShaderNodeGroup"
+        },
+        {
+          "name": "Image Texture",
+          "label": "cyclesbake",
+          "type": "ShaderNodeTexImage",
+          "image": "FinalFirst_TextureSet_CyclesBake_COMBINED",
+          "filepath": "C:\\Users\\hiepdeptrai\\Desktop\\hk1_2026_2027\\MyPortfolioWeb\\sooahs-room-folio\\blender files\\textures\\FinalFirst_TextureSet_CyclesBake_COMBINED.exr",
+          "colorspace": "Linear Rec.709"
+        },
+        {
+          "name": "Emission",
+          "label": "",
+          "type": "ShaderNodeEmission"
+        }
+      ],
+      "links": [
+        {
+          "from_node": "Image Texture",
+          "from_socket": "Color",
+          "to_node": "Emission",
+          "to_socket": "Color"
+        },
+        {
+          "from_node": "Emission",
+          "from_socket": "Emission",
+          "to_node": "Material Output",
+          "to_socket": "Surface"
+        }
+      ],
+      "object_users": [
+        "Clock_Baked",
+        "Cube.009_Baked",
+        "Cube.016_Baked",
+        "Cube.018_Baked",
+        "Cube.019_Baked",
+        "Cube.020_Baked",
+        "Cube.021_Baked",
+        "Cube.027_Baked",
+        "Cube.028_Baked",
+        "Cube.036_Baked",
+        "Cube.037_Baked",
+        "Cube.039_Baked",
+        "Cube_Baked",
+        "Lamp_Baked",
+        "Plane.001_Baked",
+        "Plane.003_Baked",
+        "Plane.037_Baked",
+        "Plane.039_Baked",
+        "Plane.040_Baked",
+        "Plane.041_Baked",
+        "Plane.063_Baked",
+        "Plane.064_Baked",
+        "Torus.001_Baked",
+        "Vert.012_Baked"
+      ],
+      "object_user_count": 24
+    },
+    "RealFinalSecond_Baked": {
+      "missing": false,
+      "use_nodes": true,
+      "node_count": 4,
+      "nodes": [
+        {
+          "name": "Material Output",
+          "label": "",
+          "type": "ShaderNodeOutputMaterial"
+        },
+        {
+          "name": "Group",
+          "label": "gltf",
+          "type": "ShaderNodeGroup"
+        },
+        {
+          "name": "Image Texture",
+          "label": "cyclesbake",
+          "type": "ShaderNodeTexImage",
+          "image": "FinalSecond_TextureSet_CyclesBake_COMBINED.exr",
+          "filepath": "C:\\Users\\hiepdeptrai\\Desktop\\hk1_2026_2027\\MyPortfolioWeb\\sooahs-room-folio\\blender files\\textures\\FinalSecond_TextureSet_CyclesBake_COMBINED.exr",
+          "colorspace": "Linear Rec.709"
+        },
+        {
+          "name": "Emission",
+          "label": "",
+          "type": "ShaderNodeEmission"
+        }
+      ],
+      "links": [
+        {
+          "from_node": "Image Texture",
+          "from_socket": "Color",
+          "to_node": "Emission",
+          "to_socket": "Color"
+        },
+        {
+          "from_node": "Emission",
+          "from_socket": "Emission",
+          "to_node": "Material Output",
+          "to_socket": "Surface"
+        }
+      ],
+      "object_users": [
+        "Backdrop_Baked",
+        "Plane.042_Baked",
+        "Plane.045_Baked",
+        "Plane.047_Baked",
+        "Plane.122_Baked"
+      ],
+      "object_user_count": 5
+    },
+    "FinalThird_Baked": {
+      "missing": false,
+      "use_nodes": true,
+      "node_count": 4,
+      "nodes": [
+        {
+          "name": "Material Output",
+          "label": "",
+          "type": "ShaderNodeOutputMaterial"
+        },
+        {
+          "name": "Group",
+          "label": "gltf",
+          "type": "ShaderNodeGroup"
+        },
+        {
+          "name": "Image Texture",
+          "label": "cyclesbake",
+          "type": "ShaderNodeTexImage",
+          "image": "FinalThird_TextureSet_CyclesBake_COMBINED",
+          "filepath": "C:\\Users\\hiepdeptrai\\Desktop\\hk1_2026_2027\\MyPortfolioWeb\\sooahs-room-folio\\blender files\\textures\\FinalThird_TextureSet_CyclesBake_COMBINED.exr",
+          "colorspace": "Linear Rec.709"
+        },
+        {
+          "name": "Emission",
+          "label": "",
+          "type": "ShaderNodeEmission"
+        }
+      ],
+      "links": [
+        {
+          "from_node": "Image Texture",
+          "from_socket": "Color",
+          "to_node": "Emission",
+          "to_socket": "Color"
+        },
+        {
+          "from_node": "Emission",
+          "from_socket": "Emission",
+          "to_node": "Material Output",
+          "to_socket": "Surface"
+        }
+      ],
+      "object_users": [
+        "Kirby_Baked",
+        "League_Logo_Baked",
+        "Microphone_Baked",
+        "Mossy Rock_2_Baked",
+        "Mossy Rock_3.001_Baked",
+        "Mossy Rock_3_Baked",
+        "Mossy Rock_4.001_Baked",
+        "Mossy Rock_4.002_Baked",
+        "Mossy Rock_4_Baked",
+        "Mossy Rock_Baked",
+        "Piano_Baked",
+        "Plane.004_Baked",
+        "Plane.006_Baked",
+        "Plane.016_Baked",
+        "Plane.017_Baked",
+        "Plane.018_Baked",
+        "Plane.019_Baked",
+        "Plane.067_Baked",
+        "Plane_Baked",
+        "Seaweed_10_Baked",
+        "Seaweed_1_Baked",
+        "Seaweed_2_Baked",
+        "Seaweed_3_Baked",
+        "Seaweed_4_Baked",
+        "Seaweed_5_Baked",
+        "Seaweed_6.001_Baked",
+        "Seaweed_6_Baked",
+        "Seaweed_7_Baked",
+        "Seaweed_8_Baked",
+        "Seaweed_9_Baked",
+        "Seaweed_Baked",
+        "Wire_Two_Baked",
+        "Wooden_Name.001_Baked"
+      ],
+      "object_user_count": 33
+    },
+    "FinalFourth_Baked": {
+      "missing": false,
+      "use_nodes": true,
+      "node_count": 4,
+      "nodes": [
+        {
+          "name": "Material Output",
+          "label": "",
+          "type": "ShaderNodeOutputMaterial"
+        },
+        {
+          "name": "Group",
+          "label": "gltf",
+          "type": "ShaderNodeGroup"
+        },
+        {
+          "name": "Image Texture",
+          "label": "cyclesbake",
+          "type": "ShaderNodeTexImage",
+          "image": "FinalFourth_TextureSet_CyclesBake_COMBINED",
+          "filepath": "C:\\Users\\hiepdeptrai\\Desktop\\hk1_2026_2027\\MyPortfolioWeb\\sooahs-room-folio\\blender files\\textures\\FinalFourth_TextureSet_CyclesBake_COMBINED.exr",
+          "colorspace": "Linear Rec.709"
+        },
+        {
+          "name": "Emission",
+          "label": "",
+          "type": "ShaderNodeEmission"
+        }
+      ],
+      "links": [
+        {
+          "from_node": "Image Texture",
+          "from_socket": "Color",
+          "to_node": "Emission",
+          "to_socket": "Color"
+        },
+        {
+          "from_node": "Emission",
+          "from_socket": "Emission",
+          "to_node": "Material Output",
+          "to_socket": "Surface"
+        }
+      ],
+      "object_users": [
+        "Boba plushie_Baked",
+        "Box_1_Baked",
+        "Box_2_Baked",
+        "Box_3_Baked",
+        "B\u00e9zierCurve.001_Baked",
+        "B\u00e9zierCurve.002_Baked",
+        "B\u00e9zierCurve.003_Baked",
+        "B\u00e9zierCurve.005_Baked",
+        "B\u00e9zierCurve.010_Baked",
+        "B\u00e9zierCurve_Baked",
+        "Chair Legs_Baked",
+        "Chair Top_Baked",
+        "Circle.001_Baked",
+        "Computer_Baked",
+        "Cube.002_Baked",
+        "Cube.003_Baked",
+        "Cube.004_Baked",
+        "Cube.005_Baked",
+        "Cube.006_Baked",
+        "Cube.007_Baked",
+        "Cube.008_Baked",
+        "Cube.010_Baked",
+        "Cube.011_Baked",
+        "Cube.012_Baked",
+        "Cube.014_Baked",
+        "Cube.015_Baked",
+        "Cube.017_Baked",
+        "Cube.022_Baked",
+        "Cube.023_Baked",
+        "Cylinder.001_Baked",
+        "Cylinder.007_Baked",
+        "Cylinder.009_Baked",
+        "Cylinder.010_Baked",
+        "Cylinder.012_Baked",
+        "Cylinder.013_Baked",
+        "Cylinder.014_Baked",
+        "Cylinder.015_Baked",
+        "Cylinder_Baked",
+        "Egg Basket_Baked",
+        "Egg One_Baked",
+        "Egg Three_Baked",
+        "Egg Two_Baked",
+        "Flower_Basket_Baked",
+        "GitHub_Baked",
+        "Lights.002_Baked",
+        "Lights.003_Baked",
+        "Lights.004_Baked",
+        "Lights.005_Baked",
+        "Lights.006_Baked",
+        "Lights.007_Baked",
+        "Lights.008_Baked",
+        "Lights.009_Baked",
+        "Lights.010_Baked",
+        "Lights_Baked",
+        "Plane.002_Baked",
+        "Plane.005_Baked",
+        "Plane.007_Baked",
+        "Plane.008_Baked",
+        "Plane.009_Baked",
+        "Plane.010_Baked",
+        "Plane.011_Baked",
+        "Plane.012_Baked",
+        "Plane.013_Baked",
+        "Plane.014_Baked",
+        "Plane.015_Baked",
+        "Plane.020_Baked",
+        "Plane.024_Baked",
+        "Plane.025_Baked",
+        "Plane.026_Baked",
+        "Plane.027_Baked",
+        "Plane.028_Baked",
+        "Plane.030_Baked",
+        "Plane.031_Baked",
+        "Plane.032_Baked",
+        "Plane.033_Baked",
+        "Plane.038_Baked",
+        "Plane.043_Baked",
+        "Plane.044_Baked",
+        "Plane.046_Baked",
+        "Plane.048_Baked",
+        "Plane.073_Baked",
+        "Plane.074_Baked",
+        "Plane.075_Baked",
+        "Plane.105_Baked",
+        "Roundcube.001_Baked",
+        "Roundcube.002_Baked",
+        "Slippers_Baked",
+        "Sticky_Note_1_Baked",
+        "Sticky_Note_2_Baked",
+        "Sticky_Note_3_Baked",
+        "Sticky_Note_4_Baked",
+        "Sticky_Note_5_Baked",
+        "Sticky_Note_6_Baked",
+        "Sticky_Note_7_Baked",
+        "Sticky_Note_8_Baked",
+        "Sticky_Note_9_Baked",
+        "Sticky_Note_Baked",
+        "Table Stand_Baked",
+        "Twitter_Baked",
+        "Vert.002_Baked",
+        "Vert.004_Baked",
+        "Vert.009_Baked",
+        "Wire_Baked",
+        "YouTube_Baked"
+      ],
+      "object_user_count": 104
+    }
+  }
+}

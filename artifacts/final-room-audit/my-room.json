@@ -1,0 +1,3456 @@
+{
+  "blend": "C:\\Users\\hiepdeptrai\\Desktop\\hk1_2026_2027\\MyPortfolioWeb\\sooahs-room-folio\\blender files\\My Room.blend",
+  "object_count": 328,
+  "mesh_count": 325,
+  "collections": [
+    "First Texture Set",
+    "Fourth Texture Set",
+    "LCA",
+    "Second Texture Set",
+    "SimpleBake_Bakes",
+    "Targets",
+    "Third Texture Set"
+  ],
+  "keyword_matches": [
+    {
+      "name": "A#1_Key_Pointer_Raycaster_Third",
+      "type": "MESH",
+      "location": [
+        0.662339,
+        3.616229,
+        2.742631
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Third Texture Set"
+      ]
+    },
+    {
+      "name": "A#2_Key_Pointer_Raycaster_Third",
+      "type": "MESH",
+      "location": [
+        2.140099,
+        3.616229,
+        2.742631
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Third Texture Set"
+      ]
+    },
+    {
+      "name": "A1_Key_Pointer_Raycaster_Third",
+      "type": "MESH",
+      "location": [
+        0.552982,
+        3.6172,
+        2.670617
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Third Texture Set"
+      ]
+    },
+    {
+      "name": "A2_Key_Pointer_Raycaster_Third",
+      "type": "MESH",
+      "location": [
+        2.037921,
+        3.6172,
+        2.670617
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Third Texture Set"
+      ]
+    },
+    {
+      "name": "About_Button_Third_Raycaster_Pointer_Hover",
+      "type": "MESH",
+      "location": [
+        -3.518259,
+        -3.093583,
+        4.686182
+      ],
+      "rotation": [
+        -1e-06,
+        1.505904,
+        1.525903
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Third Texture Set"
+      ]
+    },
+    {
+      "name": "B1_Key_Pointer_Raycaster_Third",
+      "type": "MESH",
+      "location": [
+        0.765116,
+        3.6172,
+        2.670617
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Third Texture Set"
+      ]
+    },
+    {
+      "name": "B2_Key_Pointer_Raycaster_Third",
+      "type": "MESH",
+      "location": [
+        2.250055,
+        3.6172,
+        2.670617
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Third Texture Set"
+      ]
+    },
+    {
+      "name": "Boba_Plushie_Fourth_Raycaster_Hover",
+      "type": "MESH",
+      "location": [
+        -2.921087,
+        3.978411,
+        5.591756
+      ],
+      "rotation": [
+        0.00323,
+        -0.032723,
+        0.356755
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "Box_1_Hover_Fourth_Raycaster",
+      "type": "MESH",
+      "location": [
+        -2.564978,
+        0.57633,
+        0.826967
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "Box_2_Hover_Fourth_Raycaster",
+      "type": "MESH",
+      "location": [
+        -2.448514,
+        0.565962,
+        1.389237
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "Box_3_Hover_Fourth_Raycaster",
+      "type": "MESH",
+      "location": [
+        -2.383985,
+        0.535943,
+        1.808629
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "Bulb_1_Fourth_Raycaster_Hover_2",
+      "type": "MESH",
+      "location": [
+        -2.845806,
+        -0.330343,
+        5.621179
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "Bulb_2_Fourth_Raycaster_Hover_2",
+      "type": "MESH",
+      "location": [
+        -2.787164,
+        0.162844,
+        5.583134
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "Bulb_3_Fourth_Raycaster_Hover_2",
+      "type": "MESH",
+      "location": [
+        -2.771572,
+        0.659618,
+        5.64243
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "Bulb_4_Fourth_Raycaster_Hover_2",
+      "type": "MESH",
+      "location": [
+        -2.796038,
+        1.129886,
+        5.809531
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "Bulb_5_Fourth_Raycaster_Hover_2",
+      "type": "MESH",
+      "location": [
+        -2.873117,
+        1.573718,
+        6.010357
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "Bulb_6_Fourth_Raycaster_Hover_2",
+      "type": "MESH",
+      "location": [
+        -3.11906,
+        2.499247,
+        6.189003
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "Bulb_7_Fourth_Raycaster_Hover_2",
+      "type": "MESH",
+      "location": [
+        -2.849735,
+        2.680577,
+        5.861953
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "Bulb_8_Fourth_Raycaster_Hover_2",
+      "type": "MESH",
+      "location": [
+        -2.602586,
+        3.027255,
+        5.606593
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "Bulb_9_Fourth_Raycaster_Hover_2",
+      "type": "MESH",
+      "location": [
+        -2.443498,
+        3.479603,
+        5.500043
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "C#1_Key_Pointer_Raycaster_Third",
+      "type": "MESH",
+      "location": [
+        -0.404221,
+        3.616229,
+        2.742631
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Third Texture Set"
+      ]
+    },
+    {
+      "name": "C#2_Key_Pointer_Raycaster_Third",
+      "type": "MESH",
+      "location": [
+        1.073539,
+        3.616229,
+        2.742631
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Third Texture Set"
+      ]
+    },
+    {
+      "name": "C1_Key_Pointer_Raycaster_Third",
+      "type": "MESH",
+      "location": [
+        -0.507689,
+        3.6172,
+        2.670617
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Third Texture Set"
+      ]
+    },
+    {
+      "name": "C2_Key_Pointer_Raycaster_Third",
+      "type": "MESH",
+      "location": [
+        0.97725,
+        3.6172,
+        2.670617
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Third Texture Set"
+      ]
+    },
+    {
+      "name": "Cactus_Raycaster_Fourth_Hover",
+      "type": "MESH",
+      "location": [
+        -2.913744,
+        -0.201443,
+        4.847077
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "Coffee_Mug_Fourth_Raycaster_Hover",
+      "type": "MESH",
+      "location": [
+        -1.59255,
+        0.26708,
+        3.090868
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "Computer_Fan_1_Fourth_Raycaster",
+      "type": "MESH",
+      "location": [
+        -2.482286,
+        3.226484,
+        3.670829
+      ],
+      "rotation": [
+        1.570796,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "Computer_Fan_2_Fourth_Raycaster",
+      "type": "MESH",
+      "location": [
+        -3.073555,
+        3.564003,
+        3.755698
+      ],
+      "rotation": [
+        0.0,
+        1.570796,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "Computer_Fan_3_Fourth_Raycaster",
+      "type": "MESH",
+      "location": [
+        -2.14389,
+        3.226484,
+        3.670829
+      ],
+      "rotation": [
+        1.570796,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "Computer_Fan_4_Fourth_Raycaster",
+      "type": "MESH",
+      "location": [
+        -3.073555,
+        3.564003,
+        4.095363
+      ],
+      "rotation": [
+        0.0,
+        1.570796,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "Computer_Fan_5_Fourth_Raycaster",
+      "type": "MESH",
+      "location": [
+        -1.803861,
+        3.226484,
+        3.670829
+      ],
+      "rotation": [
+        1.570796,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "Contact_Button_Third_Raycaster_Pointer_Hover",
+      "type": "MESH",
+      "location": [
+        -3.518246,
+        -3.093302,
+        3.831537
+      ],
+      "rotation": [
+        1e-06,
+        1.631403,
+        1.525905
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Third Texture Set"
+      ]
+    },
+    {
+      "name": "D#1_Key_Pointer_Raycaster_Third",
+      "type": "MESH",
+      "location": [
+        -0.189942,
+        3.616229,
+        2.742631
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Third Texture Set"
+      ]
+    },
+    {
+      "name": "D#2_Key_Pointer_Raycaster_Third",
+      "type": "MESH",
+      "location": [
+        1.287818,
+        3.616229,
+        2.742631
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Third Texture Set"
+      ]
+    },
+    {
+      "name": "D1_Key_Pointer_Raycaster_Third",
+      "type": "MESH",
+      "location": [
+        -0.295555,
+        3.6172,
+        2.670617
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Third Texture Set"
+      ]
+    },
+    {
+      "name": "D2_Key_Pointer_Raycaster_Third",
+      "type": "MESH",
+      "location": [
+        1.189384,
+        3.6172,
+        2.670617
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Third Texture Set"
+      ]
+    },
+    {
+      "name": "E1_Key_Pointer_Raycaster_Third",
+      "type": "MESH",
+      "location": [
+        -0.083421,
+        3.6172,
+        2.670617
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Third Texture Set"
+      ]
+    },
+    {
+      "name": "E2_Key_Pointer_Raycaster_Third",
+      "type": "MESH",
+      "location": [
+        1.401519,
+        3.6172,
+        2.670617
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Third Texture Set"
+      ]
+    },
+    {
+      "name": "Egg_1_Fourth_Hover_Raycaster",
+      "type": "MESH",
+      "location": [
+        -3.066327,
+        2.284015,
+        6.56626
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "Egg_2_Fourth_Hover_Raycaster",
+      "type": "MESH",
+      "location": [
+        -2.995638,
+        2.408953,
+        6.56626
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "Egg_3_Fourth_Hover_Raycaster",
+      "type": "MESH",
+      "location": [
+        -3.135372,
+        2.410597,
+        6.56626
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "F#1_Key_Pointer_Raycaster_Third",
+      "type": "MESH",
+      "location": [
+        0.233782,
+        3.616229,
+        2.742631
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Third Texture Set"
+      ]
+    },
+    {
+      "name": "F#2_Key_Pointer_Raycaster_Third",
+      "type": "MESH",
+      "location": [
+        1.711541,
+        3.616229,
+        2.742631
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Third Texture Set"
+      ]
+    },
+    {
+      "name": "F1_Key_Pointer_Raycaster_Third",
+      "type": "MESH",
+      "location": [
+        0.128713,
+        3.6172,
+        2.670617
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Third Texture Set"
+      ]
+    },
+    {
+      "name": "F2_Key_Pointer_Raycaster_Third",
+      "type": "MESH",
+      "location": [
+        1.613653,
+        3.6172,
+        2.670617
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Third Texture Set"
+      ]
+    },
+    {
+      "name": "Facebook_Fifth_Raycaster_Pointer_Hover",
+      "type": "MESH",
+      "location": [
+        -1.012596,
+        4.177194,
+        6.151619
+      ],
+      "rotation": [
+        1.242562,
+        -0.024083,
+        0.045009
+      ],
+      "scale": [
+        0.340457,
+        0.341777,
+        0.195638
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Material.001",
+        "Material.f",
+        null
+      ]
+    },
+    {
+      "name": "Fish_Fourth_Hover_Raycaster",
+      "type": "MESH",
+      "location": [
+        -0.75883,
+        -1.18375,
+        1.654745
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "Flower_1_Fourth_Hover_Raycaster",
+      "type": "MESH",
+      "location": [
+        -2.810642,
+        -0.53012,
+        3.359812
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "Flower_2_Fourth_Hover_Raycaster",
+      "type": "MESH",
+      "location": [
+        -2.936152,
+        -0.563066,
+        3.40064
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "Flower_3_Fourth_Hover_Raycaster",
+      "type": "MESH",
+      "location": [
+        -2.911349,
+        -0.399651,
+        3.363163
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "Flower_4_Fourth_Raycaster_Hover",
+      "type": "MESH",
+      "location": [
+        -2.904766,
+        -1.528212,
+        3.992311
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "Flower_5_Fourth_Raycaster_Hover",
+      "type": "MESH",
+      "location": [
+        -2.866481,
+        -1.467066,
+        4.036026
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "Flower_Basket_Raycaster_Hover_Fourth",
+      "type": "MESH",
+      "location": [
+        -2.173693,
+        -1.114139,
+        2.283368
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "Frame_1_Second_Raycaster_Hover",
+      "type": "MESH",
+      "location": [
+        -2.84069,
+        -1.333098,
+        5.944574
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Second Texture Set"
+      ]
+    },
+    {
+      "name": "Frame_2_Second_Raycaster_Hover",
+      "type": "MESH",
+      "location": [
+        -2.933536,
+        -0.523093,
+        5.791317
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Second Texture Set"
+      ]
+    },
+    {
+      "name": "Frame_3_Second_Raycaster_Hover",
+      "type": "MESH",
+      "location": [
+        -2.906601,
+        -0.878813,
+        4.842676
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Second Texture Set"
+      ]
+    },
+    {
+      "name": "G#1_Key_Pointer_Raycaster_Third",
+      "type": "MESH",
+      "location": [
+        0.44806,
+        3.616229,
+        2.742631
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Third Texture Set"
+      ]
+    },
+    {
+      "name": "G#2_Key_Pointer_Raycaster_Third",
+      "type": "MESH",
+      "location": [
+        1.92582,
+        3.616229,
+        2.742631
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Third Texture Set"
+      ]
+    },
+    {
+      "name": "G1_Key_Pointer_Raycaster_Third",
+      "type": "MESH",
+      "location": [
+        0.340847,
+        3.6172,
+        2.670617
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Third Texture Set"
+      ]
+    },
+    {
+      "name": "G2_Key_Pointer_Raycaster_Third",
+      "type": "MESH",
+      "location": [
+        1.825787,
+        3.6172,
+        2.670617
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Third Texture Set"
+      ]
+    },
+    {
+      "name": "GitHub_Fourth_Raycaster_Pointer_Hover",
+      "type": "MESH",
+      "location": [
+        -2.30955,
+        3.988425,
+        5.618943
+      ],
+      "rotation": [
+        1.256246,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "Keyboard_10_Fourth_Raycaster_Hover",
+      "type": "MESH",
+      "location": [
+        -1.911739,
+        1.963217,
+        3.242756
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "Keyboard_11_Fourth_Raycaster_Hover",
+      "type": "MESH",
+      "location": [
+        -1.796369,
+        1.134425,
+        3.238784
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "Keyboard_12_Fourth_Raycaster_Hover",
+      "type": "MESH",
+      "location": [
+        -1.796369,
+        1.341623,
+        3.238784
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "Keyboard_13_Fourth_Raycaster_Hover",
+      "type": "MESH",
+      "location": [
+        -1.796369,
+        1.548821,
+        3.238784
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "Keyboard_14_Fourth_Raycaster_Hover",
+      "type": "MESH",
+      "location": [
+        -1.796369,
+        1.756019,
+        3.238784
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "Keyboard_15_Fourth_Raycaster_Hover",
+      "type": "MESH",
+      "location": [
+        -1.796369,
+        1.963217,
+        3.238784
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "Keyboard_16_Fourth_Raycaster_Hover",
+      "type": "MESH",
+      "location": [
+        -1.680998,
+        1.134425,
+        3.234812
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "Keyboard_17_Fourth_Raycaster_Hover",
+      "type": "MESH",
+      "location": [
+        -1.680998,
+        1.341623,
+        3.234812
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "Keyboard_18_Fourth_Raycaster_Hover",
+      "type": "MESH",
+      "location": [
+        -1.680998,
+        1.548821,
+        3.234812
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "Keyboard_19_Fourth_Raycaster_Hover",
+      "type": "MESH",
+      "location": [
+        -1.680998,
+        1.756019,
+        3.234812
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "Keyboard_1_Fourth_Raycaster_Hover",
+      "type": "MESH",
+      "location": [
+        -2.02711,
+        1.134425,
+        3.246727
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "Keyboard_20_Fourth_Raycaster_Hover",
+      "type": "MESH",
+      "location": [
+        -1.680998,
+        1.963217,
+        3.234812
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "Keyboard_21_Fourth_Raycaster_Hover",
+      "type": "MESH",
+      "location": [
+        -1.540681,
+        1.54004,
+        3.234872
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "Keyboard_2_Fourth_Raycaster_Hover",
+      "type": "MESH",
+      "location": [
+        -2.02711,
+        1.341623,
+        3.246727
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "Keyboard_3_Fourth_Raycaster_Hover",
+      "type": "MESH",
+      "location": [
+        -2.02711,
+        1.548821,
+        3.246727
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "Keyboard_4_Fourth_Raycaster_Hover",
+      "type": "MESH",
+      "location": [
+        -2.02711,
+        1.756019,
+        3.246727
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "Keyboard_5_Fourth_Raycaster_Hover",
+      "type": "MESH",
+      "location": [
+        -2.02711,
+        1.963217,
+        3.246727
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "Keyboard_6_Fourth_Raycaster_Hover",
+      "type": "MESH",
+      "location": [
+        -1.911739,
+        1.134425,
+        3.242756
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "Keyboard_7_Fourth_Raycaster_Hover",
+      "type": "MESH",
+      "location": [
+        -1.911739,
+        1.341623,
+        3.242756
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "Keyboard_8_Fourth_Raycaster_Hover",
+      "type": "MESH",
+      "location": [
+        -1.911739,
+        1.548821,
+        3.242756
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "Keyboard_9_Fourth_Raycaster_Hover",
+      "type": "MESH",
+      "location": [
+        -1.911739,
+        1.756019,
+        3.242756
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "Kirby_Third_Hover_Raycaster",
+      "type": "MESH",
+      "location": [
+        1.497185,
+        2.029098,
+        0.564367
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Third Texture Set"
+      ]
+    },
+    {
+      "name": "Lamp_First_Hover_Raycaster",
+      "type": "MESH",
+      "location": [
+        -0.774696,
+        3.196326,
+        0.525823
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "First Texture Set"
+      ]
+    },
+    {
+      "name": "Microphone_Hover_Third_Raycaster",
+      "type": "MESH",
+      "location": [
+        2.353053,
+        3.836568,
+        2.836703
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Third Texture Set"
+      ]
+    },
+    {
+      "name": "Mouth_Raycaster_Hover_Fourth",
+      "type": "MESH",
+      "location": [
+        -1.85878,
+        2.70477,
+        3.161352
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "MrRabbit_Fourth_Raycaster_Hover",
+      "type": "MESH",
+      "location": [
+        -2.645614,
+        2.25218,
+        3.461087
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "MrRabbit_Son_Raycaster_Fourth_Hover",
+      "type": "MESH",
+      "location": [
+        -2.705759,
+        2.009644,
+        3.464841
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "My_Work_Button_Third_Raycaster_Pointer_Hover",
+      "type": "MESH",
+      "location": [
+        -3.518318,
+        -3.093348,
+        5.536247
+      ],
+      "rotation": [
+        0.681001,
+        1.64983,
+        2.208522
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Third Texture Set"
+      ]
+    },
+    {
+      "name": "Name_Letter_2_Third_Raycaster_Hover",
+      "type": "MESH",
+      "location": [
+        0.698678,
+        4.215424,
+        3.481639
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Third Texture Set"
+      ]
+    },
+    {
+      "name": "Name_Letter_5_Third_Raycaster_Hover",
+      "type": "MESH",
+      "location": [
+        1.333278,
+        4.215419,
+        3.481518
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Third Texture Set"
+      ]
+    },
+    {
+      "name": "Name_Letter_7_Third_Raycaster_Hover",
+      "type": "MESH",
+      "location": [
+        1.719063,
+        4.215421,
+        3.493731
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Third Texture Set"
+      ]
+    },
+    {
+      "name": "Pencil_1_Fourth_Hover_Raycaster",
+      "type": "MESH",
+      "location": [
+        -2.677375,
+        -1.611375,
+        2.864043
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "Pencil_2_Fourth_Hover_Raycaster",
+      "type": "MESH",
+      "location": [
+        -2.71188,
+        -1.568146,
+        2.85842
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "Pencil_3_Fourth_Hover_Raycaster",
+      "type": "MESH",
+      "location": [
+        -2.653188,
+        -1.540371,
+        2.862328
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "Poro_Raycaster_Hover_Fourth",
+      "type": "MESH",
+      "location": [
+        -2.648267,
+        0.842899,
+        3.473623
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "Rock_1_Third_Raycaster_Hover",
+      "type": "MESH",
+      "location": [
+        2.36353,
+        6.425403,
+        -1.337128
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Third Texture Set"
+      ]
+    },
+    {
+      "name": "Rock_2_Third_Raycaster_Hover",
+      "type": "MESH",
+      "location": [
+        3.713412,
+        2.354971,
+        -0.807651
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Third Texture Set"
+      ]
+    },
+    {
+      "name": "Rock_3_Third_Raycaster_Hover",
+      "type": "MESH",
+      "location": [
+        4.449822,
+        -0.483885,
+        -1.074744
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Third Texture Set"
+      ]
+    },
+    {
+      "name": "Rock_4_Third_Raycaster_Hover",
+      "type": "MESH",
+      "location": [
+        3.510424,
+        -0.490998,
+        -0.87949
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Third Texture Set"
+      ]
+    },
+    {
+      "name": "Rock_5_Third_Raycaster_Hover",
+      "type": "MESH",
+      "location": [
+        0.120764,
+        -2.686277,
+        -0.79738
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Third Texture Set"
+      ]
+    },
+    {
+      "name": "Rock_6_Third_Raycaster_Hover",
+      "type": "MESH",
+      "location": [
+        -2.107412,
+        -3.138527,
+        -0.812657
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Third Texture Set"
+      ]
+    },
+    {
+      "name": "Rock_7_Third_Raycaster_Hover",
+      "type": "MESH",
+      "location": [
+        -5.322715,
+        -1.799627,
+        -1.171369
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Third Texture Set"
+      ]
+    },
+    {
+      "name": "Seaweed_10_Hover_Third_Raycaster",
+      "type": "MESH",
+      "location": [
+        -2.686295,
+        -2.678671,
+        -0.358307
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Third Texture Set"
+      ]
+    },
+    {
+      "name": "Seaweed_11_Hover_Third_Raycaster",
+      "type": "MESH",
+      "location": [
+        -3.315704,
+        -2.683589,
+        0.029745
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Third Texture Set"
+      ]
+    },
+    {
+      "name": "Seaweed_12_Hover_Third_Raycaster",
+      "type": "MESH",
+      "location": [
+        -3.436229,
+        -3.086169,
+        -0.564107
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Third Texture Set"
+      ]
+    },
+    {
+      "name": "Seaweed_1_Hover_Third_Raycaster",
+      "type": "MESH",
+      "location": [
+        3.327584,
+        4.308013,
+        -0.599977
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Third Texture Set"
+      ]
+    },
+    {
+      "name": "Seaweed_2_Hover_Third_Raycaster",
+      "type": "MESH",
+      "location": [
+        3.190624,
+        3.040619,
+        -0.671812
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Third Texture Set"
+      ]
+    },
+    {
+      "name": "Seaweed_3_Hover_Third_Raycaster",
+      "type": "MESH",
+      "location": [
+        3.24537,
+        3.60894,
+        -0.452834
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Third Texture Set"
+      ]
+    },
+    {
+      "name": "Seaweed_4_Hover_Third_Raycaster",
+      "type": "MESH",
+      "location": [
+        3.544003,
+        1.234734,
+        -0.540959
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Third Texture Set"
+      ]
+    },
+    {
+      "name": "Seaweed_5_Hover_Third_Raycaster",
+      "type": "MESH",
+      "location": [
+        2.95196,
+        -2.204692,
+        -0.77667
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Third Texture Set"
+      ]
+    },
+    {
+      "name": "Seaweed_6_Hover_Third_Raycaster",
+      "type": "MESH",
+      "location": [
+        2.444665,
+        -2.491275,
+        -0.435583
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Third Texture Set"
+      ]
+    },
+    {
+      "name": "Seaweed_7_Hover_Third_Raycaster",
+      "type": "MESH",
+      "location": [
+        1.95735,
+        -2.609302,
+        -0.560843
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Third Texture Set"
+      ]
+    },
+    {
+      "name": "Seaweed_8_Hover_Third_Raycaster",
+      "type": "MESH",
+      "location": [
+        -0.963793,
+        -2.936727,
+        -0.514277
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Third Texture Set"
+      ]
+    },
+    {
+      "name": "Seaweed_9_Hover_Third_Raycaster",
+      "type": "MESH",
+      "location": [
+        -1.363165,
+        -2.506402,
+        -0.209232
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Third Texture Set"
+      ]
+    },
+    {
+      "name": "Slipper_1_Fourth_Hover_Raycaster",
+      "type": "MESH",
+      "location": [
+        -2.116385,
+        1.637765,
+        0.525823
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "Slipper_2_Fourth_Hover_Raycaster",
+      "type": "MESH",
+      "location": [
+        -2.732616,
+        2.420043,
+        0.523676
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "Story_English_Headphones_Hover_Raycaster_Pointer",
+      "type": "MESH",
+      "location": [
+        -2.12325,
+        -0.258312,
+        3.079225
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    },
+    {
+      "name": "Tree_3",
+      "type": "MESH",
+      "location": [
+        -1.05677,
+        5.865587,
+        -1.012815
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        109.762779,
+        109.757774,
+        59.100109
+      ],
+      "parent": "RootNode",
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Tree_Green",
+        "Tree_Wood"
+      ]
+    },
+    {
+      "name": "YouTube_Fourth_Raycaster_Pointer_Hover",
+      "type": "MESH",
+      "location": [
+        -1.694319,
+        3.988758,
+        5.62068
+      ],
+      "rotation": [
+        1.256246,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Fourth Texture Set"
+      ]
+    }
+  ],
+  "baked_materials": [
+    "FinalFirst_Baked",
+    "RealFinalSecond_Baked",
+    "FinalThird_Baked",
+    "FinalFourth_Baked"
+  ],
+  "grounded_images": [],
+  "missing_external_images": [
+    {
+      "name": "autumn_field_4k.hdr",
+      "filepath": "//..\\..\\..\\Downloads\\autumn_field_4k.hdr"
+    },
+    {
+      "name": "FinalFirst_TextureSet_CyclesBake_COMBINED",
+      "filepath": "//textures\\FinalFirst_TextureSet_CyclesBake_COMBINED.exr"
+    },
+    {
+      "name": "FinalFirstNight_TextureSet_CyclesBake_COMBINED.exr",
+      "filepath": "//textures\\FinalFirstNight_TextureSet_CyclesBake_COMBINED.exr"
+    },
+    {
+      "name": "FinalFourth_TextureSet_CyclesBake_COMBINED",
+      "filepath": "//textures\\FinalFourth_TextureSet_CyclesBake_COMBINED.exr"
+    },
+    {
+      "name": "FinalSecond_TextureSet_CyclesBake_COMBINED",
+      "filepath": "//textures\\FinalSecond_TextureSet_CyclesBake_COMBINED.exr"
+    },
+    {
+      "name": "FinalSecond_TextureSet_CyclesBake_COMBINED.exr",
+      "filepath": "//textures\\FinalSecond_TextureSet_CyclesBake_COMBINED.exr"
+    },
+    {
+      "name": "FinalThird_TextureSet_CyclesBake_COMBINED",
+      "filepath": "//textures\\FinalThird_TextureSet_CyclesBake_COMBINED.exr"
+    },
+    {
+      "name": "RealFinalSecond_TextureSet_CyclesBake_COMBINED",
+      "filepath": "//textures\\RealFinalSecond_TextureSet_CyclesBake_COMBINED.exr"
+    },
+    {
+      "name": "ReallyNewFirst_TextureSetOne_CyclesBake_COMBINED",
+      "filepath": "//textures\\ReallyNewFirst_TextureSetOne_CyclesBake_COMBINED.exr"
+    },
+    {
+      "name": "ReallyNewSecond_TextureSetTwo_CyclesBake_COMBINED",
+      "filepath": "//textures\\ReallyNewSecond_TextureSetTwo_CyclesBake_COMBINED.exr"
+    },
+    {
+      "name": "ReallyReallyReallyNewThird_TextureSetThree_CyclesBake_COMBINED",
+      "filepath": "//textures\\ReallyReallyReallyNewThird_TextureSetThree_CyclesBake_COMBINED.exr"
+    },
+    {
+      "name": "WaitNewFourth_TextureSet_CyclesBake_COMBINED",
+      "filepath": "//textures\\WaitNewFourth_TextureSet_CyclesBake_COMBINED.exr"
+    },
+    {
+      "name": "WaitNewThird_TextureSetThree_CyclesBake_COMBINED",
+      "filepath": "//textures\\WaitNewThird_TextureSetThree_CyclesBake_COMBINED.exr"
+    },
+    {
+      "name": "Wood02_basecolor.tga",
+      "filepath": "//textures\\Wood02_basecolor.tga"
+    },
+    {
+      "name": "Wood02_height.tga",
+      "filepath": "//textures\\Wood02_height.tga"
+    },
+    {
+      "name": "Wood02_normal.tga",
+      "filepath": "//textures\\Wood02_normal.tga"
+    },
+    {
+      "name": "Wood02_PBRset.tga",
+      "filepath": "//textures\\Wood02_PBRset.tga"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "model": "C:\\Users\\hiepdeptrai\\Desktop\\hk1_2026_2027\\MyPortfolioWeb\\sooahs-room-folio\\public\\models\\facebook-card.glb",
+  "objects": [
+    {
+      "name": "Facebook_Fifth_Raycaster_Pointer_Hover",
+      "type": "MESH",
+      "location": [
+        -1.012596,
+        4.177194,
+        6.151619
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.340457,
+        0.341777,
+        0.195638
+      ],
+      "parent": null,
+      "materials": [
+        "Material.001",
+        "Material.f"
+      ],
+      "world_bounds": [
+        [
+          -1.354513,
+          4.029407,
+          5.598106
+        ],
+        [
+          -1.350391,
+          3.91748,
+          5.636237
+        ],
+        [
+          -1.371179,
+          4.096506,
+          6.16399
+        ],
+        [
+          -1.375301,
+          4.208433,
+          6.125859
+        ],
+        [
+          -0.799711,
+          4.054394,
+          5.611484
+        ],
+        [
+          -0.795589,
+          3.942467,
+          5.649614
+        ],
+        [
+          -0.816377,
+          4.121493,
+          6.177367
+        ],
+        [
+          -0.820499,
+          4.23342,
+          6.139236
+        ]
+      ]
+    }
+  ],
+  "materials": [
+    "Material.001",
+    "Material.f"
+  ],
+  "images": []
+}

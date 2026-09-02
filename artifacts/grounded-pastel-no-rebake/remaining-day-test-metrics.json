@@ -1,0 +1,289 @@
+{
+  "atlases": {
+    "first": {
+      "source_atlas": "public/textures/room/day/first-texture-set-day.webp",
+      "source_sha256_before": "D55742049330BB2BF44956014B25DF231D7E2FAAB7628536EC84807E6DC3423A",
+      "source_sha256_after": "D55742049330BB2BF44956014B25DF231D7E2FAAB7628536EC84807E6DC3423A",
+      "source_unchanged": true,
+      "test_atlas": "public/textures/room/grounded-pastel-test/first-texture-set-day-grounded-test.webp",
+      "test_sha256": "732BC3D069221F98AE1A780D4A79EF9E885A387E2564731DBE58C1EDC29015B5",
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "source_mode": "RGB",
+      "test_mode": "RGB",
+      "mask_overlap_core_pixels": 0,
+      "mask_reports": {
+        "room-shell": {
+          "file": "public/textures/room/grounded-pastel-test/masks/first-mask-room-shell.png",
+          "debug_overlay": "public/textures/room/grounded-pastel-test/debug/first-debug-room-shell-overlay.png",
+          "dimensions": [
+            4096,
+            4096
+          ],
+          "core_pixels": 4059733,
+          "coverage_percent": 24.197894,
+          "bbox_xyxy": [
+            6,
+            32,
+            3997,
+            4089
+          ]
+        },
+        "stone-structure": {
+          "file": "public/textures/room/grounded-pastel-test/masks/first-mask-stone-structure.png",
+          "debug_overlay": "public/textures/room/grounded-pastel-test/debug/first-debug-stone-structure-overlay.png",
+          "dimensions": [
+            4096,
+            4096
+          ],
+          "core_pixels": 890846,
+          "coverage_percent": 5.309856,
+          "bbox_xyxy": [
+            6,
+            9,
+            4083,
+            3995
+          ]
+        },
+        "neutral-structure": {
+          "file": "public/textures/room/grounded-pastel-test/masks/first-mask-neutral-structure.png",
+          "debug_overlay": "public/textures/room/grounded-pastel-test/debug/first-debug-neutral-structure-overlay.png",
+          "dimensions": [
+            4096,
+            4096
+          ],
+          "core_pixels": 1374973,
+          "coverage_percent": 8.195478,
+          "bbox_xyxy": [
+            6,
+            9,
+            4087,
+            3994
+          ]
+        },
+        "cream-structure": {
+          "file": "public/textures/room/grounded-pastel-test/masks/first-mask-cream-structure.png",
+          "debug_overlay": "public/textures/room/grounded-pastel-test/debug/first-debug-cream-structure-overlay.png",
+          "dimensions": [
+            4096,
+            4096
+          ],
+          "core_pixels": 233461,
+          "coverage_percent": 1.391536,
+          "bbox_xyxy": [
+            6,
+            15,
+            4088,
+            4089
+          ]
+        }
+      },
+      "per_group": {
+        "room-shell": {
+          "target_family": "Warm Cream",
+          "target_hex": "#F1E9DE",
+          "mean_luminance_before": 48.03083,
+          "mean_luminance_after": 47.965542,
+          "mean_absolute_luminance_delta": 0.086697,
+          "luminance_correlation": 0.999994666
+        },
+        "stone-structure": {
+          "target_family": "Mist Gray",
+          "target_hex": "#DCE2DE",
+          "mean_luminance_before": 56.700748,
+          "mean_luminance_after": 56.614044,
+          "mean_absolute_luminance_delta": 0.102306,
+          "luminance_correlation": 0.999995058
+        },
+        "neutral-structure": {
+          "target_family": "Mist Gray",
+          "target_hex": "#DCE2DE",
+          "mean_luminance_before": 28.477295,
+          "mean_luminance_after": 28.418421,
+          "mean_absolute_luminance_delta": 0.081093,
+          "luminance_correlation": 0.999992749
+        },
+        "cream-structure": {
+          "target_family": "Warm Cream",
+          "target_hex": "#F1E9DE",
+          "mean_luminance_before": 51.654804,
+          "mean_luminance_after": 51.578499,
+          "mean_absolute_luminance_delta": 0.095728,
+          "luminance_correlation": 0.999989897
+        }
+      },
+      "outside_mask_pixel_mismatches": 0,
+      "black_pixels_before": 1016718,
+      "black_pixels_after": 1016718,
+      "new_black_pixels": 0,
+      "removed_black_pixels": 0,
+      "core_mask_pixels": 6559013,
+      "comparison": "public/textures/room/grounded-pastel-test/debug/first-day-original-vs-grounded-test.png"
+    },
+    "second": {
+      "source_atlas": "public/textures/room/day/second-texture-set-day.webp",
+      "source_sha256_before": "C56ED5E1A67BDA10CAA7985DD343BAEA93CDBDE966E5DED5B6785B4450477473",
+      "source_sha256_after": "C56ED5E1A67BDA10CAA7985DD343BAEA93CDBDE966E5DED5B6785B4450477473",
+      "source_unchanged": true,
+      "test_atlas": "public/textures/room/grounded-pastel-test/second-texture-set-day-grounded-test.webp",
+      "test_sha256": "E89D583DC0E13A7B6549920DA7EAEFC024C1BE6C489A95FABAD3DE5D086E3A9F",
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "source_mode": "RGB",
+      "test_mode": "RGB",
+      "mask_overlap_core_pixels": 0,
+      "mask_reports": {
+        "backdrop": {
+          "file": "public/textures/room/grounded-pastel-test/masks/second-mask-backdrop.png",
+          "debug_overlay": "public/textures/room/grounded-pastel-test/debug/second-debug-backdrop-overlay.png",
+          "dimensions": [
+            4096,
+            4096
+          ],
+          "core_pixels": 9505917,
+          "coverage_percent": 56.659681,
+          "bbox_xyxy": [
+            6,
+            98,
+            3590,
+            4089
+          ]
+        },
+        "poster-frame": {
+          "file": "public/textures/room/grounded-pastel-test/masks/second-mask-poster-frame.png",
+          "debug_overlay": "public/textures/room/grounded-pastel-test/debug/second-debug-poster-frame-overlay.png",
+          "dimensions": [
+            4096,
+            4096
+          ],
+          "core_pixels": 14835,
+          "coverage_percent": 0.088423,
+          "bbox_xyxy": [
+            3603,
+            939,
+            3682,
+            1836
+          ]
+        }
+      },
+      "per_group": {
+        "backdrop": {
+          "target_family": "Mist Gray",
+          "target_hex": "#DCE2DE",
+          "mean_luminance_before": 70.387054,
+          "mean_luminance_after": 70.310402,
+          "mean_absolute_luminance_delta": 0.100921,
+          "luminance_correlation": 0.999976481
+        },
+        "poster-frame": {
+          "target_family": "Deep Sage",
+          "target_hex": "#405D52",
+          "mean_luminance_before": 66.446556,
+          "mean_luminance_after": 66.384598,
+          "mean_absolute_luminance_delta": 0.090404,
+          "luminance_correlation": 0.999968565
+        }
+      },
+      "outside_mask_pixel_mismatches": 0,
+      "black_pixels_before": 1689108,
+      "black_pixels_after": 1689108,
+      "new_black_pixels": 0,
+      "removed_black_pixels": 0,
+      "core_mask_pixels": 9520752,
+      "comparison": "public/textures/room/grounded-pastel-test/debug/second-day-original-vs-grounded-test.png"
+    },
+    "third": {
+      "source_atlas": "public/textures/room/day/third-texture-set-day.webp",
+      "source_sha256_before": "39E11D39817F6D9A27C9A278BCB4468A6A0782CA65B0185488251BA78C28F39B",
+      "source_sha256_after": "39E11D39817F6D9A27C9A278BCB4468A6A0782CA65B0185488251BA78C28F39B",
+      "source_unchanged": true,
+      "test_atlas": "public/textures/room/grounded-pastel-test/third-texture-set-day-grounded-test.webp",
+      "test_sha256": "821376D56769AD01B96AC342B51950BD8B9222F7AAEA3B3317F83763E3C8463A",
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "source_mode": "RGB",
+      "test_mode": "RGB",
+      "mask_overlap_core_pixels": 0,
+      "mask_reports": {
+        "piano-body": {
+          "file": "public/textures/room/grounded-pastel-test/masks/third-mask-piano-body.png",
+          "debug_overlay": "public/textures/room/grounded-pastel-test/debug/third-debug-piano-body-overlay.png",
+          "dimensions": [
+            4096,
+            4096
+          ],
+          "core_pixels": 3578567,
+          "coverage_percent": 21.329921,
+          "bbox_xyxy": [
+            6,
+            33,
+            4089,
+            4089
+          ]
+        },
+        "welcome-mat": {
+          "file": "public/textures/room/grounded-pastel-test/masks/third-mask-welcome-mat.png",
+          "debug_overlay": "public/textures/room/grounded-pastel-test/debug/third-debug-welcome-mat-overlay.png",
+          "dimensions": [
+            4096,
+            4096
+          ],
+          "core_pixels": 753201,
+          "coverage_percent": 4.489428,
+          "bbox_xyxy": [
+            6,
+            29,
+            4088,
+            4089
+          ]
+        }
+      },
+      "per_group": {
+        "piano-body": {
+          "target_family": "Dusty Blue",
+          "target_hex": "#8FA9B8",
+          "mean_luminance_before": 41.883984,
+          "mean_luminance_after": 41.807426,
+          "mean_absolute_luminance_delta": 0.093006,
+          "luminance_correlation": 0.999992374
+        },
+        "welcome-mat": {
+          "target_family": "Sage Green",
+          "target_hex": "#718E7A",
+          "mean_luminance_before": 75.265656,
+          "mean_luminance_after": 75.175064,
+          "mean_absolute_luminance_delta": 0.097101,
+          "luminance_correlation": 0.999995052
+        }
+      },
+      "outside_mask_pixel_mismatches": 0,
+      "black_pixels_before": 1561578,
+      "black_pixels_after": 1561578,
+      "new_black_pixels": 0,
+      "removed_black_pixels": 0,
+      "core_mask_pixels": 4331768,
+      "comparison": "public/textures/room/grounded-pastel-test/debug/third-day-original-vs-grounded-test.png"
+    }
+  },
+  "approved_fourth_test": {
+    "path": "public/textures/room/grounded-pastel-test/fourth-texture-set-day-grounded-test.webp",
+    "sha256_before": "976965082C2FAFA4F865B54BA35AC21B04DE7435142CE3051049D547FC92EE8F",
+    "sha256_after": "976965082C2FAFA4F865B54BA35AC21B04DE7435142CE3051049D547FC92EE8F",
+    "unchanged": true
+  },
+  "all_day_comparison": "public/textures/room/grounded-pastel-test/debug/all-four-day-atlas-comparisons.png",
+  "method": {
+    "color_space": "CIELAB",
+    "luminance": "Original L channel preserved",
+    "chroma": "Original a/b blended toward each target palette color",
+    "dark_pixel_protection": "Smoothstep L=4..18",
+    "mask_edges": "2x rasterization then Lanczos antialiasing",
+    "output_encoding": "Lossless WebP RGB"
+  }
+}
