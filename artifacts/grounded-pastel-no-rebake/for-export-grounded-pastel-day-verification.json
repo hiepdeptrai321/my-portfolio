@@ -1,0 +1,84 @@
+{
+  "blend": "C:\\Users\\hiepdeptrai\\Desktop\\hk1_2026_2027\\MyPortfolioWeb\\sooahs-room-folio\\blender files\\For Export - Grounded Pastel Day.blend",
+  "mode": "day",
+  "structure_sha256": "ADFD76A59F4CBE2868AFD9232DFA82C1B09666DCB1E1962365ADFE8334297EF1",
+  "structure_counts": {
+    "object_count": 333,
+    "mesh_object_count": 331,
+    "vertex_count": 443882,
+    "polygon_count": 412028,
+    "uv_loop_count": 1819620
+  },
+  "has_embedded_readme": true,
+  "materials": {
+    "FinalFirst_Baked": {
+      "exists": true,
+      "image_node": true,
+      "image": "Grounded_First_Day",
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "packed": true,
+      "linked_to_emission": true,
+      "mode_property": "day"
+    },
+    "RealFinalSecond_Baked": {
+      "exists": true,
+      "image_node": true,
+      "image": "Grounded_Second_Day",
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "packed": true,
+      "linked_to_emission": true,
+      "mode_property": "day"
+    },
+    "FinalThird_Baked": {
+      "exists": true,
+      "image_node": true,
+      "image": "Grounded_Third_Day",
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "packed": true,
+      "linked_to_emission": true,
+      "mode_property": "day"
+    },
+    "FinalFourth_Baked": {
+      "exists": true,
+      "image_node": true,
+      "image": "Grounded_Fourth_Day",
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "packed": true,
+      "linked_to_emission": true,
+      "mode_property": "day"
+    }
+  },
+  "visibility": {
+    "baked_mesh_total": 166,
+    "baked_mesh_viewport_enabled": 166,
+    "baked_mesh_render_enabled": 166,
+    "source_mesh_total": 165,
+    "source_mesh_viewport_hidden": 165,
+    "source_mesh_render_hidden": 165
+  },
+  "baked_layer_collections": [
+    {
+      "view_layer": "ViewLayer",
+      "exclude": false,
+      "hide_viewport": false
+    }
+  ],
+  "packed_grounded_images": [
+    "Grounded_First_Day",
+    "Grounded_Fourth_Day",
+    "Grounded_Second_Day",
+    "Grounded_Third_Day"
+  ]
+}

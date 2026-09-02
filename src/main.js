@@ -1473,20 +1473,20 @@ const environmentMap = new THREE.CubeTextureLoader()
 
 const textureMap = {
   First: {
-    day: "/textures/room/day/first-texture-set-day.webp",
-    night: "/textures/room/night/first-texture-set-night.webp",
+    day: "/textures/room/grounded-pastel-test/first-texture-set-day-grounded-test.webp",
+    night: "/textures/room/grounded-pastel-test/first-texture-set-night-grounded-test.webp",
   },
   Second: {
-    day: "/textures/room/day/second-texture-set-day.webp",
-    night: "/textures/room/night/second-texture-set-night.webp",
+    day: "/textures/room/grounded-pastel-test/second-texture-set-day-grounded-test.webp",
+    night: "/textures/room/grounded-pastel-test/second-texture-set-night-grounded-test.webp",
   },
   Third: {
-    day: "/textures/room/day/third-texture-set-day.webp",
-    night: "/textures/room/night/third-texture-set-night.webp",
+    day: "/textures/room/grounded-pastel-test/third-texture-set-day-grounded-test.webp",
+    night: "/textures/room/grounded-pastel-test/third-texture-set-night-grounded-test.webp",
   },
   Fourth: {
-    day: "/textures/room/day/fourth-texture-set-day.webp",
-    night: "/textures/room/night/fourth-texture-set-night.webp",
+    day: "/textures/room/grounded-pastel-test/fourth-texture-set-day-grounded-test.webp",
+    night: "/textures/room/grounded-pastel-test/fourth-texture-set-night-grounded-test.webp",
   },
 };
 

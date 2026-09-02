@@ -1,0 +1,202 @@
+{
+  "source_atlas": "public/textures/room/day/fourth-texture-set-day.webp",
+  "source_sha256_before": "FF57DF8BF1630C4DE37888351FF914177ED429A1E08FDC3788F08D0769B74546",
+  "source_sha256_after": "FF57DF8BF1630C4DE37888351FF914177ED429A1E08FDC3788F08D0769B74546",
+  "source_unchanged": true,
+  "test_atlas": "public/textures/room/grounded-pastel-test/fourth-texture-set-day-grounded-test.webp",
+  "test_sha256": "976965082C2FAFA4F865B54BA35AC21B04DE7435142CE3051049D547FC92EE8F",
+  "dimensions": [
+    4096,
+    4096
+  ],
+  "source_mode": "RGB",
+  "test_mode": "RGB",
+  "mask_overlap_core_pixels": 0,
+  "mask_reports": {
+    "drawer": {
+      "file": "public/textures/room/grounded-pastel-test/masks/fourth-mask-drawer.png",
+      "debug_overlay": "public/textures/room/grounded-pastel-test/debug/fourth-debug-drawer-overlay.png",
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "core_pixels": 1270363,
+      "coverage_percent": 7.571954,
+      "bbox_xyxy": [
+        6,
+        64,
+        4002,
+        4089
+      ]
+    },
+    "drawer-shelves": {
+      "file": "public/textures/room/grounded-pastel-test/masks/fourth-mask-drawer-shelves.png",
+      "debug_overlay": "public/textures/room/grounded-pastel-test/debug/fourth-debug-drawer-shelves-overlay.png",
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "core_pixels": 1069877,
+      "coverage_percent": 6.376964,
+      "bbox_xyxy": [
+        10,
+        67,
+        4088,
+        3339
+      ]
+    },
+    "computer": {
+      "file": "public/textures/room/grounded-pastel-test/masks/fourth-mask-computer.png",
+      "debug_overlay": "public/textures/room/grounded-pastel-test/debug/fourth-debug-computer-overlay.png",
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "core_pixels": 2411291,
+      "coverage_percent": 14.372414,
+      "bbox_xyxy": [
+        6,
+        13,
+        4088,
+        4089
+      ]
+    },
+    "chair-body": {
+      "file": "public/textures/room/grounded-pastel-test/masks/fourth-mask-chair-body.png",
+      "debug_overlay": "public/textures/room/grounded-pastel-test/debug/fourth-debug-chair-body-overlay.png",
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "core_pixels": 671042,
+      "coverage_percent": 3.999722,
+      "bbox_xyxy": [
+        6,
+        690,
+        4088,
+        3667
+      ]
+    },
+    "chair-cushion": {
+      "file": "public/textures/room/grounded-pastel-test/masks/fourth-mask-chair-cushion.png",
+      "debug_overlay": "public/textures/room/grounded-pastel-test/debug/fourth-debug-chair-cushion-overlay.png",
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "core_pixels": 621854,
+      "coverage_percent": 3.706539,
+      "bbox_xyxy": [
+        9,
+        1701,
+        4088,
+        3556
+      ]
+    },
+    "desk-pad": {
+      "file": "public/textures/room/grounded-pastel-test/masks/fourth-mask-desk-pad.png",
+      "debug_overlay": "public/textures/room/grounded-pastel-test/debug/fourth-debug-desk-pad-overlay.png",
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "core_pixels": 314989,
+      "coverage_percent": 1.877481,
+      "bbox_xyxy": [
+        6,
+        48,
+        3877,
+        3569
+      ]
+    },
+    "keyboard-body": {
+      "file": "public/textures/room/grounded-pastel-test/masks/fourth-mask-keyboard-body.png",
+      "debug_overlay": "public/textures/room/grounded-pastel-test/debug/fourth-debug-keyboard-body-overlay.png",
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "core_pixels": 99718,
+      "coverage_percent": 0.594366,
+      "bbox_xyxy": [
+        435,
+        846,
+        3661,
+        3756
+      ]
+    }
+  },
+  "per_group": {
+    "drawer": {
+      "target_family": "Sage Green",
+      "target_hex": "#718E7A",
+      "mean_luminance_before": 30.728924,
+      "mean_luminance_after": 30.6863,
+      "mean_absolute_luminance_delta": 0.067517,
+      "luminance_correlation": 0.99999583
+    },
+    "drawer-shelves": {
+      "target_family": "Warm Cream",
+      "target_hex": "#F1E9DE",
+      "mean_luminance_before": 18.206814,
+      "mean_luminance_after": 18.190355,
+      "mean_absolute_luminance_delta": 0.057481,
+      "luminance_correlation": 0.999996337
+    },
+    "computer": {
+      "target_family": "Dusty Blue",
+      "target_hex": "#8FA9B8",
+      "mean_luminance_before": 32.069859,
+      "mean_luminance_after": 32.00988,
+      "mean_absolute_luminance_delta": 0.076916,
+      "luminance_correlation": 0.999994318
+    },
+    "chair-body": {
+      "target_family": "Warm Cream",
+      "target_hex": "#F1E9DE",
+      "mean_luminance_before": 38.65115,
+      "mean_luminance_after": 38.582607,
+      "mean_absolute_luminance_delta": 0.082949,
+      "luminance_correlation": 0.999994737
+    },
+    "chair-cushion": {
+      "target_family": "Soft Terracotta",
+      "target_hex": "#D99478",
+      "mean_luminance_before": 58.670517,
+      "mean_luminance_after": 58.554157,
+      "mean_absolute_luminance_delta": 0.127251,
+      "luminance_correlation": 0.999966571
+    },
+    "desk-pad": {
+      "target_family": "Soft Terracotta",
+      "target_hex": "#D99478",
+      "mean_luminance_before": 20.187391,
+      "mean_luminance_after": 20.13938,
+      "mean_absolute_luminance_delta": 0.052311,
+      "luminance_correlation": 0.999991804
+    },
+    "keyboard-body": {
+      "target_family": "Warm Cream",
+      "target_hex": "#F1E9DE",
+      "mean_luminance_before": 55.165607,
+      "mean_luminance_after": 55.103683,
+      "mean_absolute_luminance_delta": 0.077424,
+      "luminance_correlation": 0.999996999
+    }
+  },
+  "outside_mask_pixel_mismatches": 0,
+  "black_pixels_before": 2035143,
+  "black_pixels_after": 2035143,
+  "new_black_pixels": 0,
+  "removed_black_pixels": 0,
+  "core_mask_pixels": 6459134,
+  "comparison": "public/textures/room/grounded-pastel-test/debug/fourth-day-original-vs-grounded-test.png",
+  "method": {
+    "color_space": "CIELAB",
+    "luminance": "Original L channel preserved",
+    "chroma": "Original a/b blended toward each target palette color",
+    "dark_pixel_protection": "Smoothstep L=4..18",
+    "mask_edges": "2x rasterization then Lanczos antialiasing",
+    "output_encoding": "Lossless WebP RGB"
+  }
+}

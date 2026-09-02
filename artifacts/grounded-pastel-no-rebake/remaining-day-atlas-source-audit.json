@@ -1,0 +1,5600 @@
+{
+  "export_blend": "C:\\Users\\hiepdeptrai\\Desktop\\hk1_2026_2027\\MyPortfolioWeb\\sooahs-room-folio\\blender files\\For Export.blend",
+  "day_source_blend": "C:\\Users\\hiepdeptrai\\Desktop\\hk1_2026_2027\\MyPortfolioWeb\\sooahs-room-folio\\blender files\\Before Baking.blend",
+  "night_fallback_blend": "C:\\Users\\hiepdeptrai\\Desktop\\hk1_2026_2027\\MyPortfolioWeb\\sooahs-room-folio\\blender files\\For Night Time Baking.blend",
+  "atlases": {
+    "First": {
+      "baked_material": "FinalFirst_Baked",
+      "object_count": 24,
+      "missing": [],
+      "resolved_from_night": [
+        "Plane.003"
+      ],
+      "objects": [
+        {
+          "source_name": "Clock",
+          "baked_name": "Clock_Baked",
+          "baked_polygon_count": 1372,
+          "baked_loop_count": 5488,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 1372,
+              "nondegenerate_by_material_index": {
+                "0": 1372
+              },
+              "bounds": [
+                0.002194166,
+                0.002199219,
+                0.996870875,
+                0.976716995
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "Before Baking.blend",
+          "source_polygon_count": 1372,
+          "source_loop_count": 5488,
+          "topology_matches_baked": true,
+          "source_dimensions": [
+            0.710967,
+            0.710967,
+            0.114314
+          ],
+          "source_location": [
+            -3.24697,
+            0.734807,
+            6.403758
+          ],
+          "source_active_uv": "BakingOne",
+          "source_uv_details": [
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 1372,
+              "nondegenerate_by_material_index": {
+                "0": 892,
+                "1": 480
+              },
+              "bounds": [
+                1.1e-08,
+                -5.8e-08,
+                0.404656053,
+                1.0
+              ]
+            },
+            {
+              "name": "BakingOne",
+              "nondegenerate_polygon_count": 1372,
+              "nondegenerate_by_material_index": {
+                "0": 892,
+                "1": 480
+              },
+              "bounds": [
+                1.1e-08,
+                -5.8e-08,
+                0.404656053,
+                1.0
+              ]
+            }
+          ],
+          "materials": [
+            {
+              "name": "Light Wooden.001",
+              "slot_index": 0,
+              "polygon_count": 892,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.437489,
+                0.114489,
+                0.031192,
+                1.0
+              ],
+              "base_color_linked": true
+            },
+            {
+              "name": "Wood",
+              "slot_index": 1,
+              "polygon_count": 480,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.437489,
+                0.114489,
+                0.031192,
+                1.0
+              ],
+              "base_color_linked": true
+            }
+          ]
+        },
+        {
+          "source_name": "Cube.009",
+          "baked_name": "Cube.009_Baked",
+          "baked_polygon_count": 33,
+          "baked_loop_count": 132,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 33,
+              "nondegenerate_by_material_index": {
+                "0": 33
+              },
+              "bounds": [
+                0.119685486,
+                0.368218452,
+                0.971150517,
+                0.984276772
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "Before Baking.blend",
+          "source_polygon_count": 33,
+          "source_loop_count": 132,
+          "topology_matches_baked": true,
+          "source_dimensions": [
+            0.778646,
+            0.508272,
+            0.150957
+          ],
+          "source_location": [
+            -3.067433,
+            2.394968,
+            6.312239
+          ],
+          "source_active_uv": "UVMap",
+          "source_uv_details": [
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 33,
+              "nondegenerate_by_material_index": {
+                "0": 33
+              },
+              "bounds": [
+                -1e-08,
+                -1.5e-08,
+                0.504699111,
+                1.0
+              ]
+            }
+          ],
+          "materials": [
+            {
+              "name": "Wood",
+              "slot_index": 0,
+              "polygon_count": 33,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.437489,
+                0.114489,
+                0.031192,
+                1.0
+              ],
+              "base_color_linked": true
+            }
+          ]
+        },
+        {
+          "source_name": "Cube.016",
+          "baked_name": "Cube.016_Baked",
+          "baked_polygon_count": 145,
+          "baked_loop_count": 588,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 145,
+              "nondegenerate_by_material_index": {
+                "0": 145
+              },
+              "bounds": [
+                0.15478152,
+                0.016205842,
+                0.980818868,
+                0.965656757
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "Before Baking.blend",
+          "source_polygon_count": 145,
+          "source_loop_count": 588,
+          "topology_matches_baked": true,
+          "source_dimensions": [
+            2.378101,
+            0.163428,
+            1.449348
+          ],
+          "source_location": [
+            0.740543,
+            4.562087,
+            3.614707
+          ],
+          "source_active_uv": "BakingOne",
+          "source_uv_details": [
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 145,
+              "nondegenerate_by_material_index": {
+                "0": 145
+              },
+              "bounds": [
+                0.207925469,
+                0.002147264,
+                0.930858016,
+                0.407109082
+              ]
+            },
+            {
+              "name": "BakingOne",
+              "nondegenerate_polygon_count": 145,
+              "nondegenerate_by_material_index": {
+                "0": 145
+              },
+              "bounds": [
+                -1e-09,
+                -5e-09,
+                0.816039145,
+                0.985494673
+              ]
+            }
+          ],
+          "materials": [
+            {
+              "name": "Wood",
+              "slot_index": 0,
+              "polygon_count": 145,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.437489,
+                0.114489,
+                0.031192,
+                1.0
+              ],
+              "base_color_linked": true
+            }
+          ]
+        },
+        {
+          "source_name": "Cube.018",
+          "baked_name": "Cube.018_Baked",
+          "baked_polygon_count": 124,
+          "baked_loop_count": 504,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 124,
+              "nondegenerate_by_material_index": {
+                "0": 124
+              },
+              "bounds": [
+                0.031476997,
+                0.148198381,
+                0.719378352,
+                0.940503538
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "Before Baking.blend",
+          "source_polygon_count": 124,
+          "source_loop_count": 504,
+          "topology_matches_baked": true,
+          "source_dimensions": [
+            2.378101,
+            0.170295,
+            1.787844
+          ],
+          "source_location": [
+            0.740543,
+            4.740063,
+            5.009889
+          ],
+          "source_active_uv": "BakingOne",
+          "source_uv_details": [
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 124,
+              "nondegenerate_by_material_index": {
+                "0": 124
+              },
+              "bounds": [
+                0.195082814,
+                0.00214717,
+                0.962042451,
+                0.463916451
+              ]
+            },
+            {
+              "name": "BakingOne",
+              "nondegenerate_polygon_count": 124,
+              "nondegenerate_by_material_index": {
+                "0": 124
+              },
+              "bounds": [
+                1.3e-08,
+                3e-09,
+                0.823264182,
+                0.985506237
+              ]
+            }
+          ],
+          "materials": [
+            {
+              "name": "Wood",
+              "slot_index": 0,
+              "polygon_count": 124,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.437489,
+                0.114489,
+                0.031192,
+                1.0
+              ],
+              "base_color_linked": true
+            }
+          ]
+        },
+        {
+          "source_name": "Cube.019",
+          "baked_name": "Cube.019_Baked",
+          "baked_polygon_count": 198,
+          "baked_loop_count": 792,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 198,
+              "nondegenerate_by_material_index": {
+                "0": 198
+              },
+              "bounds": [
+                0.247916326,
+                0.002230227,
+                0.900447786,
+                0.984799266
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "Before Baking.blend",
+          "source_polygon_count": 198,
+          "source_loop_count": 792,
+          "topology_matches_baked": true,
+          "source_dimensions": [
+            0.372108,
+            2.721431,
+            0.518448
+          ],
+          "source_location": [
+            0.990289,
+            3.999137,
+            6.380616
+          ],
+          "source_active_uv": "BakingOne",
+          "source_uv_details": [
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 198,
+              "nondegenerate_by_material_index": {
+                "0": 198
+              },
+              "bounds": [
+                0.122882649,
+                0.002156829,
+                0.982657373,
+                0.475900918
+              ]
+            },
+            {
+              "name": "BakingOne",
+              "nondegenerate_polygon_count": 198,
+              "nondegenerate_by_material_index": {
+                "0": 198
+              },
+              "bounds": [
+                -1.1e-08,
+                -1.1e-08,
+                0.681700826,
+                1.0
+              ]
+            }
+          ],
+          "materials": [
+            {
+              "name": "Wood",
+              "slot_index": 0,
+              "polygon_count": 198,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.437489,
+                0.114489,
+                0.031192,
+                1.0
+              ],
+              "base_color_linked": true
+            }
+          ]
+        },
+        {
+          "source_name": "Cube.020",
+          "baked_name": "Cube.020_Baked",
+          "baked_polygon_count": 130,
+          "baked_loop_count": 480,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 130,
+              "nondegenerate_by_material_index": {
+                "0": 130
+              },
+              "bounds": [
+                0.002202392,
+                0.0022022,
+                0.99769938,
+                0.995624483
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "Before Baking.blend",
+          "source_polygon_count": 130,
+          "source_loop_count": 480,
+          "topology_matches_baked": true,
+          "source_dimensions": [
+            2.396666,
+            0.215545,
+            0.400171
+          ],
+          "source_location": [
+            0.938519,
+            3.990776,
+            6.306472
+          ],
+          "source_active_uv": "BakingOne",
+          "source_uv_details": [
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 130,
+              "nondegenerate_by_material_index": {
+                "0": 130
+              },
+              "bounds": [
+                0.375,
+                0.0,
+                0.62500006,
+                0.25000003
+              ]
+            },
+            {
+              "name": "BakingOne",
+              "nondegenerate_polygon_count": 130,
+              "nondegenerate_by_material_index": {
+                "0": 130
+              },
+              "bounds": [
+                0.256761849,
+                -1e-08,
+                0.974815071,
+                0.985595822
+              ]
+            }
+          ],
+          "materials": [
+            {
+              "name": "Base White.001",
+              "slot_index": 0,
+              "polygon_count": 130,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.869244,
+                0.853637,
+                0.90433,
+                1.0
+              ],
+              "base_color_linked": false
+            }
+          ]
+        },
+        {
+          "source_name": "Cube.021",
+          "baked_name": "Cube.021_Baked",
+          "baked_polygon_count": 45,
+          "baked_loop_count": 180,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 45,
+              "nondegenerate_by_material_index": {
+                "0": 45
+              },
+              "bounds": [
+                0.215197086,
+                0.578198612,
+                0.849443555,
+                0.993204117
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "Before Baking.blend",
+          "source_polygon_count": 45,
+          "source_loop_count": 180,
+          "topology_matches_baked": true,
+          "source_dimensions": [
+            2.544096,
+            0.28198,
+            0.149726
+          ],
+          "source_location": [
+            0.950317,
+            4.106959,
+            3.268733
+          ],
+          "source_active_uv": "BakingOne",
+          "source_uv_details": [
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 45,
+              "nondegenerate_by_material_index": {
+                "0": 45
+              },
+              "bounds": [
+                0.207777843,
+                0.030829586,
+                0.899739385,
+                0.386172742
+              ]
+            },
+            {
+              "name": "BakingOne",
+              "nondegenerate_polygon_count": 45,
+              "nondegenerate_by_material_index": {
+                "0": 45
+              },
+              "bounds": [
+                0.256761849,
+                -1e-09,
+                0.99999994,
+                0.678054273
+              ]
+            }
+          ],
+          "materials": [
+            {
+              "name": "Wood",
+              "slot_index": 0,
+              "polygon_count": 45,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.437489,
+                0.114489,
+                0.031192,
+                1.0
+              ],
+              "base_color_linked": true
+            }
+          ]
+        },
+        {
+          "source_name": "Cube.027",
+          "baked_name": "Cube.027_Baked",
+          "baked_polygon_count": 33,
+          "baked_loop_count": 132,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 33,
+              "nondegenerate_by_material_index": {
+                "0": 33
+              },
+              "bounds": [
+                0.262827456,
+                0.304221392,
+                0.892021239,
+                0.984280884
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "Before Baking.blend",
+          "source_polygon_count": 33,
+          "source_loop_count": 132,
+          "topology_matches_baked": true,
+          "source_dimensions": [
+            2.544096,
+            0.508272,
+            0.150957
+          ],
+          "source_location": [
+            -1.957393,
+            4.106959,
+            5.548482
+          ],
+          "source_active_uv": "BakingOne",
+          "source_uv_details": [
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 33,
+              "nondegenerate_by_material_index": {
+                "0": 33
+              },
+              "bounds": [
+                0.122804984,
+                0.030836523,
+                0.870253801,
+                0.351761222
+              ]
+            },
+            {
+              "name": "BakingOne",
+              "nondegenerate_polygon_count": 33,
+              "nondegenerate_by_material_index": {
+                "0": 33
+              },
+              "bounds": [
+                2e-09,
+                -1.3e-08,
+                0.307631552,
+                1.0
+              ]
+            }
+          ],
+          "materials": [
+            {
+              "name": "Wood",
+              "slot_index": 0,
+              "polygon_count": 33,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.437489,
+                0.114489,
+                0.031192,
+                1.0
+              ],
+              "base_color_linked": true
+            }
+          ]
+        },
+        {
+          "source_name": "Cube.028",
+          "baked_name": "Cube.028_Baked",
+          "baked_polygon_count": 72,
+          "baked_loop_count": 288,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 72,
+              "nondegenerate_by_material_index": {
+                "0": 72
+              },
+              "bounds": [
+                0.149043858,
+                0.03920161,
+                0.997639656,
+                0.98136282
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "Before Baking.blend",
+          "source_polygon_count": 72,
+          "source_loop_count": 288,
+          "topology_matches_baked": true,
+          "source_dimensions": [
+            1.457263,
+            0.494472,
+            0.104641
+          ],
+          "source_location": [
+            -2.575,
+            4.134853,
+            5.271383
+          ],
+          "source_active_uv": "UVMap",
+          "source_uv_details": [
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 72,
+              "nondegenerate_by_material_index": {
+                "0": 72
+              },
+              "bounds": [
+                0.0,
+                -1.1e-08,
+                0.868974447,
+                0.99999994
+              ]
+            }
+          ],
+          "materials": [
+            {
+              "name": "Wood",
+              "slot_index": 0,
+              "polygon_count": 72,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.437489,
+                0.114489,
+                0.031192,
+                1.0
+              ],
+              "base_color_linked": true
+            }
+          ]
+        },
+        {
+          "source_name": "Cube.036",
+          "baked_name": "Cube.036_Baked",
+          "baked_polygon_count": 72,
+          "baked_loop_count": 288,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 72,
+              "nondegenerate_by_material_index": {
+                "0": 72
+              },
+              "bounds": [
+                0.002197222,
+                0.04719919,
+                0.9634763,
+                0.994414091
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "Before Baking.blend",
+          "source_polygon_count": 72,
+          "source_loop_count": 288,
+          "topology_matches_baked": true,
+          "source_dimensions": [
+            0.658138,
+            0.494471,
+            0.10464
+          ],
+          "source_location": [
+            -3.220105,
+            2.14601,
+            6.03302
+          ],
+          "source_active_uv": "BakingOne",
+          "source_uv_details": [
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 72,
+              "nondegenerate_by_material_index": {
+                "0": 72
+              },
+              "bounds": [
+                4e-09,
+                1e-09,
+                0.99999994,
+                0.971732438
+              ]
+            },
+            {
+              "name": "BakingOne",
+              "nondegenerate_polygon_count": 72,
+              "nondegenerate_by_material_index": {
+                "0": 72
+              },
+              "bounds": [
+                4e-09,
+                1e-09,
+                0.99999994,
+                0.971732438
+              ]
+            }
+          ],
+          "materials": [
+            {
+              "name": "Wood",
+              "slot_index": 0,
+              "polygon_count": 72,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.437489,
+                0.114489,
+                0.031192,
+                1.0
+              ],
+              "base_color_linked": true
+            }
+          ]
+        },
+        {
+          "source_name": "Cube.037",
+          "baked_name": "Cube.037_Baked",
+          "baked_polygon_count": 1736,
+          "baked_loop_count": 6816,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 1736,
+              "nondegenerate_by_material_index": {
+                "0": 1736
+              },
+              "bounds": [
+                0.002166682,
+                0.050202902,
+                0.974732697,
+                0.96669507
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "Before Baking.blend",
+          "source_polygon_count": 1736,
+          "source_loop_count": 6816,
+          "topology_matches_baked": true,
+          "source_dimensions": [
+            5.871042,
+            6.119413,
+            0.23367
+          ],
+          "source_location": [
+            -0.274274,
+            1.1041,
+            0.517062
+          ],
+          "source_active_uv": "BakingOne",
+          "source_uv_details": [
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 1736,
+              "nondegenerate_by_material_index": {
+                "0": 1736
+              },
+              "bounds": [
+                -2e-09,
+                -8e-09,
+                0.99999994,
+                0.858005345
+              ]
+            },
+            {
+              "name": "BakingOne",
+              "nondegenerate_polygon_count": 1736,
+              "nondegenerate_by_material_index": {
+                "0": 1736
+              },
+              "bounds": [
+                -3.5e-08,
+                -8.8e-08,
+                0.992413044,
+                0.99999994
+              ]
+            }
+          ],
+          "materials": [
+            {
+              "name": "Wood",
+              "slot_index": 0,
+              "polygon_count": 1736,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.437489,
+                0.114489,
+                0.031192,
+                1.0
+              ],
+              "base_color_linked": true
+            }
+          ]
+        },
+        {
+          "source_name": "Cube.039",
+          "baked_name": "Cube.039_Baked",
+          "baked_polygon_count": 315,
+          "baked_loop_count": 1244,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 315,
+              "nondegenerate_by_material_index": {
+                "0": 315
+              },
+              "bounds": [
+                0.00219807,
+                0.025193643,
+                0.996350408,
+                0.997226954
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "Before Baking.blend",
+          "source_polygon_count": 305,
+          "source_loop_count": 1224,
+          "topology_matches_baked": false,
+          "source_dimensions": [
+            7.217873,
+            7.499709,
+            0.664433
+          ],
+          "source_location": [
+            -0.556538,
+            1.394418,
+            -0.287601
+          ],
+          "source_active_uv": "UVMap",
+          "source_uv_details": [
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 297,
+              "nondegenerate_by_material_index": {
+                "0": 297
+              },
+              "bounds": [
+                0.131505609,
+                0.507154047,
+                0.368494451,
+                0.742845893
+              ]
+            }
+          ],
+          "materials": [
+            {
+              "name": "Stone wall",
+              "slot_index": 0,
+              "polygon_count": 305,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.512156,
+                0.151538,
+                0.298626,
+                1.0
+              ],
+              "base_color_linked": true
+            }
+          ]
+        },
+        {
+          "source_name": "Cube",
+          "baked_name": "Cube_Baked",
+          "baked_polygon_count": 1063,
+          "baked_loop_count": 4268,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 1063,
+              "nondegenerate_by_material_index": {
+                "0": 1063
+              },
+              "bounds": [
+                0.002191814,
+                0.002195945,
+                0.997439504,
+                0.997551918
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "Before Baking.blend",
+          "source_polygon_count": 1110,
+          "source_loop_count": 4460,
+          "topology_matches_baked": false,
+          "source_dimensions": [
+            6.757917,
+            7.060439,
+            7.270155
+          ],
+          "source_location": [
+            0.161208,
+            0.21784,
+            3.824791
+          ],
+          "source_active_uv": "SimpleBake",
+          "source_uv_details": [
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 750,
+              "nondegenerate_by_material_index": {
+                "0": 330,
+                "1": 1,
+                "2": 419
+              },
+              "bounds": [
+                0.0,
+                0.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 656,
+              "nondegenerate_by_material_index": {
+                "0": 330,
+                "1": 1,
+                "2": 325
+              },
+              "bounds": [
+                -1.3e-08,
+                -3.1e-08,
+                0.99999994,
+                0.884332538
+              ]
+            }
+          ],
+          "materials": [
+            {
+              "name": "Room",
+              "slot_index": 0,
+              "polygon_count": 330,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.638106,
+                0.34079,
+                0.589445,
+                1.0
+              ],
+              "base_color_linked": true
+            },
+            {
+              "name": "Wood",
+              "slot_index": 1,
+              "polygon_count": 1,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.437489,
+                0.114489,
+                0.031192,
+                1.0
+              ],
+              "base_color_linked": true
+            },
+            {
+              "name": "Outlet",
+              "slot_index": 2,
+              "polygon_count": 779,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.355766,
+                0.339292,
+                0.274276,
+                1.0
+              ],
+              "base_color_linked": false
+            }
+          ]
+        },
+        {
+          "source_name": "Lamp",
+          "baked_name": "Lamp_Baked",
+          "baked_polygon_count": 432,
+          "baked_loop_count": 1728,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 432,
+              "nondegenerate_by_material_index": {
+                "0": 432
+              },
+              "bounds": [
+                0.002195925,
+                0.560208976,
+                0.99639535,
+                0.982467949
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "Before Baking.blend",
+          "source_polygon_count": 432,
+          "source_loop_count": 1728,
+          "topology_matches_baked": true,
+          "source_dimensions": [
+            0.864067,
+            0.864067,
+            1.173931
+          ],
+          "source_location": [
+            -0.774976,
+            3.196397,
+            0.501153
+          ],
+          "source_active_uv": "SimpleBake",
+          "source_uv_details": [
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 408,
+              "nondegenerate_by_material_index": {
+                "0": 376,
+                "1": 32
+              },
+              "bounds": [
+                0.0,
+                0.0,
+                1.000000119,
+                1.000000119
+              ]
+            },
+            {
+              "name": "BakingOne",
+              "nondegenerate_polygon_count": 432,
+              "nondegenerate_by_material_index": {
+                "0": 384,
+                "1": 48
+              },
+              "bounds": [
+                -0.68591404,
+                -0.626442194,
+                0.123797536,
+                0.998224914
+              ]
+            },
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 432,
+              "nondegenerate_by_material_index": {
+                "0": 384,
+                "1": 48
+              },
+              "bounds": [
+                0.053378999,
+                0.091302156,
+                0.944326878,
+                0.883672893
+              ]
+            }
+          ],
+          "materials": [
+            {
+              "name": "Light Wooden.001",
+              "slot_index": 0,
+              "polygon_count": 384,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.437489,
+                0.114489,
+                0.031192,
+                1.0
+              ],
+              "base_color_linked": true
+            },
+            {
+              "name": "Base Blue.001",
+              "slot_index": 1,
+              "polygon_count": 48,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.165131,
+                0.361307,
+                0.467784,
+                1.0
+              ],
+              "base_color_linked": false
+            }
+          ]
+        },
+        {
+          "source_name": "Plane.001",
+          "baked_name": "Plane.001_Baked",
+          "baked_polygon_count": 1287,
+          "baked_loop_count": 5140,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 1287,
+              "nondegenerate_by_material_index": {
+                "0": 1287
+              },
+              "bounds": [
+                0.002192289,
+                0.025329053,
+                0.997341752,
+                0.99712956
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "Before Baking.blend",
+          "source_polygon_count": 1248,
+          "source_loop_count": 4992,
+          "topology_matches_baked": false,
+          "source_dimensions": [
+            2.27815,
+            4.181643,
+            2.13214
+          ],
+          "source_location": [
+            -2.179932,
+            -0.231601,
+            0.731157
+          ],
+          "source_active_uv": "BakingOne",
+          "source_uv_details": [
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 1106,
+              "nondegenerate_by_material_index": {
+                "0": 1106
+              },
+              "bounds": [
+                -1.1e-08,
+                0.0,
+                1.007712126,
+                1.000000119
+              ]
+            },
+            {
+              "name": "BakingOne",
+              "nondegenerate_polygon_count": 1248,
+              "nondegenerate_by_material_index": {
+                "0": 1248
+              },
+              "bounds": [
+                -0.774449825,
+                1.767118931,
+                0.01852417,
+                2.558126688
+              ]
+            }
+          ],
+          "materials": [
+            {
+              "name": "Base Gray.001",
+              "slot_index": 0,
+              "polygon_count": 1248,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.568605,
+                0.568605,
+                0.568605,
+                1.0
+              ],
+              "base_color_linked": false
+            }
+          ]
+        },
+        {
+          "source_name": "Plane.003",
+          "baked_name": "Plane.003_Baked",
+          "baked_polygon_count": 672,
+          "baked_loop_count": 2740,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 672,
+              "nondegenerate_by_material_index": {
+                "0": 672
+              },
+              "bounds": [
+                0.002196084,
+                0.002283971,
+                0.997171223,
+                0.941160321
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "For Night Time Baking.blend",
+          "source_polygon_count": 672,
+          "source_loop_count": 2740,
+          "topology_matches_baked": true,
+          "source_dimensions": [
+            7.350455,
+            7.697651,
+            1.013971
+          ],
+          "source_location": [
+            -3.606983,
+            -1.570323,
+            7.893772
+          ],
+          "source_active_uv": "SimpleBake",
+          "source_uv_details": [
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 672,
+              "nondegenerate_by_material_index": {
+                "0": 672
+              },
+              "bounds": [
+                -1.8e-08,
+                -1.1e-08,
+                0.997594297,
+                1.0
+              ]
+            },
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 672,
+              "nondegenerate_by_material_index": {
+                "0": 672
+              },
+              "bounds": [
+                0.002196084,
+                0.002283971,
+                0.997171223,
+                0.941160321
+              ]
+            }
+          ],
+          "materials": [
+            {
+              "name": "Wood.002",
+              "slot_index": 0,
+              "polygon_count": 672,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.437489,
+                0.114489,
+                0.031192,
+                1.0
+              ],
+              "base_color_linked": true
+            }
+          ]
+        },
+        {
+          "source_name": "Plane.037",
+          "baked_name": "Plane.037_Baked",
+          "baked_polygon_count": 3164,
+          "baked_loop_count": 12656,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 3164,
+              "nondegenerate_by_material_index": {
+                "0": 3164
+              },
+              "bounds": [
+                0.014051318,
+                0.002198379,
+                0.98213768,
+                0.99195534
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "Before Baking.blend",
+          "source_polygon_count": 3632,
+          "source_loop_count": 14528,
+          "topology_matches_baked": false,
+          "source_dimensions": [
+            2.287188,
+            1.829751,
+            0.079685
+          ],
+          "source_location": [
+            -3.22147,
+            -1.512033,
+            6.029852
+          ],
+          "source_active_uv": "BakingOne",
+          "source_uv_details": [
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 3632,
+              "nondegenerate_by_material_index": {
+                "0": 3632
+              },
+              "bounds": [
+                0.744637728,
+                -1.036839724,
+                1.219989061,
+                -0.588008523
+              ]
+            },
+            {
+              "name": "BakingOne",
+              "nondegenerate_polygon_count": 3632,
+              "nondegenerate_by_material_index": {
+                "0": 3632
+              },
+              "bounds": [
+                0.744637728,
+                -1.036839724,
+                1.219989061,
+                -0.588008523
+              ]
+            }
+          ],
+          "materials": [
+            {
+              "name": "Wood",
+              "slot_index": 0,
+              "polygon_count": 3632,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.437489,
+                0.114489,
+                0.031192,
+                1.0
+              ],
+              "base_color_linked": true
+            }
+          ]
+        },
+        {
+          "source_name": "Plane.039",
+          "baked_name": "Plane.039_Baked",
+          "baked_polygon_count": 196,
+          "baked_loop_count": 832,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 196,
+              "nondegenerate_by_material_index": {
+                "0": 196
+              },
+              "bounds": [
+                0.297703326,
+                0.329201877,
+                0.985254169,
+                0.941160262
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "Before Baking.blend",
+          "source_polygon_count": 196,
+          "source_loop_count": 832,
+          "topology_matches_baked": true,
+          "source_dimensions": [
+            1.106587,
+            1.564024,
+            0.420892
+          ],
+          "source_location": [
+            -3.240325,
+            -1.512033,
+            6.029852
+          ],
+          "source_active_uv": "BakingOne",
+          "source_uv_details": [
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 196,
+              "nondegenerate_by_material_index": {
+                "0": 196
+              },
+              "bounds": [
+                -1.1e-08,
+                -2.9e-08,
+                0.843285501,
+                1.000000119
+              ]
+            },
+            {
+              "name": "BakingOne",
+              "nondegenerate_polygon_count": 196,
+              "nondegenerate_by_material_index": {
+                "0": 196
+              },
+              "bounds": [
+                -1.1e-08,
+                -2.9e-08,
+                0.843285501,
+                1.000000119
+              ]
+            }
+          ],
+          "materials": [
+            {
+              "name": "Wood",
+              "slot_index": 0,
+              "polygon_count": 196,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.437489,
+                0.114489,
+                0.031192,
+                1.0
+              ],
+              "base_color_linked": true
+            }
+          ]
+        },
+        {
+          "source_name": "Plane.040",
+          "baked_name": "Plane.040_Baked",
+          "baked_polygon_count": 33,
+          "baked_loop_count": 132,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 33,
+              "nondegenerate_by_material_index": {
+                "0": 33
+              },
+              "bounds": [
+                0.285033137,
+                0.056194305,
+                0.980816245,
+                0.938468158
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "Before Baking.blend",
+          "source_polygon_count": 33,
+          "source_loop_count": 132,
+          "topology_matches_baked": true,
+          "source_dimensions": [
+            0.571375,
+            1.652184,
+            0.117698
+          ],
+          "source_location": [
+            -2.943992,
+            -0.8213,
+            5.668219
+          ],
+          "source_active_uv": "BakingOne",
+          "source_uv_details": [
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 33,
+              "nondegenerate_by_material_index": {
+                "0": 33
+              },
+              "bounds": [
+                1.1e-08,
+                -1.4e-08,
+                0.958042383,
+                0.72863543
+              ]
+            },
+            {
+              "name": "BakingOne",
+              "nondegenerate_polygon_count": 33,
+              "nondegenerate_by_material_index": {
+                "0": 33
+              },
+              "bounds": [
+                1.1e-08,
+                -1.4e-08,
+                0.958042383,
+                0.72863543
+              ]
+            }
+          ],
+          "materials": [
+            {
+              "name": "Wood",
+              "slot_index": 0,
+              "polygon_count": 33,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.437489,
+                0.114489,
+                0.031192,
+                1.0
+              ],
+              "base_color_linked": true
+            }
+          ]
+        },
+        {
+          "source_name": "Plane.041",
+          "baked_name": "Plane.041_Baked",
+          "baked_polygon_count": 33,
+          "baked_loop_count": 132,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 33,
+              "nondegenerate_by_material_index": {
+                "0": 33
+              },
+              "bounds": [
+                0.241213724,
+                0.148202106,
+                0.700060785,
+                0.673463941
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "Before Baking.blend",
+          "source_polygon_count": 33,
+          "source_loop_count": 132,
+          "topology_matches_baked": true,
+          "source_dimensions": [
+            0.571375,
+            1.229893,
+            0.117698
+          ],
+          "source_location": [
+            -2.938772,
+            -0.616691,
+            4.734801
+          ],
+          "source_active_uv": "BakingOne",
+          "source_uv_details": [
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 33,
+              "nondegenerate_by_material_index": {
+                "0": 33
+              },
+              "bounds": [
+                0.45727101,
+                -1.4e-08,
+                0.914542079,
+                1.0
+              ]
+            },
+            {
+              "name": "BakingOne",
+              "nondegenerate_polygon_count": 33,
+              "nondegenerate_by_material_index": {
+                "0": 33
+              },
+              "bounds": [
+                0.45727101,
+                -1.4e-08,
+                0.914542079,
+                1.0
+              ]
+            }
+          ],
+          "materials": [
+            {
+              "name": "Wood",
+              "slot_index": 0,
+              "polygon_count": 33,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.437489,
+                0.114489,
+                0.031192,
+                1.0
+              ],
+              "base_color_linked": true
+            }
+          ]
+        },
+        {
+          "source_name": "Plane.063",
+          "baked_name": "Plane.063_Baked",
+          "baked_polygon_count": 108,
+          "baked_loop_count": 436,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 108,
+              "nondegenerate_by_material_index": {
+                "0": 108
+              },
+              "bounds": [
+                0.097448036,
+                0.565201759,
+                0.983004153,
+                0.992921948
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "Before Baking.blend",
+          "source_polygon_count": 147,
+          "source_loop_count": 604,
+          "topology_matches_baked": false,
+          "source_dimensions": [
+            0.650785,
+            0.084777,
+            0.146128
+          ],
+          "source_location": [
+            1.039081,
+            4.667604,
+            4.782253
+          ],
+          "source_active_uv": "BakingOne",
+          "source_uv_details": [
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 147,
+              "nondegenerate_by_material_index": {
+                "0": 147
+              },
+              "bounds": [
+                0.014863077,
+                0.002148516,
+                0.993864894,
+                0.0604246
+              ]
+            },
+            {
+              "name": "BakingOne",
+              "nondegenerate_polygon_count": 147,
+              "nondegenerate_by_material_index": {
+                "0": 147
+              },
+              "bounds": [
+                0.190617129,
+                0.488076091,
+                0.699883282,
+                0.717739344
+              ]
+            }
+          ],
+          "materials": [
+            {
+              "name": "Wood",
+              "slot_index": 0,
+              "polygon_count": 147,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.437489,
+                0.114489,
+                0.031192,
+                1.0
+              ],
+              "base_color_linked": true
+            }
+          ]
+        },
+        {
+          "source_name": "Plane.064",
+          "baked_name": "Plane.064_Baked",
+          "baked_polygon_count": 81,
+          "baked_loop_count": 326,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 81,
+              "nondegenerate_by_material_index": {
+                "0": 81
+              },
+              "bounds": [
+                0.277766913,
+                0.047197282,
+                0.955041409,
+                0.850289166
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "Before Baking.blend",
+          "source_polygon_count": 93,
+          "source_loop_count": 374,
+          "topology_matches_baked": false,
+          "source_dimensions": [
+            0.2098,
+            0.071816,
+            0.125555
+          ],
+          "source_location": [
+            1.149915,
+            4.669378,
+            4.823773
+          ],
+          "source_active_uv": "BakingOne",
+          "source_uv_details": [
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 81,
+              "nondegenerate_by_material_index": {
+                "0": 81
+              },
+              "bounds": [
+                0.0,
+                0.0,
+                1.24711132,
+                1.000000119
+              ]
+            },
+            {
+              "name": "BakingOne",
+              "nondegenerate_polygon_count": 93,
+              "nondegenerate_by_material_index": {
+                "0": 93
+              },
+              "bounds": [
+                -1e-08,
+                -5e-09,
+                0.877517164,
+                1.000000119
+              ]
+            }
+          ],
+          "materials": [
+            {
+              "name": "Wood",
+              "slot_index": 0,
+              "polygon_count": 93,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.437489,
+                0.114489,
+                0.031192,
+                1.0
+              ],
+              "base_color_linked": true
+            }
+          ]
+        },
+        {
+          "source_name": "Torus.001",
+          "baked_name": "Torus.001_Baked",
+          "baked_polygon_count": 151,
+          "baked_loop_count": 610,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 151,
+              "nondegenerate_by_material_index": {
+                "0": 151
+              },
+              "bounds": [
+                0.07465674,
+                0.428196013,
+                0.753813565,
+                0.94998908
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "Before Baking.blend",
+          "source_polygon_count": 40,
+          "source_loop_count": 160,
+          "topology_matches_baked": false,
+          "source_dimensions": [
+            0.08349,
+            0.194955,
+            0.038991
+          ],
+          "source_location": [
+            2.202247,
+            4.005172,
+            6.365559
+          ],
+          "source_active_uv": "UVMap",
+          "source_uv_details": [
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 40,
+              "nondegenerate_by_material_index": {
+                "0": 40
+              },
+              "bounds": [
+                -1e-09,
+                1.3e-08,
+                0.616048217,
+                1.0
+              ]
+            }
+          ],
+          "materials": [
+            {
+              "name": "Base White.001",
+              "slot_index": 0,
+              "polygon_count": 40,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.869244,
+                0.853637,
+                0.90433,
+                1.0
+              ],
+              "base_color_linked": false
+            }
+          ]
+        },
+        {
+          "source_name": "Vert.012",
+          "baked_name": "Vert.012_Baked",
+          "baked_polygon_count": 183,
+          "baked_loop_count": 742,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 183,
+              "nondegenerate_by_material_index": {
+                "0": 183
+              },
+              "bounds": [
+                0.496682107,
+                0.805259943,
+                0.982587934,
+                0.90851146
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "Before Baking.blend",
+          "source_polygon_count": 183,
+          "source_loop_count": 742,
+          "topology_matches_baked": true,
+          "source_dimensions": [
+            0.497329,
+            0.182598,
+            0.660383
+          ],
+          "source_location": [
+            -3.251435,
+            -1.512033,
+            5.114976
+          ],
+          "source_active_uv": "BakingOne",
+          "source_uv_details": [
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 183,
+              "nondegenerate_by_material_index": {
+                "0": 183
+              },
+              "bounds": [
+                0.0,
+                0.0,
+                1.000000119,
+                1.0
+              ]
+            },
+            {
+              "name": "BakingOne",
+              "nondegenerate_polygon_count": 183,
+              "nondegenerate_by_material_index": {
+                "0": 183
+              },
+              "bounds": [
+                2.782382965,
+                0.380094111,
+                3.501658916,
+                1.395043254
+              ]
+            }
+          ],
+          "materials": [
+            {
+              "name": "Wood",
+              "slot_index": 0,
+              "polygon_count": 183,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.437489,
+                0.114489,
+                0.031192,
+                1.0
+              ],
+              "base_color_linked": true
+            }
+          ]
+        }
+      ]
+    },
+    "Second": {
+      "baked_material": "RealFinalSecond_Baked",
+      "object_count": 5,
+      "missing": [],
+      "resolved_from_night": [
+        "Backdrop"
+      ],
+      "objects": [
+        {
+          "source_name": "Backdrop",
+          "baked_name": "Backdrop_Baked",
+          "baked_polygon_count": 21,
+          "baked_loop_count": 84,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 21,
+              "nondegenerate_by_material_index": {
+                "0": 21
+              },
+              "bounds": [
+                0.002195652,
+                0.002194919,
+                0.875905991,
+                0.975438833
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "For Night Time Baking.blend",
+          "source_polygon_count": 21,
+          "source_loop_count": 84,
+          "topology_matches_baked": true,
+          "source_dimensions": [
+            71.94194,
+            92.345039,
+            39.854256
+          ],
+          "source_location": [
+            9.22982,
+            -0.18219,
+            5.783043
+          ],
+          "source_active_uv": "SimpleBake",
+          "source_uv_details": [
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 19,
+              "nondegenerate_by_material_index": {
+                "0": 19
+              },
+              "bounds": [
+                0.0,
+                0.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 21,
+              "nondegenerate_by_material_index": {
+                "0": 21
+              },
+              "bounds": [
+                0.002195652,
+                0.002194919,
+                0.875905991,
+                0.975438833
+              ]
+            }
+          ],
+          "materials": [
+            {
+              "name": "Backdrop.001",
+              "slot_index": 0,
+              "polygon_count": 21,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.228331,
+                0.547677,
+                0.782719,
+                1.0
+              ],
+              "base_color_linked": true
+            }
+          ]
+        },
+        {
+          "source_name": "Plane.042",
+          "baked_name": "Plane.042_Baked",
+          "baked_polygon_count": 462,
+          "baked_loop_count": 1856,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 462,
+              "nondegenerate_by_material_index": {
+                "0": 462
+              },
+              "bounds": [
+                0.373833716,
+                0.002196782,
+                0.997694731,
+                0.607092202
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "Before Baking.blend",
+          "source_polygon_count": 462,
+          "source_loop_count": 1856,
+          "topology_matches_baked": true,
+          "source_dimensions": [
+            0.063478,
+            0.569554,
+            0.529654
+          ],
+          "source_location": [
+            -2.955091,
+            -0.517614,
+            6.031656
+          ],
+          "source_active_uv": "BakingOne",
+          "source_uv_details": [
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 462,
+              "nondegenerate_by_material_index": {
+                "0": 421,
+                "1": 41
+              },
+              "bounds": [
+                -1.1e-08,
+                0.0,
+                0.991938472,
+                1.0
+              ]
+            },
+            {
+              "name": "BakingOne",
+              "nondegenerate_polygon_count": 462,
+              "nondegenerate_by_material_index": {
+                "0": 421,
+                "1": 41
+              },
+              "bounds": [
+                -1.346637726,
+                0.09755975,
+                -0.130086541,
+                1.315093279
+              ]
+            }
+          ],
+          "materials": [
+            {
+              "name": "Light Wooden.001",
+              "slot_index": 0,
+              "polygon_count": 421,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.437489,
+                0.114489,
+                0.031192,
+                1.0
+              ],
+              "base_color_linked": true
+            },
+            {
+              "name": "Photo Frame Two",
+              "slot_index": 1,
+              "polygon_count": 41,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color_linked": true
+            }
+          ]
+        },
+        {
+          "source_name": "Plane.045",
+          "baked_name": "Plane.045_Baked",
+          "baked_polygon_count": 462,
+          "baked_loop_count": 1856,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 462,
+              "nondegenerate_by_material_index": {
+                "0": 462
+              },
+              "bounds": [
+                0.4741368,
+                0.007193039,
+                0.997773945,
+                0.552552819
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "Before Baking.blend",
+          "source_polygon_count": 462,
+          "source_loop_count": 1856,
+          "topology_matches_baked": true,
+          "source_dimensions": [
+            0.061262,
+            0.406196,
+            0.458112
+          ],
+          "source_location": [
+            -2.861958,
+            -1.33603,
+            6.163796
+          ],
+          "source_active_uv": "BakingOne",
+          "source_uv_details": [
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 462,
+              "nondegenerate_by_material_index": {
+                "0": 421,
+                "1": 41
+              },
+              "bounds": [
+                0.0,
+                -1.6e-08,
+                0.926848173,
+                1.007174492
+              ]
+            },
+            {
+              "name": "BakingOne",
+              "nondegenerate_polygon_count": 462,
+              "nondegenerate_by_material_index": {
+                "0": 421,
+                "1": 41
+              },
+              "bounds": [
+                -1.170677304,
+                0.09755975,
+                -0.157818973,
+                1.272239089
+              ]
+            }
+          ],
+          "materials": [
+            {
+              "name": "Light Wooden.001",
+              "slot_index": 0,
+              "polygon_count": 421,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.437489,
+                0.114489,
+                0.031192,
+                1.0
+              ],
+              "base_color_linked": true
+            },
+            {
+              "name": "Photo Frame One",
+              "slot_index": 1,
+              "polygon_count": 41,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color_linked": true
+            }
+          ]
+        },
+        {
+          "source_name": "Plane.047",
+          "baked_name": "Plane.047_Baked",
+          "baked_polygon_count": 462,
+          "baked_loop_count": 1856,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 462,
+              "nondegenerate_by_material_index": {
+                "0": 462
+              },
+              "bounds": [
+                0.37383464,
+                0.180199102,
+                0.995579183,
+                0.609081388
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "Before Baking.blend",
+          "source_polygon_count": 462,
+          "source_loop_count": 1856,
+          "topology_matches_baked": true,
+          "source_dimensions": [
+            0.061262,
+            0.406196,
+            0.458112
+          ],
+          "source_location": [
+            -2.932504,
+            -0.877133,
+            5.067755
+          ],
+          "source_active_uv": "BakingOne",
+          "source_uv_details": [
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 462,
+              "nondegenerate_by_material_index": {
+                "0": 421,
+                "1": 41
+              },
+              "bounds": [
+                0.0,
+                -1.6e-08,
+                0.886674523,
+                1.0
+              ]
+            },
+            {
+              "name": "BakingOne",
+              "nondegenerate_polygon_count": 462,
+              "nondegenerate_by_material_index": {
+                "0": 421,
+                "1": 41
+              },
+              "bounds": [
+                -1.346637726,
+                0.09755975,
+                -0.139965296,
+                1.292435169
+              ]
+            }
+          ],
+          "materials": [
+            {
+              "name": "Light Wooden.001",
+              "slot_index": 0,
+              "polygon_count": 421,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.437489,
+                0.114489,
+                0.031192,
+                1.0
+              ],
+              "base_color_linked": true
+            },
+            {
+              "name": "Photo Frame Three",
+              "slot_index": 1,
+              "polygon_count": 41,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color_linked": true
+            }
+          ]
+        },
+        {
+          "source_name": "Plane.122",
+          "baked_name": "Plane.122_Baked",
+          "baked_polygon_count": 5,
+          "baked_loop_count": 20,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 5,
+              "nondegenerate_by_material_index": {
+                "0": 5
+              },
+              "bounds": [
+                0.002194893,
+                0.411194623,
+                0.898509443,
+                0.966108203
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "Before Baking.blend",
+          "source_polygon_count": 5,
+          "source_loop_count": 20,
+          "topology_matches_baked": true,
+          "source_dimensions": [
+            1.388524,
+            0.918924,
+            0.008012
+          ],
+          "source_location": [
+            -0.954237,
+            4.210494,
+            4.340845
+          ],
+          "source_active_uv": "BakingOne",
+          "source_uv_details": [
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 5,
+              "nondegenerate_by_material_index": {
+                "0": 1,
+                "1": 4
+              },
+              "bounds": [
+                0.164062515,
+                0.0,
+                0.825861692,
+                0.99999994
+              ]
+            },
+            {
+              "name": "BakingOne",
+              "nondegenerate_polygon_count": 5,
+              "nondegenerate_by_material_index": {
+                "0": 1,
+                "1": 4
+              },
+              "bounds": [
+                1e-08,
+                0.0,
+                0.684881032,
+                0.99999994
+              ]
+            }
+          ],
+          "materials": [
+            {
+              "name": "BTS Poster One",
+              "slot_index": 0,
+              "polygon_count": 1,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color_linked": true
+            },
+            {
+              "name": "Poster Frame",
+              "slot_index": 1,
+              "polygon_count": 4,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color_linked": false
+            }
+          ]
+        }
+      ]
+    },
+    "Third": {
+      "baked_material": "FinalThird_Baked",
+      "object_count": 33,
+      "missing": [],
+      "resolved_from_night": [
+        "Kirby",
+        "Plane.004",
+        "Plane.006"
+      ],
+      "objects": [
+        {
+          "source_name": "Kirby",
+          "baked_name": "Kirby_Baked",
+          "baked_polygon_count": 1764,
+          "baked_loop_count": 7056,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 1764,
+              "nondegenerate_by_material_index": {
+                "0": 1764
+              },
+              "bounds": [
+                0.00220069,
+                0.00219566,
+                0.995720088,
+                0.923888922
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "For Night Time Baking.blend",
+          "source_polygon_count": 1764,
+          "source_loop_count": 7056,
+          "topology_matches_baked": true,
+          "source_dimensions": [
+            1.277681,
+            1.073753,
+            1.086654
+          ],
+          "source_location": [
+            1.431035,
+            2.108057,
+            0.53444
+          ],
+          "source_active_uv": "SimpleBake",
+          "source_uv_details": [
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 1764,
+              "nondegenerate_by_material_index": {
+                "0": 836,
+                "1": 928
+              },
+              "bounds": [
+                0.026031466,
+                0.050173908,
+                0.844644368,
+                0.957192898
+              ]
+            },
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 1764,
+              "nondegenerate_by_material_index": {
+                "0": 836,
+                "1": 928
+              },
+              "bounds": [
+                0.00220069,
+                0.00219566,
+                0.995720088,
+                0.923888922
+              ]
+            }
+          ],
+          "materials": [
+            {
+              "name": "Kirby Legs.001",
+              "slot_index": 0,
+              "polygon_count": 836,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.58893,
+                0.037209,
+                0.049595,
+                1.0
+              ],
+              "base_color_linked": false
+            },
+            {
+              "name": "Kirby.001",
+              "slot_index": 1,
+              "polygon_count": 928,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color_linked": true
+            }
+          ]
+        },
+        {
+          "source_name": "League_Logo",
+          "baked_name": "League_Logo_Baked",
+          "baked_polygon_count": 2539,
+          "baked_loop_count": 9780,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 2539,
+              "nondegenerate_by_material_index": {
+                "0": 2539
+              },
+              "bounds": [
+                0.002202926,
+                0.00220108,
+                0.997770071,
+                0.994336486
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "Before Baking.blend",
+          "source_polygon_count": 2539,
+          "source_loop_count": 9780,
+          "topology_matches_baked": true,
+          "source_dimensions": [
+            0.552137,
+            0.552137,
+            0.094028
+          ],
+          "source_location": [
+            0.011574,
+            4.344554,
+            3.610739
+          ],
+          "source_active_uv": "SimpleBake",
+          "source_uv_details": [
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 2539,
+              "nondegenerate_by_material_index": {
+                "0": 670,
+                "1": 1869
+              },
+              "bounds": [
+                -2.3e-08,
+                -3e-08,
+                0.987102091,
+                1.0
+              ]
+            },
+            {
+              "name": "BakingOne",
+              "nondegenerate_polygon_count": 2539,
+              "nondegenerate_by_material_index": {
+                "0": 670,
+                "1": 1869
+              },
+              "bounds": [
+                -2.3e-08,
+                -3e-08,
+                0.987102091,
+                1.0
+              ]
+            },
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 2539,
+              "nondegenerate_by_material_index": {
+                "0": 670,
+                "1": 1869
+              },
+              "bounds": [
+                0.139906079,
+                0.832122386,
+                0.259857565,
+                0.953641176
+              ]
+            }
+          ],
+          "materials": [
+            {
+              "name": "LoL Blue Gradient.001",
+              "slot_index": 0,
+              "polygon_count": 670,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color_linked": true
+            },
+            {
+              "name": "LoL Gold Gradient.001",
+              "slot_index": 1,
+              "polygon_count": 1869,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color_linked": true
+            }
+          ]
+        },
+        {
+          "source_name": "Microphone",
+          "baked_name": "Microphone_Baked",
+          "baked_polygon_count": 861,
+          "baked_loop_count": 3446,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 861,
+              "nondegenerate_by_material_index": {
+                "0": 861
+              },
+              "bounds": [
+                0.002195925,
+                0.002200241,
+                0.916512966,
+                0.986218095
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "Before Baking.blend",
+          "source_polygon_count": 879,
+          "source_loop_count": 3518,
+          "topology_matches_baked": false,
+          "source_dimensions": [
+            0.331255,
+            0.399276,
+            0.62323
+          ],
+          "source_location": [
+            2.353053,
+            3.836568,
+            2.860509
+          ],
+          "source_active_uv": "BakingOne",
+          "source_uv_details": [
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 870,
+              "nondegenerate_by_material_index": {
+                "0": 765,
+                "1": 105
+              },
+              "bounds": [
+                0.0,
+                -0.146009549,
+                1.000000119,
+                1.000000119
+              ]
+            },
+            {
+              "name": "BakingOne",
+              "nondegenerate_polygon_count": 879,
+              "nondegenerate_by_material_index": {
+                "0": 774,
+                "1": 105
+              },
+              "bounds": [
+                -1.94e-07,
+                -4.8e-08,
+                0.873945296,
+                1.000000238
+              ]
+            }
+          ],
+          "materials": [
+            {
+              "name": "Base Blue.001",
+              "slot_index": 0,
+              "polygon_count": 774,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.165131,
+                0.361307,
+                0.467784,
+                1.0
+              ],
+              "base_color_linked": false
+            },
+            {
+              "name": "Base Black.001",
+              "slot_index": 1,
+              "polygon_count": 105,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.026387,
+                0.026387,
+                0.026387,
+                1.0
+              ],
+              "base_color_linked": false
+            },
+            {
+              "name": "Microphone.001",
+              "slot_index": 2,
+              "polygon_count": 0,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.033826,
+                0.033826,
+                0.033826,
+                1.0
+              ],
+              "base_color_linked": false
+            }
+          ]
+        },
+        {
+          "source_name": "Mossy Rock_2",
+          "baked_name": "Mossy Rock_2_Baked",
+          "baked_polygon_count": 113,
+          "baked_loop_count": 452,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 113,
+              "nondegenerate_by_material_index": {
+                "0": 113
+              },
+              "bounds": [
+                0.224337772,
+                0.041195113,
+                0.953563511,
+                0.922247708
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "Before Baking.blend",
+          "source_polygon_count": 113,
+          "source_loop_count": 452,
+          "topology_matches_baked": true,
+          "source_dimensions": [
+            0.742469,
+            0.984767,
+            0.675531
+          ],
+          "source_location": [
+            3.707014,
+            2.383147,
+            -0.86202
+          ],
+          "source_active_uv": "UVMap",
+          "source_uv_details": [
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 113,
+              "nondegenerate_by_material_index": {
+                "0": 113
+              },
+              "bounds": [
+                0.666816473,
+                -2.9e-08,
+                1.000000119,
+                0.346627414
+              ]
+            }
+          ],
+          "materials": [
+            {
+              "name": "Moss on stone.001",
+              "slot_index": 0,
+              "polygon_count": 113,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color_linked": true
+            }
+          ]
+        },
+        {
+          "source_name": "Mossy Rock_3.001",
+          "baked_name": "Mossy Rock_3.001_Baked",
+          "baked_polygon_count": 145,
+          "baked_loop_count": 580,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 145,
+              "nondegenerate_by_material_index": {
+                "0": 145
+              },
+              "bounds": [
+                0.053235888,
+                0.212273896,
+                0.997618139,
+                0.68624568
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "Before Baking.blend",
+          "source_polygon_count": 146,
+          "source_loop_count": 584,
+          "topology_matches_baked": false,
+          "source_dimensions": [
+            1.248004,
+            2.305696,
+            1.708757
+          ],
+          "source_location": [
+            2.325624,
+            6.54627,
+            -1.53851
+          ],
+          "source_active_uv": "UVMap",
+          "source_uv_details": [
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 146,
+              "nondegenerate_by_material_index": {
+                "0": 146
+              },
+              "bounds": [
+                1.4e-08,
+                -2e-08,
+                0.666816413,
+                0.702046871
+              ]
+            }
+          ],
+          "materials": [
+            {
+              "name": "Moss on stone.001",
+              "slot_index": 0,
+              "polygon_count": 146,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color_linked": true
+            }
+          ]
+        },
+        {
+          "source_name": "Mossy Rock_3",
+          "baked_name": "Mossy Rock_3_Baked",
+          "baked_polygon_count": 145,
+          "baked_loop_count": 580,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 145,
+              "nondegenerate_by_material_index": {
+                "0": 145
+              },
+              "bounds": [
+                0.002388174,
+                0.338383973,
+                0.914904356,
+                0.865157068
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "Before Baking.blend",
+          "source_polygon_count": 146,
+          "source_loop_count": 584,
+          "topology_matches_baked": false,
+          "source_dimensions": [
+            1.248004,
+            2.305696,
+            1.708757
+          ],
+          "source_location": [
+            -5.421936,
+            -1.87815,
+            -1.383816
+          ],
+          "source_active_uv": "UVMap",
+          "source_uv_details": [
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 146,
+              "nondegenerate_by_material_index": {
+                "0": 146
+              },
+              "bounds": [
+                9e-09,
+                -1.4e-08,
+                0.553569019,
+                0.582816184
+              ]
+            }
+          ],
+          "materials": [
+            {
+              "name": "Moss on stone.001",
+              "slot_index": 0,
+              "polygon_count": 146,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color_linked": true
+            }
+          ]
+        },
+        {
+          "source_name": "Mossy Rock_4.001",
+          "baked_name": "Mossy Rock_4.001_Baked",
+          "baked_polygon_count": 124,
+          "baked_loop_count": 496,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 124,
+              "nondegenerate_by_material_index": {
+                "0": 124
+              },
+              "bounds": [
+                0.111443847,
+                0.21220316,
+                0.995962977,
+                0.933172226
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "Before Baking.blend",
+          "source_polygon_count": 124,
+          "source_loop_count": 496,
+          "topology_matches_baked": true,
+          "source_dimensions": [
+            0.745599,
+            1.56102,
+            0.491623
+          ],
+          "source_location": [
+            3.515968,
+            -0.540809,
+            -0.894825
+          ],
+          "source_active_uv": "UVMap",
+          "source_uv_details": [
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 124,
+              "nondegenerate_by_material_index": {
+                "0": 124
+              },
+              "bounds": [
+                5e-09,
+                1.2e-08,
+                0.571956396,
+                0.760602653
+              ]
+            }
+          ],
+          "materials": [
+            {
+              "name": "Moss on stone.001",
+              "slot_index": 0,
+              "polygon_count": 124,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color_linked": true
+            }
+          ]
+        },
+        {
+          "source_name": "Mossy Rock_4.002",
+          "baked_name": "Mossy Rock_4.002_Baked",
+          "baked_polygon_count": 172,
+          "baked_loop_count": 688,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 172,
+              "nondegenerate_by_material_index": {
+                "0": 172
+              },
+              "bounds": [
+                0.120779,
+                0.002193681,
+                0.968314886,
+                0.927139521
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "Before Baking.blend",
+          "source_polygon_count": 172,
+          "source_loop_count": 688,
+          "topology_matches_baked": true,
+          "source_dimensions": [
+            0.616743,
+            1.413793,
+            0.326861
+          ],
+          "source_location": [
+            4.442845,
+            -0.528341,
+            -1.12196
+          ],
+          "source_active_uv": "UVMap",
+          "source_uv_details": [
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 172,
+              "nondegenerate_by_material_index": {
+                "0": 172
+              },
+              "bounds": [
+                0.571956336,
+                -2e-08,
+                1.0,
+                0.599635243
+              ]
+            }
+          ],
+          "materials": [
+            {
+              "name": "Moss on stone.001",
+              "slot_index": 0,
+              "polygon_count": 172,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color_linked": true
+            }
+          ]
+        },
+        {
+          "source_name": "Mossy Rock_4",
+          "baked_name": "Mossy Rock_4_Baked",
+          "baked_polygon_count": 180,
+          "baked_loop_count": 720,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 180,
+              "nondegenerate_by_material_index": {
+                "0": 180
+              },
+              "bounds": [
+                0.171975821,
+                0.002877579,
+                0.919476032,
+                0.948849201
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "Before Baking.blend",
+          "source_polygon_count": 180,
+          "source_loop_count": 720,
+          "topology_matches_baked": true,
+          "source_dimensions": [
+            0.709626,
+            1.521026,
+            0.85375
+          ],
+          "source_location": [
+            0.06931,
+            -2.671657,
+            -0.797279
+          ],
+          "source_active_uv": "UVMap",
+          "source_uv_details": [
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 180,
+              "nondegenerate_by_material_index": {
+                "0": 180
+              },
+              "bounds": [
+                0.553569019,
+                6e-09,
+                1.0,
+                0.47348547
+              ]
+            }
+          ],
+          "materials": [
+            {
+              "name": "Moss on stone.001",
+              "slot_index": 0,
+              "polygon_count": 180,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color_linked": true
+            }
+          ]
+        },
+        {
+          "source_name": "Mossy Rock",
+          "baked_name": "Mossy Rock_Baked",
+          "baked_polygon_count": 160,
+          "baked_loop_count": 640,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 160,
+              "nondegenerate_by_material_index": {
+                "0": 160
+              },
+              "bounds": [
+                0.002197486,
+                0.002194464,
+                0.915718675,
+                0.796685934
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "Before Baking.blend",
+          "source_polygon_count": 160,
+          "source_loop_count": 640,
+          "topology_matches_baked": true,
+          "source_dimensions": [
+            0.69633,
+            1.03288,
+            1.172952
+          ],
+          "source_location": [
+            -2.028531,
+            -3.129576,
+            -1.065261
+          ],
+          "source_active_uv": "UVMap",
+          "source_uv_details": [
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 160,
+              "nondegenerate_by_material_index": {
+                "0": 160
+              },
+              "bounds": [
+                0.553569078,
+                0.47348547,
+                0.918666542,
+                0.874007642
+              ]
+            }
+          ],
+          "materials": [
+            {
+              "name": "Moss on stone.001",
+              "slot_index": 0,
+              "polygon_count": 160,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color_linked": true
+            }
+          ]
+        },
+        {
+          "source_name": "Piano",
+          "baked_name": "Piano_Baked",
+          "baked_polygon_count": 2883,
+          "baked_loop_count": 11507,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 2883,
+              "nondegenerate_by_material_index": {
+                "0": 2883
+              },
+              "bounds": [
+                0.00218885,
+                0.002190963,
+                0.997798681,
+                0.991223335
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "Before Baking.blend",
+          "source_polygon_count": 2884,
+          "source_loop_count": 11511,
+          "topology_matches_baked": false,
+          "source_dimensions": [
+            3.627214,
+            2.342608,
+            1.451586
+          ],
+          "source_location": [
+            1.918079,
+            3.444469,
+            0.651456
+          ],
+          "source_active_uv": "BakingOne",
+          "source_uv_details": [
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 2662,
+              "nondegenerate_by_material_index": {
+                "0": 264,
+                "1": 798,
+                "2": 570,
+                "4": 606,
+                "5": 424
+              },
+              "bounds": [
+                0.0,
+                0.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "name": "BakingOne",
+              "nondegenerate_polygon_count": 2884,
+              "nondegenerate_by_material_index": {
+                "0": 354,
+                "1": 798,
+                "2": 570,
+                "4": 626,
+                "5": 536
+              },
+              "bounds": [
+                -1.490157843,
+                1.286553621,
+                -0.697736919,
+                2.078308821
+              ]
+            }
+          ],
+          "materials": [
+            {
+              "name": "Base Gray.001",
+              "slot_index": 0,
+              "polygon_count": 354,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.568605,
+                0.568605,
+                0.568605,
+                1.0
+              ],
+              "base_color_linked": false
+            },
+            {
+              "name": "Base White.001",
+              "slot_index": 1,
+              "polygon_count": 798,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.869244,
+                0.853637,
+                0.90433,
+                1.0
+              ],
+              "base_color_linked": false
+            },
+            {
+              "name": "Base Black.001",
+              "slot_index": 2,
+              "polygon_count": 570,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.026387,
+                0.026387,
+                0.026387,
+                1.0
+              ],
+              "base_color_linked": false
+            },
+            {
+              "name": "Base Gray.001",
+              "slot_index": 3,
+              "polygon_count": 0,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.568605,
+                0.568605,
+                0.568605,
+                1.0
+              ],
+              "base_color_linked": false
+            },
+            {
+              "name": "Piano.001",
+              "slot_index": 4,
+              "polygon_count": 626,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ],
+              "base_color_linked": true
+            },
+            {
+              "name": "Base Purple.001",
+              "slot_index": 5,
+              "polygon_count": 536,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.327393,
+                0.158203,
+                0.481201,
+                1.0
+              ],
+              "base_color_linked": false
+            }
+          ]
+        },
+        {
+          "source_name": "Plane.004",
+          "baked_name": "Plane.004_Baked",
+          "baked_polygon_count": 5415,
+          "baked_loop_count": 19224,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 5415,
+              "nondegenerate_by_material_index": {
+                "0": 5415
+              },
+              "bounds": [
+                0.006348923,
+                0.027195893,
+                0.991887033,
+                0.994638264
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "For Night Time Baking.blend",
+          "source_polygon_count": 5415,
+          "source_loop_count": 19224,
+          "topology_matches_baked": true,
+          "source_dimensions": [
+            0.66178,
+            0.157922,
+            1.576187
+          ],
+          "source_location": [
+            -3.518259,
+            -3.093583,
+            4.686182
+          ],
+          "source_active_uv": "SimpleBake",
+          "source_uv_details": [
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 5400,
+              "nondegenerate_by_material_index": {
+                "0": 522,
+                "1": 4878
+              },
+              "bounds": [
+                -0.004195245,
+                0.0,
+                1.003804803,
+                1.000000119
+              ]
+            },
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 5415,
+              "nondegenerate_by_material_index": {
+                "0": 537,
+                "1": 4878
+              },
+              "bounds": [
+                0.006348923,
+                0.027195893,
+                0.991887033,
+                0.994638264
+              ]
+            }
+          ],
+          "materials": [
+            {
+              "name": "Dark wood",
+              "slot_index": 0,
+              "polygon_count": 537,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.437489,
+                0.114489,
+                0.031192,
+                1.0
+              ],
+              "base_color_linked": true
+            },
+            {
+              "name": "Light Wooden.002",
+              "slot_index": 1,
+              "polygon_count": 4878,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.437489,
+                0.114489,
+                0.031192,
+                1.0
+              ],
+              "base_color_linked": true
+            }
+          ]
+        },
+        {
+          "source_name": "Plane.006",
+          "baked_name": "Plane.006_Baked",
+          "baked_polygon_count": 7886,
+          "baked_loop_count": 27819,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 7886,
+              "nondegenerate_by_material_index": {
+                "0": 7886
+              },
+              "bounds": [
+                0.002192497,
+                0.002202302,
+                0.997667193,
+                0.99460721
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "For Night Time Baking.blend",
+          "source_polygon_count": 7886,
+          "source_loop_count": 27819,
+          "topology_matches_baked": true,
+          "source_dimensions": [
+            0.659129,
+            0.166273,
+            1.543634
+          ],
+          "source_location": [
+            -3.518318,
+            -3.093348,
+            5.536247
+          ],
+          "source_active_uv": "SimpleBake",
+          "source_uv_details": [
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 7878,
+              "nondegenerate_by_material_index": {
+                "0": 418,
+                "1": 7460
+              },
+              "bounds": [
+                -0.007408977,
+                0.0,
+                1.00683403,
+                1.000000119
+              ]
+            },
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 7886,
+              "nondegenerate_by_material_index": {
+                "0": 426,
+                "1": 7460
+              },
+              "bounds": [
+                0.002192497,
+                0.002202302,
+                0.997667193,
+                0.99460721
+              ]
+            }
+          ],
+          "materials": [
+            {
+              "name": "Wood.002",
+              "slot_index": 0,
+              "polygon_count": 426,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.437489,
+                0.114489,
+                0.031192,
+                1.0
+              ],
+              "base_color_linked": true
+            },
+            {
+              "name": "Light Wooden.002",
+              "slot_index": 1,
+              "polygon_count": 7460,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.437489,
+                0.114489,
+                0.031192,
+                1.0
+              ],
+              "base_color_linked": true
+            }
+          ]
+        },
+        {
+          "source_name": "Plane.016",
+          "baked_name": "Plane.016_Baked",
+          "baked_polygon_count": 190,
+          "baked_loop_count": 760,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 190,
+              "nondegenerate_by_material_index": {
+                "0": 190
+              },
+              "bounds": [
+                0.002206607,
+                0.205143332,
+                0.954343736,
+                0.913695335
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "Before Baking.blend",
+          "source_polygon_count": 276,
+          "source_loop_count": 1134,
+          "topology_matches_baked": false,
+          "source_dimensions": [
+            71.94194,
+            92.345039,
+            21.18042
+          ],
+          "source_location": [
+            1.916441,
+            -0.18219,
+            5.783043
+          ],
+          "source_active_uv": "BakingOne",
+          "source_uv_details": [
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 274,
+              "nondegenerate_by_material_index": {
+                "0": 274
+              },
+              "bounds": [
+                0.0,
+                0.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "name": "BakingOne",
+              "nondegenerate_polygon_count": 274,
+              "nondegenerate_by_material_index": {
+                "0": 274
+              },
+              "bounds": [
+                0.0,
+                0.0,
+                1.0,
+                1.0
+              ]
+            }
+          ],
+          "materials": [
+            {
+              "name": "Backdrop",
+              "slot_index": 0,
+              "polygon_count": 276,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.228331,
+                0.547677,
+                0.782719,
+                1.0
+              ],
+              "base_color_linked": true
+            }
+          ]
+        },
+        {
+          "source_name": "Plane.017",
+          "baked_name": "Plane.017_Baked",
+          "baked_polygon_count": 8744,
+          "baked_loop_count": 30785,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 8744,
+              "nondegenerate_by_material_index": {
+                "0": 8744
+              },
+              "bounds": [
+                0.002199918,
+                0.002200697,
+                0.997754157,
+                0.994638681
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "Before Baking.blend",
+          "source_polygon_count": 96,
+          "source_loop_count": 384,
+          "topology_matches_baked": false,
+          "source_dimensions": [
+            0.88908,
+            0.88908,
+            0.670671
+          ],
+          "source_location": [
+            -0.707342,
+            -1.153733,
+            1.246308
+          ],
+          "source_active_uv": "UVMap",
+          "source_uv_details": [
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 96,
+              "nondegenerate_by_material_index": {
+                "0": 96
+              },
+              "bounds": [
+                0.090078421,
+                0.090078421,
+                0.909921706,
+                0.909921706
+              ]
+            }
+          ],
+          "materials": [
+            {
+              "name": "Water Higher Transparency.001",
+              "slot_index": 0,
+              "polygon_count": 96,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.09168,
+                0.26018,
+                0.576715,
+                1.0
+              ],
+              "base_color_linked": false
+            }
+          ]
+        },
+        {
+          "source_name": "Plane.018",
+          "baked_name": "Plane.018_Baked",
+          "baked_polygon_count": 145,
+          "baked_loop_count": 580,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 145,
+              "nondegenerate_by_material_index": {
+                "0": 145
+              },
+              "bounds": [
+                0.00220361,
+                0.065259896,
+                0.50603205,
+                0.830341935
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "Before Baking.blend",
+          "source_polygon_count": 0,
+          "source_loop_count": 0,
+          "topology_matches_baked": false,
+          "source_dimensions": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "source_location": [
+            -2.319053,
+            3.549593,
+            3.085914
+          ],
+          "source_active_uv": "UVMap",
+          "source_uv_details": [
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 0,
+              "nondegenerate_by_material_index": {},
+              "bounds": null
+            }
+          ],
+          "materials": []
+        },
+        {
+          "source_name": "Plane.019",
+          "baked_name": "Plane.019_Baked",
+          "baked_polygon_count": 28356,
+          "baked_loop_count": 111100,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 28356,
+              "nondegenerate_by_material_index": {
+                "0": 28356
+              },
+              "bounds": [
+                0.002191648,
+                0.002195977,
+                0.997570157,
+                0.992303848
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "Before Baking.blend",
+          "source_polygon_count": 28356,
+          "source_loop_count": 111100,
+          "topology_matches_baked": true,
+          "source_dimensions": [
+            1.694406,
+            2.809172,
+            0.072073
+          ],
+          "source_location": [
+            1.440914,
+            -0.048581,
+            0.525981
+          ],
+          "source_active_uv": "BakingOne",
+          "source_uv_details": [
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 28356,
+              "nondegenerate_by_material_index": {
+                "0": 336,
+                "1": 28020
+              },
+              "bounds": [
+                -2.8e-08,
+                -9.3e-08,
+                0.929758668,
+                1.000000119
+              ]
+            },
+            {
+              "name": "BakingOne",
+              "nondegenerate_polygon_count": 28356,
+              "nondegenerate_by_material_index": {
+                "0": 336,
+                "1": 28020
+              },
+              "bounds": [
+                -2.8e-08,
+                -9.3e-08,
+                0.929758668,
+                1.000000119
+              ]
+            }
+          ],
+          "materials": [
+            {
+              "name": "Welcome Mat.001",
+              "slot_index": 0,
+              "polygon_count": 336,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.750016,
+                0.207663,
+                0.800133,
+                1.0
+              ],
+              "base_color_linked": true
+            },
+            {
+              "name": "Drawer Shelves.001",
+              "slot_index": 1,
+              "polygon_count": 28020,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.743711,
+                0.412282,
+                0.69235,
+                1.0
+              ],
+              "base_color_linked": false
+            }
+          ]
+        },
+        {
+          "source_name": "Plane.067",
+          "baked_name": "Plane.067_Baked",
+          "baked_polygon_count": 454,
+          "baked_loop_count": 1816,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 454,
+              "nondegenerate_by_material_index": {
+                "0": 454
+              },
+              "bounds": [
+                0.050385833,
+                0.002196252,
+                0.997229874,
+                0.95336473
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "Before Baking.blend",
+          "source_polygon_count": 454,
+          "source_loop_count": 1816,
+          "topology_matches_baked": true,
+          "source_dimensions": [
+            0.318798,
+            0.834372,
+            2.091116
+          ],
+          "source_location": [
+            0.851745,
+            3.528408,
+            0.497176
+          ],
+          "source_active_uv": "BakingOne",
+          "source_uv_details": [
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 454,
+              "nondegenerate_by_material_index": {
+                "0": 454
+              },
+              "bounds": [
+                -1e-08,
+                -5.1e-08,
+                0.766142726,
+                1.0
+              ]
+            },
+            {
+              "name": "BakingOne",
+              "nondegenerate_polygon_count": 454,
+              "nondegenerate_by_material_index": {
+                "0": 454
+              },
+              "bounds": [
+                -1.11512208,
+                0.678901851,
+                -0.348590076,
+                1.711667299
+              ]
+            }
+          ],
+          "materials": [
+            {
+              "name": "Base Black.001",
+              "slot_index": 0,
+              "polygon_count": 454,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.026387,
+                0.026387,
+                0.026387,
+                1.0
+              ],
+              "base_color_linked": false
+            }
+          ]
+        },
+        {
+          "source_name": "Plane",
+          "baked_name": "Plane_Baked",
+          "baked_polygon_count": 188,
+          "baked_loop_count": 752,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 188,
+              "nondegenerate_by_material_index": {
+                "0": 188
+              },
+              "bounds": [
+                0.002193831,
+                0.002195805,
+                0.914919257,
+                0.537323236
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "Before Baking.blend",
+          "source_polygon_count": 288,
+          "source_loop_count": 1152,
+          "topology_matches_baked": false,
+          "source_dimensions": [
+            11.444644,
+            11.444644,
+            1.243373
+          ],
+          "source_location": [
+            -0.383465,
+            1.128962,
+            -0.516596
+          ],
+          "source_active_uv": "UVMap",
+          "source_uv_details": [
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 288,
+              "nondegenerate_by_material_index": {
+                "0": 288
+              },
+              "bounds": [
+                0.0,
+                0.0,
+                1.000000119,
+                1.000000119
+              ]
+            }
+          ],
+          "materials": [
+            {
+              "name": "Water",
+              "slot_index": 0,
+              "polygon_count": 288,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.09168,
+                0.26018,
+                0.576715,
+                1.0
+              ],
+              "base_color_linked": false
+            }
+          ]
+        },
+        {
+          "source_name": "Seaweed_10",
+          "baked_name": "Seaweed_10_Baked",
+          "baked_polygon_count": 864,
+          "baked_loop_count": 3456,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 864,
+              "nondegenerate_by_material_index": {
+                "0": 864
+              },
+              "bounds": [
+                0.333911866,
+                0.002198275,
+                0.560901284,
+                0.393316001
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "Before Baking.blend",
+          "source_polygon_count": 864,
+          "source_loop_count": 3456,
+          "topology_matches_baked": true,
+          "source_dimensions": [
+            0.701816,
+            0.323308,
+            0.099626
+          ],
+          "source_location": [
+            2.952313,
+            -2.203016,
+            -0.772517
+          ],
+          "source_active_uv": "BakingOne",
+          "source_uv_details": [
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 864,
+              "nondegenerate_by_material_index": {
+                "0": 864
+              },
+              "bounds": [
+                1.2e-08,
+                -3.2e-08,
+                0.835209489,
+                1.000000119
+              ]
+            },
+            {
+              "name": "BakingOne",
+              "nondegenerate_polygon_count": 864,
+              "nondegenerate_by_material_index": {
+                "0": 864
+              },
+              "bounds": [
+                1.2e-08,
+                -3.2e-08,
+                0.835209489,
+                1.000000119
+              ]
+            }
+          ],
+          "materials": [
+            {
+              "name": "Plant Gradient.001",
+              "slot_index": 0,
+              "polygon_count": 864,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color_linked": true
+            }
+          ]
+        },
+        {
+          "source_name": "Seaweed_1",
+          "baked_name": "Seaweed_1_Baked",
+          "baked_polygon_count": 864,
+          "baked_loop_count": 3456,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 864,
+              "nondegenerate_by_material_index": {
+                "0": 864
+              },
+              "bounds": [
+                0.018654823,
+                0.917197824,
+                0.136655465,
+                0.928252697
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "Before Baking.blend",
+          "source_polygon_count": 864,
+          "source_loop_count": 3456,
+          "topology_matches_baked": true,
+          "source_dimensions": [
+            1.317287,
+            0.381844,
+            0.186996
+          ],
+          "source_location": [
+            -2.681356,
+            -2.672247,
+            -0.354958
+          ],
+          "source_active_uv": "BakingOne",
+          "source_uv_details": [
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 864,
+              "nondegenerate_by_material_index": {
+                "0": 864
+              },
+              "bounds": [
+                1.2e-08,
+                -3.2e-08,
+                0.835209489,
+                1.000000119
+              ]
+            },
+            {
+              "name": "BakingOne",
+              "nondegenerate_polygon_count": 864,
+              "nondegenerate_by_material_index": {
+                "0": 864
+              },
+              "bounds": [
+                1.2e-08,
+                -3.2e-08,
+                0.835209489,
+                1.000000119
+              ]
+            }
+          ],
+          "materials": [
+            {
+              "name": "Plant Gradient.001",
+              "slot_index": 0,
+              "polygon_count": 864,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color_linked": true
+            }
+          ]
+        },
+        {
+          "source_name": "Seaweed_2",
+          "baked_name": "Seaweed_2_Baked",
+          "baked_polygon_count": 864,
+          "baked_loop_count": 3456,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 864,
+              "nondegenerate_by_material_index": {
+                "0": 864
+              },
+              "bounds": [
+                0.196464121,
+                0.047202423,
+                0.780834019,
+                0.689946175
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "Before Baking.blend",
+          "source_polygon_count": 864,
+          "source_loop_count": 3456,
+          "topology_matches_baked": true,
+          "source_dimensions": [
+            0.800308,
+            0.257552,
+            0.15919
+          ],
+          "source_location": [
+            -3.484283,
+            -3.104733,
+            -0.580166
+          ],
+          "source_active_uv": "BakingOne",
+          "source_uv_details": [
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 864,
+              "nondegenerate_by_material_index": {
+                "0": 864
+              },
+              "bounds": [
+                1.2e-08,
+                -3.2e-08,
+                0.835209489,
+                1.000000119
+              ]
+            },
+            {
+              "name": "BakingOne",
+              "nondegenerate_polygon_count": 864,
+              "nondegenerate_by_material_index": {
+                "0": 864
+              },
+              "bounds": [
+                1.2e-08,
+                -3.2e-08,
+                0.835209489,
+                1.000000119
+              ]
+            }
+          ],
+          "materials": [
+            {
+              "name": "Plant Gradient.001",
+              "slot_index": 0,
+              "polygon_count": 864,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color_linked": true
+            }
+          ]
+        },
+        {
+          "source_name": "Seaweed_3",
+          "baked_name": "Seaweed_3_Baked",
+          "baked_polygon_count": 864,
+          "baked_loop_count": 3456,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 864,
+              "nondegenerate_by_material_index": {
+                "0": 864
+              },
+              "bounds": [
+                0.002194574,
+                0.304199338,
+                0.120843947,
+                0.914969802
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "Before Baking.blend",
+          "source_polygon_count": 864,
+          "source_loop_count": 3456,
+          "topology_matches_baked": true,
+          "source_dimensions": [
+            1.399135,
+            0.540837,
+            0.223721
+          ],
+          "source_location": [
+            -1.358123,
+            -2.514371,
+            -0.209232
+          ],
+          "source_active_uv": "BakingOne",
+          "source_uv_details": [
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 864,
+              "nondegenerate_by_material_index": {
+                "0": 864
+              },
+              "bounds": [
+                1.2e-08,
+                -3.2e-08,
+                0.835209489,
+                1.000000119
+              ]
+            },
+            {
+              "name": "BakingOne",
+              "nondegenerate_polygon_count": 864,
+              "nondegenerate_by_material_index": {
+                "0": 864
+              },
+              "bounds": [
+                1.2e-08,
+                -3.2e-08,
+                0.835209489,
+                1.000000119
+              ]
+            }
+          ],
+          "materials": [
+            {
+              "name": "Plant Gradient.001",
+              "slot_index": 0,
+              "polygon_count": 864,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color_linked": true
+            }
+          ]
+        },
+        {
+          "source_name": "Seaweed_4",
+          "baked_name": "Seaweed_4_Baked",
+          "baked_polygon_count": 864,
+          "baked_loop_count": 3456,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 864,
+              "nondegenerate_by_material_index": {
+                "0": 864
+              },
+              "bounds": [
+                0.058460791,
+                0.369201601,
+                0.234442592,
+                0.823310196
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "Before Baking.blend",
+          "source_polygon_count": 864,
+          "source_loop_count": 3456,
+          "topology_matches_baked": true,
+          "source_dimensions": [
+            0.866289,
+            0.251113,
+            0.122974
+          ],
+          "source_location": [
+            -0.964268,
+            -2.930617,
+            -0.511303
+          ],
+          "source_active_uv": "BakingOne",
+          "source_uv_details": [
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 864,
+              "nondegenerate_by_material_index": {
+                "0": 864
+              },
+              "bounds": [
+                1.2e-08,
+                -3.2e-08,
+                0.835209489,
+                1.000000119
+              ]
+            },
+            {
+              "name": "BakingOne",
+              "nondegenerate_polygon_count": 864,
+              "nondegenerate_by_material_index": {
+                "0": 864
+              },
+              "bounds": [
+                1.2e-08,
+                -3.2e-08,
+                0.835209489,
+                1.000000119
+              ]
+            }
+          ],
+          "materials": [
+            {
+              "name": "Plant Gradient.001",
+              "slot_index": 0,
+              "polygon_count": 864,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color_linked": true
+            }
+          ]
+        },
+        {
+          "source_name": "Seaweed_5",
+          "baked_name": "Seaweed_5_Baked",
+          "baked_polygon_count": 864,
+          "baked_loop_count": 3456,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 864,
+              "nondegenerate_by_material_index": {
+                "0": 864
+              },
+              "bounds": [
+                0.250960648,
+                0.821200252,
+                0.873656034,
+                0.922392726
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "Before Baking.blend",
+          "source_polygon_count": 864,
+          "source_loop_count": 3456,
+          "topology_matches_baked": true,
+          "source_dimensions": [
+            1.399135,
+            0.540837,
+            0.223721
+          ],
+          "source_location": [
+            3.254092,
+            3.589727,
+            -0.455793
+          ],
+          "source_active_uv": "BakingOne",
+          "source_uv_details": [
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 864,
+              "nondegenerate_by_material_index": {
+                "0": 864
+              },
+              "bounds": [
+                1.2e-08,
+                -3.2e-08,
+                0.835209489,
+                1.000000119
+              ]
+            },
+            {
+              "name": "BakingOne",
+              "nondegenerate_polygon_count": 864,
+              "nondegenerate_by_material_index": {
+                "0": 864
+              },
+              "bounds": [
+                1.2e-08,
+                -3.2e-08,
+                0.835209489,
+                1.000000119
+              ]
+            }
+          ],
+          "materials": [
+            {
+              "name": "Plant Gradient.001",
+              "slot_index": 0,
+              "polygon_count": 864,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color_linked": true
+            }
+          ]
+        },
+        {
+          "source_name": "Seaweed_6.001",
+          "baked_name": "Seaweed_6.001_Baked",
+          "baked_polygon_count": 864,
+          "baked_loop_count": 3456,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 864,
+              "nondegenerate_by_material_index": {
+                "0": 864
+              },
+              "bounds": [
+                0.02408281,
+                0.370195985,
+                0.327227294,
+                0.537317455
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "Before Baking.blend",
+          "source_polygon_count": 864,
+          "source_loop_count": 3456,
+          "topology_matches_baked": true,
+          "source_dimensions": [
+            0.882435,
+            0.251852,
+            0.153252
+          ],
+          "source_location": [
+            3.580957,
+            1.148075,
+            -0.560615
+          ],
+          "source_active_uv": "BakingOne",
+          "source_uv_details": [
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 864,
+              "nondegenerate_by_material_index": {
+                "0": 864
+              },
+              "bounds": [
+                1.2e-08,
+                -3.2e-08,
+                0.835209489,
+                1.000000119
+              ]
+            },
+            {
+              "name": "BakingOne",
+              "nondegenerate_polygon_count": 864,
+              "nondegenerate_by_material_index": {
+                "0": 864
+              },
+              "bounds": [
+                1.2e-08,
+                -3.2e-08,
+                0.835209489,
+                1.000000119
+              ]
+            }
+          ],
+          "materials": [
+            {
+              "name": "Plant Gradient.001",
+              "slot_index": 0,
+              "polygon_count": 864,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color_linked": true
+            }
+          ]
+        },
+        {
+          "source_name": "Seaweed_6",
+          "baked_name": "Seaweed_6_Baked",
+          "baked_polygon_count": 864,
+          "baked_loop_count": 3456,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 864,
+              "nondegenerate_by_material_index": {
+                "0": 864
+              },
+              "bounds": [
+                0.345561862,
+                0.308198631,
+                0.612025797,
+                0.628307045
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "Before Baking.blend",
+          "source_polygon_count": 864,
+          "source_loop_count": 3456,
+          "topology_matches_baked": true,
+          "source_dimensions": [
+            0.866289,
+            0.251113,
+            0.122974
+          ],
+          "source_location": [
+            3.16957,
+            3.03926,
+            -0.672454
+          ],
+          "source_active_uv": "BakingOne",
+          "source_uv_details": [
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 864,
+              "nondegenerate_by_material_index": {
+                "0": 864
+              },
+              "bounds": [
+                1.2e-08,
+                -3.2e-08,
+                0.835209489,
+                1.000000119
+              ]
+            },
+            {
+              "name": "BakingOne",
+              "nondegenerate_polygon_count": 864,
+              "nondegenerate_by_material_index": {
+                "0": 864
+              },
+              "bounds": [
+                1.2e-08,
+                -3.2e-08,
+                0.835209489,
+                1.000000119
+              ]
+            }
+          ],
+          "materials": [
+            {
+              "name": "Plant Gradient.001",
+              "slot_index": 0,
+              "polygon_count": 864,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color_linked": true
+            }
+          ]
+        },
+        {
+          "source_name": "Seaweed_7",
+          "baked_name": "Seaweed_7_Baked",
+          "baked_polygon_count": 864,
+          "baked_loop_count": 3456,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 864,
+              "nondegenerate_by_material_index": {
+                "0": 864
+              },
+              "bounds": [
+                0.314314216,
+                0.075218603,
+                0.380052447,
+                0.275438905
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "Before Baking.blend",
+          "source_polygon_count": 864,
+          "source_loop_count": 3456,
+          "topology_matches_baked": true,
+          "source_dimensions": [
+            1.175822,
+            0.35074,
+            0.152157
+          ],
+          "source_location": [
+            3.282909,
+            4.267011,
+            -0.603096
+          ],
+          "source_active_uv": "BakingOne",
+          "source_uv_details": [
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 864,
+              "nondegenerate_by_material_index": {
+                "0": 864
+              },
+              "bounds": [
+                1.2e-08,
+                -3.2e-08,
+                0.835209489,
+                1.000000119
+              ]
+            },
+            {
+              "name": "BakingOne",
+              "nondegenerate_polygon_count": 864,
+              "nondegenerate_by_material_index": {
+                "0": 864
+              },
+              "bounds": [
+                1.2e-08,
+                -3.2e-08,
+                0.835209489,
+                1.000000119
+              ]
+            }
+          ],
+          "materials": [
+            {
+              "name": "Plant Gradient.001",
+              "slot_index": 0,
+              "polygon_count": 864,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color_linked": true
+            }
+          ]
+        },
+        {
+          "source_name": "Seaweed_8",
+          "baked_name": "Seaweed_8_Baked",
+          "baked_polygon_count": 864,
+          "baked_loop_count": 3456,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 864,
+              "nondegenerate_by_material_index": {
+                "0": 864
+              },
+              "bounds": [
+                0.050993748,
+                0.002194565,
+                0.412232012,
+                0.149309188
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "Before Baking.blend",
+          "source_polygon_count": 864,
+          "source_loop_count": 3456,
+          "topology_matches_baked": true,
+          "source_dimensions": [
+            1.121868,
+            0.28363,
+            0.179851
+          ],
+          "source_location": [
+            1.937657,
+            -2.647638,
+            -0.631109
+          ],
+          "source_active_uv": "BakingOne",
+          "source_uv_details": [
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 864,
+              "nondegenerate_by_material_index": {
+                "0": 864
+              },
+              "bounds": [
+                1.2e-08,
+                -3.2e-08,
+                0.835209489,
+                1.000000119
+              ]
+            },
+            {
+              "name": "BakingOne",
+              "nondegenerate_polygon_count": 864,
+              "nondegenerate_by_material_index": {
+                "0": 864
+              },
+              "bounds": [
+                1.2e-08,
+                -3.2e-08,
+                0.835209489,
+                1.000000119
+              ]
+            }
+          ],
+          "materials": [
+            {
+              "name": "Plant Gradient.001",
+              "slot_index": 0,
+              "polygon_count": 864,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color_linked": true
+            }
+          ]
+        },
+        {
+          "source_name": "Seaweed_9",
+          "baked_name": "Seaweed_9_Baked",
+          "baked_polygon_count": 864,
+          "baked_loop_count": 3456,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 864,
+              "nondegenerate_by_material_index": {
+                "0": 864
+              },
+              "bounds": [
+                0.296478748,
+                0.909202397,
+                0.945328951,
+                0.924044967
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "Before Baking.blend",
+          "source_polygon_count": 864,
+          "source_loop_count": 3456,
+          "topology_matches_baked": true,
+          "source_dimensions": [
+            1.451862,
+            0.476326,
+            0.241884
+          ],
+          "source_location": [
+            2.503306,
+            -2.503362,
+            -0.443808
+          ],
+          "source_active_uv": "BakingOne",
+          "source_uv_details": [
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 864,
+              "nondegenerate_by_material_index": {
+                "0": 864
+              },
+              "bounds": [
+                1.2e-08,
+                -3.2e-08,
+                0.835209489,
+                1.000000119
+              ]
+            },
+            {
+              "name": "BakingOne",
+              "nondegenerate_polygon_count": 864,
+              "nondegenerate_by_material_index": {
+                "0": 864
+              },
+              "bounds": [
+                1.2e-08,
+                -3.2e-08,
+                0.835209489,
+                1.000000119
+              ]
+            }
+          ],
+          "materials": [
+            {
+              "name": "Plant Gradient.001",
+              "slot_index": 0,
+              "polygon_count": 864,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color_linked": true
+            }
+          ]
+        },
+        {
+          "source_name": "Seaweed",
+          "baked_name": "Seaweed_Baked",
+          "baked_polygon_count": 864,
+          "baked_loop_count": 3456,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 864,
+              "nondegenerate_by_material_index": {
+                "0": 864
+              },
+              "bounds": [
+                0.283001602,
+                0.845198214,
+                0.792037427,
+                0.869230926
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "Before Baking.blend",
+          "source_polygon_count": 864,
+          "source_loop_count": 3456,
+          "topology_matches_baked": true,
+          "source_dimensions": [
+            2.244099,
+            0.868154,
+            0.359044
+          ],
+          "source_location": [
+            -3.283772,
+            -2.714783,
+            0.029745
+          ],
+          "source_active_uv": "BakingOne",
+          "source_uv_details": [
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 864,
+              "nondegenerate_by_material_index": {
+                "0": 864
+              },
+              "bounds": [
+                1.2e-08,
+                -3.2e-08,
+                0.835209489,
+                1.000000119
+              ]
+            },
+            {
+              "name": "BakingOne",
+              "nondegenerate_polygon_count": 864,
+              "nondegenerate_by_material_index": {
+                "0": 864
+              },
+              "bounds": [
+                1.2e-08,
+                -3.2e-08,
+                0.835209489,
+                1.000000119
+              ]
+            }
+          ],
+          "materials": [
+            {
+              "name": "Plant Gradient.001",
+              "slot_index": 0,
+              "polygon_count": 864,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color_linked": true
+            }
+          ]
+        },
+        {
+          "source_name": "Wire_Two",
+          "baked_name": "Wire_Two_Baked",
+          "baked_polygon_count": 301,
+          "baked_loop_count": 1212,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 301,
+              "nondegenerate_by_material_index": {
+                "0": 301
+              },
+              "bounds": [
+                0.046069678,
+                0.155626863,
+                0.538185596,
+                0.858837187
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "Before Baking.blend",
+          "source_polygon_count": 301,
+          "source_loop_count": 1212,
+          "topology_matches_baked": true,
+          "source_dimensions": [
+            0.907982,
+            1.404426,
+            0.274455
+          ],
+          "source_location": [
+            1.993998,
+            4.180204,
+            1.294477
+          ],
+          "source_active_uv": "BakingOne",
+          "source_uv_details": [
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 301,
+              "nondegenerate_by_material_index": {
+                "0": 301
+              },
+              "bounds": [
+                0.0,
+                0.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "name": "BakingOne",
+              "nondegenerate_polygon_count": 301,
+              "nondegenerate_by_material_index": {
+                "0": 301
+              },
+              "bounds": [
+                0.004535542,
+                -0.009716423,
+                0.659412622,
+                0.93329525
+              ]
+            }
+          ],
+          "materials": [
+            {
+              "name": "Base Black.001",
+              "slot_index": 0,
+              "polygon_count": 301,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.026387,
+                0.026387,
+                0.026387,
+                1.0
+              ],
+              "base_color_linked": false
+            }
+          ]
+        },
+        {
+          "source_name": "Wooden_Name.001",
+          "baked_name": "Wooden_Name.001_Baked",
+          "baked_polygon_count": 4887,
+          "baked_loop_count": 17114,
+          "baked_active_uv": "SimpleBake",
+          "baked_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 4887,
+              "nondegenerate_by_material_index": {
+                "0": 4887
+              },
+              "bounds": [
+                0.002201319,
+                0.002195688,
+                0.997517347,
+                0.988065541
+              ]
+            }
+          ],
+          "source_missing": false,
+          "source_origin": "Before Baking.blend",
+          "source_polygon_count": 4887,
+          "source_loop_count": 17114,
+          "topology_matches_baked": true,
+          "source_dimensions": [
+            1.704375,
+            0.202851,
+            0.222802
+          ],
+          "source_location": [
+            1.223699,
+            4.229865,
+            3.285247
+          ],
+          "source_active_uv": "SimpleBake",
+          "source_uv_details": [
+            {
+              "name": "SimpleBake",
+              "nondegenerate_polygon_count": 4887,
+              "nondegenerate_by_material_index": {
+                "0": 4887
+              },
+              "bounds": [
+                0.042901978,
+                0.58678031,
+                0.270012677,
+                0.967584848
+              ]
+            },
+            {
+              "name": "UVMap",
+              "nondegenerate_polygon_count": 4887,
+              "nondegenerate_by_material_index": {
+                "0": 4887
+              },
+              "bounds": [
+                -2e-09,
+                -4.1e-08,
+                0.596396863,
+                0.99999994
+              ]
+            },
+            {
+              "name": "BakingOne",
+              "nondegenerate_polygon_count": 4887,
+              "nondegenerate_by_material_index": {
+                "0": 4887
+              },
+              "bounds": [
+                -2e-09,
+                -4.1e-08,
+                0.596396863,
+                0.99999994
+              ]
+            }
+          ],
+          "materials": [
+            {
+              "name": "Light Wooden.001",
+              "slot_index": 0,
+              "polygon_count": 4887,
+              "diffuse_color": [
+                0.8,
+                0.8,
+                0.8,
+                1.0
+              ],
+              "base_color": [
+                0.437489,
+                0.114489,
+                0.031192,
+                1.0
+              ],
+              "base_color_linked": true
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

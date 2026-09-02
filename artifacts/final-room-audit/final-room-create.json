@@ -1,0 +1,58 @@
+{
+  "source": "C:\\Users\\hiepdeptrai\\Desktop\\hk1_2026_2027\\MyPortfolioWeb\\sooahs-room-folio\\blender files\\My Room.blend",
+  "source_sha256_before": "8749933A53DAFF944BB8E7408DCC7C625961C2A1801CA87B7F7C323546B5433F",
+  "source_sha256_after": "8749933A53DAFF944BB8E7408DCC7C625961C2A1801CA87B7F7C323546B5433F",
+  "source_unchanged": true,
+  "output": "C:\\Users\\hiepdeptrai\\Desktop\\hk1_2026_2027\\MyPortfolioWeb\\sooahs-room-folio\\blender files\\My Room - FINAL.blend",
+  "output_sha256": "10072F4E41D4851ACA845D0CF051B4563B7048FA58F61B4FCAB04165134A5C4B",
+  "output_size_bytes": 28349179,
+  "baked_room_meshes": 165,
+  "special_objects": [
+    "Facebook_Fifth_Raycaster_Pointer_Hover",
+    "Tree_3"
+  ],
+  "removed_obsolete_meshes": 158,
+  "final_mesh_count": 167,
+  "materials": {
+    "First": {
+      "material": "FinalFirst_Baked",
+      "texture": "public/textures/room/grounded-pastel-test/first-texture-set-day-grounded-test.webp",
+      "texture_sha256": "732BC3D069221F98AE1A780D4A79EF9E885A387E2564731DBE58C1EDC29015B5",
+      "packed": true,
+      "dimensions": [
+        4096,
+        4096
+      ]
+    },
+    "Second": {
+      "material": "RealFinalSecond_Baked",
+      "texture": "public/textures/room/grounded-pastel-test/second-texture-set-day-grounded-test.webp",
+      "texture_sha256": "E89D583DC0E13A7B6549920DA7EAEFC024C1BE6C489A95FABAD3DE5D086E3A9F",
+      "packed": true,
+      "dimensions": [
+        4096,
+        4096
+      ]
+    },
+    "Third": {
+      "material": "FinalThird_Baked",
+      "texture": "public/textures/room/grounded-pastel-test/third-texture-set-day-grounded-test.webp",
+      "texture_sha256": "821376D56769AD01B96AC342B51950BD8B9222F7AAEA3B3317F83763E3C8463A",
+      "packed": true,
+      "dimensions": [
+        4096,
+        4096
+      ]
+    },
+    "Fourth": {
+      "material": "FinalFourth_Baked",
+      "texture": "public/textures/room/grounded-pastel-test/fourth-texture-set-day-grounded-test.webp",
+      "texture_sha256": "976965082C2FAFA4F865B54BA35AC21B04DE7435142CE3051049D547FC92EE8F",
+      "packed": true,
+      "dimensions": [
+        4096,
+        4096
+      ]
+    }
+  }
+}

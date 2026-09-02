@@ -1,0 +1,84 @@
+{
+  "blend": "C:\\Users\\hiepdeptrai\\Desktop\\hk1_2026_2027\\MyPortfolioWeb\\sooahs-room-folio\\blender files\\My Room - FINAL.blend",
+  "object_count": 171,
+  "mesh_count": 167,
+  "collections": [
+    "LCA",
+    "SimpleBake_Bakes",
+    "Targets"
+  ],
+  "keyword_matches": [
+    {
+      "name": "Facebook_Fifth_Raycaster_Pointer_Hover",
+      "type": "MESH",
+      "location": [
+        -1.012596,
+        4.177194,
+        6.151619
+      ],
+      "rotation": [
+        1.242562,
+        -0.024083,
+        0.045009
+      ],
+      "scale": [
+        0.340457,
+        0.341777,
+        0.195638
+      ],
+      "parent": null,
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Material.001",
+        "Material.f",
+        null
+      ]
+    },
+    {
+      "name": "Tree_3",
+      "type": "MESH",
+      "location": [
+        -1.05677,
+        5.865587,
+        -1.012815
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        109.762779,
+        109.757774,
+        59.100109
+      ],
+      "parent": "RootNode",
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false,
+      "materials": [
+        "Tree_Green",
+        "Tree_Wood"
+      ]
+    }
+  ],
+  "baked_materials": [
+    "FinalFirst_Baked",
+    "RealFinalSecond_Baked",
+    "FinalThird_Baked",
+    "FinalFourth_Baked"
+  ],
+  "grounded_images": [
+    "Grounded_First_Day_FINAL",
+    "Grounded_Fourth_Day_FINAL",
+    "Grounded_Second_Day_FINAL",
+    "Grounded_Third_Day_FINAL"
+  ],
+  "missing_external_images": []
+}

@@ -1,0 +1,69 @@
+{
+  "blend": "C:\\Users\\hiepdeptrai\\Desktop\\hk1_2026_2027\\MyPortfolioWeb\\sooahs-room-folio\\blender files\\For Export.blend",
+  "structure_sha256": "ADFD76A59F4CBE2868AFD9232DFA82C1B09666DCB1E1962365ADFE8334297EF1",
+  "structure_counts": {
+    "object_count": 333,
+    "mesh_object_count": 331,
+    "vertex_count": 443882,
+    "polygon_count": 412028,
+    "uv_loop_count": 1819620
+  },
+  "has_grounded_night_mix": false,
+  "grounded_night_mix_saved_value": null,
+  "has_embedded_readme": false,
+  "materials": {
+    "FinalFirst_Baked": {
+      "exists": true,
+      "day_node": false,
+      "night_node": false,
+      "mix_node": false,
+      "day_image": null,
+      "night_image": null,
+      "day_dimensions": null,
+      "night_dimensions": null,
+      "day_packed": false,
+      "night_packed": false,
+      "driver_count": 0
+    },
+    "RealFinalSecond_Baked": {
+      "exists": true,
+      "day_node": false,
+      "night_node": false,
+      "mix_node": false,
+      "day_image": null,
+      "night_image": null,
+      "day_dimensions": null,
+      "night_dimensions": null,
+      "day_packed": false,
+      "night_packed": false,
+      "driver_count": 0
+    },
+    "FinalThird_Baked": {
+      "exists": true,
+      "day_node": false,
+      "night_node": false,
+      "mix_node": false,
+      "day_image": null,
+      "night_image": null,
+      "day_dimensions": null,
+      "night_dimensions": null,
+      "day_packed": false,
+      "night_packed": false,
+      "driver_count": 0
+    },
+    "FinalFourth_Baked": {
+      "exists": true,
+      "day_node": false,
+      "night_node": false,
+      "mix_node": false,
+      "day_image": null,
+      "night_image": null,
+      "day_dimensions": null,
+      "night_dimensions": null,
+      "day_packed": false,
+      "night_packed": false,
+      "driver_count": 0
+    }
+  },
+  "packed_grounded_images": []
+}

@@ -1,0 +1,58 @@
+{
+  "blend": "C:\\Users\\hiepdeptrai\\Desktop\\hk1_2026_2027\\MyPortfolioWeb\\sooahs-room-folio\\blender files\\My Room - FINAL.blend",
+  "sha256": "10072F4E41D4851ACA845D0CF051B4563B7048FA58F61B4FCAB04165134A5C4B",
+  "size_bytes": 28349179,
+  "object_count": 172,
+  "mesh_count": 167,
+  "baked_room_mesh_count": 165,
+  "special_objects": [
+    "Facebook_Fifth_Raycaster_Pointer_Hover",
+    "Tree_3"
+  ],
+  "twitter_object_count": 0,
+  "missing_external_images": [],
+  "materials": {
+    "FinalFirst_Baked": {
+      "exists": true,
+      "image": "Grounded_First_Day_FINAL",
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "packed": true,
+      "linked_to_emission": true
+    },
+    "FinalFourth_Baked": {
+      "exists": true,
+      "image": "Grounded_Fourth_Day_FINAL",
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "packed": true,
+      "linked_to_emission": true
+    },
+    "FinalThird_Baked": {
+      "exists": true,
+      "image": "Grounded_Third_Day_FINAL",
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "packed": true,
+      "linked_to_emission": true
+    },
+    "RealFinalSecond_Baked": {
+      "exists": true,
+      "image": "Grounded_Second_Day_FINAL",
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "packed": true,
+      "linked_to_emission": true
+    }
+  },
+  "errors": [],
+  "passed": true
+}

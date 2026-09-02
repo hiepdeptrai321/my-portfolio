@@ -1,0 +1,71 @@
+{
+  "mode": "day",
+  "source_blend": "C:\\Users\\hiepdeptrai\\Desktop\\hk1_2026_2027\\MyPortfolioWeb\\sooahs-room-folio\\blender files\\For Export.blend",
+  "source_sha256_before": "BB381A2FA9B3729C44FD7F5FC489E064E2F3EFC50E39ED014D8D85BEB5E7188B",
+  "source_sha256_after": "BB381A2FA9B3729C44FD7F5FC489E064E2F3EFC50E39ED014D8D85BEB5E7188B",
+  "source_unchanged": true,
+  "output_blend": "C:\\Users\\hiepdeptrai\\Desktop\\hk1_2026_2027\\MyPortfolioWeb\\sooahs-room-folio\\blender files\\For Export - Grounded Pastel Day.blend",
+  "output_sha256": "ED09A1FA5B8BA2160BFA61277E433689174F12463E012CDCA63E3D2D326AC048",
+  "output_size_bytes": 37553134,
+  "materials": {
+    "First": {
+      "material": "FinalFirst_Baked",
+      "texture": "public/textures/room/grounded-pastel-test/first-texture-set-day-grounded-test.webp",
+      "texture_sha256": "732BC3D069221F98AE1A780D4A79EF9E885A387E2564731DBE58C1EDC29015B5",
+      "image": "Grounded_First_Day",
+      "packed": true,
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "object_users": 24
+    },
+    "Second": {
+      "material": "RealFinalSecond_Baked",
+      "texture": "public/textures/room/grounded-pastel-test/second-texture-set-day-grounded-test.webp",
+      "texture_sha256": "E89D583DC0E13A7B6549920DA7EAEFC024C1BE6C489A95FABAD3DE5D086E3A9F",
+      "image": "Grounded_Second_Day",
+      "packed": true,
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "object_users": 5
+    },
+    "Third": {
+      "material": "FinalThird_Baked",
+      "texture": "public/textures/room/grounded-pastel-test/third-texture-set-day-grounded-test.webp",
+      "texture_sha256": "821376D56769AD01B96AC342B51950BD8B9222F7AAEA3B3317F83763E3C8463A",
+      "image": "Grounded_Third_Day",
+      "packed": true,
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "object_users": 33
+    },
+    "Fourth": {
+      "material": "FinalFourth_Baked",
+      "texture": "public/textures/room/grounded-pastel-test/fourth-texture-set-day-grounded-test.webp",
+      "texture_sha256": "976965082C2FAFA4F865B54BA35AC21B04DE7435142CE3051049D547FC92EE8F",
+      "image": "Grounded_Fourth_Day",
+      "packed": true,
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "object_users": 104
+    }
+  },
+  "visibility": {
+    "baked_meshes_visible": 166,
+    "source_meshes_hidden": 165,
+    "baked_collection": "SimpleBake_Bakes"
+  },
+  "packed_grounded_images": [
+    "Grounded_First_Day",
+    "Grounded_Fourth_Day",
+    "Grounded_Second_Day",
+    "Grounded_Third_Day"
+  ]
+}

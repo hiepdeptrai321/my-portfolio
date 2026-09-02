@@ -1,0 +1,71 @@
+{
+  "mode": "night",
+  "source_blend": "C:\\Users\\hiepdeptrai\\Desktop\\hk1_2026_2027\\MyPortfolioWeb\\sooahs-room-folio\\blender files\\For Export.blend",
+  "source_sha256_before": "BB381A2FA9B3729C44FD7F5FC489E064E2F3EFC50E39ED014D8D85BEB5E7188B",
+  "source_sha256_after": "BB381A2FA9B3729C44FD7F5FC489E064E2F3EFC50E39ED014D8D85BEB5E7188B",
+  "source_unchanged": true,
+  "output_blend": "C:\\Users\\hiepdeptrai\\Desktop\\hk1_2026_2027\\MyPortfolioWeb\\sooahs-room-folio\\blender files\\For Export - Grounded Pastel Night.blend",
+  "output_sha256": "E014A3373E771694552D4329D822D5004928BF9A6C6E658D8F022E0193C9EFEF",
+  "output_size_bytes": 31933106,
+  "materials": {
+    "First": {
+      "material": "FinalFirst_Baked",
+      "texture": "public/textures/room/grounded-pastel-test/first-texture-set-night-grounded-test.webp",
+      "texture_sha256": "B7F61574BACFFE4B8EE7BB084A3CD67E3BCE5B6E345E98E23D8EB2A749930043",
+      "image": "Grounded_First_Night",
+      "packed": true,
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "object_users": 24
+    },
+    "Second": {
+      "material": "RealFinalSecond_Baked",
+      "texture": "public/textures/room/grounded-pastel-test/second-texture-set-night-grounded-test.webp",
+      "texture_sha256": "0AB8CFEDB5AC991E25DCCDD998A9AD439F53F885540B7F2469ECF32305D0CCFA",
+      "image": "Grounded_Second_Night",
+      "packed": true,
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "object_users": 5
+    },
+    "Third": {
+      "material": "FinalThird_Baked",
+      "texture": "public/textures/room/grounded-pastel-test/third-texture-set-night-grounded-test.webp",
+      "texture_sha256": "4896DC82D24924ABADC56DCF98B1F061F0A1F10BFC2F845A59E1B7947198BB0B",
+      "image": "Grounded_Third_Night",
+      "packed": true,
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "object_users": 33
+    },
+    "Fourth": {
+      "material": "FinalFourth_Baked",
+      "texture": "public/textures/room/grounded-pastel-test/fourth-texture-set-night-grounded-test.webp",
+      "texture_sha256": "1450DE776CD0F4B967C351A28EA0B637C2F0F21CA50C867815A9D430EB1AFB91",
+      "image": "Grounded_Fourth_Night",
+      "packed": true,
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "object_users": 104
+    }
+  },
+  "visibility": {
+    "baked_meshes_visible": 166,
+    "source_meshes_hidden": 165,
+    "baked_collection": "SimpleBake_Bakes"
+  },
+  "packed_grounded_images": [
+    "Grounded_First_Night",
+    "Grounded_Fourth_Night",
+    "Grounded_Second_Night",
+    "Grounded_Third_Night"
+  ]
+}
