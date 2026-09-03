@@ -1226,9 +1226,11 @@ body[data-language="vi"] {
   min-width: 3ch;
   color: vars.$base-purple;
   font-family: Inter, ui-sans-serif, system-ui, sans-serif;
-  font-size: 0.75rem;
-  font-weight: 750;
-  text-align: right;
+  font-size: 1rem;
+  font-weight: 850;
+  line-height: 1;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
   transition: color 350ms ease, text-shadow 350ms ease;
 
   @include media.media("<=tablet") {

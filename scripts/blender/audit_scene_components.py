@@ -13,7 +13,16 @@ blend = Path(bpy.data.filepath).resolve()
 root = blend.parent.parent
 slug = re.sub(r"[^a-z0-9]+", "-", blend.stem.lower()).strip("-")
 output = root / "artifacts/final-room-audit" / f"{slug}.json"
-keywords = ("facebook", "twitter", "tree", "fifth", "raycaster")
+keywords = (
+    "facebook",
+    "linkedin",
+    "github",
+    "youtube",
+    "twitter",
+    "tree",
+    "fifth",
+    "raycaster",
+)
 
 
 def object_record(obj):

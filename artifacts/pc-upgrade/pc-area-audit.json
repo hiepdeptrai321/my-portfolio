@@ -1,0 +1,134 @@
+{
+  "blend": "C:\\Users\\hiepdeptrai\\Desktop\\hk1_2026_2027\\MyPortfolioWeb\\sooahs-room-folio\\blender files\\My Room - FINAL.blend",
+  "pc_bounds": [
+    [
+      -3.259575,
+      0.385228,
+      3.083526
+    ],
+    [
+      -1.264589,
+      3.990193,
+      5.205954
+    ]
+  ],
+  "objects": [
+    {
+      "name": "Computer_Baked",
+      "location": [
+        -2.876522,
+        1.492217,
+        3.445292
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.576164,
+        2.213979,
+        1.754242
+      ],
+      "world_bounds": [
+        [
+          -3.191721,
+          0.385228,
+          3.451711
+        ],
+        [
+          -2.615557,
+          2.599206,
+          5.205954
+        ]
+      ],
+      "vertices": 782,
+      "polygons": 732,
+      "materials": [
+        "FinalFourth_Baked"
+      ],
+      "collections": [
+        "SimpleBake_Bakes"
+      ],
+      "parent": null
+    },
+    {
+      "name": "Plane.020_Baked",
+      "location": [
+        -2.448549,
+        3.613735,
+        4.368762
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        1.994986,
+        0.83186,
+        1.501148
+      ],
+      "world_bounds": [
+        [
+          -3.259575,
+          3.158333,
+          3.083526
+        ],
+        [
+          -1.264589,
+          3.990193,
+          4.584674
+        ]
+      ],
+      "vertices": 2904,
+      "polygons": 2439,
+      "materials": [
+        "FinalFourth_Baked"
+      ],
+      "collections": [
+        "SimpleBake_Bakes"
+      ],
+      "parent": null
+    }
+  ],
+  "materials": [
+    {
+      "name": "FinalFourth_Baked",
+      "use_nodes": true,
+      "surface_render_method": "DITHERED",
+      "nodes": [
+        {
+          "name": "Material Output",
+          "type": "ShaderNodeOutputMaterial",
+          "image": null
+        },
+        {
+          "name": "Group",
+          "type": "ShaderNodeGroup",
+          "image": null
+        },
+        {
+          "name": "Grounded Pastel Day FINAL",
+          "type": "ShaderNodeTexImage",
+          "image": "Grounded_Fourth_Day_FINAL"
+        },
+        {
+          "name": "Emission",
+          "type": "ShaderNodeEmission",
+          "image": null
+        }
+      ]
+    }
+  ]
+}

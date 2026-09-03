@@ -6,15 +6,17 @@ Trạng thái: **HOÀN TẤT — TOÀN DỰ ÁN CHỈ CÒN MỘT FILE BLENDER**
 ## File cuối
 
 - [`My Room - FINAL.blend`](../blender%20files/My%20Room%20-%20FINAL.blend)
-- SHA-256: `10072F4E41D4851ACA845D0CF051B4563B7048FA58F61B4FCAB04165134A5C4B`.
-- Kích thước: `28,349,179` bytes.
-- Render kiểm chứng: [`my-room---final-validation.png`](../artifacts/grounded-pastel-no-rebake/my-room---final-validation.png).
+- SHA-256: `7EBCA579C94F380EC8D52E80FF168D9E012A9DDB36AC5D07EB4631572FAEEEF1`.
+- Kích thước: `30,928,841` bytes.
+- Render controller trên kệ: [`xbox-room-front.png`](../artifacts/xbox-controller-audit/xbox-room-front.png).
 
 ## Nội dung đã chốt
 
-- `165` mesh căn phòng baked dùng Grounded Pastel Day.
+- `161` mesh căn phòng baked dùng Grounded Pastel Day trong trạng thái hiện tại.
+- Có `LinkedIn_Fourth_Raycaster_Pointer_Hover` thay cho YouTube.
 - Có `Facebook_Fifth_Raycaster_Pointer_Hover` đúng transform của `facebook-card.glb`.
 - Có `Tree_3` đúng transform của `outside-tree.glb`.
+- Có `Xbox_Controller_Raycaster_Hover` được dựng thẳng trên kệ bên trái.
 - Không còn object Twitter.
 - Đã loại `158` mesh authoring trùng khỏi **file cuối**.
 - Bốn atlas Grounded Pastel `4096 × 4096` được pack vào `.blend`.
@@ -26,10 +28,12 @@ Trạng thái: **HOÀN TẤT — TOÀN DỰ ÁN CHỈ CÒN MỘT FILE BLENDER**
 
 | Check | Kết quả |
 | --- | --- |
-| Tổng mesh cuối | 167 |
-| Baked room meshes | 165 |
+| Tổng mesh cuối | 165 |
+| Baked room meshes | 161 |
+| LinkedIn | Có, đang hiển thị |
 | Facebook | Có, đang hiển thị |
 | Tree_3 | Có, đang hiển thị |
+| Xbox Controller | Có, dựng thẳng trên kệ |
 | Twitter | 0 object |
 | Atlas được pack | 4/4 |
 | Kích thước atlas | 4096 × 4096 |
@@ -41,7 +45,7 @@ Artifact kiểm tra: [`final-room-verification.json`](../artifacts/final-room-au
 ## Backup đã xóa
 
 - Toàn bộ thư mục `backups/grounded-pastel-phase1-2026-09-01`.
-- Toàn bộ file `.blend1`; số file `.blend1` còn lại là `0`.
+- Blender đã tự tạo lại `My Room - FINAL.blend1` khi lưu controller; file production duy nhất vẫn là `My Room - FINAL.blend`.
 
 Các thao tác xóa này không thể khôi phục từ workspace hiện tại.
 
@@ -70,5 +74,6 @@ Các file sau không phải backup và vẫn được website tải trực tiế
 
 - `public/models/room-main.glb`
 - `public/models/facebook-card.glb`
+- `public/models/linkedin-card.glb`
 - `public/models/outside-tree.glb`
 - Các bản tương ứng trong `dist/models/`.

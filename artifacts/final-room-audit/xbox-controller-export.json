@@ -1,0 +1,133 @@
+{
+  "blend": "C:\\Users\\hiepdeptrai\\Desktop\\hk1_2026_2027\\MyPortfolioWeb\\sooahs-room-folio\\blender files\\My Room - FINAL.blend",
+  "blend_size_bytes": 30928841,
+  "blend_sha256": "7EBCA579C94F380EC8D52E80FF168D9E012A9DDB36AC5D07EB4631572FAEEEF1",
+  "object": "Xbox_Controller_Raycaster_Hover",
+  "mesh": "Xbox_Controller_Raycaster_Hover_Mesh",
+  "location": [
+    -2.934394,
+    -0.841689,
+    4.858981
+  ],
+  "rotation": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "scale": [
+    0.040453,
+    0.034849,
+    0.031659
+  ],
+  "dimensions": [
+    0.350247,
+    0.542234,
+    0.305998
+  ],
+  "world_bounds": {
+    "min": [
+      -3.01826,
+      -1.112805,
+      4.855499
+    ],
+    "max": [
+      -2.668013,
+      -0.570572,
+      5.161497
+    ]
+  },
+  "shelf": "Plane.041_Baked",
+  "shelf_top": 4.852499,
+  "shelf_gap": 0.003,
+  "vertices": 25656,
+  "polygons": 43119,
+  "material": "Xbox_Controller_Material",
+  "material_values": {
+    "metallic": 0.0,
+    "roughness": 0.6800000071525574,
+    "ior": 1.4600000381469727,
+    "specular_ior_level": 0.2800000011920929,
+    "coat_weight": 0.07999999821186066,
+    "coat_roughness": 0.3499999940395355
+  },
+  "removed_stand_objects": [
+    "Object_2",
+    "Object_3",
+    "Object_4",
+    "Object_5.001",
+    "Object_6",
+    "stand_fore_controller_Xbox.obj.cleaner.materialmerger.gles"
+  ],
+  "removed_empty_objects": [
+    "5e0104faa3004d6aa8339dd980237f58.fbx",
+    "5e0104faa3004d6aa8339dd980237f58.fbx.001",
+    "Camada 03",
+    "Camada 03.001",
+    "Camada 03.002",
+    "Camada 05",
+    "Camada 05.001",
+    "Camada 05.002",
+    "Direita",
+    "Direita.001",
+    "Direita.002",
+    "Frontal",
+    "Frontal.001",
+    "Frontal.002",
+    "GLTF_SceneRootNode",
+    "GLTF_SceneRootNode.001",
+    "Object_14",
+    "Object_14.001",
+    "Object_14.002",
+    "Object_16",
+    "Object_16.001",
+    "Object_16.002",
+    "Object_18",
+    "Object_18.001",
+    "Object_18.002",
+    "Object_20",
+    "Object_20.001",
+    "Object_20.002",
+    "Objeto_1",
+    "Objeto_1.001",
+    "Objeto_1.002",
+    "Objeto_2",
+    "Objeto_2.001",
+    "Objeto_2.002",
+    "Objeto_3",
+    "Objeto_3.001",
+    "Objeto_3.002",
+    "Objeto_4",
+    "Objeto_4.001",
+    "Objeto_4.002",
+    "Perspetiva",
+    "Perspetiva.001",
+    "Perspetiva.002",
+    "RootNode.001",
+    "RootNode.002",
+    "RootNode.003",
+    "Sketchfab_model.001",
+    "Sketchfab_model.002",
+    "Sketchfab_model.003",
+    "Sketchfab_model.004",
+    "Sketchfab_model.005",
+    "Superior",
+    "Superior.001",
+    "Superior.002",
+    "ee76677423204f96b7112f4f339ae4aa.fbx",
+    "node_id30_1",
+    "node_id62_0",
+    "root",
+    "root.001",
+    "root_0",
+    "root_1"
+  ],
+  "remaining_type_counts": {
+    "CAMERA": 1,
+    "EMPTY": 1,
+    "LIGHT": 1,
+    "MESH": 165
+  },
+  "output_glb": "C:\\Users\\hiepdeptrai\\Desktop\\hk1_2026_2027\\MyPortfolioWeb\\sooahs-room-folio\\public\\models\\xbox-controller.glb",
+  "output_size_bytes": 309440,
+  "output_sha256": "9D2994E3829541BC3BBF3D3476E43703A6BD18257A24F2BC287876321FAFE5AD"
+}
