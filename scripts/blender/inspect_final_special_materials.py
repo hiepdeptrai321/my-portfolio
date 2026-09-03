@@ -8,7 +8,15 @@ import bpy
 
 blend = Path(bpy.data.filepath).resolve()
 root = blend.parent.parent
-material_names = ("Tree_Green", "Tree_Wood", "Material.001", "Material.f")
+material_names = (
+    "Tree_Green",
+    "Tree_Wood",
+    "Material.001",
+    "Material.f",
+    "Tinta_1.002",
+    "Tinta_3.001",
+    "Tinta_3.002",
+)
 materials = {}
 for name in material_names:
     material = bpy.data.materials.get(name)

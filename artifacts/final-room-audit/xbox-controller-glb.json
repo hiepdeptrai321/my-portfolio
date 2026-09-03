@@ -1,0 +1,76 @@
+{
+  "model": "C:\\Users\\hiepdeptrai\\Desktop\\hk1_2026_2027\\MyPortfolioWeb\\sooahs-room-folio\\public\\models\\xbox-controller.glb",
+  "objects": [
+    {
+      "name": "Xbox_Controller_Raycaster_Hover",
+      "type": "MESH",
+      "location": [
+        -2.934394,
+        -0.841689,
+        4.858981
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.040453,
+        0.034849,
+        0.031659
+      ],
+      "parent": null,
+      "materials": [
+        "Xbox_Controller_Material"
+      ],
+      "world_bounds": [
+        [
+          -3.01826,
+          -1.112805,
+          4.855499
+        ],
+        [
+          -3.01826,
+          -1.112805,
+          5.161504
+        ],
+        [
+          -3.01826,
+          -0.570572,
+          5.161504
+        ],
+        [
+          -3.01826,
+          -0.570572,
+          4.855499
+        ],
+        [
+          -2.668019,
+          -1.112805,
+          4.855499
+        ],
+        [
+          -2.668019,
+          -1.112805,
+          5.161504
+        ],
+        [
+          -2.668019,
+          -0.570572,
+          5.161504
+        ],
+        [
+          -2.668019,
+          -0.570572,
+          4.855499
+        ]
+      ]
+    }
+  ],
+  "materials": [
+    "Xbox_Controller_Material"
+  ],
+  "images": [
+    "Image_0"
+  ]
+}

@@ -1,0 +1,2917 @@
+{
+  "current_blend": "C:\\Users\\hiepdeptrai\\Desktop\\hk1_2026_2027\\MyPortfolioWeb\\sooahs-room-folio\\blender files\\My Room - FINAL.blend",
+  "backup_blend": "C:\\Users\\hiepdeptrai\\Desktop\\hk1_2026_2027\\MyPortfolioWeb\\sooahs-room-folio\\blender files\\My Room - FINAL.blend1",
+  "current_object_count": 235,
+  "backup_object_count": 171,
+  "current_type_counts": {
+    "CAMERA": 1,
+    "EMPTY": 63,
+    "LIGHT": 1,
+    "MESH": 170
+  },
+  "backup_type_counts": {
+    "CAMERA": 1,
+    "EMPTY": 1,
+    "LIGHT": 3,
+    "MESH": 166
+  },
+  "added_names": [
+    "5e0104faa3004d6aa8339dd980237f58.fbx",
+    "5e0104faa3004d6aa8339dd980237f58.fbx.001",
+    "Camada 03",
+    "Camada 03.001",
+    "Camada 03.002",
+    "Camada 05",
+    "Camada 05.001",
+    "Camada 05.002",
+    "Direita",
+    "Direita.001",
+    "Direita.002",
+    "Frontal",
+    "Frontal.001",
+    "Frontal.002",
+    "GLTF_SceneRootNode",
+    "GLTF_SceneRootNode.001",
+    "Object_14",
+    "Object_14.001",
+    "Object_14.002",
+    "Object_16",
+    "Object_16.001",
+    "Object_16.002",
+    "Object_18",
+    "Object_18.001",
+    "Object_18.002",
+    "Object_2",
+    "Object_20",
+    "Object_20.001",
+    "Object_20.002",
+    "Object_3",
+    "Object_4",
+    "Object_5",
+    "Object_5.001",
+    "Object_6",
+    "Objeto_1",
+    "Objeto_1.001",
+    "Objeto_1.002",
+    "Objeto_1_Tinta (1)_0",
+    "Objeto_2",
+    "Objeto_2.001",
+    "Objeto_2.002",
+    "Objeto_3",
+    "Objeto_3.001",
+    "Objeto_3.002",
+    "Objeto_4",
+    "Objeto_4.001",
+    "Objeto_4.002",
+    "Perspetiva",
+    "Perspetiva.001",
+    "Perspetiva.002",
+    "RootNode.001",
+    "RootNode.002",
+    "RootNode.003",
+    "Sketchfab_model.001",
+    "Sketchfab_model.002",
+    "Sketchfab_model.003",
+    "Sketchfab_model.004",
+    "Sketchfab_model.005",
+    "Superior",
+    "Superior.001",
+    "Superior.002",
+    "ee76677423204f96b7112f4f339ae4aa.fbx",
+    "node_id30_1",
+    "node_id62_0",
+    "root",
+    "root.001",
+    "root_0",
+    "root_1",
+    "stand_fore_controller_Xbox.obj.cleaner.materialmerger.gles"
+  ],
+  "removed_names": [
+    "Final Daylight",
+    "Final Fill",
+    "LinkedIn_Fourth_Raycaster_Pointer_Hover",
+    "Plane.047_Baked",
+    "Plane.048_Baked"
+  ],
+  "keyword_names": [
+    "stand_fore_controller_Xbox.obj.cleaner.materialmerger.gles"
+  ],
+  "candidates": [
+    {
+      "name": "5e0104faa3004d6aa8339dd980237f58.fbx",
+      "type": "EMPTY",
+      "parent": "Sketchfab_model.001",
+      "children": [
+        "RootNode.002"
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.01,
+        0.01,
+        0.01
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "5e0104faa3004d6aa8339dd980237f58.fbx.001",
+      "type": "EMPTY",
+      "parent": "Sketchfab_model.002",
+      "children": [
+        "RootNode.003"
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.01,
+        0.01,
+        0.01
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Camada 03",
+      "type": "EMPTY",
+      "parent": "RootNode.001",
+      "children": [
+        "Objeto_1"
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Camada 03.001",
+      "type": "EMPTY",
+      "parent": "RootNode.002",
+      "children": [
+        "Objeto_1.001"
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Camada 03.002",
+      "type": "EMPTY",
+      "parent": "RootNode.003",
+      "children": [
+        "Objeto_1.002"
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Camada 05",
+      "type": "EMPTY",
+      "parent": "RootNode.001",
+      "children": [
+        "Objeto_2",
+        "Objeto_3",
+        "Objeto_4"
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Camada 05.001",
+      "type": "EMPTY",
+      "parent": "RootNode.002",
+      "children": [
+        "Objeto_2.001",
+        "Objeto_3.001",
+        "Objeto_4.001"
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Camada 05.002",
+      "type": "EMPTY",
+      "parent": "RootNode.003",
+      "children": [
+        "Objeto_2.002",
+        "Objeto_3.002",
+        "Objeto_4.002"
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Direita",
+      "type": "EMPTY",
+      "parent": "RootNode.001",
+      "children": [
+        "Object_20"
+      ],
+      "location": [
+        15984.079102,
+        -74.669724,
+        28.165865
+      ],
+      "world_location": [
+        159.84079,
+        -0.281659,
+        -0.746697
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Direita.001",
+      "type": "EMPTY",
+      "parent": "RootNode.002",
+      "children": [
+        "Object_20.001"
+      ],
+      "location": [
+        15984.079102,
+        -74.669724,
+        28.165865
+      ],
+      "world_location": [
+        159.84079,
+        -0.746697,
+        0.281659
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Direita.002",
+      "type": "EMPTY",
+      "parent": "RootNode.003",
+      "children": [
+        "Object_20.002"
+      ],
+      "location": [
+        15984.079102,
+        -74.669724,
+        28.165865
+      ],
+      "world_location": [
+        159.84079,
+        -0.746697,
+        0.281659
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Frontal",
+      "type": "EMPTY",
+      "parent": "RootNode.001",
+      "children": [
+        "Object_18"
+      ],
+      "location": [
+        26.7686,
+        -32.064709,
+        -153.192474
+      ],
+      "world_location": [
+        0.267686,
+        1.531925,
+        -0.320647
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Frontal.001",
+      "type": "EMPTY",
+      "parent": "RootNode.002",
+      "children": [
+        "Object_18.001"
+      ],
+      "location": [
+        26.7686,
+        -32.064709,
+        -153.192474
+      ],
+      "world_location": [
+        0.267686,
+        -0.320647,
+        -1.531925
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Frontal.002",
+      "type": "EMPTY",
+      "parent": "RootNode.003",
+      "children": [
+        "Object_18.002"
+      ],
+      "location": [
+        26.7686,
+        -32.064709,
+        -153.192474
+      ],
+      "world_location": [
+        0.267686,
+        -0.320647,
+        -1.531925
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "GLTF_SceneRootNode",
+      "type": "EMPTY",
+      "parent": "root",
+      "children": [
+        "root_1"
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_location": [
+        -2.12023,
+        0.0,
+        5.553143
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "GLTF_SceneRootNode.001",
+      "type": "EMPTY",
+      "parent": "root.001",
+      "children": [
+        "root_0"
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_location": [
+        -2.234742,
+        -0.434447,
+        5.114425
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Object_14",
+      "type": "EMPTY",
+      "parent": "Perspetiva",
+      "children": [],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_location": [
+        1.689916,
+        2.319006,
+        -0.453559
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Object_14.001",
+      "type": "EMPTY",
+      "parent": "Perspetiva.001",
+      "children": [],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_location": [
+        1.631589,
+        -0.759923,
+        -1.530698
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Object_14.002",
+      "type": "EMPTY",
+      "parent": "Perspetiva.002",
+      "children": [],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_location": [
+        1.631589,
+        -0.759923,
+        -1.530698
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Object_16",
+      "type": "EMPTY",
+      "parent": "Superior",
+      "children": [],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_location": [
+        0.448578,
+        -0.00359,
+        -76.549271
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Object_16.001",
+      "type": "EMPTY",
+      "parent": "Superior.001",
+      "children": [],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_location": [
+        0.448578,
+        -76.549278,
+        0.0036
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Object_16.002",
+      "type": "EMPTY",
+      "parent": "Superior.002",
+      "children": [],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_location": [
+        0.448578,
+        -76.549278,
+        0.0036
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Object_18",
+      "type": "EMPTY",
+      "parent": "Frontal",
+      "children": [],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_location": [
+        0.267686,
+        1.531925,
+        -0.320647
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Object_18.001",
+      "type": "EMPTY",
+      "parent": "Frontal.001",
+      "children": [],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_location": [
+        0.267686,
+        -0.320647,
+        -1.531925
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Object_18.002",
+      "type": "EMPTY",
+      "parent": "Frontal.002",
+      "children": [],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_location": [
+        0.267686,
+        -0.320647,
+        -1.531925
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Object_2",
+      "type": "MESH",
+      "parent": "stand_fore_controller_Xbox.obj.cleaner.materialmerger.gles",
+      "children": [],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        17.878012,
+        50.192497,
+        74.9151
+      ],
+      "world_bounds": {
+        "min": [
+          -104.481438,
+          1.670291,
+          13.851357
+        ],
+        "max": [
+          -53.899998,
+          19.548309,
+          89.026489
+        ]
+      },
+      "materials": [
+        "Plastic_-_Glossy_Grey"
+      ],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Object_20",
+      "type": "EMPTY",
+      "parent": "Direita",
+      "children": [],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_location": [
+        159.84079,
+        -0.281659,
+        -0.746697
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Object_20.001",
+      "type": "EMPTY",
+      "parent": "Direita.001",
+      "children": [],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_location": [
+        159.84079,
+        -0.746697,
+        0.281659
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Object_20.002",
+      "type": "EMPTY",
+      "parent": "Direita.002",
+      "children": [],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_location": [
+        159.84079,
+        -0.746697,
+        0.281659
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Object_3",
+      "type": "MESH",
+      "parent": "stand_fore_controller_Xbox.obj.cleaner.materialmerger.gles",
+      "children": [],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        17.87801,
+        50.192497,
+        74.9151
+      ],
+      "world_bounds": {
+        "min": [
+          -104.481438,
+          -48.329716,
+          13.851357
+        ],
+        "max": [
+          -53.899998,
+          -30.451696,
+          89.026489
+        ]
+      },
+      "materials": [
+        "Plastic_-_Glossy_Grey"
+      ],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Object_4",
+      "type": "MESH",
+      "parent": "stand_fore_controller_Xbox.obj.cleaner.materialmerger.gles",
+      "children": [],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        17.87801,
+        50.192505,
+        74.9151
+      ],
+      "world_bounds": {
+        "min": [
+          -197.270065,
+          1.485838,
+          13.368767
+        ],
+        "max": [
+          -146.688629,
+          19.363855,
+          88.5439
+        ]
+      },
+      "materials": [
+        "Plastic_-_Glossy_Grey"
+      ],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Object_5",
+      "type": "MESH",
+      "parent": "node_id30_1",
+      "children": [],
+      "location": [
+        2.163778,
+        -13.207746,
+        -0.701611
+      ],
+      "world_location": [
+        -2.934394,
+        -0.841689,
+        4.827084
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.763663,
+        0.657859,
+        0.597652
+      ],
+      "dimensions": [
+        0.350247,
+        0.542234,
+        0.305998
+      ],
+      "world_bounds": {
+        "min": [
+          -3.028079,
+          -1.122327,
+          4.823602
+        ],
+        "max": [
+          -2.658315,
+          -0.567697,
+          5.1296
+        ]
+      },
+      "materials": [
+        "material.001"
+      ],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Object_5.001",
+      "type": "MESH",
+      "parent": "stand_fore_controller_Xbox.obj.cleaner.materialmerger.gles",
+      "children": [],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        17.878012,
+        50.192505,
+        74.9151
+      ],
+      "world_bounds": {
+        "min": [
+          -197.570068,
+          -48.514172,
+          13.367206
+        ],
+        "max": [
+          -146.988617,
+          -30.63615,
+          88.542343
+        ]
+      },
+      "materials": [
+        "Plastic_-_Glossy_Grey"
+      ],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Object_6",
+      "type": "MESH",
+      "parent": "stand_fore_controller_Xbox.obj.cleaner.materialmerger.gles",
+      "children": [],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        90.000008,
+        180.0,
+        5.0
+      ],
+      "world_bounds": {
+        "min": [
+          -216.467194,
+          -60.027512,
+          8.874431
+        ],
+        "max": [
+          -36.443604,
+          29.972527,
+          14.810527
+        ]
+      },
+      "materials": [
+        "Plastic_-_Glossy_Grey"
+      ],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Objeto_1",
+      "type": "EMPTY",
+      "parent": "Camada 03",
+      "children": [],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Objeto_1.001",
+      "type": "EMPTY",
+      "parent": "Camada 03.001",
+      "children": [],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Objeto_1.002",
+      "type": "EMPTY",
+      "parent": "Camada 03.002",
+      "children": [
+        "Objeto_1_Tinta (1)_0"
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Objeto_1_Tinta (1)_0",
+      "type": "MESH",
+      "parent": "Objeto_1.002",
+      "children": [],
+      "location": [
+        -254.333679,
+        395.87561,
+        561.300842
+      ],
+      "world_location": [
+        -2.543337,
+        3.958757,
+        5.613009
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.735657,
+        2.480356,
+        0.689765
+      ],
+      "dimensions": [
+        0.588526,
+        0.101879,
+        0.551812
+      ],
+      "world_bounds": {
+        "min": [
+          -2.543689,
+          3.913502,
+          5.599741
+        ],
+        "max": [
+          -1.955163,
+          4.194076,
+          6.153848
+        ]
+      },
+      "materials": [
+        "Tinta_1.002",
+        "Tinta_3.001",
+        "Tinta_3.002"
+      ],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Objeto_2",
+      "type": "EMPTY",
+      "parent": "Camada 05",
+      "children": [],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Objeto_2.001",
+      "type": "EMPTY",
+      "parent": "Camada 05.001",
+      "children": [],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Objeto_2.002",
+      "type": "EMPTY",
+      "parent": "Camada 05.002",
+      "children": [],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Objeto_3",
+      "type": "EMPTY",
+      "parent": "Camada 05",
+      "children": [],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Objeto_3.001",
+      "type": "EMPTY",
+      "parent": "Camada 05.001",
+      "children": [],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Objeto_3.002",
+      "type": "EMPTY",
+      "parent": "Camada 05.002",
+      "children": [],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Objeto_4",
+      "type": "EMPTY",
+      "parent": "Camada 05",
+      "children": [],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Objeto_4.001",
+      "type": "EMPTY",
+      "parent": "Camada 05.001",
+      "children": [],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Objeto_4.002",
+      "type": "EMPTY",
+      "parent": "Camada 05.002",
+      "children": [],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Perspetiva",
+      "type": "EMPTY",
+      "parent": "RootNode.001",
+      "children": [
+        "Object_14"
+      ],
+      "location": [
+        168.991623,
+        -45.355957,
+        -231.900558
+      ],
+      "world_location": [
+        1.689916,
+        2.319006,
+        -0.453559
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Perspetiva.001",
+      "type": "EMPTY",
+      "parent": "RootNode.002",
+      "children": [
+        "Object_14.001"
+      ],
+      "location": [
+        163.158951,
+        -75.99231,
+        -153.069748
+      ],
+      "world_location": [
+        1.631589,
+        -0.759923,
+        -1.530698
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Perspetiva.002",
+      "type": "EMPTY",
+      "parent": "RootNode.003",
+      "children": [
+        "Object_14.002"
+      ],
+      "location": [
+        163.158951,
+        -75.99231,
+        -153.069748
+      ],
+      "world_location": [
+        1.631589,
+        -0.759923,
+        -1.530698
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "RootNode.001",
+      "type": "EMPTY",
+      "parent": "ee76677423204f96b7112f4f339ae4aa.fbx",
+      "children": [
+        "Camada 03",
+        "Camada 05",
+        "Direita",
+        "Frontal",
+        "Perspetiva",
+        "Superior"
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "RootNode.002",
+      "type": "EMPTY",
+      "parent": "5e0104faa3004d6aa8339dd980237f58.fbx",
+      "children": [
+        "Camada 03.001",
+        "Camada 05.001",
+        "Direita.001",
+        "Frontal.001",
+        "Perspetiva.001",
+        "Superior.001"
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "RootNode.003",
+      "type": "EMPTY",
+      "parent": "5e0104faa3004d6aa8339dd980237f58.fbx.001",
+      "children": [
+        "Camada 03.002",
+        "Camada 05.002",
+        "Direita.002",
+        "Frontal.002",
+        "Perspetiva.002",
+        "Superior.002"
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Sketchfab_model.001",
+      "type": "EMPTY",
+      "parent": null,
+      "children": [
+        "5e0104faa3004d6aa8339dd980237f58.fbx"
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Sketchfab_model.002",
+      "type": "EMPTY",
+      "parent": null,
+      "children": [
+        "5e0104faa3004d6aa8339dd980237f58.fbx.001"
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Sketchfab_model.003",
+      "type": "EMPTY",
+      "parent": null,
+      "children": [
+        "root"
+      ],
+      "location": [
+        -2.12023,
+        0.0,
+        5.553143
+      ],
+      "world_location": [
+        -2.12023,
+        0.0,
+        5.553143
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Sketchfab_model.004",
+      "type": "EMPTY",
+      "parent": null,
+      "children": [
+        "root.001"
+      ],
+      "location": [
+        -2.234742,
+        -0.434447,
+        5.114425
+      ],
+      "world_location": [
+        -2.234742,
+        -0.434447,
+        5.114425
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Sketchfab_model.005",
+      "type": "EMPTY",
+      "parent": null,
+      "children": [
+        "stand_fore_controller_Xbox.obj.cleaner.materialmerger.gles"
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Superior",
+      "type": "EMPTY",
+      "parent": "RootNode.001",
+      "children": [
+        "Object_16"
+      ],
+      "location": [
+        44.857773,
+        -7654.92627,
+        0.360006
+      ],
+      "world_location": [
+        0.448578,
+        -0.00359,
+        -76.549271
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Superior.001",
+      "type": "EMPTY",
+      "parent": "RootNode.002",
+      "children": [
+        "Object_16.001"
+      ],
+      "location": [
+        44.857773,
+        -7654.92627,
+        0.360006
+      ],
+      "world_location": [
+        0.448578,
+        -76.549278,
+        0.0036
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Superior.002",
+      "type": "EMPTY",
+      "parent": "RootNode.003",
+      "children": [
+        "Object_16.002"
+      ],
+      "location": [
+        44.857773,
+        -7654.92627,
+        0.360006
+      ],
+      "world_location": [
+        0.448578,
+        -76.549278,
+        0.0036
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "ee76677423204f96b7112f4f339ae4aa.fbx",
+      "type": "EMPTY",
+      "parent": null,
+      "children": [
+        "RootNode.001"
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.01,
+        0.01,
+        0.01
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "node_id30_1",
+      "type": "EMPTY",
+      "parent": "root_0",
+      "children": [
+        "Object_5"
+      ],
+      "location": [
+        0.0,
+        -0.29262,
+        -0.250174
+      ],
+      "world_location": [
+        -2.234742,
+        -0.727067,
+        4.86425
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.052973,
+        0.052973,
+        0.052973
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "node_id62_0",
+      "type": "EMPTY",
+      "parent": "root_1",
+      "children": [],
+      "location": [
+        0.024849,
+        -0.214029,
+        0.004097
+      ],
+      "world_location": [
+        -1.905825,
+        0.021367,
+        5.55724
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.048178,
+        0.048178,
+        0.048178
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "root",
+      "type": "EMPTY",
+      "parent": "Sketchfab_model.003",
+      "children": [
+        "GLTF_SceneRootNode"
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_location": [
+        -2.12023,
+        0.0,
+        5.553143
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "root.001",
+      "type": "EMPTY",
+      "parent": "Sketchfab_model.004",
+      "children": [
+        "GLTF_SceneRootNode.001"
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_location": [
+        -2.234742,
+        -0.434447,
+        5.114425
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "root_0",
+      "type": "EMPTY",
+      "parent": "GLTF_SceneRootNode.001",
+      "children": [
+        "node_id30_1"
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_location": [
+        -2.234742,
+        -0.434447,
+        5.114425
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "root_1",
+      "type": "EMPTY",
+      "parent": "GLTF_SceneRootNode",
+      "children": [
+        "node_id62_0"
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_location": [
+        -2.12023,
+        0.0,
+        5.553143
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "stand_fore_controller_Xbox.obj.cleaner.materialmerger.gles",
+      "type": "EMPTY",
+      "parent": "Sketchfab_model.005",
+      "children": [
+        "Object_2",
+        "Object_3",
+        "Object_4",
+        "Object_5.001",
+        "Object_6"
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_bounds": null,
+      "materials": [],
+      "collections": [
+        "Targets"
+      ],
+      "hide_viewport": false,
+      "hide_render": false
+    }
+  ]
+}

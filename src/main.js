@@ -11,8 +11,14 @@ import smokeVertexShader from "./shaders/smoke/vertex.glsl";
 import smokeFragmentShader from "./shaders/smoke/fragment.glsl";
 import themeVertexShader from "./shaders/theme/vertex.glsl";
 import themeFragmentShader from "./shaders/theme/fragment.glsl";
+import githubVertexShader from "./shaders/github/vertex.glsl";
+import githubFragmentShader from "./shaders/github/fragment.glsl";
 import treeVertexShader from "./shaders/tree/vertex.glsl";
 import treeFragmentShader from "./shaders/tree/fragment.glsl";
+import xboxVertexShader from "./shaders/xbox/vertex.glsl";
+import xboxFragmentShader from "./shaders/xbox/fragment.glsl";
+import pcVertexShader from "./shaders/pc/vertex.glsl";
+import pcFragmentShader from "./shaders/pc/fragment.glsl";
 
 import { StoryModal } from "./components/story-modal.js";
 import { AmbientBackground } from "./components/ambient-background.js";
@@ -500,7 +506,7 @@ const updateSoundControlLabels = () => {
     "aria-valuetext",
     translate("controls.volumeValue")(volumePercentage)
   );
-  volumeValue.textContent = `${volumePercentage}%`;
+  volumeValue.textContent = String(volumePercentage);
 };
 
 const applyLanguage = (language) => {
@@ -933,25 +939,30 @@ function playIntroAnimation() {
     y: 1,
     x: 1,
     delay: 0.4,
-  })
-    .to(
-      github.scale,
+  });
+
+  if (linkedin) {
+    t2.to(
+      linkedin.scale,
       {
-        x: 1,
-        y: 1,
-        z: 1,
+        x: linkedin.userData.initialScale.x,
+        y: linkedin.userData.initialScale.y,
+        z: linkedin.userData.initialScale.z,
+        onComplete: activateLinkedInHitbox,
       },
       "-=0.5"
-    )
-    .to(
-      youtube.scale,
-      {
-        x: 1,
-        y: 1,
-        z: 1,
-      },
-      "-=0.6"
     );
+  }
+
+  t2.to(
+    github.scale,
+    {
+      x: 1,
+      y: 1,
+      z: 1,
+    },
+    "-=0.6"
+  );
 
   if (facebook) {
     t2.to(
@@ -963,6 +974,19 @@ function playIntroAnimation() {
         onComplete: activateFacebookHitbox,
       },
       "-=0.6"
+    );
+  }
+
+  if (xboxController) {
+    t2.to(
+      xboxController.scale,
+      {
+        x: xboxController.userData.initialScale.x,
+        y: xboxController.userData.initialScale.y,
+        z: xboxController.userData.initialScale.z,
+        onComplete: activateXboxControllerHitbox,
+      },
+      "-=0.5"
     );
   }
 
@@ -1533,30 +1557,36 @@ const whiteMaterial = new THREE.MeshBasicMaterial({
   color: 0xffffff,
 });
 
-const createMaterialForTextureSet = (textureSet) => {
-  const material = new THREE.ShaderMaterial({
-    uniforms: {
-      uDayTexture1: { value: loadedTextures.day.First },
-      uNightTexture1: { value: loadedTextures.night.First },
-      uDayTexture2: { value: loadedTextures.day.Second },
-      uNightTexture2: { value: loadedTextures.night.Second },
-      uDayTexture3: { value: loadedTextures.day.Third },
-      uNightTexture3: { value: loadedTextures.night.Third },
-      uDayTexture4: { value: loadedTextures.day.Fourth },
-      uNightTexture4: { value: loadedTextures.night.Fourth },
-      uMixRatio: { value: 0 },
-      uTextureSet: { value: textureSet },
-    },
-    vertexShader: themeVertexShader,
-    fragmentShader: themeFragmentShader,
-  });
+const createThemeUniforms = (textureSet) => ({
+  uDayTexture1: { value: loadedTextures.day.First },
+  uNightTexture1: { value: loadedTextures.night.First },
+  uDayTexture2: { value: loadedTextures.day.Second },
+  uNightTexture2: { value: loadedTextures.night.Second },
+  uDayTexture3: { value: loadedTextures.day.Third },
+  uNightTexture3: { value: loadedTextures.night.Third },
+  uDayTexture4: { value: loadedTextures.day.Fourth },
+  uNightTexture4: { value: loadedTextures.night.Fourth },
+  uMixRatio: { value: 0 },
+  uTextureSet: { value: textureSet },
+});
 
-  Object.entries(material.uniforms).forEach(([key, uniform]) => {
+const configureThemeTextures = (material) => {
+  Object.values(material.uniforms).forEach((uniform) => {
     if (uniform.value instanceof THREE.Texture) {
       uniform.value.minFilter = THREE.LinearFilter;
       uniform.value.magFilter = THREE.LinearFilter;
     }
   });
+};
+
+const createMaterialForTextureSet = (textureSet) => {
+  const material = new THREE.ShaderMaterial({
+    uniforms: createThemeUniforms(textureSet),
+    vertexShader: themeVertexShader,
+    fragmentShader: themeFragmentShader,
+  });
+
+  configureThemeTextures(material);
 
   return material;
 };
@@ -1568,7 +1598,300 @@ const roomMaterials = {
   Fourth: createMaterialForTextureSet(4),
 };
 
+const githubMaterials = [];
+
+function addGitHubLogoMask(geometry) {
+  const position = geometry.getAttribute("position");
+  if (!position || position.count === 0) return;
+
+  const parent = new Int32Array(position.count);
+  const rank = new Uint8Array(position.count);
+  const coordinateRepresentatives = new Map();
+
+  for (let index = 0; index < position.count; index += 1) {
+    parent[index] = index;
+  }
+
+  const find = (index) => {
+    let root = index;
+    while (parent[root] !== root) root = parent[root];
+
+    while (parent[index] !== index) {
+      const next = parent[index];
+      parent[index] = root;
+      index = next;
+    }
+
+    return root;
+  };
+
+  const union = (first, second) => {
+    let firstRoot = find(first);
+    let secondRoot = find(second);
+    if (firstRoot === secondRoot) return;
+
+    if (rank[firstRoot] < rank[secondRoot]) {
+      [firstRoot, secondRoot] = [secondRoot, firstRoot];
+    }
+
+    parent[secondRoot] = firstRoot;
+    if (rank[firstRoot] === rank[secondRoot]) rank[firstRoot] += 1;
+  };
+
+  // Weld UV-seam duplicates virtually so each loose mesh part stays together.
+  for (let index = 0; index < position.count; index += 1) {
+    const key = `${Math.round(position.getX(index) * 100000)},${Math.round(
+      position.getY(index) * 100000
+    )},${Math.round(position.getZ(index) * 100000)}`;
+    const representative = coordinateRepresentatives.get(key);
+
+    if (representative === undefined) {
+      coordinateRepresentatives.set(key, index);
+    } else {
+      union(index, representative);
+    }
+  }
+
+  const geometryIndex = geometry.getIndex();
+  const triangleVertexCount = geometryIndex
+    ? geometryIndex.count
+    : position.count;
+  const getVertexIndex = geometryIndex
+    ? (index) => geometryIndex.getX(index)
+    : (index) => index;
+
+  for (let index = 0; index < triangleVertexCount; index += 3) {
+    const first = getVertexIndex(index);
+    const second = getVertexIndex(index + 1);
+    const third = getVertexIndex(index + 2);
+    union(first, second);
+    union(second, third);
+  }
+
+  const components = new Map();
+  for (let index = 0; index < position.count; index += 1) {
+    const root = find(index);
+    let component = components.get(root);
+
+    if (!component) {
+      component = {
+        vertices: [],
+        min: new THREE.Vector3(Infinity, Infinity, Infinity),
+        max: new THREE.Vector3(-Infinity, -Infinity, -Infinity),
+      };
+      components.set(root, component);
+    }
+
+    component.vertices.push(index);
+    component.min.min(
+      new THREE.Vector3(
+        position.getX(index),
+        position.getY(index),
+        position.getZ(index)
+      )
+    );
+    component.max.max(
+      new THREE.Vector3(
+        position.getX(index),
+        position.getY(index),
+        position.getZ(index)
+      )
+    );
+  }
+
+  // Find the broad front plane of the card, then use its shallowest axis as
+  // depth. Draco splits the mark and frame into many pieces, but the mark is
+  // consistently offset from that plane while the wooden frame ends on it.
+  geometry.computeBoundingBox();
+  const geometrySize = geometry.boundingBox.getSize(new THREE.Vector3());
+  const depthAxis = geometrySize
+    .toArray()
+    .indexOf(Math.min(...geometrySize.toArray()));
+  const geometryDepth = geometrySize.getComponent(depthAxis);
+  const geometryMinimumDepth = geometry.boundingBox.min.getComponent(depthAxis);
+  let cardFront = null;
+  let largestSurfaceArea = -Infinity;
+
+  components.forEach((component) => {
+    const extents = component.max
+      .clone()
+      .sub(component.min)
+      .toArray()
+      .sort((first, second) => second - first);
+    const surfaceArea = extents[0] * extents[1];
+
+    if (surfaceArea > largestSurfaceArea) {
+      largestSurfaceArea = surfaceArea;
+      cardFront = component;
+    }
+  });
+
+  const cardFrontDepth = cardFront.max.getComponent(depthAxis);
+  const depthOffsetThreshold = geometryDepth * 0.1;
+  const thinSurfaceThreshold = geometryDepth * 0.05;
+
+  const logoMask = new Float32Array(position.count);
+  components.forEach((component) => {
+    const minimumDepth = component.min.getComponent(depthAxis);
+    const maximumDepth = component.max.getComponent(depthAxis);
+    const componentDepth = maximumDepth - minimumDepth;
+    const extendsInFront =
+      maximumDepth > cardFrontDepth + depthOffsetThreshold;
+    const isDetachedBackSurface =
+      maximumDepth < cardFrontDepth - depthOffsetThreshold &&
+      minimumDepth > geometryMinimumDepth + geometryDepth * 0.2 &&
+      componentDepth < thinSurfaceThreshold;
+
+    if (!extendsInFront && !isDetachedBackSurface) return;
+
+    component.vertices.forEach((index) => {
+      logoMask[index] = 1;
+    });
+  });
+
+  geometry.setAttribute(
+    "aGitHubLogoMask",
+    new THREE.BufferAttribute(logoMask, 1)
+  );
+}
+
+function createGitHubMaterial(geometry) {
+  addGitHubLogoMask(geometry);
+
+  const restColor = new THREE.Color("#f0f6fc");
+  const hoverColor = new THREE.Color("#ffffff");
+  const backgroundColor = new THREE.Color("#0d1117");
+  const material = new THREE.ShaderMaterial({
+    uniforms: {
+      ...createThemeUniforms(4),
+      uGitHubLogoColor: { value: restColor.clone() },
+      uGitHubBackgroundColor: { value: backgroundColor },
+    },
+    vertexShader: githubVertexShader,
+    fragmentShader: githubFragmentShader,
+  });
+
+  material.name = "GitHub_High_Contrast";
+  material.userData.socialCardRestColor = restColor;
+  material.userData.socialCardHoverColor = hoverColor;
+  material.userData.socialCardColorUniform = "uGitHubLogoColor";
+  configureThemeTextures(material);
+  githubMaterials.push(material);
+
+  return material;
+}
+
 const outsideTreeMaterials = [];
+
+const PC_UPGRADE_COLORS = {
+  PC_Case_Warm_Off_White: { day: "#ddd8d4", night: "#817b78" },
+  PC_Case_Soft_Light_Gray: { day: "#c9c8c6", night: "#747371" },
+  PC_Interior_Mauve_Gray: { day: "#8f8193", night: "#4d4353" },
+  PC_GPU_Muted_Plum: { day: "#74617f", night: "#43354a" },
+  PC_Motherboard_Mauve: { day: "#a582a4", night: "#5c465e" },
+  PC_Internal_Soft_Lavender: { day: "#bba8cc", night: "#6d5a79" },
+  PC_Fan_Pastel_Lilac: { day: "#cbb3db", night: "#786587" },
+};
+
+const pcUpgradeMaterials = [];
+
+function createPcSolidMaterial(materialName) {
+  const colors = PC_UPGRADE_COLORS[materialName] ?? {
+    day: "#dce2de",
+    night: "#747d78",
+  };
+  const isCaseMaterial = materialName.startsWith("PC_Case_");
+  const material = new THREE.ShaderMaterial({
+    uniforms: {
+      uDayColor: { value: new THREE.Color(colors.day) },
+      uNightColor: { value: new THREE.Color(colors.night) },
+      uThemeMix: { value: 0 },
+      uPolish: { value: isCaseMaterial ? 0.13 : 0.055 },
+    },
+    vertexShader: pcVertexShader,
+    fragmentShader: pcFragmentShader,
+  });
+
+  material.name = materialName;
+  pcUpgradeMaterials.push(material);
+  return material;
+}
+
+const pcGlassMaterial = new THREE.MeshPhysicalMaterial({
+  color: 0xd9cbe5,
+  transmission: 0.82,
+  transparent: true,
+  opacity: 0.16,
+  roughness: 0.12,
+  metalness: 0,
+  ior: 1.45,
+  thickness: 0.018,
+  envMap: environmentMap,
+  envMapIntensity: 0.35,
+  depthWrite: false,
+  side: THREE.DoubleSide,
+});
+
+function createPcUpgradeMaterial(sourceMaterial) {
+  const materialName = sourceMaterial.name;
+
+  if (materialName === "PC_Glass_Cool_Tint") return pcGlassMaterial;
+
+  if (materialName === "PC_LED_Lavender") {
+    return new THREE.MeshBasicMaterial({
+      color: 0xd8b5ee,
+      transparent: true,
+      opacity: 0.9,
+      blending: THREE.AdditiveBlending,
+      depthWrite: false,
+      toneMapped: false,
+    });
+  }
+
+  if (materialName === "PC_LED_Lavender_Halo") {
+    return new THREE.MeshBasicMaterial({
+      color: 0xcaa6df,
+      transparent: true,
+      opacity: 0.3,
+      blending: THREE.AdditiveBlending,
+      depthWrite: false,
+      toneMapped: false,
+    });
+  }
+
+  return createPcSolidMaterial(materialName);
+}
+
+function createPcAmbientGlow() {
+  const canvas = document.createElement("canvas");
+  canvas.width = 128;
+  canvas.height = 128;
+  const context = canvas.getContext("2d");
+  const gradient = context.createRadialGradient(64, 64, 4, 64, 64, 64);
+  gradient.addColorStop(0, "rgba(216, 181, 238, 0.42)");
+  gradient.addColorStop(0.45, "rgba(202, 166, 223, 0.2)");
+  gradient.addColorStop(1, "rgba(185, 151, 207, 0)");
+  context.fillStyle = gradient;
+  context.fillRect(0, 0, 128, 128);
+
+  const texture = new THREE.CanvasTexture(canvas);
+  texture.colorSpace = THREE.SRGBColorSpace;
+  const material = new THREE.SpriteMaterial({
+    map: texture,
+    color: 0xffffff,
+    transparent: true,
+    opacity: 0.25,
+    blending: THREE.AdditiveBlending,
+    depthWrite: false,
+    toneMapped: false,
+  });
+  const glow = new THREE.Sprite(material);
+  glow.name = "PC_Upgrade_Ambient_Lavender_Glow";
+  glow.position.set(-2.2, 3.38, 3.84);
+  glow.scale.set(1.15, 0.92, 1);
+  glow.renderOrder = 2;
+  return glow;
+}
 
 function createOutsideTreeMaterial(sourceMaterial) {
   const dayColor =
@@ -1658,12 +1981,19 @@ let plank1,
   contactBtn,
   boba,
   github,
-  youtube,
   twitter;
 
 let facebook;
 let facebookHitbox;
 let isFacebookHitboxActive = false;
+
+let linkedin;
+let linkedinHitbox;
+let isLinkedInHitboxActive = false;
+
+let xboxController;
+let xboxControllerHitbox;
+let isXboxControllerHitboxActive = false;
 
 let letter1, letter2, letter3, letter4, letter5, letter6, letter7, letter8;
 
@@ -1708,6 +2038,16 @@ const useOriginalMeshObjects = ["Bulb", "Cactus", "Kirby"];
 
 const objectsNeedingHitboxes = [];
 
+// room-main.glb still contains GitHub in the old left social-card slot.
+// LinkedIn now owns that slot, so move GitHub to the center position authored
+// in My Room - FINAL.blend before its intro state and hitbox are captured.
+const GITHUB_CENTER_SLOT_X = -1.657146;
+const LINKEDIN_LEFT_SLOT_X = -2.613337;
+const FACEBOOK_RIGHT_SLOT_X = -0.942596;
+const SOCIAL_CARD_HOVER_SCALE = 1.14;
+const XBOX_CONTROLLER_HOVER_SCALE = 1.12;
+const XBOX_CONTROLLER_HOVER_LIFT = 0.08;
+
 const objectsWithIntroAnimations = [
   "Hanging_Plank_1",
   "Hanging_Plank_2",
@@ -1716,7 +2056,7 @@ const objectsWithIntroAnimations = [
   "Contact_Button",
   "Boba",
   "GitHub",
-  "YouTube",
+  "LinkedIn",
   "Twitter",
   "Name_Letter_1",
   "Name_Letter_2",
@@ -1776,11 +2116,87 @@ function hasIntroAnimation(objectName) {
   );
 }
 
+// The original PC is baked into the merged Fourth atlas mesh. The upgraded PC
+// is a complete replacement, so remove only the old PC triangles before the
+// room material is assigned. This prevents atlas-blue edges and z-fighting.
+const ORIGINAL_PC_BOUNDS = new THREE.Box3(
+  new THREE.Vector3(-3.27, 3.145, 3.07),
+  new THREE.Vector3(-1.25, 4.0, 4.6)
+);
+
+function removeOriginalPcTriangles(mesh) {
+  const geometry = mesh.geometry.clone();
+  const position = geometry.getAttribute("position");
+  const index = geometry.getIndex();
+  const sourceIndexCount = index ? index.count : position.count;
+  const keptIndices = [];
+  const a = new THREE.Vector3();
+  const b = new THREE.Vector3();
+  const c = new THREE.Vector3();
+  const centroid = new THREE.Vector3();
+
+  const vertexIndexAt = (offset) => (index ? index.getX(offset) : offset);
+
+  for (let offset = 0; offset < sourceIndexCount; offset += 3) {
+    const aIndex = vertexIndexAt(offset);
+    const bIndex = vertexIndexAt(offset + 1);
+    const cIndex = vertexIndexAt(offset + 2);
+
+    a.fromBufferAttribute(position, aIndex).applyMatrix4(mesh.matrixWorld);
+    b.fromBufferAttribute(position, bIndex).applyMatrix4(mesh.matrixWorld);
+    c.fromBufferAttribute(position, cIndex).applyMatrix4(mesh.matrixWorld);
+    centroid.copy(a).add(b).add(c).multiplyScalar(1 / 3);
+
+    if (!ORIGINAL_PC_BOUNDS.containsPoint(centroid)) {
+      keptIndices.push(aIndex, bIndex, cIndex);
+    }
+  }
+
+  geometry.setIndex(keptIndices);
+  geometry.clearGroups();
+  geometry.addGroup(0, keptIndices.length, 0);
+  geometry.computeBoundingBox();
+  geometry.computeBoundingSphere();
+  mesh.geometry = geometry;
+  mesh.userData.removedPcTriangleCount =
+    sourceIndexCount / 3 - keptIndices.length / 3;
+}
+
 loader.load("/models/room-main.glb", (glb) => {
+  glb.scene.updateMatrixWorld(true);
   glb.scene.traverse((child) => {
     if (child.isMesh) {
-      if (child.name.includes("Twitter")) {
+      // This photo frame occupied the shelf before the controller was added.
+      // Keep the node for the existing intro timeline, but do not render or
+      // raycast it now that the controller owns this position.
+      if (child.name.includes("Frame_3_Second_Raycaster_Hover")) {
         child.visible = false;
+        child.userData.skipRuntimeInteraction = true;
+      }
+
+      if (child.name === "Fourth") {
+        removeOriginalPcTriangles(child);
+      }
+
+      if (
+        child.name.includes("Computer_Fan") ||
+        child.name.includes("Computer_Glass")
+      ) {
+        child.visible = false;
+        child.userData.skipRuntimeInteraction = true;
+        return;
+      }
+
+      if (
+        child.name.includes("Twitter") ||
+        child.name.includes("YouTube")
+      ) {
+        child.visible = false;
+        return;
+      }
+
+      if (child.name.includes("GitHub")) {
+        child.position.x = GITHUB_CENTER_SLOT_X;
       }
 
       if (child.name.includes("Fish_Fourth")) {
@@ -1839,9 +2255,6 @@ loader.load("/models/room-main.glb", (glb) => {
         child.scale.set(0, 0, 0);
       } else if (child.name.includes("GitHub")) {
         github = child;
-        child.scale.set(0, 0, 0);
-      } else if (child.name.includes("YouTube")) {
-        youtube = child;
         child.scale.set(0, 0, 0);
       } else if (child.name.includes("Twitter")) {
         twitter = child;
@@ -1955,7 +2368,12 @@ loader.load("/models/room-main.glb", (glb) => {
       } else {
         Object.keys(textureMap).forEach((key) => {
           if (child.name.includes(key)) {
-            child.material = roomMaterials[key];
+            if (child.name.includes("GitHub")) {
+              child.geometry = child.geometry.clone();
+              child.material = createGitHubMaterial(child.geometry);
+            } else {
+              child.material = roomMaterials[key];
+            }
 
             if (child.name.includes("Fan")) {
               if (
@@ -1973,7 +2391,8 @@ loader.load("/models/room-main.glb", (glb) => {
 
       if (
         child.name.includes("Raycaster") &&
-        !child.name.includes("Twitter")
+        !child.name.includes("Twitter") &&
+        !child.userData.skipRuntimeInteraction
       ) {
         if (hasIntroAnimation(child.name)) {
           // Create a hitbox for object after intro is done playing,
@@ -2019,6 +2438,33 @@ loader.load("/models/outside-tree.glb", (glb) => {
   scene.add(glb.scene);
 });
 
+loader.load("/models/pc-upgrade.glb", (glb) => {
+  glb.scene.traverse((child) => {
+    if (!child.isMesh) return;
+
+    child.material = Array.isArray(child.material)
+      ? child.material.map(createPcUpgradeMaterial)
+      : createPcUpgradeMaterial(child.material);
+
+    if (child.name.includes("PC_Upgrade_Case_Replacement")) {
+      child.renderOrder = 1;
+    }
+    if (child.name.includes("PC_Upgrade_Glass_Panel")) {
+      child.renderOrder = 2;
+    }
+    if (
+      child.name.includes("PC_Upgrade_RGB_Fan") ||
+      child.name.includes("PC_Upgrade_Top_Fan") ||
+      child.name.includes("PC_Upgrade_LED_Strip")
+    ) {
+      child.renderOrder = 3;
+    }
+  });
+
+  glb.scene.add(createPcAmbientGlow());
+  scene.add(glb.scene);
+});
+
 /**  -------------------------- Raycaster setup -------------------------- */
 
 const raycasterObjects = [];
@@ -2027,6 +2473,7 @@ let currentHoveredObject = null;
 
 const socialLinks = {
   GitHub: "https://github.com/hiepdeptrai321",
+  LinkedIn: "https://www.linkedin.com/in/dophuhiep212/",
   Facebook: "https://www.facebook.com/hiepdeptrai321",
 };
 
@@ -2147,7 +2594,21 @@ function activateFacebookHitbox() {
   isFacebookHitboxActive = true;
 }
 
-const FACEBOOK_CARD_COLORS = {
+function activateLinkedInHitbox() {
+  if (!linkedinHitbox || isLinkedInHitboxActive) return;
+
+  raycasterObjects.push(linkedinHitbox);
+  isLinkedInHitboxActive = true;
+}
+
+function activateXboxControllerHitbox() {
+  if (!xboxControllerHitbox || isXboxControllerHitboxActive) return;
+
+  raycasterObjects.push(xboxControllerHitbox);
+  isXboxControllerHitboxActive = true;
+}
+
+const SOCIAL_CARD_COLORS = {
   blue: {
     rest: new THREE.Color("#455a86"),
     hover: new THREE.Color("#576f9e"),
@@ -2158,7 +2619,7 @@ const FACEBOOK_CARD_COLORS = {
   },
 };
 
-function createUnlitMaterial(material) {
+function createSocialCardMaterial(material) {
   const sourceColor = material.color ?? new THREE.Color(0xffffff);
   const isFacebookBlue =
     material.name === "Material.001" ||
@@ -2166,8 +2627,8 @@ function createUnlitMaterial(material) {
       sourceColor.b > sourceColor.r * 1.5 &&
       sourceColor.b > sourceColor.g * 1.5);
   const palette = isFacebookBlue
-    ? FACEBOOK_CARD_COLORS.blue
-    : FACEBOOK_CARD_COLORS.white;
+    ? SOCIAL_CARD_COLORS.blue
+    : SOCIAL_CARD_COLORS.white;
   const unlitMaterial = new THREE.MeshBasicMaterial({
     color: palette.rest,
     map: material.map ?? null,
@@ -2180,14 +2641,64 @@ function createUnlitMaterial(material) {
   });
 
   unlitMaterial.name = material.name;
-  unlitMaterial.userData.facebookRole = isFacebookBlue ? "blue" : "white";
-  unlitMaterial.userData.facebookRestColor = palette.rest.clone();
-  unlitMaterial.userData.facebookHoverColor = palette.hover.clone();
+  unlitMaterial.userData.socialCardRole = isFacebookBlue ? "blue" : "white";
+  unlitMaterial.userData.socialCardRestColor = palette.rest.clone();
+  unlitMaterial.userData.socialCardHoverColor = palette.hover.clone();
 
   return unlitMaterial;
 }
 
-function animateFacebookMaterials(object, isHovering) {
+function createXboxControllerMaterial(material) {
+  if (material.map) {
+    material.map.colorSpace = THREE.SRGBColorSpace;
+    material.map.minFilter = THREE.LinearFilter;
+    material.map.magFilter = THREE.LinearFilter;
+  }
+
+  const controllerMaterial = new THREE.ShaderMaterial({
+    uniforms: {
+      uMap: { value: material.map ?? null },
+      uHoverMix: { value: 0 },
+      uRestDark: { value: new THREE.Color("#405d52") },
+      uRestLight: { value: new THREE.Color("#dce2de") },
+      uHoverDark: { value: new THREE.Color("#718e7a") },
+      uHoverLight: { value: new THREE.Color("#f1e9de") },
+    },
+    vertexShader: xboxVertexShader,
+    fragmentShader: xboxFragmentShader,
+    transparent: material.transparent,
+    opacity: material.opacity,
+    side: material.side,
+    depthWrite: material.depthWrite,
+  });
+
+  controllerMaterial.name = `${material.name}-GroundedPastel`;
+  return controllerMaterial;
+}
+
+function animateXboxControllerMaterials(object, isHovering) {
+  object.traverse((child) => {
+    if (!child.isMesh) return;
+
+    const materials = Array.isArray(child.material)
+      ? child.material
+      : [child.material];
+
+    materials.forEach((material) => {
+      const hoverUniform = material.uniforms?.uHoverMix;
+      if (!hoverUniform) return;
+
+      gsap.killTweensOf(hoverUniform);
+      gsap.to(hoverUniform, {
+        value: isHovering ? 1 : 0,
+        duration: isHovering ? 0.25 : 0.3,
+        ease: "power2.out",
+      });
+    });
+  });
+}
+
+function animateSocialCardMaterials(object, isHovering) {
   object.traverse((child) => {
     if (!child.isMesh) return;
 
@@ -2197,13 +2708,19 @@ function animateFacebookMaterials(object, isHovering) {
 
     materials.forEach((material) => {
       const targetColor = isHovering
-        ? material.userData.facebookHoverColor
-        : material.userData.facebookRestColor;
+        ? material.userData.socialCardHoverColor
+        : material.userData.socialCardRestColor;
 
       if (!targetColor) return;
 
-      gsap.killTweensOf(material.color);
-      gsap.to(material.color, {
+      const uniformName = material.userData.socialCardColorUniform;
+      const animatedColor = uniformName
+        ? material.uniforms?.[uniformName]?.value
+        : material.color;
+      if (!animatedColor) return;
+
+      gsap.killTweensOf(animatedColor);
+      gsap.to(animatedColor, {
         r: targetColor.r,
         g: targetColor.g,
         b: targetColor.b,
@@ -2277,8 +2794,8 @@ function addStandaloneInteractiveModel(modelUrl) {
     glb.scene.traverse((child) => {
       if (child.isMesh) {
         child.material = Array.isArray(child.material)
-          ? child.material.map(createUnlitMaterial)
-          : createUnlitMaterial(child.material);
+          ? child.material.map(createSocialCardMaterial)
+          : createSocialCardMaterial(child.material);
       }
 
       if (
@@ -2291,7 +2808,13 @@ function addStandaloneInteractiveModel(modelUrl) {
 
     interactiveObjects.forEach((object) => {
       const isFacebook = object.name.includes("Facebook");
-      const animationObject = isFacebook
+      const isLinkedIn = object.name.includes("LinkedIn");
+      const isSocialCard = isFacebook || isLinkedIn;
+
+      if (isFacebook) object.position.x = FACEBOOK_RIGHT_SLOT_X;
+      if (isLinkedIn) object.position.x = LINKEDIN_LEFT_SLOT_X;
+
+      const animationObject = isSocialCard
         ? createBottomCenterAnimationPivot(object)
         : object;
 
@@ -2318,6 +2841,13 @@ function addStandaloneInteractiveModel(modelUrl) {
         return;
       }
 
+      if (isLinkedIn) {
+        linkedin = animationObject;
+        linkedinHitbox = raycastObject;
+        linkedin.scale.set(0, 0, 0);
+        return;
+      }
+
       raycasterObjects.push(raycastObject);
     });
 
@@ -2326,6 +2856,36 @@ function addStandaloneInteractiveModel(modelUrl) {
 }
 
 addStandaloneInteractiveModel("/models/facebook-card.glb");
+addStandaloneInteractiveModel("/models/linkedin-card.glb");
+
+loader.load("/models/xbox-controller.glb", (glb) => {
+  let loadedController = null;
+
+  glb.scene.traverse((child) => {
+    if (!child.isMesh) return;
+
+    child.material = Array.isArray(child.material)
+      ? child.material.map(createXboxControllerMaterial)
+      : createXboxControllerMaterial(child.material);
+
+    if (child.name.includes("Xbox_Controller")) loadedController = child;
+  });
+
+  if (!loadedController) return;
+
+  xboxController = loadedController;
+
+  xboxController.userData.initialScale = xboxController.scale.clone();
+  xboxController.userData.initialPosition = xboxController.position.clone();
+  xboxController.userData.initialRotation = xboxController.rotation.clone();
+
+  xboxControllerHitbox = createStaticHitbox(xboxController);
+  if (xboxControllerHitbox !== xboxController) scene.add(xboxControllerHitbox);
+
+  hitboxToObjectMap.set(xboxControllerHitbox, xboxController);
+  xboxController.scale.set(0, 0, 0);
+  scene.add(glb.scene);
+});
 
 function isStoryTriggerObject(objectName) {
   return (
@@ -2397,10 +2957,19 @@ function handleRaycasterInteraction() {
 function playHoverAnimation(objectHitbox, isHovering) {
   let scale = 1.4;
   const object = hitboxToObjectMap.get(objectHitbox);
+  const isSocialCard =
+    object.name.includes("GitHub") ||
+    object.name.includes("Facebook") ||
+    object.name.includes("LinkedIn");
+  const isXboxController = object.name.includes("Xbox_Controller");
 
-  if (object.name.includes("Facebook")) {
-    animateFacebookMaterials(object, isHovering);
+  if (isSocialCard) scale = SOCIAL_CARD_HOVER_SCALE;
+  if (isXboxController) scale = XBOX_CONTROLLER_HOVER_SCALE;
+
+  if (isSocialCard) {
+    animateSocialCardMaterials(object, isHovering);
   }
+  if (isXboxController) animateXboxControllerMaterials(object, isHovering);
 
   gsap.killTweensOf(object.scale);
   gsap.killTweensOf(object.rotation);
@@ -2452,7 +3021,7 @@ function playHoverAnimation(objectHitbox, isHovering) {
       object.name.includes("My_Work_Button") ||
       object.name.includes("GitHub") ||
       object.name.includes("Facebook") ||
-      object.name.includes("YouTube") ||
+      object.name.includes("LinkedIn") ||
       object.name.includes("Twitter")
     ) {
       gsap.to(object.rotation, {
@@ -2462,7 +3031,16 @@ function playHoverAnimation(objectHitbox, isHovering) {
       });
     }
 
-    if (object.name.includes("Boba") || object.name.includes("Name_Letter")) {
+    if (isXboxController) {
+      gsap.to(object.position, {
+        y: object.userData.initialPosition.y + XBOX_CONTROLLER_HOVER_LIFT,
+        duration: 0.5,
+        ease: "back.out(2)",
+      });
+    } else if (
+      object.name.includes("Boba") ||
+      object.name.includes("Name_Letter")
+    ) {
       gsap.to(object.position, {
         y: object.userData.initialPosition.y + 0.2,
         duration: 0.5,
@@ -2485,7 +3063,7 @@ function playHoverAnimation(objectHitbox, isHovering) {
       object.name.includes("My_Work_Button") ||
       object.name.includes("GitHub") ||
       object.name.includes("Facebook") ||
-      object.name.includes("YouTube") ||
+      object.name.includes("LinkedIn") ||
       object.name.includes("Twitter")
     ) {
       gsap.to(object.rotation, {
@@ -2495,7 +3073,11 @@ function playHoverAnimation(objectHitbox, isHovering) {
       });
     }
 
-    if (object.name.includes("Boba") || object.name.includes("Name_Letter")) {
+    if (
+      isXboxController ||
+      object.name.includes("Boba") ||
+      object.name.includes("Name_Letter")
+    ) {
       gsap.to(object.position, {
         y: object.userData.initialPosition.y,
         duration: 0.3,
@@ -2760,7 +3342,7 @@ const handleThemeToggle = (e) => {
     },
   });
 
-  Object.values(roomMaterials).forEach((material) => {
+  [...Object.values(roomMaterials), ...githubMaterials].forEach((material) => {
     gsap.to(material.uniforms.uMixRatio, {
       value: isNightMode ? 1 : 0,
       duration: 1.5,
@@ -2769,6 +3351,14 @@ const handleThemeToggle = (e) => {
   });
 
   outsideTreeMaterials.forEach((material) => {
+    gsap.to(material.uniforms.uThemeMix, {
+      value: isNightMode ? 1 : 0,
+      duration: 1.5,
+      ease: "power2.inOut",
+    });
+  });
+
+  pcUpgradeMaterials.forEach((material) => {
     gsap.to(material.uniforms.uThemeMix, {
       value: isNightMode ? 1 : 0,
       duration: 1.5,

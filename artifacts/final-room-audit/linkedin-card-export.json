@@ -1,0 +1,29 @@
+{
+  "blend": "C:\\Users\\hiepdeptrai\\Desktop\\hk1_2026_2027\\MyPortfolioWeb\\sooahs-room-folio\\blender files\\My Room - FINAL.blend",
+  "blend_sha256": "3DFD34A4DB4E29A2695F5CAEFB1E319207FE382CFDCD255B4DA39FE503D05D95",
+  "object": "LinkedIn_Fourth_Raycaster_Pointer_Hover",
+  "mesh": "LinkedIn_Fourth_Raycaster_Pointer_Hover_Mesh",
+  "world_location": [
+    -2.543337,
+    3.958757,
+    5.613009
+  ],
+  "dimensions": [
+    0.588526,
+    0.111991,
+    0.606582
+  ],
+  "materials": [
+    "Tinta_1.002",
+    "Tinta_3.001",
+    "Tinta_3.002"
+  ],
+  "removed_stray_meshes": [
+    "Objeto_2_Tinta (3)_0",
+    "Objeto_3_Tinta (3)_0"
+  ],
+  "removed_import_empties": 51,
+  "output_glb": "C:\\Users\\hiepdeptrai\\Desktop\\hk1_2026_2027\\MyPortfolioWeb\\sooahs-room-folio\\public\\models\\linkedin-card.glb",
+  "output_size_bytes": 881780,
+  "output_sha256": "49041036A3C580A0B021C8DC978724C9E034499AE40E07E62F0D4CE313E18C0B"
+}

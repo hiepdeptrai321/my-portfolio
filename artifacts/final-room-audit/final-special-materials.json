@@ -2,8 +2,272 @@
   "blend": "C:\\Users\\hiepdeptrai\\Desktop\\hk1_2026_2027\\MyPortfolioWeb\\sooahs-room-folio\\blender files\\My Room - FINAL.blend",
   "non_mesh_objects": [
     {
+      "name": "5e0104faa3004d6aa8339dd980237f58.fbx",
+      "type": "EMPTY",
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "5e0104faa3004d6aa8339dd980237f58.fbx.001",
+      "type": "EMPTY",
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Camada 03",
+      "type": "EMPTY",
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Camada 03.001",
+      "type": "EMPTY",
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Camada 03.002",
+      "type": "EMPTY",
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Camada 05",
+      "type": "EMPTY",
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Camada 05.001",
+      "type": "EMPTY",
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Camada 05.002",
+      "type": "EMPTY",
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
       "name": "Camera",
       "type": "CAMERA",
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Direita",
+      "type": "EMPTY",
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Direita.001",
+      "type": "EMPTY",
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Direita.002",
+      "type": "EMPTY",
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "ee76677423204f96b7112f4f339ae4aa.fbx",
+      "type": "EMPTY",
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Final Daylight",
+      "type": "LIGHT",
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Final Fill",
+      "type": "LIGHT",
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Frontal",
+      "type": "EMPTY",
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Frontal.001",
+      "type": "EMPTY",
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Frontal.002",
+      "type": "EMPTY",
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Object_14",
+      "type": "EMPTY",
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Object_14.001",
+      "type": "EMPTY",
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Object_14.002",
+      "type": "EMPTY",
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Object_16",
+      "type": "EMPTY",
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Object_16.001",
+      "type": "EMPTY",
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Object_16.002",
+      "type": "EMPTY",
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Object_18",
+      "type": "EMPTY",
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Object_18.001",
+      "type": "EMPTY",
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Object_18.002",
+      "type": "EMPTY",
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Object_20",
+      "type": "EMPTY",
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Object_20.001",
+      "type": "EMPTY",
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Object_20.002",
+      "type": "EMPTY",
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Objeto_1",
+      "type": "EMPTY",
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Objeto_1.001",
+      "type": "EMPTY",
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Objeto_1.002",
+      "type": "EMPTY",
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Objeto_2",
+      "type": "EMPTY",
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Objeto_2.001",
+      "type": "EMPTY",
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Objeto_2.002",
+      "type": "EMPTY",
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Objeto_3",
+      "type": "EMPTY",
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Objeto_3.001",
+      "type": "EMPTY",
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Objeto_3.002",
+      "type": "EMPTY",
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Objeto_4",
+      "type": "EMPTY",
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Objeto_4.001",
+      "type": "EMPTY",
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Objeto_4.002",
+      "type": "EMPTY",
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Perspetiva",
+      "type": "EMPTY",
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Perspetiva.001",
+      "type": "EMPTY",
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Perspetiva.002",
+      "type": "EMPTY",
       "hide_viewport": false,
       "hide_render": false
     },
@@ -15,6 +279,60 @@
     },
     {
       "name": "RootNode",
+      "type": "EMPTY",
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "RootNode.001",
+      "type": "EMPTY",
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "RootNode.002",
+      "type": "EMPTY",
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "RootNode.003",
+      "type": "EMPTY",
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Sketchfab_model",
+      "type": "EMPTY",
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Sketchfab_model.001",
+      "type": "EMPTY",
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Sketchfab_model.002",
+      "type": "EMPTY",
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Superior",
+      "type": "EMPTY",
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Superior.001",
+      "type": "EMPTY",
+      "hide_viewport": false,
+      "hide_render": false
+    },
+    {
+      "name": "Superior.002",
       "type": "EMPTY",
       "hide_viewport": false,
       "hide_render": false
@@ -39,8 +357,8 @@
               0.019237300381064415,
               1.0
             ],
-            "Metallic": 0.4000000059604645,
-            "Roughness": 0.41508710384368896,
+            "Metallic": 0.0,
+            "Roughness": 0.5799999833106995,
             "IOR": 1.5,
             "Alpha": 1.0,
             "Thin Wall": false,
@@ -60,7 +378,7 @@
             "Subsurface Scale": 0.004999999888241291,
             "Subsurface IOR": 1.399999976158142,
             "Subsurface Anisotropy": 0.0,
-            "Specular IOR Level": 0.5,
+            "Specular IOR Level": 0.2800000011920929,
             "Specular Tint": [
               1.0,
               1.0,
@@ -75,7 +393,7 @@
               0.0
             ],
             "Transmission Weight": 0.0,
-            "Coat Weight": 0.0,
+            "Coat Weight": 0.10000000149011612,
             "Coat Roughness": 0.029999999329447746,
             "Coat IOR": 1.5,
             "Coat Tint": [
@@ -148,8 +466,335 @@
               0.035405322909355164,
               1.0
             ],
-            "Metallic": 0.4000000059604645,
-            "Roughness": 0.41508710384368896,
+            "Metallic": 0.0,
+            "Roughness": 0.6800000071525574,
+            "IOR": 1.5,
+            "Alpha": 1.0,
+            "Thin Wall": false,
+            "Normal": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Weight": 0.0,
+            "Diffuse Roughness": 0.0,
+            "Subsurface Weight": 0.0,
+            "Subsurface Radius": [
+              1.0,
+              0.20000000298023224,
+              0.10000000149011612
+            ],
+            "Subsurface Scale": 0.004999999888241291,
+            "Subsurface IOR": 1.399999976158142,
+            "Subsurface Anisotropy": 0.0,
+            "Specular IOR Level": 0.23999999463558197,
+            "Specular Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Anisotropic": 0.0,
+            "Anisotropic Rotation": 0.0,
+            "Tangent": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Transmission Weight": 0.0,
+            "Coat Weight": 0.029999999329447746,
+            "Coat Roughness": 0.029999999329447746,
+            "Coat IOR": 1.5,
+            "Coat Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Coat Normal": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Sheen Weight": 0.0,
+            "Sheen Roughness": 0.5,
+            "Sheen Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Emission Color": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Emission Strength": 0.0,
+            "Thin Film Thickness": 0.0,
+            "Thin Film IOR": 1.3300000429153442
+          }
+        },
+        {
+          "name": "Material Output",
+          "type": "ShaderNodeOutputMaterial",
+          "inputs": {
+            "Displacement": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Thickness": 0.0
+          }
+        }
+      ],
+      "links": [
+        {
+          "from": "Principled BSDF",
+          "from_socket": "BSDF",
+          "to": "Material Output",
+          "to_socket": "Surface"
+        }
+      ]
+    },
+    "Material.001": {
+      "diffuse_color": [
+        0.05951123684644699,
+        0.10224173218011856,
+        0.23839756846427917,
+        1.0
+      ],
+      "nodes": [
+        {
+          "name": "Principled BSDF",
+          "type": "ShaderNodeBsdfPrincipled",
+          "inputs": {
+            "Base Color": [
+              0.05951123684644699,
+              0.10224173218011856,
+              0.23839756846427917,
+              1.0
+            ],
+            "Metallic": 0.0,
+            "Roughness": 0.7200000286102295,
+            "IOR": 1.5,
+            "Alpha": 1.0,
+            "Thin Wall": false,
+            "Normal": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Weight": 0.0,
+            "Diffuse Roughness": 0.0,
+            "Subsurface Weight": 0.0,
+            "Subsurface Radius": [
+              1.0,
+              0.20000000298023224,
+              0.10000000149011612
+            ],
+            "Subsurface Scale": 0.004999999888241291,
+            "Subsurface IOR": 1.399999976158142,
+            "Subsurface Anisotropy": 0.0,
+            "Specular IOR Level": 0.25,
+            "Specular Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Anisotropic": 0.0,
+            "Anisotropic Rotation": 0.0,
+            "Tangent": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Transmission Weight": 0.0,
+            "Coat Weight": 0.07999999821186066,
+            "Coat Roughness": 0.029999999329447746,
+            "Coat IOR": 1.5,
+            "Coat Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Coat Normal": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Sheen Weight": 0.0,
+            "Sheen Roughness": 0.5,
+            "Sheen Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Emission Color": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Emission Strength": 0.0,
+            "Thin Film Thickness": 0.0,
+            "Thin Film IOR": 1.3300000429153442
+          }
+        },
+        {
+          "name": "Material Output",
+          "type": "ShaderNodeOutputMaterial",
+          "inputs": {
+            "Displacement": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Thickness": 0.0
+          }
+        }
+      ],
+      "links": [
+        {
+          "from": "Principled BSDF",
+          "from_socket": "BSDF",
+          "to": "Material Output",
+          "to_socket": "Surface"
+        }
+      ]
+    },
+    "Material.f": {
+      "diffuse_color": [
+        0.7304607629776001,
+        0.68668532371521,
+        0.6583748459815979,
+        1.0
+      ],
+      "nodes": [
+        {
+          "name": "Principled BSDF",
+          "type": "ShaderNodeBsdfPrincipled",
+          "inputs": {
+            "Base Color": [
+              0.7304607629776001,
+              0.68668532371521,
+              0.6583748459815979,
+              1.0
+            ],
+            "Metallic": 0.0,
+            "Roughness": 0.6399999856948853,
+            "IOR": 1.5,
+            "Alpha": 1.0,
+            "Thin Wall": false,
+            "Normal": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Weight": 0.0,
+            "Diffuse Roughness": 0.0,
+            "Subsurface Weight": 0.0,
+            "Subsurface Radius": [
+              1.0,
+              0.20000000298023224,
+              0.10000000149011612
+            ],
+            "Subsurface Scale": 0.004999999888241291,
+            "Subsurface IOR": 1.399999976158142,
+            "Subsurface Anisotropy": 0.0,
+            "Specular IOR Level": 0.25,
+            "Specular Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Anisotropic": 0.0,
+            "Anisotropic Rotation": 0.0,
+            "Tangent": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Transmission Weight": 0.0,
+            "Coat Weight": 0.05000000074505806,
+            "Coat Roughness": 0.029999999329447746,
+            "Coat IOR": 1.5,
+            "Coat Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Coat Normal": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Sheen Weight": 0.0,
+            "Sheen Roughness": 0.5,
+            "Sheen Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Emission Color": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Emission Strength": 0.0,
+            "Thin Film Thickness": 0.0,
+            "Thin Film IOR": 1.3300000429153442
+          }
+        },
+        {
+          "name": "Material Output",
+          "type": "ShaderNodeOutputMaterial",
+          "inputs": {
+            "Displacement": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Thickness": 0.0
+          }
+        }
+      ],
+      "links": [
+        {
+          "from": "Principled BSDF",
+          "from_socket": "BSDF",
+          "to": "Material Output",
+          "to_socket": "Surface"
+        }
+      ]
+    },
+    "Tinta_1.002": {
+      "diffuse_color": [
+        0.0,
+        0.0,
+        0.749019980430603,
+        1.0
+      ],
+      "nodes": [
+        {
+          "name": "Principled BSDF",
+          "type": "ShaderNodeBsdfPrincipled",
+          "inputs": {
+            "Base Color": [
+              0.0,
+              0.04466648027300835,
+              0.7490459680557251,
+              1.0
+            ],
+            "Metallic": 0.0,
+            "Roughness": 0.9303820133209229,
             "IOR": 1.5,
             "Alpha": 1.0,
             "Thin Wall": false,
@@ -239,11 +884,11 @@
         }
       ]
     },
-    "Material.001": {
+    "Tinta_3.001": {
       "diffuse_color": [
-        0.800000011920929,
-        0.800000011920929,
-        0.800000011920929,
+        1.0,
+        1.0,
+        1.0,
         1.0
       ],
       "nodes": [
@@ -252,13 +897,13 @@
           "type": "ShaderNodeBsdfPrincipled",
           "inputs": {
             "Base Color": [
-              0.0062222713604569435,
-              0.044885262846946716,
-              0.887911319732666,
+              1.0,
+              1.0,
+              1.0,
               1.0
             ],
             "Metallic": 0.0,
-            "Roughness": 1.0,
+            "Roughness": 0.9303820133209229,
             "IOR": 1.5,
             "Alpha": 1.0,
             "Thin Wall": false,
@@ -278,7 +923,7 @@
             "Subsurface Scale": 0.004999999888241291,
             "Subsurface IOR": 1.399999976158142,
             "Subsurface Anisotropy": 0.0,
-            "Specular IOR Level": 0.0,
+            "Specular IOR Level": 0.5,
             "Specular Tint": [
               1.0,
               1.0,
@@ -348,11 +993,11 @@
         }
       ]
     },
-    "Material.f": {
+    "Tinta_3.002": {
       "diffuse_color": [
-        0.800000011920929,
-        0.800000011920929,
-        0.800000011920929,
+        1.0,
+        1.0,
+        1.0,
         1.0
       ],
       "nodes": [
@@ -367,7 +1012,7 @@
               1.0
             ],
             "Metallic": 0.0,
-            "Roughness": 0.5,
+            "Roughness": 0.9303820133209229,
             "IOR": 1.5,
             "Alpha": 1.0,
             "Thin Wall": false,
