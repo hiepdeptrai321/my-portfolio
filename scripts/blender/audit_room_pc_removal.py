@@ -1,4 +1,4 @@
-"""Audit the runtime AABB used to remove the legacy PC from room-main.glb."""
+"""Audit the corrected Three.js AABB used to remove the legacy PC."""
 
 from pathlib import Path
 
@@ -8,13 +8,13 @@ from mathutils import Vector
 
 ROOT = Path.cwd().resolve()
 MODEL = ROOT / "public/models/room-main.glb"
-BOUNDS_MIN = Vector((-3.27, 3.145, 3.07))
-BOUNDS_MAX = Vector((-1.25, 4.0, 4.6))
+BOUNDS_MIN_WEB = Vector((-3.27, 3.07, -4.0))
+BOUNDS_MAX_WEB = Vector((-1.25, 4.6, -3.145))
 
 
-def inside(point):
+def inside_web_bounds(point):
     return all(
-        BOUNDS_MIN[axis] <= point[axis] <= BOUNDS_MAX[axis]
+        BOUNDS_MIN_WEB[axis] <= point[axis] <= BOUNDS_MAX_WEB[axis]
         for axis in range(3)
     )
 
@@ -29,72 +29,28 @@ if not room_mesh or room_mesh.type != "MESH":
 mesh = room_mesh.data
 mesh.calc_loop_triangles()
 removed = 0
-parent = list(range(len(mesh.vertices)))
 
-
-def find(index):
-    while parent[index] != index:
-        parent[index] = parent[parent[index]]
-        index = parent[index]
-    return index
-
-
-def union(left, right):
-    left_root = find(left)
-    right_root = find(right)
-    if left_root != right_root:
-        parent[right_root] = left_root
-
-
-for edge in mesh.edges:
-    union(edge.vertices[0], edge.vertices[1])
-
-components = {}
 for triangle in mesh.loop_triangles:
     centroid_local = sum(
         (mesh.vertices[index].co for index in triangle.vertices),
         Vector(),
     ) / 3.0
-    centroid_world = room_mesh.matrix_world @ centroid_local
-    triangle_removed = inside(centroid_world)
-    removed += int(triangle_removed)
-    component = components.setdefault(
-        find(triangle.vertices[0]),
-        {"triangles": 0, "removed": 0, "min": centroid_world.copy(), "max": centroid_world.copy()},
+    centroid_blender = room_mesh.matrix_world @ centroid_local
+    centroid_web = Vector(
+        (centroid_blender.x, centroid_blender.z, -centroid_blender.y)
     )
-    component["triangles"] += 1
-    component["removed"] += int(triangle_removed)
-    for axis in range(3):
-        component["min"][axis] = min(component["min"][axis], centroid_world[axis])
-        component["max"][axis] = max(component["max"][axis], centroid_world[axis])
+    removed += int(inside_web_bounds(centroid_web))
 
 total = len(mesh.loop_triangles)
 kept = total - removed
 
 print("ROOM_PC_REMOVAL_AUDIT")
-print("MODEL", MODEL)
+print("WEB_BOUNDS_MIN", list(BOUNDS_MIN_WEB))
+print("WEB_BOUNDS_MAX", list(BOUNDS_MAX_WEB))
 print("TOTAL_TRIANGLES", total)
 print("REMOVED_TRIANGLES", removed)
 print("KEPT_TRIANGLES", kept)
 print("REMOVED_PERCENT", round(removed / total * 100.0, 4))
-for component_id, component in sorted(
-    components.items(), key=lambda item: item[1]["removed"], reverse=True
-):
-    if not component["removed"]:
-        continue
-    print(
-        "REMOVED_COMPONENT",
-        component_id,
-        "removed",
-        component["removed"],
-        "of",
-        component["triangles"],
-        "centroid_bounds",
-        [round(value, 4) for value in component["min"]],
-        [round(value, 4) for value in component["max"]],
-    )
 
-if removed < 4000 or removed > 6000:
-    raise RuntimeError(
-        f"Expected the isolated PC to contain 4000-6000 triangles, got {removed}"
-    )
+if removed != 5236:
+    raise RuntimeError(f"Expected 5236 isolated PC-area triangles, got {removed}")

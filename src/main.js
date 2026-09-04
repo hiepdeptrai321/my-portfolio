@@ -1784,13 +1784,14 @@ function createGitHubMaterial(geometry) {
 const outsideTreeMaterials = [];
 
 const PC_UPGRADE_COLORS = {
-  PC_Case_Warm_Off_White: { day: "#ddd8d4", night: "#817b78" },
-  PC_Case_Soft_Light_Gray: { day: "#c9c8c6", night: "#747371" },
+  PC_Case_Blush_White: { day: "#cdbbc5", night: "#756770" },
+  PC_Case_Lavender_Trim: { day: "#b9a8c3", night: "#695c72" },
   PC_Interior_Mauve_Gray: { day: "#8f8193", night: "#4d4353" },
   PC_GPU_Muted_Plum: { day: "#74617f", night: "#43354a" },
   PC_Motherboard_Mauve: { day: "#a582a4", night: "#5c465e" },
   PC_Internal_Soft_Lavender: { day: "#bba8cc", night: "#6d5a79" },
   PC_Fan_Pastel_Lilac: { day: "#cbb3db", night: "#786587" },
+  PC_Logo_Deep_Mauve: { day: "#62546d", night: "#332a39" },
 };
 
 const pcUpgradeMaterials = [];
@@ -1806,7 +1807,7 @@ function createPcSolidMaterial(materialName) {
       uDayColor: { value: new THREE.Color(colors.day) },
       uNightColor: { value: new THREE.Color(colors.night) },
       uThemeMix: { value: 0 },
-      uPolish: { value: isCaseMaterial ? 0.13 : 0.055 },
+      uPolish: { value: isCaseMaterial ? 0.075 : 0.045 },
     },
     vertexShader: pcVertexShader,
     fragmentShader: pcFragmentShader,
@@ -1818,10 +1819,10 @@ function createPcSolidMaterial(materialName) {
 }
 
 const pcGlassMaterial = new THREE.MeshPhysicalMaterial({
-  color: 0xd9cbe5,
-  transmission: 0.82,
+  color: 0xcbb9d5,
+  transmission: 0.72,
   transparent: true,
-  opacity: 0.16,
+  opacity: 0.22,
   roughness: 0.12,
   metalness: 0,
   ior: 1.45,
@@ -1880,16 +1881,18 @@ function createPcAmbientGlow() {
     map: texture,
     color: 0xffffff,
     transparent: true,
-    opacity: 0.25,
+    opacity: 0.32,
     blending: THREE.AdditiveBlending,
     depthWrite: false,
     toneMapped: false,
   });
   const glow = new THREE.Sprite(material);
   glow.name = "PC_Upgrade_Ambient_Lavender_Glow";
-  glow.position.set(-2.2, 3.38, 3.84);
+  // Blender (X, Y, Z) -> glTF/Three.js (X, Z, -Y).
+  glow.position.set(-2.2, 3.84, -3.38);
   glow.scale.set(1.15, 0.92, 1);
-  glow.renderOrder = 2;
+  // Draw the ambient lavender wash after the glass, but before LED cores.
+  glow.renderOrder = 2.5;
   return glow;
 }
 
@@ -2120,8 +2123,10 @@ function hasIntroAnimation(objectName) {
 // is a complete replacement, so remove only the old PC triangles before the
 // room material is assigned. This prevents atlas-blue edges and z-fighting.
 const ORIGINAL_PC_BOUNDS = new THREE.Box3(
-  new THREE.Vector3(-3.27, 3.145, 3.07),
-  new THREE.Vector3(-1.25, 4.0, 4.6)
+  // Blender bounds were X[-3.27,-1.25], Y[3.145,4.0], Z[3.07,4.6].
+  // GLTFLoader exposes them in Three.js as (X, Z, -Y).
+  new THREE.Vector3(-3.27, 3.07, -4.0),
+  new THREE.Vector3(-1.25, 4.6, -3.145)
 );
 
 function removeOriginalPcTriangles(mesh) {
@@ -2438,7 +2443,8 @@ loader.load("/models/outside-tree.glb", (glb) => {
   scene.add(glb.scene);
 });
 
-loader.load("/models/pc-upgrade.glb", (glb) => {
+// Revision query prevents the browser/CDN from serving an older PC export.
+loader.load("/models/pc-upgrade.glb?v=20260904-led3-final", (glb) => {
   glb.scene.traverse((child) => {
     if (!child.isMesh) return;
 
@@ -2454,8 +2460,10 @@ loader.load("/models/pc-upgrade.glb", (glb) => {
     }
     if (
       child.name.includes("PC_Upgrade_RGB_Fan") ||
-      child.name.includes("PC_Upgrade_Top_Fan") ||
-      child.name.includes("PC_Upgrade_LED_Strip")
+      child.name.includes("PC_Upgrade_Left_Fan") ||
+      child.name.includes("PC_Upgrade_Right_Fan") ||
+      child.name.includes("PC_Upgrade_LED_Strip") ||
+      child.name.includes("PC_Upgrade_Top_LED_Strip")
     ) {
       child.renderOrder = 3;
     }

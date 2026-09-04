@@ -4,16 +4,16 @@
   "source_pc_object": "Plane.020_Baked",
   "source_pc_geometry": {
     "vertices": 2904,
-    "polygons": 2439,
+    "polygons": 2408,
     "uv_layers": [
       "SimpleBake"
     ]
   },
   "component_material_roles": {
-    "43": "warm_off_white",
-    "242": "warm_off_white",
-    "444": "warm_off_white",
-    "575": "soft_light_gray",
+    "43": "blush_white",
+    "242": "blush_white",
+    "444": "blush_white",
+    "575": "logo_deep_mauve",
     "609": "soft_lavender",
     "635": "mauve",
     "657": "mauve",
@@ -42,21 +42,20 @@
     "2646": "soft_lavender",
     "2670": "soft_lavender",
     "2694": "soft_lavender",
-    "2740": "soft_light_gray",
-    "2758": "mauve_gray",
-    "2731": "soft_lavender",
-    "2860": "soft_light_gray"
+    "2860": "lavender_mist"
   },
+  "removed_coincident_polygons": [],
   "palette": {
-    "warm_off_white": "#DDD8D4",
-    "soft_light_gray": "#C9C8C6",
+    "blush_white": "#EADDE3",
+    "lavender_mist": "#D8C7DD",
     "mauve_gray": "#8F8193",
     "muted_plum": "#74617F",
     "mauve": "#A582A4",
     "soft_lavender": "#BBA8CC",
     "fan_lilac": "#CBB3DB",
     "lavender_glow": "#D8B5EE",
-    "glass": "#D9CBE5"
+    "glass": "#D9CBE5",
+    "logo_deep_mauve": "#62546D"
   },
   "added_objects": [
     "PC_Upgrade_CPU_Block",
@@ -66,21 +65,23 @@
     "PC_Upgrade_Glass_Panel",
     "PC_Upgrade_LED_Strip",
     "PC_Upgrade_LED_Strip_Halo",
+    "PC_Upgrade_Left_Fan_Halo",
     "PC_Upgrade_Left_Fan_Ring",
     "PC_Upgrade_Motherboard",
     "PC_Upgrade_RAM_Block_1",
     "PC_Upgrade_RAM_Block_2",
     "PC_Upgrade_RGB_Fan_Halo",
     "PC_Upgrade_RGB_Fan_Ring",
+    "PC_Upgrade_Right_Fan_Halo",
     "PC_Upgrade_Right_Fan_Ring",
-    "PC_Upgrade_Top_Fan_Halo",
-    "PC_Upgrade_Top_Fan_Ring"
+    "PC_Upgrade_Top_LED_Strip",
+    "PC_Upgrade_Top_LED_Strip_Halo"
   ],
   "export": "C:\\Users\\hiepdeptrai\\Desktop\\hk1_2026_2027\\MyPortfolioWeb\\sooahs-room-folio\\public\\models\\pc-upgrade.glb",
   "preview": "C:\\Users\\hiepdeptrai\\Desktop\\hk1_2026_2027\\MyPortfolioWeb\\sooahs-room-folio\\artifacts\\pc-upgrade\\pc-room-context-after.png",
   "point_light": {
     "name": "Point",
-    "energy": 42.0,
+    "energy": 55.0,
     "color": [
       0.686685,
       0.462077,

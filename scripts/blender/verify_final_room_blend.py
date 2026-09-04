@@ -31,11 +31,13 @@ pc_upgrade_names = {
     "PC_Upgrade_RAM_Block_2",
     "PC_Upgrade_GPU_Block",
     "PC_Upgrade_Left_Fan_Ring",
+    "PC_Upgrade_Left_Fan_Halo",
     "PC_Upgrade_RGB_Fan_Halo",
     "PC_Upgrade_RGB_Fan_Ring",
     "PC_Upgrade_Right_Fan_Ring",
-    "PC_Upgrade_Top_Fan_Halo",
-    "PC_Upgrade_Top_Fan_Ring",
+    "PC_Upgrade_Right_Fan_Halo",
+    "PC_Upgrade_Top_LED_Strip_Halo",
+    "PC_Upgrade_Top_LED_Strip",
     "PC_Upgrade_LED_Strip_Halo",
     "PC_Upgrade_LED_Strip",
     "PC_Upgrade_Cable_Hint_1",
@@ -53,6 +55,24 @@ def sha256(path: Path) -> str:
 
 
 errors = []
+scene = bpy.context.scene
+if scene.camera is None or scene.camera.name != "Camera":
+    errors.append(
+        f"Expected active scene camera Camera, found "
+        f"{scene.camera.name if scene.camera else None}"
+    )
+if scene.render.engine != "CYCLES":
+    errors.append(f"Expected Cycles render engine, found {scene.render.engine}")
+if (
+    scene.render.resolution_x,
+    scene.render.resolution_y,
+    scene.render.resolution_percentage,
+) != (2048, 2048, 100):
+    errors.append(
+        "Expected original render resolution 2048x2048 at 100%, found "
+        f"{scene.render.resolution_x}x{scene.render.resolution_y} at "
+        f"{scene.render.resolution_percentage}%"
+    )
 meshes = [obj for obj in bpy.data.objects if obj.type == "MESH"]
 baked = [
     obj
@@ -67,8 +87,8 @@ special = [
 ]
 other = [obj for obj in meshes if obj not in baked and obj not in special]
 
-if len(meshes) != 181:
-    errors.append(f"Expected 181 meshes, found {len(meshes)}")
+if len(meshes) != 183:
+    errors.append(f"Expected 183 meshes, found {len(meshes)}")
 if len(baked) != 161:
     errors.append(f"Expected 161 baked room meshes, found {len(baked)}")
 if {obj.name for obj in special} != special_names | pc_upgrade_names:
@@ -131,6 +151,12 @@ if not controller_report["base_image_packed"]:
 
 pc_case = bpy.data.objects.get("Plane.020_Baked")
 pc_collection = bpy.data.collections.get("PC Upgrade")
+case_used_materials = sorted({
+    pc_case.material_slots[polygon.material_index].material.name
+    for polygon in pc_case.data.polygons
+    if polygon.material_index < len(pc_case.material_slots)
+    and pc_case.material_slots[polygon.material_index].material is not None
+}) if pc_case else []
 pc_report = {
     "case_exists": pc_case is not None,
     "case_vertices": len(pc_case.data.vertices) if pc_case else None,
@@ -139,18 +165,54 @@ pc_report = {
         slot.material.name if slot.material else None
         for slot in pc_case.material_slots
     ] if pc_case else [],
+    "case_used_materials": case_used_materials,
     "upgrade_collection_exists": pc_collection is not None,
     "upgrade_objects": sorted(obj.name for obj in pc_collection.objects)
     if pc_collection else [],
 }
 if not pc_case:
     errors.append("PC case Plane.020_Baked is missing")
-elif (pc_report["case_vertices"], pc_report["case_polygons"]) != (2904, 2439):
+elif (pc_report["case_vertices"], pc_report["case_polygons"]) != (2904, 2408):
     errors.append("PC case geometry changed unexpectedly")
-if "PC_Case_Warm_Off_White" not in pc_report["case_materials"]:
-    errors.append("PC case warm off-white material is missing")
+if "PC_Case_Blush_White" not in pc_report["case_used_materials"]:
+    errors.append("PC case blush-white material is missing")
+if "PC_Logo_Deep_Mauve" not in pc_report["case_used_materials"]:
+    errors.append("PC front-logo deep-mauve material is missing")
 if set(pc_report["upgrade_objects"]) != pc_upgrade_names:
     errors.append("PC upgrade object set is incomplete")
+
+expected_pc_materials = {
+    "PC_Upgrade_CPU_Block": "PC_Case_Lavender_Trim",
+    "PC_Upgrade_Cable_Hint_1": "PC_Fan_Pastel_Lilac",
+    "PC_Upgrade_Cable_Hint_2": "PC_Internal_Soft_Lavender",
+    "PC_Upgrade_GPU_Block": "PC_GPU_Muted_Plum",
+    "PC_Upgrade_Glass_Panel": "PC_Glass_Cool_Tint",
+    "PC_Upgrade_LED_Strip": "PC_LED_Lavender",
+    "PC_Upgrade_LED_Strip_Halo": "PC_LED_Lavender_Halo",
+    "PC_Upgrade_Left_Fan_Halo": "PC_LED_Lavender_Halo",
+    "PC_Upgrade_Left_Fan_Ring": "PC_LED_Lavender",
+    "PC_Upgrade_Motherboard": "PC_Motherboard_Mauve",
+    "PC_Upgrade_RAM_Block_1": "PC_Internal_Soft_Lavender",
+    "PC_Upgrade_RAM_Block_2": "PC_Fan_Pastel_Lilac",
+    "PC_Upgrade_RGB_Fan_Halo": "PC_LED_Lavender_Halo",
+    "PC_Upgrade_RGB_Fan_Ring": "PC_LED_Lavender",
+    "PC_Upgrade_Right_Fan_Halo": "PC_LED_Lavender_Halo",
+    "PC_Upgrade_Right_Fan_Ring": "PC_LED_Lavender",
+    "PC_Upgrade_Top_LED_Strip": "PC_LED_Lavender",
+    "PC_Upgrade_Top_LED_Strip_Halo": "PC_LED_Lavender_Halo",
+}
+pc_report["upgrade_materials"] = {}
+for object_name, expected_material in expected_pc_materials.items():
+    obj = bpy.data.objects.get(object_name)
+    actual_materials = [
+        slot.material.name for slot in obj.material_slots if slot.material
+    ] if obj else []
+    pc_report["upgrade_materials"][object_name] = actual_materials
+    if actual_materials != [expected_material]:
+        errors.append(
+            f"Unexpected material on {object_name}: {actual_materials}; "
+            f"expected {expected_material}"
+        )
 
 obsolete_controller_imports = [
     obj.name
@@ -219,6 +281,13 @@ report = {
     "size_bytes": blend.stat().st_size,
     "object_count": len(bpy.data.objects),
     "mesh_count": len(meshes),
+    "active_camera": scene.camera.name if scene.camera else None,
+    "render_engine": scene.render.engine,
+    "render_resolution": [
+        scene.render.resolution_x,
+        scene.render.resolution_y,
+        scene.render.resolution_percentage,
+    ],
     "baked_room_mesh_count": len(baked),
     "special_objects": sorted(obj.name for obj in special),
     "empty_objects": empty_names,

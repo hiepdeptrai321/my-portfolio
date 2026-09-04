@@ -1,9 +1,16 @@
 {
   "blend": "C:\\Users\\hiepdeptrai\\Desktop\\hk1_2026_2027\\MyPortfolioWeb\\sooahs-room-folio\\blender files\\My Room - FINAL.blend",
-  "sha256": "75CEBCDE44CED7018ABDB6A084FE9B41F40119D390BA565940816A18279F7D33",
-  "size_bytes": 30969947,
-  "object_count": 184,
-  "mesh_count": 181,
+  "sha256": "2F83CA931205A6B75EB3B389235DD47FB62BDE7E1DD360F580D7CB2995671C0C",
+  "size_bytes": 31008981,
+  "object_count": 186,
+  "mesh_count": 183,
+  "active_camera": "Camera",
+  "render_engine": "CYCLES",
+  "render_resolution": [
+    2048,
+    2048,
+    100
+  ],
   "baked_room_mesh_count": 161,
   "special_objects": [
     "Facebook_Fifth_Raycaster_Pointer_Hover",
@@ -15,15 +22,17 @@
     "PC_Upgrade_Glass_Panel",
     "PC_Upgrade_LED_Strip",
     "PC_Upgrade_LED_Strip_Halo",
+    "PC_Upgrade_Left_Fan_Halo",
     "PC_Upgrade_Left_Fan_Ring",
     "PC_Upgrade_Motherboard",
     "PC_Upgrade_RAM_Block_1",
     "PC_Upgrade_RAM_Block_2",
     "PC_Upgrade_RGB_Fan_Halo",
     "PC_Upgrade_RGB_Fan_Ring",
+    "PC_Upgrade_Right_Fan_Halo",
     "PC_Upgrade_Right_Fan_Ring",
-    "PC_Upgrade_Top_Fan_Halo",
-    "PC_Upgrade_Top_Fan_Ring",
+    "PC_Upgrade_Top_LED_Strip",
+    "PC_Upgrade_Top_LED_Strip_Halo",
     "Tree_3",
     "Xbox_Controller_Raycaster_Hover"
   ],
@@ -96,11 +105,11 @@
   "pc_upgrade": {
     "case_exists": true,
     "case_vertices": 2904,
-    "case_polygons": 2439,
+    "case_polygons": 2408,
     "case_materials": [
       "FinalFourth_Baked",
-      "PC_Case_Warm_Off_White",
-      "PC_Case_Soft_Light_Gray",
+      "PC_Case_Blush_White",
+      "PC_Case_Lavender_Trim",
       "PC_Interior_Mauve_Gray",
       "PC_GPU_Muted_Plum",
       "PC_Motherboard_Mauve",
@@ -108,7 +117,17 @@
       "PC_Fan_Pastel_Lilac",
       "PC_LED_Lavender",
       "PC_LED_Lavender_Halo",
-      "PC_Glass_Cool_Tint"
+      "PC_Glass_Cool_Tint",
+      "PC_Logo_Deep_Mauve"
+    ],
+    "case_used_materials": [
+      "PC_Case_Blush_White",
+      "PC_Case_Lavender_Trim",
+      "PC_Fan_Pastel_Lilac",
+      "PC_GPU_Muted_Plum",
+      "PC_Internal_Soft_Lavender",
+      "PC_Logo_Deep_Mauve",
+      "PC_Motherboard_Mauve"
     ],
     "upgrade_collection_exists": true,
     "upgrade_objects": [
@@ -119,16 +138,74 @@
       "PC_Upgrade_Glass_Panel",
       "PC_Upgrade_LED_Strip",
       "PC_Upgrade_LED_Strip_Halo",
+      "PC_Upgrade_Left_Fan_Halo",
       "PC_Upgrade_Left_Fan_Ring",
       "PC_Upgrade_Motherboard",
       "PC_Upgrade_RAM_Block_1",
       "PC_Upgrade_RAM_Block_2",
       "PC_Upgrade_RGB_Fan_Halo",
       "PC_Upgrade_RGB_Fan_Ring",
+      "PC_Upgrade_Right_Fan_Halo",
       "PC_Upgrade_Right_Fan_Ring",
-      "PC_Upgrade_Top_Fan_Halo",
-      "PC_Upgrade_Top_Fan_Ring"
-    ]
+      "PC_Upgrade_Top_LED_Strip",
+      "PC_Upgrade_Top_LED_Strip_Halo"
+    ],
+    "upgrade_materials": {
+      "PC_Upgrade_CPU_Block": [
+        "PC_Case_Lavender_Trim"
+      ],
+      "PC_Upgrade_Cable_Hint_1": [
+        "PC_Fan_Pastel_Lilac"
+      ],
+      "PC_Upgrade_Cable_Hint_2": [
+        "PC_Internal_Soft_Lavender"
+      ],
+      "PC_Upgrade_GPU_Block": [
+        "PC_GPU_Muted_Plum"
+      ],
+      "PC_Upgrade_Glass_Panel": [
+        "PC_Glass_Cool_Tint"
+      ],
+      "PC_Upgrade_LED_Strip": [
+        "PC_LED_Lavender"
+      ],
+      "PC_Upgrade_LED_Strip_Halo": [
+        "PC_LED_Lavender_Halo"
+      ],
+      "PC_Upgrade_Left_Fan_Halo": [
+        "PC_LED_Lavender_Halo"
+      ],
+      "PC_Upgrade_Left_Fan_Ring": [
+        "PC_LED_Lavender"
+      ],
+      "PC_Upgrade_Motherboard": [
+        "PC_Motherboard_Mauve"
+      ],
+      "PC_Upgrade_RAM_Block_1": [
+        "PC_Internal_Soft_Lavender"
+      ],
+      "PC_Upgrade_RAM_Block_2": [
+        "PC_Fan_Pastel_Lilac"
+      ],
+      "PC_Upgrade_RGB_Fan_Halo": [
+        "PC_LED_Lavender_Halo"
+      ],
+      "PC_Upgrade_RGB_Fan_Ring": [
+        "PC_LED_Lavender"
+      ],
+      "PC_Upgrade_Right_Fan_Halo": [
+        "PC_LED_Lavender_Halo"
+      ],
+      "PC_Upgrade_Right_Fan_Ring": [
+        "PC_LED_Lavender"
+      ],
+      "PC_Upgrade_Top_LED_Strip": [
+        "PC_LED_Lavender"
+      ],
+      "PC_Upgrade_Top_LED_Strip_Halo": [
+        "PC_LED_Lavender_Halo"
+      ]
+    }
   },
   "errors": [],
   "passed": true
