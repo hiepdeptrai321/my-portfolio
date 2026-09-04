@@ -13,6 +13,7 @@ import sys
 from collections import defaultdict
 from pathlib import Path
 
+import bmesh
 import bpy
 from mathutils import Vector
 
@@ -29,8 +30,8 @@ export_path = (
 )
 
 PALETTE = {
-    "warm_off_white": "#DDD8D4",
-    "soft_light_gray": "#C9C8C6",
+    "blush_white": "#EADDE3",
+    "lavender_mist": "#D8C7DD",
     "mauve_gray": "#8F8193",
     "muted_plum": "#74617F",
     "mauve": "#A582A4",
@@ -38,6 +39,7 @@ PALETTE = {
     "fan_lilac": "#CBB3DB",
     "lavender_glow": "#D8B5EE",
     "glass": "#D9CBE5",
+    "logo_deep_mauve": "#62546D",
 }
 
 
@@ -114,8 +116,8 @@ def make_glass_material():
 
 
 materials = {
-    "warm_off_white": make_principled_material("PC_Case_Warm_Off_White", PALETTE["warm_off_white"], 0.36, emission=0.42),
-    "soft_light_gray": make_principled_material("PC_Case_Soft_Light_Gray", PALETTE["soft_light_gray"], 0.42, emission=0.35),
+    "blush_white": make_principled_material("PC_Case_Blush_White", PALETTE["blush_white"], 0.34, emission=0.36),
+    "lavender_mist": make_principled_material("PC_Case_Lavender_Trim", PALETTE["lavender_mist"], 0.4, emission=0.34),
     "mauve_gray": make_principled_material("PC_Interior_Mauve_Gray", PALETTE["mauve_gray"], 0.72, emission=0.28),
     "muted_plum": make_principled_material("PC_GPU_Muted_Plum", PALETTE["muted_plum"], 0.68, emission=0.4),
     "mauve": make_principled_material("PC_Motherboard_Mauve", PALETTE["mauve"], 0.7, emission=0.48),
@@ -124,6 +126,7 @@ materials = {
     "led": make_emission_material("PC_LED_Lavender", PALETTE["lavender_glow"], 2.2),
     "halo": make_emission_material("PC_LED_Lavender_Halo", PALETTE["lavender_glow"], 0.7, 0.35),
     "glass": make_glass_material(),
+    "logo_deep_mauve": make_principled_material("PC_Logo_Deep_Mauve", PALETTE["logo_deep_mauve"], 0.5, emission=0.22),
 }
 
 
@@ -189,8 +192,8 @@ for role, material in materials.items():
     material_indices[role] = len(pc.data.materials) - 1
 
 component_roles = {
-    "warm_off_white": {43, 242, 444},
-    "soft_light_gray": {575, 2740, 2860},
+    "blush_white": {43, 242, 444},
+    "lavender_mist": {2740, 2860},
     "mauve_gray": {2758},
     "mauve": {635, 657, 957, 1275},
     "muted_plum": {1482, 1810, 1836},
@@ -203,11 +206,100 @@ role_for_component = {
 }
 component_polygons = connected_components(pc.data)
 component_assignment = {}
+
+
+def is_front_logo_component(polygon_indices):
+    vertex_indices = {
+        vertex_index
+        for polygon_index in polygon_indices
+        for vertex_index in pc.data.polygons[polygon_index].vertices
+    }
+    coordinates = [
+        pc.matrix_world @ pc.data.vertices[index].co
+        for index in vertex_indices
+    ]
+    minimum = Vector(
+        tuple(min(point[axis] for point in coordinates) for axis in range(3))
+    )
+    maximum = Vector(
+        tuple(max(point[axis] for point in coordinates) for axis in range(3))
+    )
+    dimensions = maximum - minimum
+    center = (minimum + maximum) * 0.5
+    return (
+        dimensions.x < 0.01
+        and -1.31 < center.x < -1.29
+        and 3.5 < center.y < 3.8
+        and 4.0 < center.z < 4.3
+    )
+
+
 for component_id, polygon_indices in component_polygons.items():
-    role = role_for_component.get(component_id, "soft_lavender")
+    role = (
+        "logo_deep_mauve"
+        if is_front_logo_component(polygon_indices)
+        else role_for_component.get(component_id, "soft_lavender")
+    )
     component_assignment[str(component_id)] = role
     for polygon_index in polygon_indices:
         pc.data.polygons[polygon_index].material_index = material_indices[role]
+
+
+def remove_coincident_case_faces(obj, preserved_material_index):
+    mesh = obj.data
+    mesh.calc_loop_triangles()
+    signature_to_polygons = defaultdict(set)
+
+    for triangle in mesh.loop_triangles:
+        points = []
+        for vertex_index in triangle.vertices:
+            point = obj.matrix_world @ mesh.vertices[vertex_index].co
+            points.append(tuple(round(float(value), 6) for value in point))
+        signature_to_polygons[tuple(sorted(points))].add(triangle.polygon_index)
+
+    polygon_indices_to_remove = set()
+    for polygon_indices in signature_to_polygons.values():
+        if len(polygon_indices) < 2:
+            continue
+
+        ordered = sorted(
+            polygon_indices,
+            key=lambda index: (
+                mesh.polygons[index].material_index != preserved_material_index,
+                index,
+            ),
+        )
+        polygon_indices_to_remove.update(ordered[1:])
+
+    if not polygon_indices_to_remove:
+        return []
+
+    editable_mesh = bmesh.new()
+    editable_mesh.from_mesh(mesh)
+    editable_mesh.faces.ensure_lookup_table()
+    bmesh.ops.delete(
+        editable_mesh,
+        geom=[editable_mesh.faces[index] for index in polygon_indices_to_remove],
+        context="FACES_ONLY",
+    )
+    editable_mesh.to_mesh(mesh)
+    editable_mesh.free()
+    mesh.update()
+    return sorted(polygon_indices_to_remove)
+
+
+removed_coincident_polygons = remove_coincident_case_faces(
+    pc,
+    material_indices["blush_white"],
+)
+
+for obsolete_material_name in (
+    "PC_Case_Warm_Off_White",
+    "PC_Case_Soft_Light_Gray",
+):
+    obsolete_material = bpy.data.materials.get(obsolete_material_name)
+    if obsolete_material and obsolete_material.users == 0:
+        bpy.data.materials.remove(obsolete_material)
 
 
 def add_rounded_box(name, location, dimensions, material, bevel=0.025):
@@ -238,7 +330,7 @@ add_rounded_box(
     "PC_Upgrade_CPU_Block",
     (-2.61, 3.235, 4.11),
     (0.20, 0.04, 0.18),
-    materials["soft_light_gray"],
+    materials["lavender_mist"],
     0.028,
 )
 add_rounded_box(
@@ -291,11 +383,18 @@ def add_torus(
 
 
 add_torus(
+    "PC_Upgrade_Left_Fan_Halo",
+    (-2.482286, 3.196, 3.670829),
+    0.147,
+    0.026,
+    materials["halo"],
+)
+add_torus(
     "PC_Upgrade_Left_Fan_Ring",
     (-2.482286, 3.193, 3.670829),
     0.145,
     0.013,
-    materials["soft_light_gray"],
+    materials["led"],
 )
 add_torus(
     "PC_Upgrade_RGB_Fan_Halo",
@@ -312,25 +411,32 @@ add_torus(
     materials["led"],
 )
 add_torus(
+    "PC_Upgrade_Right_Fan_Halo",
+    (-1.803861, 3.196, 3.670829),
+    0.147,
+    0.026,
+    materials["halo"],
+)
+add_torus(
     "PC_Upgrade_Right_Fan_Ring",
     (-1.803861, 3.193, 3.670829),
     0.145,
     0.013,
-    materials["soft_light_gray"],
-)
-add_torus(
-    "PC_Upgrade_Top_Fan_Halo",
-    (-2.76, 3.205, 4.12),
-    0.132,
-    0.023,
-    materials["halo"],
-)
-add_torus(
-    "PC_Upgrade_Top_Fan_Ring",
-    (-2.76, 3.202, 4.12),
-    0.13,
-    0.012,
     materials["led"],
+)
+add_rounded_box(
+    "PC_Upgrade_Top_LED_Strip_Halo",
+    (-2.20, 3.194, 4.315),
+    (1.28, 0.025, 0.055),
+    materials["halo"],
+    0.024,
+)
+add_rounded_box(
+    "PC_Upgrade_Top_LED_Strip",
+    (-2.20, 3.191, 4.315),
+    (1.24, 0.018, 0.022),
+    materials["led"],
+    0.010,
 )
 add_rounded_box(
     "PC_Upgrade_LED_Strip_Halo",
@@ -393,7 +499,7 @@ glass = add_rounded_box(
 point_light = bpy.data.objects.get("Point")
 if point_light and point_light.type == "LIGHT":
     point_light.data.color = hex_to_linear_rgba(PALETTE["lavender_glow"])[0:3]
-    point_light.data.energy = 42.0
+    point_light.data.energy = 55.0
     point_light.data.shadow_soft_size = 0.38
 
 
@@ -434,25 +540,51 @@ bpy.data.objects.remove(replacement, do_unlink=True)
 
 def render_preview():
     scene = bpy.context.scene
-    scene.render.engine = "BLENDER_EEVEE"
-    scene.render.resolution_x = 1000
-    scene.render.resolution_y = 1000
-    scene.render.resolution_percentage = 100
-    scene.render.image_settings.file_format = "PNG"
-    scene.render.film_transparent = True
+    original_camera = scene.camera or bpy.data.objects.get("Camera")
+    original_render_settings = {
+        "engine": scene.render.engine,
+        "resolution_x": scene.render.resolution_x,
+        "resolution_y": scene.render.resolution_y,
+        "resolution_percentage": scene.render.resolution_percentage,
+        "file_format": scene.render.image_settings.file_format,
+        "film_transparent": scene.render.film_transparent,
+        "filepath": scene.render.filepath,
+    }
     camera_data = bpy.data.cameras.new("PC_Upgrade_Preview_Camera")
     camera = bpy.data.objects.new("PC_Upgrade_Preview_Camera", camera_data)
-    scene.collection.objects.link(camera)
-    target = Vector((-2.26, 3.57, 3.84))
-    camera.location = target + Vector((3.2, -3.4, 1.7))
-    camera.rotation_euler = (target - camera.location).to_track_quat("-Z", "Y").to_euler()
-    camera_data.type = "ORTHO"
-    camera_data.ortho_scale = 3.3
-    scene.camera = camera
-    scene.render.filepath = str(artifact_dir / "pc-room-context-after.png")
-    bpy.ops.render.render(write_still=True)
-    bpy.data.objects.remove(camera, do_unlink=True)
-    bpy.data.cameras.remove(camera_data)
+    try:
+        scene.render.engine = "BLENDER_EEVEE"
+        scene.render.resolution_x = 1000
+        scene.render.resolution_y = 1000
+        scene.render.resolution_percentage = 100
+        scene.render.image_settings.file_format = "PNG"
+        scene.render.film_transparent = True
+        scene.collection.objects.link(camera)
+        target = Vector((-2.26, 3.57, 3.84))
+        camera.location = target + Vector((3.2, -3.4, 1.7))
+        camera.rotation_euler = (target - camera.location).to_track_quat("-Z", "Y").to_euler()
+        camera_data.type = "ORTHO"
+        camera_data.ortho_scale = 3.3
+        scene.camera = camera
+        scene.render.filepath = str(artifact_dir / "pc-room-context-after.png")
+        bpy.ops.render.render(write_still=True)
+    finally:
+        scene.camera = original_camera
+        scene.render.engine = original_render_settings["engine"]
+        scene.render.resolution_x = original_render_settings["resolution_x"]
+        scene.render.resolution_y = original_render_settings["resolution_y"]
+        scene.render.resolution_percentage = original_render_settings[
+            "resolution_percentage"
+        ]
+        scene.render.image_settings.file_format = original_render_settings[
+            "file_format"
+        ]
+        scene.render.film_transparent = original_render_settings[
+            "film_transparent"
+        ]
+        scene.render.filepath = original_render_settings["filepath"]
+        bpy.data.objects.remove(camera, do_unlink=True)
+        bpy.data.cameras.remove(camera_data)
 
 
 render_preview()
@@ -467,6 +599,7 @@ report = {
         "uv_layers": [layer.name for layer in pc.data.uv_layers],
     },
     "component_material_roles": component_assignment,
+    "removed_coincident_polygons": removed_coincident_polygons,
     "palette": PALETTE,
     "added_objects": sorted(obj.name for obj in upgrade_collection.objects),
     "export": str(export_path),

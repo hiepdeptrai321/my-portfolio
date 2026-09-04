@@ -21,7 +21,7 @@
       ],
       "parent": null,
       "materials": [
-        "PC_Case_Soft_Light_Gray"
+        "PC_Case_Lavender_Trim"
       ],
       "world_bounds": [
         [
@@ -216,13 +216,13 @@
       ],
       "parent": null,
       "materials": [
-        "PC_Case_Warm_Off_White",
-        "PC_Case_Soft_Light_Gray",
-        "PC_Interior_Mauve_Gray",
+        "PC_Case_Blush_White",
+        "PC_Case_Lavender_Trim",
         "PC_GPU_Muted_Plum",
         "PC_Motherboard_Mauve",
         "PC_Internal_Soft_Lavender",
-        "PC_Fan_Pastel_Lilac"
+        "PC_Fan_Pastel_Lilac",
+        "PC_Logo_Deep_Mauve"
       ],
       "world_bounds": [
         [
@@ -528,6 +528,71 @@
       ]
     },
     {
+      "name": "PC_Upgrade_Left_Fan_Halo",
+      "type": "MESH",
+      "location": [
+        -2.482286,
+        3.196,
+        3.670829
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "materials": [
+        "PC_LED_Lavender_Halo"
+      ],
+      "world_bounds": [
+        [
+          -2.655286,
+          3.220728,
+          3.497829
+        ],
+        [
+          -2.655286,
+          3.171266,
+          3.497829
+        ],
+        [
+          -2.655286,
+          3.171266,
+          3.843829
+        ],
+        [
+          -2.655286,
+          3.220727,
+          3.843829
+        ],
+        [
+          -2.309286,
+          3.220728,
+          3.497829
+        ],
+        [
+          -2.309286,
+          3.171266,
+          3.497829
+        ],
+        [
+          -2.309286,
+          3.171266,
+          3.843829
+        ],
+        [
+          -2.309286,
+          3.220727,
+          3.843829
+        ]
+      ]
+    },
+    {
       "name": "PC_Upgrade_Left_Fan_Ring",
       "type": "MESH",
       "location": [
@@ -547,7 +612,7 @@
       ],
       "parent": null,
       "materials": [
-        "PC_Case_Soft_Light_Gray"
+        "PC_LED_Lavender"
       ],
       "world_bounds": [
         [
@@ -918,6 +983,71 @@
       ]
     },
     {
+      "name": "PC_Upgrade_Right_Fan_Halo",
+      "type": "MESH",
+      "location": [
+        -1.803861,
+        3.196,
+        3.670829
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "materials": [
+        "PC_LED_Lavender_Halo"
+      ],
+      "world_bounds": [
+        [
+          -1.976861,
+          3.220728,
+          3.497829
+        ],
+        [
+          -1.976861,
+          3.171266,
+          3.497829
+        ],
+        [
+          -1.976861,
+          3.171266,
+          3.843829
+        ],
+        [
+          -1.976861,
+          3.220727,
+          3.843829
+        ],
+        [
+          -1.630861,
+          3.220728,
+          3.497829
+        ],
+        [
+          -1.630861,
+          3.171266,
+          3.497829
+        ],
+        [
+          -1.630861,
+          3.171266,
+          3.843829
+        ],
+        [
+          -1.630861,
+          3.220727,
+          3.843829
+        ]
+      ]
+    },
+    {
       "name": "PC_Upgrade_Right_Fan_Ring",
       "type": "MESH",
       "location": [
@@ -937,7 +1067,7 @@
       ],
       "parent": null,
       "materials": [
-        "PC_Case_Soft_Light_Gray"
+        "PC_LED_Lavender"
       ],
       "world_bounds": [
         [
@@ -983,77 +1113,12 @@
       ]
     },
     {
-      "name": "PC_Upgrade_Top_Fan_Halo",
+      "name": "PC_Upgrade_Top_LED_Strip",
       "type": "MESH",
       "location": [
-        -2.76,
-        3.205,
-        4.12
-      ],
-      "rotation": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "scale": [
-        1.0,
-        1.0,
-        1.0
-      ],
-      "parent": null,
-      "materials": [
-        "PC_LED_Lavender_Halo"
-      ],
-      "world_bounds": [
-        [
-          -2.915,
-          3.226874,
-          3.965
-        ],
-        [
-          -2.915,
-          3.183126,
-          3.965
-        ],
-        [
-          -2.915,
-          3.183126,
-          4.275
-        ],
-        [
-          -2.915,
-          3.226874,
-          4.275
-        ],
-        [
-          -2.605,
-          3.226874,
-          3.965
-        ],
-        [
-          -2.605,
-          3.183126,
-          3.965
-        ],
-        [
-          -2.605,
-          3.183126,
-          4.275
-        ],
-        [
-          -2.605,
-          3.226874,
-          4.275
-        ]
-      ]
-    },
-    {
-      "name": "PC_Upgrade_Top_Fan_Ring",
-      "type": "MESH",
-      "location": [
-        -2.76,
-        3.202,
-        4.12
+        -2.2,
+        3.191,
+        4.315
       ],
       "rotation": [
         0.0,
@@ -1071,58 +1136,123 @@
       ],
       "world_bounds": [
         [
-          -2.902,
-          3.213413,
-          3.978
+          -2.82,
+          3.181986,
+          4.304
         ],
         [
-          -2.902,
-          3.190582,
-          3.978
+          -2.82,
+          3.181986,
+          4.326025
         ],
         [
-          -2.902,
-          3.190582,
-          4.262
+          -2.82,
+          3.2,
+          4.326025
         ],
         [
-          -2.902,
-          3.213413,
-          4.262
+          -2.82,
+          3.2,
+          4.304
         ],
         [
-          -2.618,
-          3.213413,
-          3.978
+          -1.58,
+          3.181986,
+          4.304
         ],
         [
-          -2.618,
-          3.190582,
-          3.978
+          -1.58,
+          3.181986,
+          4.326025
         ],
         [
-          -2.618,
-          3.190582,
-          4.262
+          -1.58,
+          3.2,
+          4.326025
         ],
         [
-          -2.618,
-          3.213413,
-          4.262
+          -1.58,
+          3.2,
+          4.304
+        ]
+      ]
+    },
+    {
+      "name": "PC_Upgrade_Top_LED_Strip_Halo",
+      "type": "MESH",
+      "location": [
+        -2.2,
+        3.194,
+        4.315
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parent": null,
+      "materials": [
+        "PC_LED_Lavender_Halo"
+      ],
+      "world_bounds": [
+        [
+          -2.84,
+          3.181499,
+          4.2875
+        ],
+        [
+          -2.84,
+          3.181499,
+          4.342504
+        ],
+        [
+          -2.84,
+          3.2065,
+          4.342504
+        ],
+        [
+          -2.84,
+          3.2065,
+          4.2875
+        ],
+        [
+          -1.56,
+          3.181499,
+          4.2875
+        ],
+        [
+          -1.56,
+          3.181499,
+          4.342504
+        ],
+        [
+          -1.56,
+          3.2065,
+          4.342504
+        ],
+        [
+          -1.56,
+          3.2065,
+          4.2875
         ]
       ]
     }
   ],
   "materials": [
-    "PC_Case_Soft_Light_Gray",
-    "PC_Case_Warm_Off_White",
+    "PC_Case_Blush_White",
+    "PC_Case_Lavender_Trim",
     "PC_Fan_Pastel_Lilac",
     "PC_GPU_Muted_Plum",
     "PC_Glass_Cool_Tint",
-    "PC_Interior_Mauve_Gray",
     "PC_Internal_Soft_Lavender",
     "PC_LED_Lavender",
     "PC_LED_Lavender_Halo",
+    "PC_Logo_Deep_Mauve",
     "PC_Motherboard_Mauve"
   ],
   "images": []

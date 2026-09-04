@@ -1,48 +1,50 @@
-# PC material refinement
+# PC blush–lavender material correction
 
-Ngày hoàn tất: 2026-09-03  
-Trạng thái: **Hoàn tất**
+Ngày hoàn tất: 2026-09-04
 
-## Kết quả
+Trạng thái: **Hoàn tất và đã xác minh**
 
-Chỉ khu vực PC được tinh chỉnh. Hình dáng, kích thước, vị trí PC, camera, bố cục phòng và các vật trang trí khác được giữ nguyên.
+## Nguyên nhân màu bị loang và nhấp nháy
 
-- Vỏ trắng gắt được thay bằng warm off-white `#DDD8D4`.
-- Các phần phụ của vỏ dùng soft light gray `#C9C8C6` để tạo độ tách khối nhẹ.
-- Đã loại bỏ nguyên nhân tạo vệt xanh loang: PC xanh cũ nằm trong mesh atlas `Fourth` không còn được render chồng với PC mới.
-- Vật liệu vỏ dùng màu phẳng sạch và có highlight bóng nhẹ; không dùng texture noise hay hiệu ứng painterly.
-- Kính hông dùng tint xanh xám/lavender rất nhạt `#D9CBE5`, transmission `0.82`, opacity `0.16`, roughness `0.12`.
-- Các chi tiết stylized bên trong được giữ lại với mauve, plum và lavender dịu.
-- LED lavender `#D8B5EE` vẫn được giữ, nhưng ambient glow đã giảm opacity từ `0.32` xuống `0.25` để ánh sáng kín đáo hơn.
-- Đèn lavender trong PC giảm energy từ `55` xuống `42`.
-- Chế độ Day/Night vẫn đổi màu PC đồng bộ trong `1.5s`.
+PC xanh cũ nằm trong mesh atlas gộp `Fourth`, trong khi `pc-upgrade.glb` đặt một PC mới đúng cùng vị trí. Code trước đã cố loại PC cũ bằng bounding box lấy từ Blender, nhưng Blender dùng hệ trục Z-up còn GLTFLoader/Three.js dùng Y-up.
 
-## Cách xử lý vệt xanh
+Do bounding box dùng sai hệ trục, PC cũ thực tế không bị loại trên website. Hai bề mặt nằm gần như trùng nhau gây **z-fighting**, tạo vệt xanh loang và nhấp nháy liên tục.
 
-`room-main.glb` chứa PC xanh cũ bên trong mesh gộp `Fourth`. Bản trước chỉ đặt một lớp màu mới lên trên nên các mép cũ có thể lộ ra và xảy ra z-fighting.
+Tọa độ đã được sửa theo phép đổi:
 
-Bản sửa hiện tại:
+```text
+Blender (X, Y, Z) → Three.js (X, Z, -Y)
+```
 
-1. Loại các tam giác của PC cũ khỏi `Fourth` tại runtime.
-2. Ẩn các helper `Computer_Fan_*` và `Computer_Glass` cũ.
-3. Dùng `pc-upgrade.glb` làm model PC thay thế hoàn chỉnh, không còn là lớp phủ.
+Bounding box PC trên web hiện là:
 
-Kiểm tra vùng loại bỏ trên `room-main.glb`:
+```text
+min = (-3.27, 3.07, -4.00)
+max = (-1.25, 4.60, -3.145)
+```
 
-- Tổng tam giác của `Fourth`: `64,248`.
-- Tam giác thuộc vùng PC cũ được loại bỏ: `5,236`.
-- Tam giác còn lại: `59,012`.
-- Tỷ lệ vùng chỉnh: `8.1497%`.
+## Bản sửa hiện tại
 
-Room atlas và `room-main.glb` không bị ghi đè.
+- Loại đúng các tam giác PC cũ khỏi `Fourth` tại runtime.
+- Ẩn các helper cũ `Computer_Fan_*` và `Computer_Glass`.
+- Chỉ render một case hoàn chỉnh từ `pc-upgrade.glb`; không còn hai bề mặt case chồng nhau.
+- Xóa `31` polygon thừa tạo thành `62` tam giác trùng khít trong chính case; hình dáng nhìn thấy không đổi.
+- Đặt ambient lavender glow vào đúng hệ tọa độ Three.js: `(-2.2, 3.84, -3.38)`.
+- Thêm cache-busting `?v=20260904-clean` vào URL model để trình duyệt/CDN không dùng lại GLB cũ còn mặt trùng.
+- Giảm highlight trắng của case để bề mặt không bị cháy sáng.
+- Khôi phục hướng màu blush–mauve–lavender theo hình tham chiếu thứ hai.
+- Giữ nguyên hình dáng, kích thước, vị trí PC, camera, bố cục phòng và các đồ vật khác.
+- Không ghi đè room atlas và không sửa `room-main.glb`.
 
-## Bảng màu PC
+## Màu đã chốt
+
+### Blender
 
 | Thành phần | Màu | Hex |
 | --- | --- | --- |
-| Vỏ chính | Warm Off-White | `#DDD8D4` |
-| Trim/vỏ phụ | Soft Light Gray | `#C9C8C6` |
-| Kính | Faint Cool Lavender Gray | `#D9CBE5` |
+| Vỏ chính | Blush White | `#EADDE3` |
+| Viền/vỏ phụ | Lavender Mist | `#D8C7DD` |
+| Kính | Cool Lavender Glass | `#D9CBE5` |
 | Nội thất trung tính | Mauve Gray | `#8F8193` |
 | GPU | Muted Plum | `#74617F` |
 | Motherboard | Mauve | `#A582A4` |
@@ -50,39 +52,67 @@ Room atlas và `room-main.glb` không bị ghi đè.
 | Fan accents | Pastel Lilac | `#CBB3DB` |
 | LED | Pastel Lavender | `#D8B5EE` |
 
+### Web
+
+Shader web cần màu nền đậm hơn một chút để sau tone mapping cho kết quả gần hình tham chiếu:
+
+| Thành phần | Day | Night |
+| --- | --- | --- |
+| Vỏ chính | `#CDBBC5` | `#756770` |
+| Viền/vỏ phụ | `#B9A8C3` | `#695C72` |
+| Kính | `#CBB9D5` | Theo ánh sáng môi trường |
+
+Thông số kính web: transmission `0.72`, opacity `0.22`, roughness `0.12`. Ambient glow dùng opacity `0.32`; đèn lavender trong file Blender dùng energy `55`.
+
+## Xác minh chống nhấp nháy
+
+Vùng lọc mới được kiểm tra trong đúng hệ tọa độ web:
+
+- Tổng tam giác của `Fourth`: `64,248`.
+- Tam giác trong vùng PC cũ được loại: `5,236`.
+- Tam giác còn lại: `59,012`.
+- Tỷ lệ vùng thay thế: `8.1497%`.
+
+Kết quả này xác nhận bounding box mới đã chạm đúng PC; bounding box cũ nằm sai phía trên trục Z của Three.js.
+
+Kiểm tra riêng case sau khi dọn mặt trùng:
+
+- Tam giác trước khi dọn: `4,946`.
+- Tam giác sau khi dọn: `4,884`.
+- Tam giác trùng khít còn lại: `0`.
+
 ## File đã cập nhật
 
 - [My Room - FINAL.blend](../blender%20files/My%20Room%20-%20FINAL.blend)
 - [pc-upgrade.glb](../public/models/pc-upgrade.glb)
 - [src/main.js](../src/main.js)
 - [PC fragment shader](../src/shaders/pc/fragment.glsl)
-- [PC vertex shader](../src/shaders/pc/vertex.glsl)
 - [upgrade_pc_area.py](../scripts/blender/upgrade_pc_area.py)
 - [audit_room_pc_removal.py](../scripts/blender/audit_room_pc_removal.py)
+- [audit_pc_duplicate_faces.py](../scripts/blender/audit_pc_duplicate_faces.py)
 - [verify_final_room_blend.py](../scripts/blender/verify_final_room_blend.py)
 
-## Xác minh
+## Kết quả kiểm thử
 
-- Blender verification: **Pass**, không có lỗi.
-- Final Blender: `184` objects, `181` meshes.
-- Geometry case được giữ nguyên: `2,904` vertices, `2,439` polygons.
+- Blender verification: **Pass**.
+- Final Blender: `184` objects, `181` meshes, `161` baked room meshes.
+- Case giữ nguyên `2,904` vertices; polygon giảm từ `2,439` xuống `2,408` do loại đúng `31` mặt trùng khít, không làm đổi silhouette.
 - Missing external images: `0`.
-- `pc-upgrade.glb`: `17` meshes, `10` materials, `89,744` bytes.
-- `npm run build`: **Pass** với Vite `6.4.3`.
-- Production output: `dist/assets/index-rzzgHTrW.js` và `dist/assets/index-y74iNUV2.css`.
-- Trang chính, `src/main.js`, model PC và hai PC shader đều trả HTTP `200` trên dev server.
+- `pc-upgrade.glb`: `17` meshes, `9` materials, `88,196` bytes.
+- `npm run build`: **Pass**, Vite `6.4.3`.
+- Production bundle: `dist/assets/index-BvNas232.js`.
+- Trang chính, source JavaScript, PC GLB và PC shader đều trả HTTP `200`.
 
 SHA-256:
 
-- `My Room - FINAL.blend`: `75CEBCDE44CED7018ABDB6A084FE9B41F40119D390BA565940816A18279F7D33`
-- `pc-upgrade.glb`: `4FED36F137D0D17AC6E6D5077D01D8357AFC1189A7A9640C1891EEC2B00A9F24`
-- Preview: `3790DE822BE0B7EC3F371D0825EDCCB04F77D9D4875EBFA3E69290B7DF439961`
+- `My Room - FINAL.blend`: `15C102DC317FF9B663C234B6D4947F06F4F9C058515FAC815F6736612B8825C2`
+- `pc-upgrade.glb`: `DBD6444398A892DB2A87D211FCAC3BE42645134128BC9A5F2581736DE0CF7937`
+- Preview: `504F603D990C561C9F11B0EE3A7AB0BBBD8A643AF79781399DF1BC106ACD03AB`
 
 ## Preview
 
-- [Ảnh PC sau khi tinh chỉnh](../artifacts/pc-upgrade/pc-room-context-after.png)
+- [Ảnh PC Blender sau khi sửa](../artifacts/pc-upgrade/pc-room-context-after.png)
 
-## Khi xem trên website
+## Lưu ý khi xem bản deploy
 
-Sau khi deploy build mới, nên dùng `Ctrl + F5` để tránh trình duyệt giữ cache của `pc-upgrade.glb` hoặc bundle JavaScript cũ.
-
+Cần deploy lại cả bundle và `pc-upgrade.glb`. URL model mới đã có revision để né cache cũ; vẫn nên dùng `Ctrl + F5` sau khi deploy.
