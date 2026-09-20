@@ -44,6 +44,22 @@ pc_upgrade_names = {
     "PC_Upgrade_Cable_Hint_2",
     "PC_Upgrade_Glass_Panel",
 }
+reference_pc = bpy.data.collections.get("PC Reference Match") is not None
+studio_pc = reference_pc and bpy.data.collections['PC Reference Match'].get('reference_version') == 'studio-v2'
+if reference_pc:
+    pc_upgrade_names = {
+        "PC_Reference_Upper_Rear_Fan_Diffuser",
+        "PC_Reference_Upper_Rear_Fan_Rotor",
+        "PC_Reference_Upper_Rear_Fan_Hub",
+        "PC_Reference_Lower_Rear_Fan_Rotor",
+        "PC_Reference_Lower_Rear_Fan_Hub",
+        "PC_Reference_Bottom_LED_Diffuser",
+        "PC_Reference_Glass_Panel",
+    } | {f"PC_Reference_GPU_{part}_{i}" for part in ("Fan", "Hub") for i in range(1, 4)} | {
+        f"PC_Reference_Motherboard_Chip_{i}" for i in range(4)
+    }
+if studio_pc:
+    pc_upgrade_names = {o.name for o in bpy.data.collections['PC Reference Match'].objects if o.type == 'MESH' and o.name != 'Plane.020_Baked'}
 
 
 def sha256(path: Path) -> str:
@@ -55,6 +71,16 @@ def sha256(path: Path) -> str:
 
 
 errors = []
+if studio_pc:
+    required = {'PC_Reference_Top_Case', 'PC_Reference_Front_Panel', 'PC_Reference_Front_Perforations',
+        'PC_Reference_Top_Mesh_Grille', 'PC_Reference_Floor_Mesh_Grille', 'PC_Reference_Glass_Panel',
+        'PC_Reference_CPU_Cold_Plate', 'PC_Reference_RAM_Module_0', 'PC_Reference_RAM_Module_1',
+        'PC_Reference_RAM_LED_0', 'PC_Reference_RAM_LED_1', 'PC_Reference_Cooling_Tube_0',
+        'PC_Reference_Cooling_Tube_1', 'PC_Reference_GPU_Fan_1', 'PC_Reference_GPU_Fan_2',
+        'PC_Reference_GPU_Fan_3', 'PC_Reference_Front_Heart_Cat_Silhouette',
+        'PC_Reference_Top_LED_Diffuser', 'PC_Reference_Bottom_LED_Diffuser'}
+    missing = required - pc_upgrade_names
+    if missing: errors.append(f'Missing studio reference features: {sorted(missing)}')
 scene = bpy.context.scene
 if scene.camera is None or scene.camera.name != "Camera":
     errors.append(
@@ -87,8 +113,9 @@ special = [
 ]
 other = [obj for obj in meshes if obj not in baked and obj not in special]
 
-if len(meshes) != 183:
-    errors.append(f"Expected 183 meshes, found {len(meshes)}")
+expected_mesh_count = 161 + len(special_names) + len(pc_upgrade_names)
+if len(meshes) != expected_mesh_count:
+    errors.append(f"Expected {expected_mesh_count} meshes, found {len(meshes)}")
 if len(baked) != 161:
     errors.append(f"Expected 161 baked room meshes, found {len(baked)}")
 if {obj.name for obj in special} != special_names | pc_upgrade_names:
@@ -150,7 +177,7 @@ if not controller_report["base_image_packed"]:
     errors.append("Xbox base-color image is not packed")
 
 pc_case = bpy.data.objects.get("Plane.020_Baked")
-pc_collection = bpy.data.collections.get("PC Upgrade")
+pc_collection = bpy.data.collections.get("PC Reference Match" if reference_pc else "PC Upgrade")
 case_used_materials = sorted({
     pc_case.material_slots[polygon.material_index].material.name
     for polygon in pc_case.data.polygons
@@ -167,16 +194,16 @@ pc_report = {
     ] if pc_case else [],
     "case_used_materials": case_used_materials,
     "upgrade_collection_exists": pc_collection is not None,
-    "upgrade_objects": sorted(obj.name for obj in pc_collection.objects)
+    "upgrade_objects": sorted(obj.name for obj in pc_collection.objects if obj.type == "MESH" and obj.name != 'Plane.020_Baked')
     if pc_collection else [],
 }
 if not pc_case:
     errors.append("PC case Plane.020_Baked is missing")
-elif (pc_report["case_vertices"], pc_report["case_polygons"]) != (2904, 2408):
+elif not studio_pc and (pc_report["case_vertices"], pc_report["case_polygons"]) != (2904, 2408):
     errors.append("PC case geometry changed unexpectedly")
 if "PC_Case_Blush_White" not in pc_report["case_used_materials"]:
     errors.append("PC case blush-white material is missing")
-if "PC_Logo_Deep_Mauve" not in pc_report["case_used_materials"]:
+if not studio_pc and "PC_Logo_Deep_Mauve" not in pc_report["case_used_materials"]:
     errors.append("PC front-logo deep-mauve material is missing")
 if set(pc_report["upgrade_objects"]) != pc_upgrade_names:
     errors.append("PC upgrade object set is incomplete")
@@ -201,6 +228,43 @@ expected_pc_materials = {
     "PC_Upgrade_Top_LED_Strip": "PC_LED_Lavender",
     "PC_Upgrade_Top_LED_Strip_Halo": "PC_LED_Lavender_Halo",
 }
+if reference_pc:
+    expected_pc_materials = {
+        "PC_Reference_Upper_Rear_Fan_Diffuser": "PC_LED_Lavender",
+        "PC_Reference_Upper_Rear_Fan_Rotor": "PC_Fan_Pastel_Lilac",
+        "PC_Reference_Upper_Rear_Fan_Hub": "PC_Reference_Fan_Hub",
+        "PC_Reference_Lower_Rear_Fan_Rotor": "PC_Fan_Pastel_Lilac",
+        "PC_Reference_Lower_Rear_Fan_Hub": "PC_Reference_Fan_Hub",
+        "PC_Reference_Glass_Panel": "PC_Glass_Cool_Tint",
+        "PC_Reference_Bottom_LED_Diffuser": "PC_LED_Lavender",
+    }
+    expected_pc_materials.update({f"PC_Reference_GPU_Fan_{i}": "PC_Fan_Pastel_Lilac" for i in range(1, 4)})
+    expected_pc_materials.update({f"PC_Reference_GPU_Hub_{i}": "PC_Reference_Small_LED" for i in range(1, 4)})
+    expected_pc_materials.update({f"PC_Reference_Motherboard_Chip_{i}": "PC_Interior_Mauve_Gray" for i in range(4)})
+    glass = bpy.data.materials.get("PC_Glass_Cool_Tint")
+    glass_shader = next((n for n in glass.node_tree.nodes if n.type == "BSDF_PRINCIPLED"), None) if glass else None
+    if not glass_shader or glass_shader.inputs["Transmission Weight"].default_value < .99:
+        errors.append("Reference PC glass must use physical transmission")
+    shell = bpy.data.materials.get("PC_Case_Blush_White")
+    shell_shader = next((n for n in shell.node_tree.nodes if n.type == "BSDF_PRINCIPLED"), None) if shell else None
+    if not shell_shader or shell_shader.inputs["Emission Strength"].default_value != 0:
+        errors.append("Reference PC shell must receive light without self-emission")
+    if any(o.name.startswith("PC_Upgrade_") for o in bpy.data.objects):
+        errors.append("Obsolete upgrade geometry still obscures the reference PC")
+if studio_pc:
+    expected_pc_materials = {
+        'PC_Reference_Glass_Panel':'PC_Glass_Cool_Tint',
+        'PC_Reference_Front_Panel':'PC_Case_Blush_White',
+        'PC_Reference_Front_Perforations':'PC_Case_Blush_White',
+        'PC_Reference_Front_Heart_Cat_Silhouette':'PC_Logo_Deep_Mauve',
+        'PC_Reference_CPU_Cold_Plate':'PC_Internal_Soft_Lavender',
+        'PC_Reference_Upper_Rear_Fan_Diffuser':'PC_LED_Lavender',
+        'PC_Reference_Top_LED_Diffuser':'PC_LED_Lavender',
+        'PC_Reference_Bottom_LED_Diffuser':'PC_LED_Lavender',
+        'PC_Reference_RAM_LED_0':'PC_LED_Lavender',
+        'PC_Reference_RAM_LED_1':'PC_LED_Lavender',
+    }
+    expected_pc_materials.update({f'PC_Reference_GPU_Fan_{i}':'PC_Fan_Pastel_Lilac' for i in range(1,4)})
 pc_report["upgrade_materials"] = {}
 for object_name, expected_material in expected_pc_materials.items():
     obj = bpy.data.objects.get(object_name)

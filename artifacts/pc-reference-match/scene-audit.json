@@ -1,0 +1,1424 @@
+{
+  "blender": "5.2.1 LTS",
+  "engine": "CYCLES",
+  "view": "AgX",
+  "look": "None",
+  "exposure": 0.0,
+  "gamma": 1.0,
+  "camera": "Camera",
+  "compositor": "<bpy_struct, CompositorNodeTree(\"Compositing Nodetree\") at 0x0000023CD806E420>",
+  "world": [
+    {
+      "type": "OUTPUT_WORLD",
+      "inputs": {}
+    },
+    {
+      "type": "BACKGROUND",
+      "inputs": {
+        "Color": [
+          0.055,
+          0.055,
+          0.055,
+          1.0
+        ],
+        "Strength": 0.3499999940395355,
+        "Weight": 0.0
+      }
+    }
+  ],
+  "lights": [
+    {
+      "name": "Point",
+      "type": "POINT",
+      "pos": [
+        -2.42815,
+        3.7672,
+        3.57834
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "energy": 55.0,
+      "color": [
+        0.68669,
+        0.46208,
+        0.85499
+      ],
+      "size": 0.3799999952316284,
+      "hide": false
+    }
+  ],
+  "objects": [
+    {
+      "name": "PC_Upgrade_Cable_Hint_1",
+      "bounds": [
+        [
+          -1.91746,
+          3.37737,
+          4.09004
+        ],
+        [
+          -1.58999,
+          3.56237,
+          4.31271
+        ]
+      ],
+      "hide": false,
+      "hide_viewport": false,
+      "materials": [
+        "PC_Fan_Pastel_Lilac"
+      ],
+      "modifiers": []
+    },
+    {
+      "name": "PC_Upgrade_Cable_Hint_2",
+      "bounds": [
+        [
+          -1.868,
+          3.38937,
+          4.01078
+        ],
+        [
+          -1.57164,
+          3.57029,
+          4.23991
+        ]
+      ],
+      "hide": false,
+      "hide_viewport": false,
+      "materials": [
+        "PC_Internal_Soft_Lavender"
+      ],
+      "modifiers": []
+    },
+    {
+      "name": "PC_Upgrade_CPU_Block",
+      "bounds": [
+        [
+          -2.71,
+          3.215,
+          4.02
+        ],
+        [
+          -2.51,
+          3.255,
+          4.2
+        ]
+      ],
+      "hide": false,
+      "hide_viewport": false,
+      "materials": [
+        "PC_Case_Lavender_Trim"
+      ],
+      "modifiers": []
+    },
+    {
+      "name": "PC_Upgrade_Glass_Panel",
+      "bounds": [
+        [
+          -2.915,
+          3.165,
+          3.28
+        ],
+        [
+          -1.485,
+          3.183,
+          4.38
+        ]
+      ],
+      "hide": false,
+      "hide_viewport": false,
+      "materials": [
+        "PC_Glass_Cool_Tint"
+      ],
+      "modifiers": []
+    },
+    {
+      "name": "PC_Upgrade_GPU_Block",
+      "bounds": [
+        [
+          -2.725,
+          3.25,
+          3.49
+        ],
+        [
+          -1.565,
+          3.37,
+          3.85
+        ]
+      ],
+      "hide": false,
+      "hide_viewport": false,
+      "materials": [
+        "PC_GPU_Muted_Plum"
+      ],
+      "modifiers": []
+    },
+    {
+      "name": "PC_Upgrade_LED_Strip",
+      "bounds": [
+        [
+          -2.82,
+          3.182,
+          3.329
+        ],
+        [
+          -1.58,
+          3.2,
+          3.351
+        ]
+      ],
+      "hide": false,
+      "hide_viewport": false,
+      "materials": [
+        "PC_LED_Lavender"
+      ],
+      "modifiers": []
+    },
+    {
+      "name": "PC_Upgrade_LED_Strip_Halo",
+      "bounds": [
+        [
+          -2.84,
+          3.1815,
+          3.3125
+        ],
+        [
+          -1.56,
+          3.2065,
+          3.3675
+        ]
+      ],
+      "hide": false,
+      "hide_viewport": false,
+      "materials": [
+        "PC_LED_Lavender_Halo"
+      ],
+      "modifiers": []
+    },
+    {
+      "name": "PC_Upgrade_Left_Fan_Halo",
+      "bounds": [
+        [
+          -2.65529,
+          3.17127,
+          3.49783
+        ],
+        [
+          -2.30929,
+          3.22073,
+          3.84383
+        ]
+      ],
+      "hide": false,
+      "hide_viewport": false,
+      "materials": [
+        "PC_LED_Lavender_Halo"
+      ],
+      "modifiers": []
+    },
+    {
+      "name": "PC_Upgrade_Left_Fan_Ring",
+      "bounds": [
+        [
+          -2.64029,
+          3.18064,
+          3.51283
+        ],
+        [
+          -2.32429,
+          3.20536,
+          3.82883
+        ]
+      ],
+      "hide": false,
+      "hide_viewport": false,
+      "materials": [
+        "PC_LED_Lavender"
+      ],
+      "modifiers": []
+    },
+    {
+      "name": "PC_Upgrade_Motherboard",
+      "bounds": [
+        [
+          -2.91,
+          3.2425,
+          3.83
+        ],
+        [
+          -2.23,
+          3.2975,
+          4.31
+        ]
+      ],
+      "hide": false,
+      "hide_viewport": false,
+      "materials": [
+        "PC_Motherboard_Mauve"
+      ],
+      "modifiers": []
+    },
+    {
+      "name": "PC_Upgrade_RAM_Block_1",
+      "bounds": [
+        [
+          -2.4075,
+          3.215,
+          4.03
+        ],
+        [
+          -2.3525,
+          3.255,
+          4.27
+        ]
+      ],
+      "hide": false,
+      "hide_viewport": false,
+      "materials": [
+        "PC_Internal_Soft_Lavender"
+      ],
+      "modifiers": []
+    },
+    {
+      "name": "PC_Upgrade_RAM_Block_2",
+      "bounds": [
+        [
+          -2.3175,
+          3.215,
+          4.03
+        ],
+        [
+          -2.2625,
+          3.255,
+          4.27
+        ]
+      ],
+      "hide": false,
+      "hide_viewport": false,
+      "materials": [
+        "PC_Fan_Pastel_Lilac"
+      ],
+      "modifiers": []
+    },
+    {
+      "name": "PC_Upgrade_RGB_Fan_Halo",
+      "bounds": [
+        [
+          -2.31689,
+          3.17127,
+          3.49783
+        ],
+        [
+          -1.97089,
+          3.22073,
+          3.84383
+        ]
+      ],
+      "hide": false,
+      "hide_viewport": false,
+      "materials": [
+        "PC_LED_Lavender_Halo"
+      ],
+      "modifiers": []
+    },
+    {
+      "name": "PC_Upgrade_RGB_Fan_Ring",
+      "bounds": [
+        [
+          -2.30189,
+          3.18064,
+          3.51283
+        ],
+        [
+          -1.98589,
+          3.20536,
+          3.82883
+        ]
+      ],
+      "hide": false,
+      "hide_viewport": false,
+      "materials": [
+        "PC_LED_Lavender"
+      ],
+      "modifiers": []
+    },
+    {
+      "name": "PC_Upgrade_Right_Fan_Halo",
+      "bounds": [
+        [
+          -1.97686,
+          3.17127,
+          3.49783
+        ],
+        [
+          -1.63086,
+          3.22073,
+          3.84383
+        ]
+      ],
+      "hide": false,
+      "hide_viewport": false,
+      "materials": [
+        "PC_LED_Lavender_Halo"
+      ],
+      "modifiers": []
+    },
+    {
+      "name": "PC_Upgrade_Right_Fan_Ring",
+      "bounds": [
+        [
+          -1.96186,
+          3.18064,
+          3.51283
+        ],
+        [
+          -1.64586,
+          3.20536,
+          3.82883
+        ]
+      ],
+      "hide": false,
+      "hide_viewport": false,
+      "materials": [
+        "PC_LED_Lavender"
+      ],
+      "modifiers": []
+    },
+    {
+      "name": "PC_Upgrade_Top_LED_Strip",
+      "bounds": [
+        [
+          -2.82,
+          3.182,
+          4.304
+        ],
+        [
+          -1.58,
+          3.2,
+          4.326
+        ]
+      ],
+      "hide": false,
+      "hide_viewport": false,
+      "materials": [
+        "PC_LED_Lavender"
+      ],
+      "modifiers": []
+    },
+    {
+      "name": "PC_Upgrade_Top_LED_Strip_Halo",
+      "bounds": [
+        [
+          -2.84,
+          3.1815,
+          4.2875
+        ],
+        [
+          -1.56,
+          3.2065,
+          4.3425
+        ]
+      ],
+      "hide": false,
+      "hide_viewport": false,
+      "materials": [
+        "PC_LED_Lavender_Halo"
+      ],
+      "modifiers": []
+    },
+    {
+      "name": "Plane.020_Baked",
+      "bounds": [
+        [
+          -3.25958,
+          3.15833,
+          3.08353
+        ],
+        [
+          -1.26459,
+          3.99019,
+          4.58467
+        ]
+      ],
+      "hide": false,
+      "hide_viewport": false,
+      "materials": [
+        "FinalFourth_Baked",
+        "PC_Case_Blush_White",
+        "PC_Case_Lavender_Trim",
+        "PC_Interior_Mauve_Gray",
+        "PC_GPU_Muted_Plum",
+        "PC_Motherboard_Mauve",
+        "PC_Internal_Soft_Lavender",
+        "PC_Fan_Pastel_Lilac",
+        "PC_LED_Lavender",
+        "PC_LED_Lavender_Halo",
+        "PC_Glass_Cool_Tint",
+        "PC_Logo_Deep_Mauve"
+      ],
+      "modifiers": []
+    }
+  ],
+  "materials": [
+    {
+      "name": "FinalFourth_Baked",
+      "nodes": [
+        {
+          "type": "OUTPUT_MATERIAL",
+          "inputs": {
+            "Displacement": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Thickness": 0.0
+          }
+        },
+        {
+          "type": "GROUP",
+          "inputs": {
+            "Occlusion": 0.0
+          }
+        },
+        {
+          "type": "TEX_IMAGE",
+          "inputs": {
+            "Vector": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "type": "EMISSION",
+          "inputs": {
+            "Strength": 1.0,
+            "Weight": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "name": "PC_Case_Blush_White",
+      "nodes": [
+        {
+          "type": "OUTPUT_MATERIAL",
+          "inputs": {
+            "Displacement": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Thickness": 0.0
+          }
+        },
+        {
+          "type": "BSDF_PRINCIPLED",
+          "inputs": {
+            "Base Color": [
+              0.82279,
+              0.72306,
+              0.76815,
+              1.0
+            ],
+            "Metallic": 0.0,
+            "Roughness": 0.3400000035762787,
+            "IOR": 1.4600000381469727,
+            "Alpha": 1.0,
+            "Thin Wall": false,
+            "Normal": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Weight": 0.0,
+            "Diffuse Roughness": 0.0,
+            "Subsurface Weight": 0.0,
+            "Subsurface Radius": [
+              1.0,
+              0.2,
+              0.1
+            ],
+            "Subsurface Scale": 0.004999999888241291,
+            "Subsurface IOR": 1.399999976158142,
+            "Subsurface Anisotropy": 0.0,
+            "Specular IOR Level": 0.5,
+            "Specular Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Anisotropic": 0.0,
+            "Anisotropic Rotation": 0.0,
+            "Tangent": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Transmission Weight": 0.0,
+            "Coat Weight": 0.07999999821186066,
+            "Coat Roughness": 0.3499999940395355,
+            "Coat IOR": 1.5,
+            "Coat Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Coat Normal": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Sheen Weight": 0.0,
+            "Sheen Roughness": 0.5,
+            "Sheen Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Emission Color": [
+              0.82279,
+              0.72306,
+              0.76815,
+              1.0
+            ],
+            "Emission Strength": 0.36000001430511475,
+            "Thin Film Thickness": 0.0,
+            "Thin Film IOR": 1.3300000429153442
+          }
+        }
+      ]
+    },
+    {
+      "name": "PC_Case_Lavender_Trim",
+      "nodes": [
+        {
+          "type": "OUTPUT_MATERIAL",
+          "inputs": {
+            "Displacement": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Thickness": 0.0
+          }
+        },
+        {
+          "type": "BSDF_PRINCIPLED",
+          "inputs": {
+            "Base Color": [
+              0.68669,
+              0.57112,
+              0.72306,
+              1.0
+            ],
+            "Metallic": 0.0,
+            "Roughness": 0.4000000059604645,
+            "IOR": 1.4600000381469727,
+            "Alpha": 1.0,
+            "Thin Wall": false,
+            "Normal": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Weight": 0.0,
+            "Diffuse Roughness": 0.0,
+            "Subsurface Weight": 0.0,
+            "Subsurface Radius": [
+              1.0,
+              0.2,
+              0.1
+            ],
+            "Subsurface Scale": 0.004999999888241291,
+            "Subsurface IOR": 1.399999976158142,
+            "Subsurface Anisotropy": 0.0,
+            "Specular IOR Level": 0.5,
+            "Specular Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Anisotropic": 0.0,
+            "Anisotropic Rotation": 0.0,
+            "Tangent": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Transmission Weight": 0.0,
+            "Coat Weight": 0.07999999821186066,
+            "Coat Roughness": 0.3499999940395355,
+            "Coat IOR": 1.5,
+            "Coat Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Coat Normal": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Sheen Weight": 0.0,
+            "Sheen Roughness": 0.5,
+            "Sheen Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Emission Color": [
+              0.68669,
+              0.57112,
+              0.72306,
+              1.0
+            ],
+            "Emission Strength": 0.3400000035762787,
+            "Thin Film Thickness": 0.0,
+            "Thin Film IOR": 1.3300000429153442
+          }
+        }
+      ]
+    },
+    {
+      "name": "PC_Fan_Pastel_Lilac",
+      "nodes": [
+        {
+          "type": "OUTPUT_MATERIAL",
+          "inputs": {
+            "Displacement": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Thickness": 0.0
+          }
+        },
+        {
+          "type": "BSDF_PRINCIPLED",
+          "inputs": {
+            "Base Color": [
+              0.5972,
+              0.45079,
+              0.70838,
+              1.0
+            ],
+            "Metallic": 0.0,
+            "Roughness": 0.5799999833106995,
+            "IOR": 1.4600000381469727,
+            "Alpha": 1.0,
+            "Thin Wall": false,
+            "Normal": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Weight": 0.0,
+            "Diffuse Roughness": 0.0,
+            "Subsurface Weight": 0.0,
+            "Subsurface Radius": [
+              1.0,
+              0.2,
+              0.1
+            ],
+            "Subsurface Scale": 0.004999999888241291,
+            "Subsurface IOR": 1.399999976158142,
+            "Subsurface Anisotropy": 0.0,
+            "Specular IOR Level": 0.5,
+            "Specular Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Anisotropic": 0.0,
+            "Anisotropic Rotation": 0.0,
+            "Tangent": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Transmission Weight": 0.0,
+            "Coat Weight": 0.07999999821186066,
+            "Coat Roughness": 0.3499999940395355,
+            "Coat IOR": 1.5,
+            "Coat Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Coat Normal": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Sheen Weight": 0.0,
+            "Sheen Roughness": 0.5,
+            "Sheen Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Emission Color": [
+              0.5972,
+              0.45079,
+              0.70838,
+              1.0
+            ],
+            "Emission Strength": 0.5400000214576721,
+            "Thin Film Thickness": 0.0,
+            "Thin Film IOR": 1.3300000429153442
+          }
+        }
+      ]
+    },
+    {
+      "name": "PC_Glass_Cool_Tint",
+      "nodes": [
+        {
+          "type": "OUTPUT_MATERIAL",
+          "inputs": {
+            "Displacement": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Thickness": 0.0
+          }
+        },
+        {
+          "type": "BSDF_PRINCIPLED",
+          "inputs": {
+            "Base Color": [
+              0.69387,
+              0.5972,
+              0.78354,
+              0.1
+            ],
+            "Metallic": 0.0,
+            "Roughness": 0.11999999731779099,
+            "IOR": 1.4500000476837158,
+            "Alpha": 0.10000000149011612,
+            "Thin Wall": false,
+            "Normal": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Weight": 0.0,
+            "Diffuse Roughness": 0.0,
+            "Subsurface Weight": 0.0,
+            "Subsurface Radius": [
+              1.0,
+              0.2,
+              0.1
+            ],
+            "Subsurface Scale": 0.004999999888241291,
+            "Subsurface IOR": 1.399999976158142,
+            "Subsurface Anisotropy": 0.0,
+            "Specular IOR Level": 0.5,
+            "Specular Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Anisotropic": 0.0,
+            "Anisotropic Rotation": 0.0,
+            "Tangent": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Transmission Weight": 0.6499999761581421,
+            "Coat Weight": 0.0,
+            "Coat Roughness": 0.029999999329447746,
+            "Coat IOR": 1.5,
+            "Coat Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Coat Normal": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Sheen Weight": 0.0,
+            "Sheen Roughness": 0.5,
+            "Sheen Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Emission Color": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Emission Strength": 0.0,
+            "Thin Film Thickness": 0.0,
+            "Thin Film IOR": 1.3300000429153442
+          }
+        }
+      ]
+    },
+    {
+      "name": "PC_GPU_Muted_Plum",
+      "nodes": [
+        {
+          "type": "OUTPUT_MATERIAL",
+          "inputs": {
+            "Displacement": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Thickness": 0.0
+          }
+        },
+        {
+          "type": "BSDF_PRINCIPLED",
+          "inputs": {
+            "Base Color": [
+              0.17465,
+              0.11954,
+              0.21223,
+              1.0
+            ],
+            "Metallic": 0.0,
+            "Roughness": 0.6800000071525574,
+            "IOR": 1.4600000381469727,
+            "Alpha": 1.0,
+            "Thin Wall": false,
+            "Normal": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Weight": 0.0,
+            "Diffuse Roughness": 0.0,
+            "Subsurface Weight": 0.0,
+            "Subsurface Radius": [
+              1.0,
+              0.2,
+              0.1
+            ],
+            "Subsurface Scale": 0.004999999888241291,
+            "Subsurface IOR": 1.399999976158142,
+            "Subsurface Anisotropy": 0.0,
+            "Specular IOR Level": 0.5,
+            "Specular Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Anisotropic": 0.0,
+            "Anisotropic Rotation": 0.0,
+            "Tangent": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Transmission Weight": 0.0,
+            "Coat Weight": 0.07999999821186066,
+            "Coat Roughness": 0.3499999940395355,
+            "Coat IOR": 1.5,
+            "Coat Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Coat Normal": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Sheen Weight": 0.0,
+            "Sheen Roughness": 0.5,
+            "Sheen Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Emission Color": [
+              0.17465,
+              0.11954,
+              0.21223,
+              1.0
+            ],
+            "Emission Strength": 0.4000000059604645,
+            "Thin Film Thickness": 0.0,
+            "Thin Film IOR": 1.3300000429153442
+          }
+        }
+      ]
+    },
+    {
+      "name": "PC_Interior_Mauve_Gray",
+      "nodes": [
+        {
+          "type": "OUTPUT_MATERIAL",
+          "inputs": {
+            "Displacement": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Thickness": 0.0
+          }
+        },
+        {
+          "type": "BSDF_PRINCIPLED",
+          "inputs": {
+            "Base Color": [
+              0.27468,
+              0.21953,
+              0.29177,
+              1.0
+            ],
+            "Metallic": 0.0,
+            "Roughness": 0.7200000286102295,
+            "IOR": 1.4600000381469727,
+            "Alpha": 1.0,
+            "Thin Wall": false,
+            "Normal": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Weight": 0.0,
+            "Diffuse Roughness": 0.0,
+            "Subsurface Weight": 0.0,
+            "Subsurface Radius": [
+              1.0,
+              0.2,
+              0.1
+            ],
+            "Subsurface Scale": 0.004999999888241291,
+            "Subsurface IOR": 1.399999976158142,
+            "Subsurface Anisotropy": 0.0,
+            "Specular IOR Level": 0.5,
+            "Specular Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Anisotropic": 0.0,
+            "Anisotropic Rotation": 0.0,
+            "Tangent": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Transmission Weight": 0.0,
+            "Coat Weight": 0.07999999821186066,
+            "Coat Roughness": 0.3499999940395355,
+            "Coat IOR": 1.5,
+            "Coat Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Coat Normal": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Sheen Weight": 0.0,
+            "Sheen Roughness": 0.5,
+            "Sheen Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Emission Color": [
+              0.27468,
+              0.21953,
+              0.29177,
+              1.0
+            ],
+            "Emission Strength": 0.2800000011920929,
+            "Thin Film Thickness": 0.0,
+            "Thin Film IOR": 1.3300000429153442
+          }
+        }
+      ]
+    },
+    {
+      "name": "PC_Internal_Soft_Lavender",
+      "nodes": [
+        {
+          "type": "OUTPUT_MATERIAL",
+          "inputs": {
+            "Displacement": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Thickness": 0.0
+          }
+        },
+        {
+          "type": "BSDF_PRINCIPLED",
+          "inputs": {
+            "Base Color": [
+              0.49693,
+              0.39157,
+              0.60383,
+              1.0
+            ],
+            "Metallic": 0.0,
+            "Roughness": 0.6499999761581421,
+            "IOR": 1.4600000381469727,
+            "Alpha": 1.0,
+            "Thin Wall": false,
+            "Normal": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Weight": 0.0,
+            "Diffuse Roughness": 0.0,
+            "Subsurface Weight": 0.0,
+            "Subsurface Radius": [
+              1.0,
+              0.2,
+              0.1
+            ],
+            "Subsurface Scale": 0.004999999888241291,
+            "Subsurface IOR": 1.399999976158142,
+            "Subsurface Anisotropy": 0.0,
+            "Specular IOR Level": 0.5,
+            "Specular Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Anisotropic": 0.0,
+            "Anisotropic Rotation": 0.0,
+            "Tangent": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Transmission Weight": 0.0,
+            "Coat Weight": 0.07999999821186066,
+            "Coat Roughness": 0.3499999940395355,
+            "Coat IOR": 1.5,
+            "Coat Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Coat Normal": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Sheen Weight": 0.0,
+            "Sheen Roughness": 0.5,
+            "Sheen Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Emission Color": [
+              0.49693,
+              0.39157,
+              0.60383,
+              1.0
+            ],
+            "Emission Strength": 0.47999998927116394,
+            "Thin Film Thickness": 0.0,
+            "Thin Film IOR": 1.3300000429153442
+          }
+        }
+      ]
+    },
+    {
+      "name": "PC_LED_Lavender",
+      "nodes": [
+        {
+          "type": "OUTPUT_MATERIAL",
+          "inputs": {
+            "Displacement": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Thickness": 0.0
+          }
+        },
+        {
+          "type": "EMISSION",
+          "inputs": {
+            "Color": [
+              0.68669,
+              0.46208,
+              0.85499,
+              1.0
+            ],
+            "Strength": 2.200000047683716,
+            "Weight": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "name": "PC_LED_Lavender_Halo",
+      "nodes": [
+        {
+          "type": "OUTPUT_MATERIAL",
+          "inputs": {
+            "Displacement": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Thickness": 0.0
+          }
+        },
+        {
+          "type": "EMISSION",
+          "inputs": {
+            "Color": [
+              0.68669,
+              0.46208,
+              0.85499,
+              0.35
+            ],
+            "Strength": 0.699999988079071,
+            "Weight": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "name": "PC_Logo_Deep_Mauve",
+      "nodes": [
+        {
+          "type": "OUTPUT_MATERIAL",
+          "inputs": {
+            "Displacement": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Thickness": 0.0
+          }
+        },
+        {
+          "type": "BSDF_PRINCIPLED",
+          "inputs": {
+            "Base Color": [
+              0.12214,
+              0.08866,
+              0.15293,
+              1.0
+            ],
+            "Metallic": 0.0,
+            "Roughness": 0.5,
+            "IOR": 1.4600000381469727,
+            "Alpha": 1.0,
+            "Thin Wall": false,
+            "Normal": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Weight": 0.0,
+            "Diffuse Roughness": 0.0,
+            "Subsurface Weight": 0.0,
+            "Subsurface Radius": [
+              1.0,
+              0.2,
+              0.1
+            ],
+            "Subsurface Scale": 0.004999999888241291,
+            "Subsurface IOR": 1.399999976158142,
+            "Subsurface Anisotropy": 0.0,
+            "Specular IOR Level": 0.5,
+            "Specular Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Anisotropic": 0.0,
+            "Anisotropic Rotation": 0.0,
+            "Tangent": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Transmission Weight": 0.0,
+            "Coat Weight": 0.07999999821186066,
+            "Coat Roughness": 0.3499999940395355,
+            "Coat IOR": 1.5,
+            "Coat Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Coat Normal": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Sheen Weight": 0.0,
+            "Sheen Roughness": 0.5,
+            "Sheen Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Emission Color": [
+              0.12214,
+              0.08866,
+              0.15293,
+              1.0
+            ],
+            "Emission Strength": 0.2199999988079071,
+            "Thin Film Thickness": 0.0,
+            "Thin Film IOR": 1.3300000429153442
+          }
+        }
+      ]
+    },
+    {
+      "name": "PC_Motherboard_Mauve",
+      "nodes": [
+        {
+          "type": "OUTPUT_MATERIAL",
+          "inputs": {
+            "Displacement": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Thickness": 0.0
+          }
+        },
+        {
+          "type": "BSDF_PRINCIPLED",
+          "inputs": {
+            "Base Color": [
+              0.37626,
+              0.22323,
+              0.37124,
+              1.0
+            ],
+            "Metallic": 0.0,
+            "Roughness": 0.699999988079071,
+            "IOR": 1.4600000381469727,
+            "Alpha": 1.0,
+            "Thin Wall": false,
+            "Normal": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Weight": 0.0,
+            "Diffuse Roughness": 0.0,
+            "Subsurface Weight": 0.0,
+            "Subsurface Radius": [
+              1.0,
+              0.2,
+              0.1
+            ],
+            "Subsurface Scale": 0.004999999888241291,
+            "Subsurface IOR": 1.399999976158142,
+            "Subsurface Anisotropy": 0.0,
+            "Specular IOR Level": 0.5,
+            "Specular Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Anisotropic": 0.0,
+            "Anisotropic Rotation": 0.0,
+            "Tangent": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Transmission Weight": 0.0,
+            "Coat Weight": 0.07999999821186066,
+            "Coat Roughness": 0.3499999940395355,
+            "Coat IOR": 1.5,
+            "Coat Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Coat Normal": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Sheen Weight": 0.0,
+            "Sheen Roughness": 0.5,
+            "Sheen Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Emission Color": [
+              0.37626,
+              0.22323,
+              0.37124,
+              1.0
+            ],
+            "Emission Strength": 0.47999998927116394,
+            "Thin Film Thickness": 0.0,
+            "Thin Film IOR": 1.3300000429153442
+          }
+        }
+      ]
+    }
+  ],
+  "devices": [
+    [
+      "NVIDIA GeForce RTX 3060",
+      "CUDA"
+    ],
+    [
+      "12th Gen Intel Core i3-12100",
+      "CPU"
+    ],
+    [
+      "NVIDIA GeForce RTX 3060",
+      "OPTIX"
+    ]
+  ]
+}

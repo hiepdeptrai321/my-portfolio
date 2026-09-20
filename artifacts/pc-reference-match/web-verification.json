@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "meshes": 9,
+  "embeddedImages": 1,
+  "materials": [
+    "PC_LED_Lavender",
+    "PC_Reference_Baked_Day",
+    "PC_Glass_Cool_Tint"
+  ],
+  "bytes": 9369036,
+  "sha256": "8f1b0418360a7a4f0d009bc3d1f690f7617bddee6cff30f42e67dc64fd88f3af",
+  "sourceBlendUnchanged": true,
+  "buildAssetMatches": true,
+  "devServerAssetMatches": true,
+  "browserVisualCheck": "unavailable"
+}
