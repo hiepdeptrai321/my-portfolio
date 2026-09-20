@@ -18,6 +18,7 @@ dist-ssr/
 .vite/
 .eslintcache
 *.blend1
+artifacts/pc-reference-match/backup/
 
 *.local
 

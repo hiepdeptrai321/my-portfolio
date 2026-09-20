@@ -1783,52 +1783,40 @@ function createGitHubMaterial(geometry) {
 
 const outsideTreeMaterials = [];
 
-const PC_UPGRADE_COLORS = {
-  PC_Case_Blush_White: { day: "#cdbbc5", night: "#756770" },
-  PC_Case_Lavender_Trim: { day: "#b9a8c3", night: "#695c72" },
-  PC_Interior_Mauve_Gray: { day: "#8f8193", night: "#4d4353" },
-  PC_GPU_Muted_Plum: { day: "#74617f", night: "#43354a" },
-  PC_Motherboard_Mauve: { day: "#a582a4", night: "#5c465e" },
-  PC_Internal_Soft_Lavender: { day: "#bba8cc", night: "#6d5a79" },
-  PC_Fan_Pastel_Lilac: { day: "#cbb3db", night: "#786587" },
-  PC_Logo_Deep_Mauve: { day: "#62546d", night: "#332a39" },
-};
-
 const pcUpgradeMaterials = [];
 
-function createPcSolidMaterial(materialName) {
-  const colors = PC_UPGRADE_COLORS[materialName] ?? {
-    day: "#dce2de",
-    night: "#747d78",
-  };
-  const isCaseMaterial = materialName.startsWith("PC_Case_");
+function createPcSolidMaterial(sourceMaterial) {
+  // The atlas contains the verified Blender colors and soft lighting.
+  // Recoloring it with the old palette would undo the reference match.
+  const dayTexture = sourceMaterial.map;
+  dayTexture.colorSpace = THREE.SRGBColorSpace;
+  dayTexture.anisotropy = renderer.capabilities.getMaxAnisotropy();
   const material = new THREE.ShaderMaterial({
     uniforms: {
-      uDayColor: { value: new THREE.Color(colors.day) },
-      uNightColor: { value: new THREE.Color(colors.night) },
+      uDayTexture: { value: dayTexture },
+      uNightTint: { value: new THREE.Vector3(0.32, 0.26, 0.39) },
       uThemeMix: { value: 0 },
-      uPolish: { value: isCaseMaterial ? 0.075 : 0.045 },
     },
     vertexShader: pcVertexShader,
     fragmentShader: pcFragmentShader,
   });
 
-  material.name = materialName;
+  material.name = sourceMaterial.name;
   pcUpgradeMaterials.push(material);
   return material;
 }
 
 const pcGlassMaterial = new THREE.MeshPhysicalMaterial({
-  color: 0xcbb9d5,
-  transmission: 0.72,
+  color: 0xfbf6ff,
+  transmission: 0.92,
   transparent: true,
-  opacity: 0.22,
-  roughness: 0.12,
+  opacity: 0.18,
+  roughness: 0.08,
   metalness: 0,
   ior: 1.45,
-  thickness: 0.018,
+  thickness: 0.006,
   envMap: environmentMap,
-  envMapIntensity: 0.35,
+  envMapIntensity: 0.18,
   depthWrite: false,
   side: THREE.DoubleSide,
 });
@@ -1840,60 +1828,71 @@ function createPcUpgradeMaterial(sourceMaterial) {
 
   if (materialName === "PC_LED_Lavender") {
     return new THREE.MeshBasicMaterial({
-      color: 0xd8b5ee,
-      transparent: true,
-      opacity: 0.9,
-      blending: THREE.AdditiveBlending,
-      depthWrite: false,
+      color: 0xf1d7ff,
       toneMapped: false,
     });
   }
 
-  if (materialName === "PC_LED_Lavender_Halo") {
-    return new THREE.MeshBasicMaterial({
-      color: 0xcaa6df,
-      transparent: true,
-      opacity: 0.3,
-      blending: THREE.AdditiveBlending,
-      depthWrite: false,
-      toneMapped: false,
-    });
-  }
-
-  return createPcSolidMaterial(materialName);
+  return createPcSolidMaterial(sourceMaterial);
 }
 
-function createPcAmbientGlow() {
+function addPcLedGlow(led) {
+  // A small halo follows each emitter's own plane. Depth testing keeps the
+  // housing and other room objects in front of it when the camera moves.
+  led.geometry.computeBoundingBox();
+  const bounds = led.geometry.boundingBox;
+  const size = bounds.getSize(new THREE.Vector3()).toArray();
+  const center = bounds.getCenter(new THREE.Vector3());
+  const normalAxis = size.indexOf(Math.min(...size));
+  const [u, v] = [0, 1, 2].filter((axis) => axis !== normalAxis);
+  const padding = 0.035;
+  const width = size[u] + padding * 2;
+  const height = size[v] + padding * 2;
+  const pixels = 512;
   const canvas = document.createElement("canvas");
-  canvas.width = 128;
-  canvas.height = 128;
+  canvas.width = Math.ceil(width * pixels);
+  canvas.height = Math.ceil(height * pixels);
   const context = canvas.getContext("2d");
-  const gradient = context.createRadialGradient(64, 64, 4, 64, 64, 64);
-  gradient.addColorStop(0, "rgba(216, 181, 238, 0.42)");
-  gradient.addColorStop(0.45, "rgba(202, 166, 223, 0.2)");
-  gradient.addColorStop(1, "rgba(185, 151, 207, 0)");
-  context.fillStyle = gradient;
-  context.fillRect(0, 0, 128, 128);
-
+  context.shadowColor = "#ce86ff";
+  context.shadowBlur = 10;
+  context.fillStyle = context.strokeStyle = "#e4c0ff";
+  const isRing = /Fan_Diffuser|Fan_LED|Power_Button_LED/.test(led.name);
+  if (isRing) {
+    const thickness = size[normalAxis];
+    context.lineWidth = thickness * pixels;
+    context.beginPath();
+    context.ellipse(canvas.width / 2, canvas.height / 2,
+      (size[u] - thickness) * pixels / 2,
+      (size[v] - thickness) * pixels / 2, 0, 0, Math.PI * 2);
+    context.stroke();
+  } else {
+    context.beginPath();
+    context.roundRect(padding * pixels, padding * pixels,
+      size[u] * pixels, size[v] * pixels, Math.min(size[u], size[v]) * pixels / 2);
+    context.fill();
+  }
   const texture = new THREE.CanvasTexture(canvas);
   texture.colorSpace = THREE.SRGBColorSpace;
-  const material = new THREE.SpriteMaterial({
-    map: texture,
-    color: 0xffffff,
-    transparent: true,
-    opacity: 0.32,
-    blending: THREE.AdditiveBlending,
-    depthWrite: false,
-    toneMapped: false,
-  });
-  const glow = new THREE.Sprite(material);
-  glow.name = "PC_Upgrade_Ambient_Lavender_Glow";
-  // Blender (X, Y, Z) -> glTF/Three.js (X, Z, -Y).
-  glow.position.set(-2.2, 3.84, -3.38);
-  glow.scale.set(1.15, 0.92, 1);
-  // Draw the ambient lavender wash after the glass, but before LED cores.
-  glow.renderOrder = 2.5;
-  return glow;
+  const geometry = new THREE.PlaneGeometry(width, height);
+  const cameraLocal = led.worldToLocal(camera.getWorldPosition(new THREE.Vector3()));
+  const sign = cameraLocal.getComponent(normalAxis) >= center.getComponent(normalAxis) ? 1 : -1;
+  const normalPosition = center.getComponent(normalAxis) + sign * (size[normalAxis] / 2 + 0.001);
+  const positions = geometry.attributes.position;
+  for (let i = 0; i < positions.count; i++) {
+    const point = center.clone();
+    point.setComponent(u, center.getComponent(u) + positions.getX(i));
+    point.setComponent(v, center.getComponent(v) + positions.getY(i));
+    point.setComponent(normalAxis, normalPosition);
+    positions.setXYZ(i, point.x, point.y, point.z);
+  }
+  const glow = new THREE.Mesh(geometry, new THREE.MeshBasicMaterial({
+    map: texture, transparent: true, opacity: 0.16,
+    blending: THREE.AdditiveBlending, depthWrite: false, depthTest: true,
+    side: THREE.DoubleSide, toneMapped: false,
+  }));
+  glow.name = `${led.name}_Glow`;
+  glow.renderOrder = 3;
+  led.add(glow);
 }
 
 function createOutsideTreeMaterial(sourceMaterial) {
@@ -2444,32 +2443,28 @@ loader.load("/models/outside-tree.glb", (glb) => {
 });
 
 // Revision query prevents the browser/CDN from serving an older PC export.
-loader.load("/models/pc-upgrade.glb?v=20260904-led3-final", (glb) => {
+loader.load("/models/pc-upgrade.glb?v=20260920-pc-polish-v3", (glb) => {
+  const ledMeshes = [];
   glb.scene.traverse((child) => {
     if (!child.isMesh) return;
+
+    const sourceMaterials = Array.isArray(child.material) ? child.material : [child.material];
+    if (sourceMaterials.some((material) => material.name === "PC_LED_Lavender")) ledMeshes.push(child);
 
     child.material = Array.isArray(child.material)
       ? child.material.map(createPcUpgradeMaterial)
       : createPcUpgradeMaterial(child.material);
 
-    if (child.name.includes("PC_Upgrade_Case_Replacement")) {
+    if (child.name.includes("PC_Reference_Case_Replacement")) {
       child.renderOrder = 1;
     }
-    if (child.name.includes("PC_Upgrade_Glass_Panel")) {
+    if (child.name.includes("PC_Reference_Glass_Panel")) {
       child.renderOrder = 2;
-    }
-    if (
-      child.name.includes("PC_Upgrade_RGB_Fan") ||
-      child.name.includes("PC_Upgrade_Left_Fan") ||
-      child.name.includes("PC_Upgrade_Right_Fan") ||
-      child.name.includes("PC_Upgrade_LED_Strip") ||
-      child.name.includes("PC_Upgrade_Top_LED_Strip")
-    ) {
-      child.renderOrder = 3;
     }
   });
 
-  glb.scene.add(createPcAmbientGlow());
+  glb.scene.updateMatrixWorld(true);
+  ledMeshes.forEach(addPcLedGlow);
   scene.add(glb.scene);
 });
 

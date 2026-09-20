@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "differences": {},
+  "unrelated_objects_compared": 166,
+  "images_compared": 7,
+  "non_pc_materials_compared": 14,
+  "base_pc_geometry_and_uvs_preserved": false,
+  "pc_rebuilt_to_studio_references": true,
+  "pc_polish": true,
+  "rear_fan_mount": {
+    "gap": 0.0,
+    "normal_alignment": 1.0,
+    "changed_geometry": [
+      "PC_Reference_Lower_Rear_Fan_Hub",
+      "PC_Reference_Lower_Rear_Fan_LED",
+      "PC_Reference_Lower_Rear_Fan_Rotor",
+      "PC_Reference_Rear_Fan_Frame",
+      "PC_Reference_Rear_Fan_Heart_Cat_Ear_-1",
+      "PC_Reference_Rear_Fan_Heart_Cat_Ear_1",
+      "PC_Reference_Rear_Fan_Heart_Cat_Heart",
+      "PC_Reference_Rear_Fan_Heart_Cat_Silhouette",
+      "PC_Reference_Rear_Fan_Screw_3.25_4.36",
+      "PC_Reference_Rear_Fan_Screw_3.25_4.8",
+      "PC_Reference_Rear_Fan_Screw_3.69_4.36",
+      "PC_Reference_Rear_Fan_Screw_3.69_4.8",
+      "PC_Reference_Upper_Rear_Fan_Diffuser",
+      "PC_Reference_Upper_Rear_Fan_Hub",
+      "PC_Reference_Upper_Rear_Fan_Rotor"
+    ],
+    "other_pc_geometry_preserved": true
+  },
+  "backup_sha256": "0b304ff866fadaf8684d4eb715a3dc3c6dd657b1cf155dddbb5081adcdaf7cb8",
+  "final_sha256": "f3656ffc3e94462bce18a25cbd4682eeeb225f56fcf01f7766f4b081247885b3"
+}
